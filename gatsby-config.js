@@ -84,7 +84,8 @@ module.exports = {
       options: {
         spaceId: '80ssd6cbsstv',
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-      }
-    }
+      },
+    },
+    '@contentful/gatsby-transformer-contentful-richtext',
   ],
 }
