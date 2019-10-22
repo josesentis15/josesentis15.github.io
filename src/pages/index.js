@@ -28,8 +28,9 @@ class Projects extends React.Component {
                   {node.external ? (
                     <a
                       href={node.externalLink}
-                      target="_black"
+                      target="_blank"
                       rel="noopener noreferrer"
+                      style={{ boxShadow: `none` }}
                     >
                       {title} External!
                     </a>
@@ -60,14 +61,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulProject(
-      sort: { fields: order }
-      filter: { external: { eq: false } }
-    ) {
+    allContentfulProject(sort: { fields: order }) {
       edges {
         node {
           title
           external
+          externalLink
           slug
           image {
             fluid {

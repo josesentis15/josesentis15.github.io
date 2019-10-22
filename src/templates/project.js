@@ -7,12 +7,15 @@ import { rhythm, scale } from "../utils/typography"
 
 class ProjectTemplate extends React.Component {
   render() {
-    const post = this.props.data.contentfulProject
+    const project = this.props.data.contentfulProject
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.title} description={post.abstract.abstract} />
+        <SEO
+          title={project.title}
+          description={project.abstract}
+        />
         <article>
           <header>
             <h1
@@ -21,19 +24,10 @@ class ProjectTemplate extends React.Component {
                 marginBottom: 0,
               }}
             >
-              {post.title}
+              {project.title}
             </h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {post.abstract.abstract}
-            </p>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.content.childContentfulRichText.html }} />
+          <section dangerouslySetInnerHTML={{ __html: project.content.childContentfulRichText.html }} />
           <hr
             style={{
               marginBottom: rhythm(1),
@@ -48,15 +42,18 @@ class ProjectTemplate extends React.Component {
 export default ProjectTemplate
 
 export const pageQuery = graphql`
-  query ProjectBySlug($slug: String!) {
+  query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {
         title
+        author
       }
     }
-    contentfulProject( slug: { eq: $slug }) {
+    contentfulProject(slug: { eq: $slug }) {
       title
-      slug
+      abstract {
+        abstract
+      }
       image {
         fluid {
           src
@@ -66,9 +63,6 @@ export const pageQuery = graphql`
         childContentfulRichText {
           html
         }
-      }
-      abstract {
-        abstract
       }
     }
   }
