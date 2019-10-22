@@ -8,7 +8,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
-        allContentfulProject {
+        allContentfulProject(filter: {external: {eq: false}}) {
           edges {
             node {
               slug

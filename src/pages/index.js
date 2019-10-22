@@ -1,27 +1,51 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import styled from 'styled-components';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { rhythm } from '../utils/typography';
 
 class Projects extends React.Component {
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const projects = data.allContentfulProject.edges
+    const { data } = this.props;
+    const siteTitle = data.site.siteMetadata.title;
+    const projects = data.allContentfulProject.edges;
+
+    const Post = styled.article`
+      display: flex;
+    `;
+
+    const PostImage = styled.div`
+      flex: 25%;
+      margin-right: 1rem;
+    `;
+
+    const PostText = styled.div`
+      flex: 75%;
+    `;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Projects" />
         {projects.map(({ node }) => {
-          const title = node.title || node.slug
+          const title = node.title || node.slug;
 
           return (
-            <article key={node.id}>
-              <header>
+            <Post
+              key={node.id}
+              style={{
+                marginBottom: rhythm(1),
+              }}
+            >
+              <PostImage>
+                <Img fluid={node.image.fluid} />
+              </PostImage>
+              <PostText>
                 <h3
                   style={{
+                    marginTop: 0,
                     marginBottom: rhythm(1 / 4),
                   }}
                 >
@@ -40,19 +64,17 @@ class Projects extends React.Component {
                     </Link>
                   )}
                 </h3>
-              </header>
-              <section>
                 <p>{node.abstract.abstract}</p>
-              </section>
-            </article>
-          )
+              </PostText>
+            </Post>
+          );
         })}
       </Layout>
-    )
+    );
   }
 }
 
-export default Projects
+export default Projects;
 
 export const pageQuery = graphql`
   query {
@@ -70,7 +92,7 @@ export const pageQuery = graphql`
           slug
           image {
             fluid {
-              src
+              ...GatsbyContentfulFluid
             }
           }
           id
@@ -81,4 +103,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
