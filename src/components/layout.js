@@ -10,8 +10,6 @@ class Layout extends React.Component {
   render() {
     const { children } = this.props;
 
-    const Footer = () => <footer>Footer</footer>;
-
     return (
       <div
         style={{
@@ -23,7 +21,6 @@ class Layout extends React.Component {
       >
         <Header />
         <main>{children}</main>
-        <Footer />
       </div>
     );
   }
