@@ -14,7 +14,7 @@ class Home extends React.Component {
     return (
       <Layout location={this.props.location}>
         <SEO />
-        <ExternalLink to={routes.playground} text={playground} />
+        <ExternalLink to={routes.playground} text={playground} icon={true} />
         <Link to={routes.projects}>{projects}</Link>
         <Link to={routes.about}>{about}</Link>
       </Layout>

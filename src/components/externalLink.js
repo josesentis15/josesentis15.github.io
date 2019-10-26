@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExternalLink = ({ className, to, text }) => (
+const ExternalLink = ({ className, to, text, icon = false }) => (
   <a
     className={className}
     href={to}
@@ -8,7 +8,7 @@ const ExternalLink = ({ className, to, text }) => (
     rel="noopener noreferrer"
     style={{ boxShadow: `none` }}
   >
-    {text} External!
+    {text} {icon && 'External!'}
   </a>
 );
 
