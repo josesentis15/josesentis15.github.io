@@ -14,6 +14,7 @@ module.exports = {
       github: `https://github.com/josesentis15`,
       linkedin: `https://www.linkedin.com/in/jose-sentis-vazquez-b0915679/`,
       instagram: `https://www.instagram.com/josesentis.playground/`,
+      email: 'jose.sentis1987@gmail.com'
     },
     sections: {
       playground: 'Playground',
