@@ -6,12 +6,19 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    job: `Creative Front-End developer`,
+    name: `Jose Sentis`,
+    description: `Hi – I’m Jose, a Front-End developer based in Barcelona. I do stuff for the Internet.`,
+    siteUrl: `https://josesentis.com/`,
     social: {
-      twitter: `kylemathews`,
+      github: `https://github.com/josesentis15`,
+      linkedin: `https://www.linkedin.com/in/jose-sentis-vazquez-b0915679/`,
+      instagram: `https://www.instagram.com/josesentis.playground/`,
+    },
+    sections: {
+      playground: 'Playground',
+      projects: 'Projects',
+      about: 'About',
     },
   },
   plugins: [
@@ -79,13 +86,14 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    },{
+    },
+    {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: '80ssd6cbsstv',
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     '@contentful/gatsby-transformer-contentful-richtext',
   ],
-}
+};

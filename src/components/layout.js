@@ -1,28 +1,16 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { locationShape } from 'react-router-props';
 
-import { rhythm, scale } from '../utils/typography';
+import Header from './header';
+
+import { rhythm } from '../utils/typography';
 
 class Layout extends React.Component {
   render() {
     const { children } = this.props;
-    const rootPath = `${__PATH_PREFIX__}/`;
-    const Header = () => (
-      <header>
-        Header
-        <Link to={rootPath}>Jose Sentis</Link>
-      </header>
-    );
-    const Footer = () => <footer>Footer</footer>;
 
-    // Checks home page
-    // if (location.pathname === rootPath) {
-    //   header = (
-    //       Header
-    //   );
-    // }
+    const Footer = () => <footer>Footer</footer>;
 
     return (
       <div

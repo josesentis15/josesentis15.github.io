@@ -4,13 +4,13 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 import Layout from '../components/layout';
+import ExternalLink from '../components/externalLink';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
 
 class Projects extends React.Component {
   render() {
     const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
     const projects = data.allContentfulProject.edges;
 
     const Post = styled.article`
@@ -27,7 +27,7 @@ class Projects extends React.Component {
     `;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO title="Projects" />
         {projects.map(({ node }) => {
           const title = node.title || node.slug;
@@ -50,14 +50,7 @@ class Projects extends React.Component {
                   }}
                 >
                   {node.external ? (
-                    <a
-                      href={node.externalLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ boxShadow: `none` }}
-                    >
-                      {title} External!
-                    </a>
+                    <ExternalLink to={node.externalLink} text={title} />
                   ) : (
                     <Link style={{ boxShadow: `none` }} to={node.slug}>
                       {title}
@@ -78,11 +71,6 @@ export default Projects;
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allContentfulProject(sort: { fields: order }) {
       edges {
         node {

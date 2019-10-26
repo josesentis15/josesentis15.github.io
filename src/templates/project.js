@@ -4,15 +4,16 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+
+import routes from '../utils/routes';
 import { rhythm } from '../utils/typography';
 
 class ProjectTemplate extends React.Component {
   render() {
     const project = this.props.data.contentfulProject;
-    const siteTitle = this.props.data.site.siteMetadata.title;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO title={project.title} description={project.abstract.abstract} />
         <article>
           <header>
@@ -24,7 +25,7 @@ class ProjectTemplate extends React.Component {
             >
               {project.title}
             </h1>
-            <Link to="/projects">Back</Link>
+            <Link to={routes.projects}>Back</Link>
           </header>
           <Img fluid={project.image.fluid} />
           <section
@@ -47,12 +48,6 @@ export default ProjectTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     contentfulProject(slug: { eq: $slug }) {
       title
       abstract {

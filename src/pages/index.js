@@ -1,23 +1,22 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import styled from 'styled-components';
 
+import ExternalLink from '../components/externalLink';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { rhythm } from '../utils/typography';
+
+import routes from '../utils/routes';
 
 class Home extends React.Component {
   render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
+    const { playground, projects, about } = this.props.data.site.siteMetadata.sections;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={siteTitle} />
-        <Link to="/projects">Projects</Link>
-        <button onClick={() => {
-          alert('About!');
-        }}>About</button>
+      <Layout location={this.props.location}>
+        <SEO />
+        <ExternalLink to={routes.playground} text={playground} />
+        <Link to={routes.projects}>{projects}</Link>
+        <Link to={routes.about}>{about}</Link>
       </Layout>
     );
   }
@@ -29,7 +28,11 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
-        title
+        sections {
+          playground
+          projects
+          about
+        }
       }
     }
   }
