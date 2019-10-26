@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ExternalLink = ({ className, to, text, icon = false }) => (
   <a
@@ -11,5 +12,12 @@ const ExternalLink = ({ className, to, text, icon = false }) => (
     {text} {icon && 'External!'}
   </a>
 );
+
+ExternalLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  icon: PropTypes.bool
+};
 
 export default ExternalLink;

@@ -18,8 +18,6 @@ const Header = () => {
 
   const { job, name } = data.site.siteMetadata;
 
-  // console.log(job, name);
-
   return (
       <HeaderStyled>
         <div>
