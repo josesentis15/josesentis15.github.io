@@ -21,7 +21,10 @@ class ProjectTemplate extends React.Component {
             </h1>
             <Link to={routes.projects}>Back</Link>
           </header>
+          {project.abstract.abstract}
           <Img fluid={project.image.fluid} />
+          <br />
+          CONTENT:
           <section
             dangerouslySetInnerHTML={{
               __html: project.content.childContentfulRichText.html,
