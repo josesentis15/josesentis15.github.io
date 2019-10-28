@@ -6,7 +6,6 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 import routes from '../utils/routes';
-import { rhythm } from '../utils/typography';
 
 class ProjectTemplate extends React.Component {
   render() {
@@ -17,12 +16,7 @@ class ProjectTemplate extends React.Component {
         <SEO title={project.title} description={project.abstract.abstract} />
         <article>
           <header>
-            <h1
-              style={{
-                marginTop: rhythm(1),
-                marginBottom: 0,
-              }}
-            >
+            <h1>
               {project.title}
             </h1>
             <Link to={routes.projects}>Back</Link>
@@ -31,11 +25,6 @@ class ProjectTemplate extends React.Component {
           <section
             dangerouslySetInnerHTML={{
               __html: project.content.childContentfulRichText.html,
-            }}
-          />
-          <hr
-            style={{
-              marginBottom: rhythm(1),
             }}
           />
         </article>
@@ -47,7 +36,7 @@ class ProjectTemplate extends React.Component {
 export default ProjectTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query ProjectBySlug($slug: String!) {
     contentfulProject(slug: { eq: $slug }) {
       title
       abstract {

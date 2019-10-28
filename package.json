@@ -35,10 +35,7 @@
     "react-router-props": "^1.0.2",
     "react-typography": "^0.16.19",
     "styled-components": "^4.4.0",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75",
-    "typography": "^0.16.19",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "typography": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

@@ -3,11 +3,11 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Helvetica Neue';
-    src: url('./assets/fonts/HelveticaNeueLTStd-Lt.otf')  format('opentype'),
-    url('./assets/fonts/HelveticaNeueLTStd-Lt.woff') format('woff'),
-    url('./assets/fonts/HelveticaNeueLTStd-Lt.ttf')  format('truetype'),
-    url('./assets/fonts/HelveticaNeueLTStd-Lt.eot') format('embedded-opentype')
-    url('./assets/fonts/HelveticaNeueLTStd-Lt.svg#HelveticaNeueLTStd-Lt') format('svg');
+    src: url('./static/fonts/HelveticaNeueLTStd-Lt.otf')  format('opentype'),
+    url('./static/fonts/HelveticaNeueLTStd-Lt.woff') format('woff'),
+    url('./static/fonts/HelveticaNeueLTStd-Lt.ttf')  format('truetype'),
+    url('./static/fonts/HelveticaNeueLTStd-Lt.eot') format('embedded-opentype')
+    url('./static/fonts/HelveticaNeueLTStd-Lt.svg#HelveticaNeueLTStd-Lt') format('svg');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -15,11 +15,11 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Helvetica Neue';
-    src:  url('./assets/fonts/HelveticaNeueLTStd-Bd.otf')  format('opentype'),
-        url('./assets/fonts/HelveticaNeueLTStd-Bd.eot') format('embedded-opentype'),
-        url('./assets/fonts/HelveticaNeueLTStd-Bd.woff') format('woff'),
-      url('./assets/fonts/HelveticaNeueLTStd-Bd.ttf')  format('truetype'),
-      url('./assets/fonts/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg');
+    src:  url('./static/fonts/HelveticaNeueLTStd-Bd.otf')  format('opentype'),
+        url('./static/fonts/HelveticaNeueLTStd-Bd.eot') format('embedded-opentype'),
+        url('./static/fonts/HelveticaNeueLTStd-Bd.woff') format('woff'),
+      url('./static/fonts/HelveticaNeueLTStd-Bd.ttf')  format('truetype'),
+      url('./static/fonts/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -27,10 +27,10 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Space Mono';
-    src:  url('./assets/fonts/SpaceMono-Regular.woff') format('woff'),
-      url('./assets/fonts/SpaceMono-Regular.ttf')  format('truetype'),
-      url('./assets/fonts/SpaceMono-Regular.eot') format('embedded-opentype'),
-      url('./assets/fonts/SpaceMono-Regular.svg#SpaceMono-Regular') format('svg');
+    src:  url('./static/fonts/SpaceMono-Regular.woff') format('woff'),
+      url('./static/fonts/SpaceMono-Regular.ttf')  format('truetype'),
+      url('./static/fonts/SpaceMono-Regular.eot') format('embedded-opentype'),
+      url('./static/fonts/SpaceMono-Regular.svg#SpaceMono-Regular') format('svg');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -38,10 +38,10 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Space Mono';
-    src:  url('./assets/fonts/SpaceMono-Bold.woff') format('woff'),
-      url('./assets/fonts/SpaceMono-Bold.ttf')  format('truetype'),
-      url('./assets/fonts/SpaceMono-Bold.eot') format('embedded-opentype'),
-      url('./assets/fonts/SpaceMono-Bold.svg#SpaceMono-Bold') format('svg');
+    src:  url('./static/fonts/SpaceMono-Bold.woff') format('woff'),
+      url('./static/fonts/SpaceMono-Bold.ttf')  format('truetype'),
+      url('./static/fonts/SpaceMono-Bold.eot') format('embedded-opentype'),
+      url('./static/fonts/SpaceMono-Bold.svg#SpaceMono-Bold') format('svg');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
