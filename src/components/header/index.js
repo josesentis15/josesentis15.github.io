@@ -1,5 +1,5 @@
-import React from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import React from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 
 import HeaderStyled from './styles';
 
@@ -19,15 +19,13 @@ const Header = () => {
   const { job, name } = data.site.siteMetadata;
 
   return (
-      <HeaderStyled>
-        <div>
-          <Link to={rootPath}>{name}</Link>
-          <p>Folio - {new Date().getFullYear()}</p>
-        </div>
-        <div>
-          {job}
-        </div>
-      </HeaderStyled>
+    <HeaderStyled>
+      <div>
+        <Link to={rootPath}>{name}</Link>
+        <p>Folio - {new Date().getFullYear()}</p>
+      </div>
+      <div>{job}</div>
+    </HeaderStyled>
   );
 };
 

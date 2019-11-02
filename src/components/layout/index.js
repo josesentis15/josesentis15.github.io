@@ -8,11 +8,11 @@ import LayoutStyled from './styles';
 
 class Layout extends React.Component {
   render() {
-    const { children, title = false, reading = false } = this.props;
+    const { children, title = false, description = false, reading = false } = this.props;
 
     return (
       <LayoutStyled className={reading ? 'reading' : ''}>
-        {title ? <SEO title={title} /> : <SEO />}
+        <SEO title={title} description={description} />
         <GlobalStyle />
         <Header />
         <main>{children}</main>

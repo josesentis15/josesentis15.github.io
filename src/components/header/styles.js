@@ -1,19 +1,24 @@
 import styled from 'styled-components';
 
-import LayoutStyled from '../layout/styles';
+import { Wrapper } from '../layout/styles';
 
 import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
+import { typography } from '../../utils/settings';
 
-const HeaderStyled = styled(LayoutStyled)`
+const HeaderStyled = styled.header`
+  ${Wrapper}
+
   align-items: flex-start;
   display: flex;
+  font-family: ${typography.secondaryFontFamily.join(', ')};
   justify-content: space-between;
   padding: ${space()};
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 9;
 
   > div {
     max-width: 150px;
@@ -28,7 +33,7 @@ const HeaderStyled = styled(LayoutStyled)`
   `};
 
   ${media.min('tablet')`
-    padding: ${space(1.75)};
+    padding: ${space(1.75)} ${space(2)};
   `};
 `;
 

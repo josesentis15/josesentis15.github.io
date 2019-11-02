@@ -4,13 +4,13 @@ import { media } from '../../utils/media-queries';
 import { pixelate, space } from '../../utils/mixins';
 import { vars } from '../../utils/settings';
 
-const LayoutStyled = styled.div`
+const Wrapper = `
   margin: 0 auto;
   max-width: ${pixelate(vars.layout.maxContentWidth)};
-  padding: ${space(5)} ${space()} ${space(3)};
+  padding: 0 ${space()};
 
   ${media.min('tablet')`
-    padding: ${space(6)} ${space(2)} ${space(4)};
+    padding: 0 ${space(2)};
   `};
 
   ${media.min('maxWidth')`
@@ -18,7 +18,7 @@ const LayoutStyled = styled.div`
     padding-right: 0;
   `};
 
-  &.reader {
+  &.reading {
     max-width: ${pixelate(vars.layout.maxReadingWidth)};
 
     ${media.min('reader')`
@@ -28,4 +28,17 @@ const LayoutStyled = styled.div`
   }
 `;
 
+const LayoutStyled = styled.div`
+  ${Wrapper}
+
+  padding-bottom:  ${space(3)};
+  padding-top: ${space(5)};
+
+  ${media.min('tablet')`
+    padding-bottom:  ${space(4)};
+    padding-top: ${space(6)};
+  `};
+`;
+
 export default LayoutStyled;
+export { Wrapper };

@@ -1,8 +1,8 @@
 const typography = {
   baseFontSize: 18,
   baseLineHeight: 1.33,
-  bodyFontFamily: ['Adobe Caslon Pro', 'Georgia', 'serif'],
-  titleFontFamily: ['Avenir Next', 'Helvetica', 'sans-serif'],
+  bodyFontFamily: ['Avenir Next', 'Helvetica', 'sans-serif'],
+  secondaryFontFamily: ['Adobe Caslon Pro', 'Georgia', 'serif']
 };
 
 const colors = {
