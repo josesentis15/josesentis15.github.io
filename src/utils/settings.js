@@ -15,6 +15,7 @@ const vars = {
   layout: {
     gap: 24,
     maxContentWidth: 1440,
+    maxReadingWidth: 780
   }
 };
 

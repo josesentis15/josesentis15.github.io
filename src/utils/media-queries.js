@@ -3,11 +3,12 @@ import { css } from 'styled-components';
 import { pixelate } from './mixins';
 
 const breakpoints = {
+  phone: 480,
+  reader: 780,
+  tablet: 768,
   desktop: 992,
   desktopLarge: 1024,
-  maxWidth: 1440,
-  phone: 480,
-  tablet: 768
+  maxWidth: 1440
 };
 
 function getSizeFromBreakpoint(breakpointValue, max= false) {

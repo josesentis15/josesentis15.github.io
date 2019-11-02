@@ -1,4 +1,4 @@
-import { media, breakpoints } from '../utils/media-queries';
+import { media } from '../utils/media-queries';
 import { typography } from '../utils/settings';
 
 const typographyStyles = `
@@ -9,13 +9,9 @@ const typographyStyles = `
     font-weight: 400;
     line-height: 1;
 
-    ${media.min(breakpoints.tablet)`
+    ${media.min('tablet')`
       font-size: 165px;
     `}
-
-    @media (min-width: 768px) {
-      font-size: 165px;
-    }
   }
 `;
 

@@ -151,7 +151,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    font-size: 1rem;
     margin: 0 0 ${space()};
 
     &:last-child { margin-bottom: 0; }
