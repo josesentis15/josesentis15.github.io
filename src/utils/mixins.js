@@ -1,6 +1,6 @@
-import { font } from './settings';
+import { typography } from './settings';
 
-const space = n => `${Math.pow(font.baseSize, n) || 1}rem`;
+const space = (n = 1) => `${typography.baseLineHeight * n}rem`;
 
 const pixelate = n => `${n}px`;
 

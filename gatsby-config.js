@@ -84,13 +84,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-        omitGoogleFont: true
-      },
-    },
-    {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: '80ssd6cbsstv',

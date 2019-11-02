@@ -1,8 +1,8 @@
-const font = {
-    baseFontSize: '18px',
+const typography = {
+    baseFontSize: 18,
     baseLineHeight: 1.33,
     bodyFontFamily: ['Adobe Caslon Pro', 'Georgia', 'serif'],
-    altFontFamily: ['Avenir Next', 'Helvetica', 'sans-serif']
+    titleFontFamily: ['Avenir Next', 'Helvetica', 'sans-serif']
 }
 
 const colors = {
@@ -33,4 +33,4 @@ const vars = {
   },
 };
 
-export { colors, font, vars };
+export { colors, typography, vars };

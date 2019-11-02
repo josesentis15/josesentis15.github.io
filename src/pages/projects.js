@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 import Layout from '../components/layout';
 import ExternalLink from '../components/externalLink';
-import { rhythm } from '../utils/typography';
 
 class Projects extends React.Component {
   render() {
@@ -33,20 +32,12 @@ class Projects extends React.Component {
           return (
             <Post
               key={node.id}
-              style={{
-                marginBottom: rhythm(1),
-              }}
             >
               <PostImage>
                 <Img fluid={node.image.fluid} />
               </PostImage>
               <PostText>
-                <h3
-                  style={{
-                    marginTop: 0,
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
+                <h3>
                   {node.external ? (
                     <ExternalLink to={node.externalLink} text={title} />
                   ) : (

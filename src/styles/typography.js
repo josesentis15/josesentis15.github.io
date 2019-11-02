@@ -1,10 +1,10 @@
 import { media, breakpoints } from '../utils/media-queries';
-import { font } from '../utils/settings';
+import { typography } from '../utils/settings';
 
 const typographyStyles = `
   .title {
     display: block;
-    font-family: ${font.altFontFamily.join(', ')};
+    font-family: ${typography.titleFontFamily.join(', ')};
     font-size: 75px;
     font-weight: 400;
     line-height: 1;

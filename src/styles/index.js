@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 import { space } from '../utils/mixins';
+import { typography } from '../utils/settings';
 import colors from './colors';
 import typographyStyles from './typography';
 
@@ -9,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Avenir Next';
-    src: url('./static/fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
-        url('./static/fonts/AvenirNextLTPro-Regular.woff') format('woff');
+    src: url('./fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+        url('./fonts/AvenirNextLTPro-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -18,8 +19,8 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Avenir Next';
-    src: url('./static/fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
-        url('./static/fonts/AvenirNextLTPro-Bold.woff') format('woff');
+    src: url('./fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+        url('./fonts/AvenirNextLTPro-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -27,8 +28,8 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Adobe Caslon Pro';
-    src: url('./static/fonts/ACaslonPro-Regular.woff2') format('woff2'),
-        url('./static/fonts/ACaslonPro-Regular.woff') format('woff');
+    src: url('./fonts/ACaslonPro-Regular.woff2') format('woff2'),
+        url('./fonts/ACaslonPro-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -36,8 +37,8 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Adobe Caslon Pro';
-    src: url('./static/fonts/ACaslonPro-Bold.woff2') format('woff2'),
-        url('./static/fonts/ACaslonPro-Bold.woff') format('woff');
+    src: url('./fonts/ACaslonPro-Bold.woff2') format('woff2'),
+        url('./fonts/ACaslonPro-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -136,11 +137,14 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     color: ${colors.base};
+    font-family: ${typography.bodyFontFamily.join(', ')};
+    font-size: ${typography.baseFontSize}px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: ${space(1)};
     margin: 0;
     overflow-x: hidden;
     padding: 0;
-    font-size: 16px;
-    line-height: 24px;
   }
 
   b,
