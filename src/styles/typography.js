@@ -1,4 +1,4 @@
-import { media } from '../utils/media-queries';
+import { colors } from '../utils/settings';
 
 const typographyStyles = `
   .title {
@@ -7,9 +7,13 @@ const typographyStyles = `
     font-weight: 400;
     line-height: 1;
 
-    ${media.min('tablet')`
+    @media (min-width: 768px) {
       font-size: 165px;
-    `}
+    }
+
+    .non-touch &:hover {
+      color: ${colors.hover};
+    }
   }
 `;
 

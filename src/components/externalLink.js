@@ -7,9 +7,10 @@ const ExternalLink = ({ children, className, to, icon = false }) => (
     href={to}
     target="_blank"
     rel="noopener noreferrer"
-  >
-    {children} {icon && 'External!'}
-  </a>
+    dangerouslySetInnerHTML={{
+      __html: children,
+    }}
+  />
 );
 
 ExternalLink.propTypes = {

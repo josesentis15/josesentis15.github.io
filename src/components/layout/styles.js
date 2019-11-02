@@ -31,13 +31,19 @@ const Wrapper = `
 const LayoutStyled = styled.div`
   ${Wrapper}
 
-  padding-bottom:  ${space(3)};
+  min-height: 100vh;
+  padding-bottom: ${space(3)};
   padding-top: ${space(5)};
 
   ${media.min('tablet')`
     padding-bottom:  ${space(4)};
     padding-top: ${space(6)};
   `};
+
+  &.home {
+    display: flex;
+    padding-bottom: ${space(1)};
+  }
 `;
 
 export default LayoutStyled;

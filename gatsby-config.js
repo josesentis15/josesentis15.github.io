@@ -17,9 +17,9 @@ module.exports = {
       email: 'jose.sentis1987@gmail.com'
     },
     sections: {
-      playground: 'Playground',
-      projects: 'Projects',
-      about: 'About',
+      playground: '<span>play</span><span>ground</span>',
+      projects: 'projects',
+      about: 'about',
     },
   },
   plugins: [
