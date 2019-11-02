@@ -1,13 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 import { space } from '../utils/mixins';
-import { typography } from '../utils/settings';
-import colors from './colors';
+import { colors, typography } from '../utils/settings';
 import typographyStyles from './typography';
 
 const GlobalStyle = createGlobalStyle`
-  background: red;
-
   @font-face {
     font-family: 'Avenir Next';
     src: url('./fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
@@ -131,6 +128,7 @@ const GlobalStyle = createGlobalStyle`
 
   html,
   body {
+    background-color: ${colors.white};
     height: 100%;
     position: relative;
   }
@@ -141,7 +139,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${typography.baseFontSize}px;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: ${space(1)};
+    line-height: ${space()};
     margin: 0;
     overflow-x: hidden;
     padding: 0;
@@ -155,6 +153,8 @@ const GlobalStyle = createGlobalStyle`
   p {
     font-size: 1rem;
     margin: 0 0 ${space()};
+
+    &:last-child { margin-bottom: 0; }
   }
 
   a {

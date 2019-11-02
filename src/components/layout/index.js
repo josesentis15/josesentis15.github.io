@@ -1,25 +1,22 @@
 import React from 'react';
 
-import Header from './header';
-import GlobalStyle from '../styles';
-import SEO from './seo';
+import GlobalStyle from '../../styles';
+import Header from '../header';
+import SEO from '../seo';
+
+import LayoutStyled from './styles';
 
 class Layout extends React.Component {
   render() {
     const { children, title = false } = this.props;
 
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`
-        }}
-      >
+      <LayoutStyled>
         {title ? <SEO title={title} /> : <SEO />}
         <GlobalStyle />
         <Header />
         <main>{children}</main>
-      </div>
+      </LayoutStyled>
     );
   }
 }
