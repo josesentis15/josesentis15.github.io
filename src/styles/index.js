@@ -1,47 +1,43 @@
 import { createGlobalStyle } from 'styled-components'
 
+import { space } from '../utils/mixins';
+import colors from './colors';
+import typographyStyles from './typography';
+
 const GlobalStyle = createGlobalStyle`
+  background: red;
+
   @font-face {
-    font-family: 'Helvetica Neue';
-    src: url('./static/fonts/HelveticaNeueLTStd-Lt.otf')  format('opentype'),
-    url('./static/fonts/HelveticaNeueLTStd-Lt.woff') format('woff'),
-    url('./static/fonts/HelveticaNeueLTStd-Lt.ttf')  format('truetype'),
-    url('./static/fonts/HelveticaNeueLTStd-Lt.eot') format('embedded-opentype')
-    url('./static/fonts/HelveticaNeueLTStd-Lt.svg#HelveticaNeueLTStd-Lt') format('svg');
+    font-family: 'Avenir Next';
+    src: url('./static/fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+        url('./static/fonts/AvenirNextLTPro-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'Helvetica Neue';
-    src:  url('./static/fonts/HelveticaNeueLTStd-Bd.otf')  format('opentype'),
-        url('./static/fonts/HelveticaNeueLTStd-Bd.eot') format('embedded-opentype'),
-        url('./static/fonts/HelveticaNeueLTStd-Bd.woff') format('woff'),
-      url('./static/fonts/HelveticaNeueLTStd-Bd.ttf')  format('truetype'),
-      url('./static/fonts/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg');
+    font-family: 'Avenir Next';
+    src: url('./static/fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+        url('./static/fonts/AvenirNextLTPro-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'Space Mono';
-    src:  url('./static/fonts/SpaceMono-Regular.woff') format('woff'),
-      url('./static/fonts/SpaceMono-Regular.ttf')  format('truetype'),
-      url('./static/fonts/SpaceMono-Regular.eot') format('embedded-opentype'),
-      url('./static/fonts/SpaceMono-Regular.svg#SpaceMono-Regular') format('svg');
+    font-family: 'Adobe Caslon Pro';
+    src: url('./static/fonts/ACaslonPro-Regular.woff2') format('woff2'),
+        url('./static/fonts/ACaslonPro-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'Space Mono';
-    src:  url('./static/fonts/SpaceMono-Bold.woff') format('woff'),
-      url('./static/fonts/SpaceMono-Bold.ttf')  format('truetype'),
-      url('./static/fonts/SpaceMono-Bold.eot') format('embedded-opentype'),
-      url('./static/fonts/SpaceMono-Bold.svg#SpaceMono-Bold') format('svg');
+    font-family: 'Adobe Caslon Pro';
+    src: url('./static/fonts/ACaslonPro-Bold.woff2') format('woff2'),
+        url('./static/fonts/ACaslonPro-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -134,14 +130,12 @@ const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    background-color: #0c0421;
     height: 100%;
     position: relative;
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
   }
 
   body {
-    color: #fcf9f9;
+    color: ${colors.base};
     margin: 0;
     overflow-x: hidden;
     padding: 0;
@@ -151,63 +145,20 @@ const GlobalStyle = createGlobalStyle`
 
   b,
   strong {
-    color: #fcf9f9;
     font-weight: 700;
   }
 
   p {
     font-size: 1rem;
-    margin: 0 0 20px;
+    margin: 0 0 ${space()};
   }
 
   a {
-    color: #fcf9f9;
+    color: ${colors.base};
     text-decoration: none;
   }
 
-  @media only screen and (min-width: 480px) {
-    body {
-      font-size: calc(16px + 2 * ((100vw - 480px) / 288));
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    body {
-      font-size: 18px;
-    }
-  }
-
-  .anim{
-    opacity: 0;
-      transform: translate(0, 15px);
-      transition: all .4s ease-out;
-  }
-  .anim.animated{
-    opacity: 1;
-      transform: translate(0, 0);
-  }
-
-  .container {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1440px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 1440px) {
-    .container {
-      padding: 0;
-    }
-  }
+  ${typographyStyles}
 `;
 
 export default GlobalStyle;

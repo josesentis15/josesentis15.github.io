@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 import Layout from '../components/layout';
 import ExternalLink from '../components/externalLink';
-import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
 
 class Projects extends React.Component {
@@ -27,8 +26,7 @@ class Projects extends React.Component {
     `;
 
     return (
-      <Layout location={this.props.location}>
-        <SEO title="Projects" />
+      <Layout location={this.props.location} title="Projects">
         {projects.map(({ node }) => {
           const title = node.title || node.slug;
 

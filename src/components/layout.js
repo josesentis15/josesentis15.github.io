@@ -1,14 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { locationShape } from 'react-router-props';
 
 import Header from './header';
+import GlobalStyle from '../styles';
+import SEO from './seo';
 
 import { rhythm } from '../utils/typography';
 
 class Layout extends React.Component {
   render() {
-    const { children } = this.props;
+    const { children, title = false } = this.props;
 
     return (
       <div
@@ -19,16 +19,13 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
+        {title ? <SEO title={title} /> : <SEO />}
+        <GlobalStyle />
         <Header />
         <main>{children}</main>
       </div>
     );
   }
 }
-
-Layout.propTypes = {
-  location: locationShape.isRequired,
-  title: PropTypes.string.isRequired,
-};
 
 export default Layout;

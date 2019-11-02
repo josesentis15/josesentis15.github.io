@@ -1,10 +1,11 @@
 import Typography from 'typography';
 
+import { font } from './settings';
+
 const typography = new Typography({
-  baseFontSize: '18px',
-  baseLineHeight: 1.33,
-  bodyFontFamily: ['Avenir Next', 'Georgia', 'serif'],
-  // See below for the full list of options.
+  baseFontSize: font.baseFontSize,
+  baseLineHeight: font.baseLineHeight,
+  bodyFontFamily: font.bodyFontFamily
 });
 
 // Hot reload typography in development.

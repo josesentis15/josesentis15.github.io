@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby';
 
 import ExternalLink from '../components/externalLink';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
 
 import routes from '../utils/routes';
 
@@ -13,10 +12,9 @@ class Home extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO />
-        <ExternalLink to={routes.playground} text={playground} icon={true} />
-        <Link to={routes.projects}>{projects}</Link>
-        <Link to={routes.about}>{about}</Link>
+        <ExternalLink to={routes.playground} className="title" icon={true}>{playground}</ExternalLink>
+        <Link to={routes.projects} className="title" >{projects}</Link>
+        <Link to={routes.about} className="title" >{about}</Link>
       </Layout>
     );
   }
