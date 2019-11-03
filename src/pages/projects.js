@@ -1,56 +1,70 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import styled from 'styled-components';
+// import Img from 'gatsby-image';
 
-import Layout from '../components/layout';
+import Layout, { Wrapper } from '../components/layout';
 import ExternalLink from '../components/externalLink';
+import ProjectList from '../components/projectsList';
+import Navigation from '../styles/navigation';
 
 class Projects extends React.Component {
+  state = {
+    hover: false
+  }
+
+  onMouseOver = e => {
+    this.setState({ hover: false });
+    e.currentTarget.classList.add('hover');
+  }
+
+  onMouseOut = e => {
+    this.setState({ hover: false });
+    e.currentTarget.classList.remove('hover');
+  }
+
   render() {
     const { data } = this.props;
+    const { hover } = this.state;
     const projects = data.allContentfulProject.edges;
-
-    const Post = styled.article`
-      display: flex;
-    `;
-
-    const PostImage = styled.div`
-      flex: 25%;
-      margin-right: 1rem;
-    `;
-
-    const PostText = styled.div`
-      flex: 75%;
-    `;
+    const title = data.site.siteMetadata.sections.projects;
 
     return (
-      <Layout location={this.props.location} title="Projects">
-        {projects.map(({ node }) => {
-          const title = node.title || node.slug;
+      <Layout location={this.props.location} title="Projects" className="dark">
+        <Wrapper>
+          <Navigation>
+            <h1 className="title">{title}</h1>
+          </Navigation>
+        </Wrapper>
+        <Wrapper className="reading">
+          <ProjectList>
+            {projects.map(({ node }) => {
+              const title = node.title || node.slug;
+              const { order } = node;
 
-          return (
-            <Post
-              key={node.id}
-            >
-              <PostImage>
-                <Img fluid={node.image.fluid} />
-              </PostImage>
-              <PostText>
-                <h3>
+              const className = `project ${hover ? 'no-hover' : ''}`;
+
+              return (
+                <div
+                  key={node.id}
+                  className={className}
+                  onMouseEnter={this.onMouseOver}
+                  onMouseLeave={this.onMouseOut}
+                >
+                  <h2 className="project__title title2">
+                    <span className="label">{order.toString().length === 1 ? '0' : ''}{order}.</span>
+                    {title}
+                  </h2>
+                  <p className="project__text">{node.abstract.abstract}</p>
                   {node.external ? (
-                    <ExternalLink to={node.externalLink} text={title} />
+                    <ExternalLink to={node.externalLink}>Go to site</ExternalLink>
                   ) : (
-                    <Link style={{ boxShadow: `none` }} to={node.slug}>
-                      {title}
-                    </Link>
+                    <Link to={node.slug}>View project</Link>
                   )}
-                </h3>
-                <p>{node.abstract.abstract}</p>
-              </PostText>
-            </Post>
-          );
-        })}
+                </div>
+              );
+            })}
+          </ProjectList>
+        </Wrapper>
       </Layout>
     );
   }
@@ -60,6 +74,13 @@ export default Projects;
 
 export const pageQuery = graphql`
   query {
+    site {
+      siteMetadata {
+        sections {
+          projects
+        }
+      }
+    }
     allContentfulProject(sort: { fields: order }) {
       edges {
         node {
@@ -73,6 +94,7 @@ export const pageQuery = graphql`
             }
           }
           id
+          order
           abstract {
             abstract
           }
@@ -81,3 +103,7 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+//       <PostImage>
+//         <Img fluid={node.image.fluid} />
+//       </PostImage>

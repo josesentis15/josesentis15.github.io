@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 import { media } from '../../utils/media-queries';
 import { pixelate, space } from '../../utils/mixins';
-import { vars } from '../../utils/settings';
+import { colors, vars } from '../../utils/settings';
 
-const Wrapper = `
+const Wrapper = styled.div`
   margin: 0 auto;
   max-width: ${pixelate(vars.layout.maxContentWidth)};
   padding: 0 ${space()};
@@ -29,8 +29,6 @@ const Wrapper = `
 `;
 
 const LayoutStyled = styled.div`
-  ${Wrapper}
-
   min-height: 100vh;
   padding-bottom: ${space(3)};
   padding-top: ${space(5)};
@@ -43,6 +41,13 @@ const LayoutStyled = styled.div`
   &.home {
     display: flex;
     padding-bottom: ${space(1)};
+  }
+
+  &.dark {
+    background-color: ${colors.base500};
+    color: ${colors.white};
+
+    a { color: ${colors.white}; }
   }
 `;
 

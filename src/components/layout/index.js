@@ -4,8 +4,7 @@ import GlobalStyle from '../../styles';
 import Header from '../header';
 import SEO from '../seo';
 
-import LayoutStyled from './styles';
-
+import LayoutStyled, { Wrapper } from './styles';
 
 class Layout extends React.Component {
   componentDidMount() {
@@ -40,3 +39,4 @@ class Layout extends React.Component {
 }
 
 export default Layout;
+export { Wrapper };

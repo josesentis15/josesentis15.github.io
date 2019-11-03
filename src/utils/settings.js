@@ -6,7 +6,8 @@ const typography = {
 };
 
 const colors = {
-  base: '#191919',
+  base300: '#4B4B4B',
+  base500: '#191919',
   hover: '#3cea43',
   white: '#ffffff',
 };

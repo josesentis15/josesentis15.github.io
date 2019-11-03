@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../../components/layout';
+import Layout, { Wrapper } from '../../components/layout';
 import ProjectDetail, { Wysiwyg } from './styles';
 
 import routes from '../../utils/routes';
@@ -16,23 +16,25 @@ class ProjectTemplate extends React.Component {
         title={project.title}
         description={project.abstract.abstract}
       >
-        <ProjectDetail>
-          <header>
-            <h1>
-              {project.order.toString().length === 1 ? '0' : ''}
-              {project.order}. {project.title}
-            </h1>
-            <Link to={routes.projects} className="backBtn">Back</Link>
-          </header>
-          <Wysiwyg className="reading">
-            <p>{project.abstract.abstract}</p>
-            <section
-              dangerouslySetInnerHTML={{
-                __html: project.content.childContentfulRichText.html,
-              }}
-            />
-          </Wysiwyg>
-        </ProjectDetail>
+        <Wrapper className="reading">
+          <ProjectDetail>
+            <header>
+              <h1 className="title2">
+                <span className="label">{project.order.toString().length === 1 ? '0' : ''}{project.order}.</span>
+                {project.title}
+              </h1>
+              <Link to={routes.projects} className="backBtn">Back</Link>
+            </header>
+            <Wysiwyg>
+              <p>{project.abstract.abstract}</p>
+              <section
+                dangerouslySetInnerHTML={{
+                  __html: project.content.childContentfulRichText.html,
+                }}
+              />
+            </Wysiwyg>
+          </ProjectDetail>
+        </Wrapper>
       </Layout>
     );
   }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 
+import { Wrapper } from '../layout';
+
 import HeaderStyled from './styles';
 
 const Header = () => {
@@ -20,11 +22,17 @@ const Header = () => {
 
   return (
     <HeaderStyled>
-      <div>
-        <Link to={rootPath}>{name}</Link>
-        <p>Folio - {new Date().getFullYear()}</p>
-      </div>
-      <div>{job}</div>
+      <Wrapper>
+        <div className="header">
+          <div>
+            <Link to={rootPath}>
+              <span>{name}</span>
+              <span>Folio - {new Date().getFullYear()}</span>
+            </Link>
+          </div>
+          <div>{job}</div>
+        </div>
+      </Wrapper>
     </HeaderStyled>
   );
 };

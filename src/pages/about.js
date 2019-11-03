@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import ExternalLink from '../components/externalLink';
-import Layout from '../components/layout';
+import Layout, { Wrapper } from '../components/layout';
 import SEO from '../components/seo';
 
 class Home extends React.Component {
@@ -18,22 +18,24 @@ class Home extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO />
-        <div>
-          <Img fluid={page.image.fluid} />
+        <Wrapper>
+          <SEO />
           <div>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: page.content.childContentfulRichText.html.replace('%link', email),
-              }}
-            />
+            <Img fluid={page.image.fluid} />
             <div>
-              <ExternalLink to={github} text="GitHub" />
-              <ExternalLink to={linkedin} text="Linkedin" />
-              <ExternalLink to={instagram} text="Instagram" />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: page.content.childContentfulRichText.html.replace('%link', email),
+                }}
+              />
+              <div>
+                <ExternalLink to={github} text="GitHub" />
+                <ExternalLink to={linkedin} text="Linkedin" />
+                <ExternalLink to={instagram} text="Instagram" />
+              </div>
             </div>
           </div>
-        </div>
+        </Wrapper>
       </Layout>
     );
   }

@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { Wrapper } from '../../components/layout/styles';
-
 import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
@@ -17,8 +15,6 @@ const ProjectDetail = styled.article`
 `;
 
 const Wysiwyg = styled.div`
-  ${Wrapper}
-
   p {
     max-width: 580px;
     margin: ${space(3)} auto;

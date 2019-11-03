@@ -134,7 +134,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    color: ${colors.base};
+    color: ${colors.base500};
     font-family: ${typography.bodyFontFamily.join(', ')};
     font-size: ${typography.baseFontSize}px;
     font-weight: 400;
@@ -157,7 +157,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${colors.base};
+    color: ${colors.base500};
     text-decoration: none;
   }
 
