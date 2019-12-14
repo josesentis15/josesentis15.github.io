@@ -1,0 +1,24 @@
+
+{
+    "esade-exed": [
+      {
+        "type": "image",
+        "src": "/img/cases/esade-img-1.jpg"
+      }, {
+        "type": "image",
+        "src": "/img/cases/esade-img-5.jpg"
+      }
+    ],
+    "vc-community": [
+      {
+        "type": "image",
+        "src": "/img/cases/innoenergy-img-1.jpg"
+      }, {
+        "type": "text",
+        "text": "The Styleguide in this case was very strict as it had to be approved by an European Community body. Thus, with little room for maneuver, we could add to the titillium a more geometric typography and make it even easier for the user to read. We chose Nunito Sans."
+      }, {
+        "type": "image",
+        "src": "/img/cases/innoenergy-img-6.jpg"
+      }
+    ]
+}

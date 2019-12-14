@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
+import Component from '../../components/component';
 import Layout, { Wrapper } from '../../components/layout';
-import ProjectDetail, { Wysiwyg } from './styles';
+import ProjectDetail from './styles';
 
+import DATA from '../../../content/content.json';
 import routes from '../../utils/routes';
 
 class ProjectTemplate extends React.Component {
@@ -20,19 +22,19 @@ class ProjectTemplate extends React.Component {
           <ProjectDetail>
             <header>
               <h1 className="title2">
-                <span className="label">{project.order.toString().length === 1 ? '0' : ''}{project.order}.</span>
+                <span className="label">
+                  {project.order.toString().length === 1 ? '0' : ''}
+                  {project.order}.
+                </span>
                 {project.title}
               </h1>
-              <Link to={routes.projects} className="backBtn">Back</Link>
+              <Link to={routes.projects} className="backBtn">
+                Back
+              </Link>
             </header>
-            <Wysiwyg>
-              <p>{project.abstract.abstract}</p>
-              <section
-                dangerouslySetInnerHTML={{
-                  __html: project.content.childContentfulRichText.html,
-                }}
-              />
-            </Wysiwyg>
+            {DATA[project.slug].map((data, index) => (
+              <Component data={data} key={`component_${index}`} />
+            ))}
           </ProjectDetail>
         </Wrapper>
       </Layout>
@@ -46,17 +48,13 @@ export const pageQuery = graphql`
   query ProjectBySlug($slug: String!) {
     contentfulProject(slug: { eq: $slug }) {
       title
+      slug
       abstract {
         abstract
       }
       image {
         fluid {
           ...GatsbyContentfulFluid
-        }
-      }
-      content {
-        childContentfulRichText {
-          html
         }
       }
       order
