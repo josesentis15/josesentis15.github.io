@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   max-width: ${pixelate(vars.layout.maxContentWidth)};
   padding: 0 ${space()};
+  width: 100%;
 
   ${media.min('tablet')`
     padding: 0 ${space(2)};
@@ -29,15 +30,6 @@ const Wrapper = styled.div`
 `;
 
 const LayoutStyled = styled.div`
-  min-height: 100vh;
-  padding-bottom: ${space(3)};
-  padding-top: ${space(5)};
-
-  ${media.min('tablet')`
-    padding-bottom:  ${space(4)};
-    padding-top: ${space(6)};
-  `};
-
   &.home {
     display: flex;
     padding-bottom: ${space(1)};
@@ -47,7 +39,36 @@ const LayoutStyled = styled.div`
     background-color: ${colors.base500};
     color: ${colors.white};
 
-    a { color: ${colors.white}; }
+    a {
+      color: ${colors.white};
+    }
+  }
+
+  main {
+    padding-bottom: ${space()};
+    padding-top: ${space(5)};
+
+    ${media.min('tablet')`
+      padding-bottom:  ${space(4)};
+      padding-top: ${space(6)};
+    `}
+  }
+
+  &.layout-bottom main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+
+    ${media.min('tablet')`
+      min-height: 100vh;
+      padding-bottom: ${space(2)};
+      padding-top: ${space(6)};
+    `}
+
+    ${media.min('desktop')`
+      padding-bottom: ${space(4)};
+    `}
   }
 `;
 

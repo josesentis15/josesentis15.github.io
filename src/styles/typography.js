@@ -13,6 +13,10 @@ const typographyStyles = `
     font-size: 75px;
 
     @media (min-width: 768px) {
+      font-size: 125px;
+    }
+
+    @media (min-width: 1024px) {
       font-size: 165px;
     }
   }
@@ -27,12 +31,12 @@ const typographyStyles = `
 
   .label {
     font-size: ${pixelate(typography.baseFontSize)};
-    margin-right: ${space(.25)};
+    margin-right: ${space(0.25)};
   }
 
   .link {
     .non-touch &:hover {
-      color: ${colors.hover};
+      color: ${colors.primary};
     }
   }
 `;

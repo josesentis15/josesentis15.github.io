@@ -1,8 +1,9 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 import { space } from '../utils/mixins';
 import { colors, typography } from '../utils/settings';
 import typographyStyles from './typography';
+import utils from './utils';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -162,6 +163,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ${typographyStyles}
+  ${utils}
 `;
 
 export default GlobalStyle;

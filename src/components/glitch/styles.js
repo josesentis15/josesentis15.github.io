@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
-// import { colors } from '../utils/settings';
+import { colors } from '../../utils/settings';
+import { space } from '../../utils/mixins';
 
 const glitchTop = keyframes`
   2%, 64% {
@@ -51,6 +52,8 @@ const glitchFront = keyframes`
 `;
 
 const Glitch = styled.div`
+  font-weight: 700;
+  margin-bottom: ${space()};
   position: relative;
 
   .text {
@@ -69,20 +72,20 @@ const Glitch = styled.div`
     }
 
     &:before,
-    &:after{
+    &:after {
       content: attr(data-title);
       position: absolute;
       left: 0;
       z-index: 0;
     }
 
-    &:before{
-      color: #3CEA43;
+    &:before {
+      color: ${colors.primary};
       animation: ${glitchBack} 1.5s linear infinite;
     }
 
-    &:after{
-      color: #F742F2;
+    &:after {
+      color: ${colors.secondary};
       animation: ${glitchFront} 1.5s linear infinite;
     }
   }

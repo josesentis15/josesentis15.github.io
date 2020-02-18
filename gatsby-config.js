@@ -14,7 +14,7 @@ module.exports = {
       github: `https://github.com/josesentis15`,
       linkedin: `https://www.linkedin.com/in/jose-sentis-vazquez-b0915679/`,
       instagram: `https://www.instagram.com/josesentis.playground/`,
-      email: 'jose.sentis1987@gmail.com'
+      email: 'jose.sentis1987@gmail.com',
     },
     sections: {
       playground: '<span>play</span><span>ground</span>',
@@ -83,6 +83,7 @@ module.exports = {
     // },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-remove-trailing-slashes`,
     {
       resolve: 'gatsby-source-contentful',
       options: {

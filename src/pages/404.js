@@ -11,12 +11,18 @@ class NotFoundPage extends React.Component {
     const text = 'Error 404';
 
     return (
-      <Layout location={this.props.location} title="404: Not Found">
+      <Layout
+        className="layout-bottom"
+        location={this.props.location}
+        title="404: Not Found"
+      >
         <Wrapper>
           <h1 className="title">
+            <Glitch className="u-hide--s768" text={text} />
+            <Glitch className="u-hide--s768" text={text} />
             <Glitch text={text} />
           </h1>
-          <Link to={routes.home}>Back</Link>
+          <Link to={routes.home}>Get back</Link>
         </Wrapper>
       </Layout>
     );

@@ -18,7 +18,7 @@ const HeaderStyled = styled.header`
     display: flex;
     font-family: ${typography.secondaryFontFamily.join(', ')};
     justify-content: space-between;
-    padding: ${space()};
+    padding: ${space()} 0;
 
     > div {
       max-width: 150px;
@@ -27,7 +27,9 @@ const HeaderStyled = styled.header`
     a {
       color: ${colors.base500};
 
-      span { display: block; }
+      span {
+        display: block;
+      }
     }
 
     ${media.min('phone')`
@@ -39,7 +41,7 @@ const HeaderStyled = styled.header`
     `};
 
     ${media.min('tablet')`
-      padding: ${space(1.75)} ${space(2)};
+      padding: ${space(1.75)} 0;
     `};
   }
 `;

@@ -1,17 +1,16 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components';
 
-import { pixelate } from './mixins';
+import { pixelate } from './mixins';
 
 const breakpoints = {
   phone: 480,
   reader: 780,
   tablet: 768,
-  desktop: 992,
-  desktopLarge: 1024,
-  maxWidth: 1440
+  desktop: 1024,
+  maxWidth: 1440,
 };
 
-function getSizeFromBreakpoint(breakpointValue, max= false) {
+function getSizeFromBreakpoint(breakpointValue, max = false) {
   let mq;
   if (breakpoints[breakpointValue]) {
     mq = max ? breakpoints[breakpointValue] - 1 : breakpoints[breakpointValue];
@@ -26,21 +25,19 @@ function getSizeFromBreakpoint(breakpointValue, max= false) {
 }
 
 export function generateMedia() {
-  const max = (breakpoint) => (...args) => css`
+  const max = breakpoint => (...args) => css`
     @media (max-width: ${getSizeFromBreakpoint(breakpoint, true)}) {
       ${css.call(null, ...args)};
     }
   `;
 
-  const min = (breakpoint) => (...args) => css`
+  const min = breakpoint => (...args) => css`
     @media (min-width: ${getSizeFromBreakpoint(breakpoint)}) {
       ${css.call(null, ...args)};
     }
   `;
 
-  const between = (firstBreakpoint, secondBreakpoint) => (
-    ...args
-  ) => css`
+  const between = (firstBreakpoint, secondBreakpoint) => (...args) => css`
     @media (min-width: ${getSizeFromBreakpoint(
         firstBreakpoint
       )}) and (max-width: ${getSizeFromBreakpoint(secondBreakpoint, true)}) {
@@ -51,7 +48,7 @@ export function generateMedia() {
   return {
     between,
     max,
-    min
+    min,
   };
 }
 
