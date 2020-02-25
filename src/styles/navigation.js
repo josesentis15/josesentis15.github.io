@@ -8,15 +8,16 @@ const Navigation = styled.div`
   display: flex;
   height: 100%;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
 
   .title {
-    margin: 0 0 ${space()};
+    margin-bottom: ${space(3)};
+    margin-left: -15px;
 
     &:last-child { margin-bottom: 0; }
   }
 
-  ${media.max('tablet')`
+  ${media.max('desktop')`
     .title span { display: block; }
   `}
 `;

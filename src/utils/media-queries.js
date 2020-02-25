@@ -7,6 +7,7 @@ const breakpoints = {
   reader: 780,
   tablet: 768,
   desktop: 1024,
+  desktopLarge: 1280,
   maxWidth: 1440,
 };
 

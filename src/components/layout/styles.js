@@ -5,6 +5,7 @@ import { pixelate, space } from '../../utils/mixins';
 import { colors, vars } from '../../utils/settings';
 
 const Wrapper = styled.div`
+  height: 100%;
   margin: 0 auto;
   max-width: ${pixelate(vars.layout.maxContentWidth)};
   padding: 0 ${space()};
@@ -12,11 +13,6 @@ const Wrapper = styled.div`
 
   ${media.min('tablet')`
     padding: 0 ${space(2)};
-  `};
-
-  ${media.min('maxWidth')`
-    padding-left: 0;
-    padding-right: 0;
   `};
 
   &.reading {
@@ -32,7 +28,16 @@ const Wrapper = styled.div`
 const LayoutStyled = styled.div`
   &.home {
     display: flex;
-    padding-bottom: ${space(1)};
+
+    main { padding-top: ${space(6)}; }
+
+    ${media.between('tablet', 'desktop')`
+      main { padding-top: ${space(7)}; }
+    `}
+
+    ${media.min('desktop')`
+      main { padding-bottom: ${space()}; }
+    `}
   }
 
   &.dark {
@@ -45,20 +50,12 @@ const LayoutStyled = styled.div`
   }
 
   main {
-    padding-bottom: ${space()};
-    padding-top: ${space(5)};
-
-    ${media.min('tablet')`
-      padding-bottom:  ${space(4)};
-      padding-top: ${space(6)};
-    `}
-  }
-
-  &.layout-bottom main {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     min-height: 100vh;
+    padding-bottom: ${space()};
+    padding-top: ${space(5)};
+    width: 100%;
 
     ${media.min('tablet')`
       min-height: 100vh;
@@ -70,6 +67,8 @@ const LayoutStyled = styled.div`
       padding-bottom: ${space(4)};
     `}
   }
+
+  &.layout-bottom main { justify-content: flex-end; }
 `;
 
 export default LayoutStyled;
