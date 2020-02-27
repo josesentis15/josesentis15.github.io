@@ -29,18 +29,12 @@ const LayoutStyled = styled.div`
   &.home {
     display: flex;
 
-    main { padding-top: ${space(6)}; }
-
-    ${media.between('tablet', 'desktop')`
-      main { padding-top: ${space(7)}; }
-    `}
-
     ${media.min('desktop')`
       main { padding-bottom: ${space()}; }
     `}
   }
 
-  &.dark {
+  &.dark main {
     background-color: ${colors.base500};
     color: ${colors.white};
 
@@ -54,13 +48,16 @@ const LayoutStyled = styled.div`
     flex-direction: column;
     min-height: 100vh;
     padding-bottom: ${space()};
-    padding-top: ${space(5)};
+    padding-top: ${space(6)};
     width: 100%;
 
     ${media.min('tablet')`
       min-height: 100vh;
       padding-bottom: ${space(2)};
-      padding-top: ${space(6)};
+    `}
+
+    ${media.between('tablet', 'desktop')`
+      main { padding-top: ${space(7)}; }
     `}
 
     ${media.min('desktop')`

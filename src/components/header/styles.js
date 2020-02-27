@@ -41,7 +41,7 @@ const HeaderStyled = styled.header`
     `};
 
     ${media.min('tablet')`
-      padding: ${space(1.75)} 0;
+      padding: ${space(1.5)} 0;
     `};
   }
 `;
