@@ -1,15 +1,21 @@
 import React from 'react';
 
 import { Wysiwyg } from '../styles';
-import ImageStyled from './styles';
 
-/**
- * TODO: Lazyload
-*/
-const Image = src => (
-  <Wysiwyg>
-    <ImageStyled style={`background-image: url(${src});`} />
-  </Wysiwyg>
-);
+class Image extends React.Component {
+  componentDidMount() {}
+
+  render() {
+    const {
+      data: { src }
+    } = this.props;
+
+    return (
+      <Wysiwyg>
+        <img src={src} alt="Supporting the current project" />
+      </Wysiwyg>
+    );
+  }
+}
 
 export default Image;

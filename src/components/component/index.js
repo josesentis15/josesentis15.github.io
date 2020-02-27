@@ -1,15 +1,28 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
-import { Wysiwyg } from './styles';
+import Image from './image';
+import Text from './text';
 
-const Component = data => {
-  const content =
-    data.data.type === 'image'
-      ? data.data.src
-      : data.data.type === 'text'
-      ? data.data.text : '';
+class Component extends React.Component {
+  render() {
+    const {
+      data: { type }
+    } = this.props;
 
-  return <Wysiwyg><p>{content}</p></Wysiwyg>;
-};
+    const componentType = {
+      image: Image,
+      text: Text
+    };
+
+    const Component = componentType[type];
+
+    return (
+      <LazyLoad>
+        <Component {...this.props} />
+      </LazyLoad>
+    );
+  }
+}
 
 export default Component;

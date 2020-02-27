@@ -2,10 +2,18 @@ import React from 'react';
 
 import { Wysiwyg } from '../styles';
 
-const Text = text => (
-  <Wysiwyg>
-    <p>{text}</p>
-  </Wysiwyg>
-);
+class Text extends React.Component {
+  render() {
+    const {
+      data: { text },
+    } = this.props;
+
+    return (
+      <Wysiwyg>
+        <p>{text}</p>
+      </Wysiwyg>
+    );
+  }
+}
 
 export default Text;
