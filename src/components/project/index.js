@@ -17,8 +17,8 @@ const Project = ({ project, hover, onMouseOver, onMouseOut }) => {
   return (
     <ProjectStyled
       className={className}
-      onMouseEnter={e => onMouseOver(e)}
-      onMouseLeave={e => onMouseOut(e)}
+      // onMouseEnter={e => onMouseOver(e)}
+      // onMouseLeave={e => onMouseOut(e)}
     >
       <h2 className="project__title title2">
         <span className="label">

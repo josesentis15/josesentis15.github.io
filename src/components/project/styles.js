@@ -10,8 +10,12 @@ const ProjectStyled = styled.div`
   margin-bottom: ${space(3)};
   padding-left: ${space(1.5)};
 
-  &.no-hover { color: ${colors.base300}; }
-  &.hover { color: ${colors.white}; }
+  &.no-hover {
+    color: ${colors.base300};
+  }
+  &.hover {
+    color: ${colors.white};
+  }
 
   .project {
     &__title {
@@ -26,7 +30,9 @@ const ProjectStyled = styled.div`
     }
   }
 
-  a { text-decoration: underline; }
+  a {
+    text-decoration: underline;
+  }
 
   .label {
     left: 0;
@@ -38,11 +44,9 @@ const ProjectStyled = styled.div`
     margin-bottom: ${space(4)};
 
     .label {
-      bottom: ${space(.30)};
+      bottom: ${space(0.3)};
     }
-  `}
 
-  ${media.min('desktop')`
     .project__text {
       column-count: 2;
       column-gap: ${space(2)};
