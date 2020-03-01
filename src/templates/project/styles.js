@@ -23,6 +23,16 @@ const ProjectDetail = styled.article`
     .background-wrapper {
       padding-top: ${space(5)};
     }
+
+    .title2 {
+      margin-left: -${space(1.5)};
+    }
+  `}
+
+  ${media.min('desktopLarge')`
+    .title2 {
+      margin-left: -${space(5)};
+    }
   `}
 `;
 

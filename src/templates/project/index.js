@@ -22,22 +22,20 @@ class ProjectTemplate extends React.Component {
       >
         <Wrapper>
           <Navigation>
-            <h1 className="title">{title}</h1>
+            <div className="title">{title}</div>
           </Navigation>
         </Wrapper>
         <ProjectDetail id="project-detail">
           <Wrapper>
             <div className="background-wrapper">
               <Wrapper className="reading">
-                  <header>
-                    <h1 className="title2">
-                      <span className="label">
-                        {project.order.toString().length === 1 ? '0' : ''}
-                        {project.order}.
-                      </span>
-                      {project.title}
-                    </h1>
-                  </header>
+                  <h1 className="title2">
+                    <span className="label">
+                      {project.order.toString().length === 1 ? '0' : ''}
+                      {project.order}.
+                    </span>
+                    {project.title}
+                  </h1>
                   {DATA[project.slug].map((data, index) => (
                     <Component data={data} key={`component_${index}`} />
                   ))}
