@@ -30,6 +30,10 @@ const Wysiwyg = styled.div`
   ${media.min('tablet')`
     margin: ${space(4)} auto;
   `};
+
+  ${media.min('desktop')`
+    margin: ${space(6)} auto;
+  `}
 `;
 
 export { Wysiwyg };

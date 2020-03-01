@@ -1,18 +1,29 @@
 import styled from 'styled-components';
 
+import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
+import { colors } from '../../utils/settings';
 
 const ProjectDetail = styled.article`
-  margin-top: ${space(4)};
+  background-image: linear-gradient(90deg, ${colors.base500} 50%, ${colors.base100} 50%);
+  margin-top: ${space()};
 
-  .backBtn {
-    position: fixed;
-    left: ${space(-0.5)};
-    top: 50%;
-    padding: ${space()};
-    transform: rotate(-90deg) translateY(-50%);
-    transform-origin: top;
+  > div { padding: 0; }
+
+  .background-wrapper {
+    background-color: ${colors.base100};
+    color: ${colors.base500};
+    margin: 0 calc(100% / 12);
+    padding: ${space(3)} ${space()};
+
+    .reading { padding: 0; }
   }
+
+  ${media.min('desktop')`
+    .background-wrapper {
+      padding-top: ${space(5)};
+    }
+  `}
 `;
 
 export default ProjectDetail;

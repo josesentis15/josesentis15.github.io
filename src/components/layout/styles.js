@@ -37,6 +37,7 @@ const LayoutStyled = styled.div`
   &.dark main {
     background-color: ${colors.base500};
     color: ${colors.white};
+    padding-bottom: 0;
 
     a {
       color: ${colors.white};

@@ -6,7 +6,8 @@ const typography = {
 };
 
 const colors = {
-  base300: '#4B4B4B',
+  base100: '#f5f5f5',
+  base300: '#4b4b4b',
   base500: '#191919',
   white: '#ffffff',
   primary: '#3cea43',

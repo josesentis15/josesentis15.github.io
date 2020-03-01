@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Component from '../../components/component';
 import Layout, { Wrapper } from '../../components/layout';
@@ -7,7 +7,6 @@ import Navigation from '../../styles/navigation';
 import ProjectDetail from './styles';
 
 import DATA from '../../../content/content.json';
-import routes from '../../utils/routes';
 
 class ProjectTemplate extends React.Component {
   render() {
@@ -26,55 +25,28 @@ class ProjectTemplate extends React.Component {
             <h1 className="title">{title}</h1>
           </Navigation>
         </Wrapper>
-        <Wrapper className="reading">
-          <ProjectDetail>
-            <header>
-              <h1 className="title2">
-                <span className="label">
-                  {project.order.toString().length === 1 ? '0' : ''}
-                  {project.order}.
-                </span>
-                {project.title}
-              </h1>
-              <Link to={routes.projects} className="backBtn">
-                Back
-              </Link>
-            </header>
-            {DATA[project.slug].map((data, index) => (
-              <Component data={data} key={`component_${index}`} />
-            ))}
-          </ProjectDetail>
-        </Wrapper>
+        <ProjectDetail id="project-detail">
+          <Wrapper>
+            <div className="background-wrapper">
+              <Wrapper className="reading">
+                  <header>
+                    <h1 className="title2">
+                      <span className="label">
+                        {project.order.toString().length === 1 ? '0' : ''}
+                        {project.order}.
+                      </span>
+                      {project.title}
+                    </h1>
+                  </header>
+                  {DATA[project.slug].map((data, index) => (
+                    <Component data={data} key={`component_${index}`} />
+                  ))}
+              </Wrapper>
+            </div>
+          </Wrapper>
+        </ProjectDetail>
       </Layout>
     );
-
-    // return (
-    //   <Layout
-    //     location={this.props.location}
-    //     title={project.title}
-    //     description={project.abstract.abstract}
-    //   >
-    //     <Wrapper className="reading">
-    //       <ProjectDetail>
-    //         <header>
-    //           <h1 className="title2">
-    //             <span className="label">
-    //               {project.order.toString().length === 1 ? '0' : ''}
-    //               {project.order}.
-    //             </span>
-    //             {project.title}
-    //           </h1>
-    //           <Link to={routes.projects} className="backBtn">
-    //             Back
-    //           </Link>
-    //         </header>
-    //         {DATA[project.slug].map((data, index) => (
-    //           <Component data={data} key={`component_${index}`} />
-    //         ))}
-    //       </ProjectDetail>
-    //     </Wrapper>
-    //   </Layout>
-    // );
   }
 }
 
