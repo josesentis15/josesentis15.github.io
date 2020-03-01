@@ -17,7 +17,8 @@ const Wysiwyg = styled.div`
     }
   }
 
-  img {
+  img,
+  video {
     width: 100%;
     max-width: 780px;
   }

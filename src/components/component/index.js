@@ -3,6 +3,7 @@ import LazyLoad from 'react-lazyload';
 
 import Image from './image';
 import Text from './text';
+import Video from './video';
 
 class Component extends React.Component {
   render() {
@@ -12,7 +13,8 @@ class Component extends React.Component {
 
     const componentType = {
       image: Image,
-      text: Text
+      text: Text,
+      video: Video
     };
 
     const Component = componentType[type];
