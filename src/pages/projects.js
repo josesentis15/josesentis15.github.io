@@ -54,7 +54,7 @@ class Projects extends React.Component {
 
 export default Projects;
 
-export const pageQuery = graphql`
+const pageQuery = graphql`
   query {
     site {
       siteMetadata {
