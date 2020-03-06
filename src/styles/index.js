@@ -162,6 +162,14 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  ul {
+    margin: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
   ${typographyStyles}
   ${utils}
 `;
