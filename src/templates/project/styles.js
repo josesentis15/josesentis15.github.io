@@ -10,13 +10,15 @@ const ProjectDetail = styled.article`
 
   > div { padding: 0; }
 
-  .background-wrapper {
+  .dark & .background-wrapper {
     background-color: ${colors.base100};
     color: ${colors.base500};
     margin: 0 calc(100% / 12);
     padding: ${space(3)} ${space()};
 
     .reading { padding: 0; }
+
+    a { color: ${colors.base500}; }
   }
 
   ${media.min('desktop')`

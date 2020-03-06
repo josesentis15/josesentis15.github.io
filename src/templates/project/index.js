@@ -7,6 +7,7 @@ import Navigation from '../../styles/navigation';
 import ProjectDetail from './styles';
 
 import DATA from '../../../content/content.json';
+import CrossNavigation from '../../components/crossNavigation';
 
 class ProjectTemplate extends React.Component {
   render() {
@@ -29,16 +30,17 @@ class ProjectTemplate extends React.Component {
           <Wrapper>
             <div className="background-wrapper">
               <Wrapper className="reading">
-                  <h1 className="title2">
-                    <span className="label">
-                      {project.order.toString().length === 1 ? '0' : ''}
-                      {project.order}.
+                <h1 className="title2">
+                  <span className="label">
+                    {project.order.toString().length === 1 ? '0' : ''}
+                    {project.order}.
                     </span>
-                    {project.title}
-                  </h1>
-                  {DATA[project.slug].map((data, index) => (
-                    <Component data={data} key={`component_${index}`} />
-                  ))}
+                  {project.title}
+                </h1>
+                {DATA[project.slug].map((data, index) => (
+                  <Component data={data} key={`component_${index}`} />
+                ))}
+                <CrossNavigation current={project.slug} />
               </Wrapper>
             </div>
           </Wrapper>
@@ -64,11 +66,6 @@ export const pageQuery = graphql`
       slug
       abstract {
         abstract
-      }
-      image {
-        fluid {
-          ...GatsbyContentfulFluid
-        }
       }
       order
     }

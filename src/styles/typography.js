@@ -36,7 +36,7 @@ const typographyStyles = `
 
   .link {
     .non-touch &:hover {
-      color: ${colors.primary};
+      color: ${colors.primary} !important;
     }
   }
 `;

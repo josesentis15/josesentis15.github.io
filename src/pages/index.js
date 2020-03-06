@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import 'normalize.css';
 
 import ExternalLink from '../components/externalLink';
 import Layout, { Wrapper } from '../components/layout';
