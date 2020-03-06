@@ -1,4 +1,4 @@
-## josesentis.com built using Gatsby + Contentful + Netlify
+## [josesentis.com](https://www.josesentis.com) built using Gatsby + Contentful + Netlify
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4864bde8-389c-4c2d-806c-1e5f85fb7020/deploy-status)](https://app.netlify.com/sites/josesentis/deploys)
 
 ____
