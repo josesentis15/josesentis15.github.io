@@ -1,12 +1,7 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+## josesentis.com built using Gatsby + Contentful + Netlify
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4864bde8-389c-4c2d-806c-1e5f85fb7020/deploy-status)](https://app.netlify.com/sites/josesentis/deploys)
+
+____
 
 Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
