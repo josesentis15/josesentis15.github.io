@@ -2,12 +2,14 @@ import React from 'react';
 
 class CrossNavigation extends React.Component {
   render() {
-    const projects = data.allContentfulProject.edges;
+    // const projects = data.allContentfulProject.edges;
 
+    const { current } = this.props;
 
     return (
       <ul>
-        {projects.map(({ node }) => {
+        {current}
+        {/* {projects.map(({ node }) => {
           const { external, externalLink, slug, order } = project;
 
           const LinkType = external ? ExternalLink : Link;
@@ -26,7 +28,7 @@ class CrossNavigation extends React.Component {
               </LinkType>
             </li>
           );
-        })}
+        })} */}
       </ul>
     );
   }
@@ -34,17 +36,17 @@ class CrossNavigation extends React.Component {
 
 export default CrossNavigation;
 
-const pageQuery = graphql`
-  query {
-    allContentfulProject(sort: { fields: order }) {
-      edges {
-        node {
-          title
-          slug
-          id
-          order
-        }
-      }
-    }
-  }
-`;
+// const pageQuery = graphql`
+//   query {
+//     allContentfulProject(sort: { fields: order }) {
+//       edges {
+//         node {
+//           title
+//           slug
+//           id
+//           order
+//         }
+//       }
+//     }
+//   }
+// `;

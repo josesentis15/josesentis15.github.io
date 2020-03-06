@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Component from '../../components/component';
+import CrossNavigation from '../../components/crossNavigation';
 import Layout, { Wrapper } from '../../components/layout';
 import Navigation from '../../styles/navigation';
 import ProjectDetail from './styles';
@@ -43,6 +44,9 @@ class ProjectTemplate extends React.Component {
             </div>
           </Wrapper>
         </ProjectDetail>
+        <Wrapper>
+          <CrossNavigation current={project.slug} />
+        </Wrapper>
       </Layout>
     );
   }
@@ -64,11 +68,6 @@ const pageQuery = graphql`
       slug
       abstract {
         abstract
-      }
-      image {
-        fluid {
-          ...GatsbyContentfulFluid
-        }
       }
       order
     }
