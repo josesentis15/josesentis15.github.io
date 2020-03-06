@@ -43,7 +43,7 @@ class Home extends React.Component {
 
 export default Home;
 
-const pageQuery = graphql`
+export const pageQuery = graphql`
   query {
     site {
       siteMetadata {

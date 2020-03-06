@@ -8,7 +8,6 @@ import Navigation from '../../styles/navigation';
 import ProjectDetail from './styles';
 
 import DATA from '../../../content/content.json';
-import CrossNavigation from '../../components/crossNavigation';
 
 class ProjectTemplate extends React.Component {
   render() {
@@ -46,9 +45,6 @@ class ProjectTemplate extends React.Component {
             </div>
           </Wrapper>
         </ProjectDetail>
-        <Wrapper>
-          <CrossNavigation current={project.slug} />
-        </Wrapper>
       </Layout>
     );
   }
@@ -56,7 +52,7 @@ class ProjectTemplate extends React.Component {
 
 export default ProjectTemplate;
 
-const pageQuery = graphql`
+export const pageQuery = graphql`
   query ProjectBySlug($slug: String!) {
     site {
       siteMetadata {
