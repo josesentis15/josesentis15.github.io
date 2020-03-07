@@ -15,10 +15,13 @@ class Home extends React.Component {
     return (
       <Layout location={this.props.location} className="home">
         <Wrapper>
-          <Navigation>
+          {/* <Navigation>
             <Link to={routes.projects} className="title link">{projects}</Link>
             <ExternalLink to={routes.playground} className="title link" icon={true}>{playground}</ExternalLink>
             <Link to={routes.about} className="title link">{about}</Link>
+          </Navigation> */}
+          <Navigation>
+            <Link to={`/`} className="title link">New site coming soon...</Link>
           </Navigation>
         </Wrapper>
       </Layout>
