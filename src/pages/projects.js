@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import Layout, { Wrapper } from '../components/layout';
 import ProjectList from '../components/projectsList';
 import Project from '../components/project';
-import Navigation from '../styles/navigation';
+import Navigation from '../components/navigation/styles';
 
 class Projects extends React.Component {
   state = {

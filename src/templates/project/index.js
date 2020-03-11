@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import Component from '../../components/component';
 import CrossNavigation from '../../components/crossNavigation';
 import Layout, { Wrapper } from '../../components/layout';
-import Navigation from '../../styles/navigation';
+import Navigation from '../../components/navigation/styles';
 import ProjectDetail from './styles';
 
 import DATA from '../../../content/content.json';
