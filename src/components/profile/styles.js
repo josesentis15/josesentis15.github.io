@@ -7,7 +7,11 @@ const ProfileWrapper = styled.div`
   .gatsby-image-wrapper {
     display: block;
     filter: grayscale(100%);
-    padding-bottom: 100%;
+
+    &::before {
+      padding-bottom: 100%;
+      position: relative;
+    }
   }
 
   .social {
@@ -39,6 +43,10 @@ const ProfileWrapper = styled.div`
 
   ${media.min('desktop')`
     > * { ${columns(2, 4)} }
+  `};
+
+  ${media.min('desktopLarge')`
+    > * { ${columns(2, 6)} }
   `};
 `;
 
