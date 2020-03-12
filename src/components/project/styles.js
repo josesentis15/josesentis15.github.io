@@ -5,17 +5,20 @@ import { space } from '../../utils/mixins';
 import { colors } from '../../utils/settings';
 
 const ProjectStyled = styled.div`
-  margin-top: ${space(4)};
   color: ${colors.white};
-  margin-bottom: ${space(3)};
+  cursor: pointer;
+  // margin-bottom: ${space()};
+  // margin-top: ${space()};
+  padding-bottom: ${space()};
+  padding-top: ${space()};
   padding-left: ${space(1.5)};
 
-  &.no-hover {
-    color: ${colors.base300};
-  }
-  &.hover {
-    color: ${colors.white};
-  }
+  // &.no-hover {
+  //   color: ${colors.base300};
+  // }
+  // &.hover {
+  //   color: ${colors.white};
+  // }
 
   .project {
     &__title {
@@ -28,7 +31,12 @@ const ProjectStyled = styled.div`
     &__text {
       margin-bottom: ${space(2)};
     }
+
+    &__content { display: none; }
   }
+
+  .touch &.active .project__content,
+  .non-touch &.hover .project__content { display: block; }
 
   a {
     text-decoration: underline;
@@ -41,7 +49,7 @@ const ProjectStyled = styled.div`
   }
 
   ${media.min('tablet')`
-    margin-bottom: ${space(4)};
+    // margin-bottom: ${space(4)};
 
     .label {
       bottom: ${space(0.3)};

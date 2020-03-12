@@ -7,23 +7,23 @@ import Project from '../components/project';
 import Navigation from '../components/navigation/styles';
 
 class Projects extends React.Component {
-  state = {
-    hover: false,
-  };
+  // state = {
+  //   hover: false,
+  // };
 
-  onMouseOver = e => {
-    this.setState({ hover: false });
-    e.currentTarget.classList.add('hover');
-  };
+  // onMouseOver = e => {
+    // this.setState({ hover: false });
+    // e.currentTarget.classList.add('hover');
+  // };
 
-  onMouseOut = e => {
-    this.setState({ hover: false });
-    e.currentTarget.classList.remove('hover');
-  };
+  // onMouseOut = e => {
+    // this.setState({ hover: false });
+    // e.currentTarget.classList.remove('hover');
+  // };
 
   render() {
     const { data } = this.props;
-    const { hover } = this.state;
+    // const { hover } = this.state;
     const projects = data.allContentfulProject.edges;
     const title = data.site.siteMetadata.sections.projects;
 
@@ -40,11 +40,11 @@ class Projects extends React.Component {
               <Project
                 key={node.id}
                 project={node}
-                hover={hover}
-                onMouseOver={this.onMouseOver}
-                onFocus={this.onMouseOver}
-                onMouseOut={this.onMouseOut}
-                onBlur={this.onMouseOut}
+                // hover={hover}
+                // onMouseOver={this.onMouseOver}
+                // onFocus={this.onMouseOver}
+                // onMouseOut={this.onMouseOut}
+                // onBlur={this.onMouseOut}
               />
             ))}
           </ProjectList>
