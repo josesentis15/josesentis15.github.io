@@ -40,11 +40,10 @@ class Project extends React.Component {
         </h2>
         <div className="project__content">
           <p className="project__text">{abstract.abstract}</p>
-          {external}
           {external ? (
             <ExternalLink className="external" to={externalLink}>Go to site</ExternalLink>
           ) : (
-              <Link to={slug}>View project</Link>
+              <Link to={slug} onClick={e => e.stopPropagation()}>View project</Link>
             )}
         </div>
       </ProjectStyled>

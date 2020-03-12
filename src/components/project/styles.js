@@ -2,23 +2,12 @@ import styled from 'styled-components';
 
 import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
-import { colors } from '../../utils/settings';
 
 const ProjectStyled = styled.div`
-  color: ${colors.white};
   cursor: pointer;
-  // margin-bottom: ${space()};
-  // margin-top: ${space()};
   padding-bottom: ${space()};
   padding-top: ${space()};
   padding-left: ${space(1.5)};
-
-  // &.no-hover {
-  //   color: ${colors.base300};
-  // }
-  // &.hover {
-  //   color: ${colors.white};
-  // }
 
   .project {
     &__title {
@@ -49,8 +38,6 @@ const ProjectStyled = styled.div`
   }
 
   ${media.min('tablet')`
-    // margin-bottom: ${space(4)};
-
     .label {
       bottom: ${space(0.3)};
     }
