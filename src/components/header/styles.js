@@ -42,7 +42,7 @@ const HeaderStyled = styled.header`
       }
     `};
 
-    ${media.min('tablet')`
+    ${media.min('maxWidth')`
       padding: ${space(1.5)} 0;
     `};
   }

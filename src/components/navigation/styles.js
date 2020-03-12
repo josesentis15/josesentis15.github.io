@@ -10,7 +10,7 @@ const NavigationWrapper = styled.div`
   justify-content: center;
 
   .title {
-    margin-bottom: ${space(3)};
+    margin: 0 auto ${space(3)};
     margin-left: -6px;
 
     &:last-child { margin-bottom: 0; }
