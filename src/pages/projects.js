@@ -42,7 +42,9 @@ class Projects extends React.Component {
                 project={node}
                 hover={hover}
                 onMouseOver={this.onMouseOver}
+                onFocus={this.onMouseOver}
                 onMouseOut={this.onMouseOut}
+                onBlur={this.onMouseOut}
               />
             ))}
           </ProjectList>
