@@ -26,6 +26,8 @@ const HeaderStyled = styled.header`
 
     a {
       color: ${colors.base500};
+      text-decoration: none;
+      &::after { display: none; }
 
       span {
         display: block;

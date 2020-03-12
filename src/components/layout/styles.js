@@ -63,6 +63,7 @@ const LayoutStyled = styled.div`
 
     ${media.min('desktop')`
       padding-bottom: ${space(4)};
+      padding-top: ${space(5)};
     `}
   }
 

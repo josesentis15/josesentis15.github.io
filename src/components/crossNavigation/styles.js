@@ -22,7 +22,7 @@ const CrossNavigationStyled = styled.ul`
     }
   `}
 
-  ${media.min('table')`
+  ${media.min('tablet')`
     li { margin: ${space(0.75)}; }
   `}
 

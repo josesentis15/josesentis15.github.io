@@ -6,7 +6,6 @@ import { space } from '../../utils/mixins';
 const NavigationWrapper = styled.div`
   align-items: flex-start;
   display: flex;
-  height: 100%;
   flex-direction: column;
   justify-content: center;
 
@@ -17,8 +16,16 @@ const NavigationWrapper = styled.div`
     &:last-child { margin-bottom: 0; }
   }
 
+  ${media.max('phone')`
+    padding: 0 0 ${space()} 0;
+  `}
+
   ${media.max('desktop')`
-    .title span { display: block; }
+    .title {
+      margin-bottom: ${space(2.5)};
+
+      span { display: block; }
+    }
   `}
 
   ${media.min('tablet')`

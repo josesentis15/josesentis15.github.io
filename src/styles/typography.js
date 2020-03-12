@@ -10,7 +10,7 @@ const typographyStyles = `
   }
 
   .title {
-    font-size: 75px;
+    font-size: 78px;
 
     @media (min-width: 768px) {
       font-size: 125px;
@@ -34,9 +34,33 @@ const typographyStyles = `
     margin-right: ${space(0.25)};
   }
 
+  a {
+    color: ${colors.base500};
+    display: inline-block;
+
+    &::after {
+      border-bottom: 1px solid ${colors.base500}:
+      content: '';
+    }
+
+    .non-touch &:hover {
+      &::after { display: none; }
+    }
+  }
+
   .link {
+    text-decoration: none;
+    &::after { display: none; }
+
     .non-touch &:hover {
       color: ${colors.primary} !important;
+    }
+  }
+
+  .p-big {
+    @media (min-width: 768px) {
+      font-size: ${pixelate(typography.bigFontSize)};
+      line-height: ${space(1.75)};
     }
   }
 `;

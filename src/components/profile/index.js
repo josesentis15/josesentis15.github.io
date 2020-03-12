@@ -1,8 +1,10 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import Img from 'gatsby-background-image';
 
 import ExternalLink from '../externalLink';
+
+import ProfileWrapper from './styles';
 
 class Profile extends React.Component {
   render() {
@@ -19,21 +21,21 @@ class Profile extends React.Component {
           const { node } = edges[0];
 
           return (
-            <>
+            <ProfileWrapper>
               <Img fluid={node.image.fluid} />
-              <div>
+              <div className="p-big">
                 <div
                   dangerouslySetInnerHTML={{
                     __html: node.content.childContentfulRichText.html.replace('%link', email),
                   }}
                 />
-                <div>
-                  <ExternalLink to={github} text="GitHub" />
-                  <ExternalLink to={linkedin} text="Linkedin" />
-                  <ExternalLink to={instagram} text="Instagram" />
+                <div className="social">
+                  <ExternalLink className="link" to={github}>GitHub</ExternalLink>
+                  <ExternalLink className="link" to={linkedin}>Linkedin</ExternalLink>
+                  <ExternalLink className="link" to={instagram}>Instagram</ExternalLink>
                 </div>
               </div>
-            </>
+            </ProfileWrapper>
           );
         }}
       />
