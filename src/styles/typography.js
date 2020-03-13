@@ -6,11 +6,11 @@ const typographyStyles = `
   .title2 {
     display: block;
     font-weight: 400;
-    line-height: 1;
   }
 
   .title {
     font-size: 78px;
+    line-height: 1;
 
     @media (min-width: 768px) {
       font-size: 125px;
@@ -23,6 +23,7 @@ const typographyStyles = `
 
   .title2 {
     font-size: 40px;
+    line-height: 1.4;
 
     @media (min-width: 768px) {
       font-size: 50px;

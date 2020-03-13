@@ -96,7 +96,6 @@ const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    background-color: ${colors.white};
     height: 100%;
     position: relative;
   }
@@ -129,6 +128,16 @@ const GlobalStyle = createGlobalStyle`
 
     li {
       list-style: none;
+    }
+  }
+
+  .background-img {
+    display: block;
+    overflow: hidden;
+
+    &::before {
+      padding-bottom: 100%;
+      position: relative !important;
     }
   }
 

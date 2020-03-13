@@ -43,7 +43,7 @@ const HeaderStyled = styled.header`
     `};
 
     ${media.min('maxWidth')`
-      padding: ${space(1.5)} 0;
+      padding: ${space(1.25)} 0;
     `};
   }
 `;

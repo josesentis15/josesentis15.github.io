@@ -22,7 +22,7 @@ class Profile extends React.Component {
 
           return (
             <ProfileWrapper>
-              <Img fluid={node.image.fluid} />
+              <Img className="background-img" fluid={node.image.fluid} />
               <div className="p-big">
                 <div
                   dangerouslySetInnerHTML={{

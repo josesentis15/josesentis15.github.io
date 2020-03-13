@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-// import Img from 'gatsby-background-image';
+import Img from 'gatsby-background-image';
 
 import ExternalLink from '../../components/externalLink';
 
@@ -14,9 +14,11 @@ class Project extends React.Component {
 
   render() {
     const { active, hover } = this.state;
-    const { project: { abstract, external, externalLink, slug, order } } = this.props;
+    const { project: { abstract, external, externalLink, slug, order, image } } = this.props;
     const title = this.props.project.title || slug;
     const className = `project ${active ? 'active' : ''} ${hover ? 'hover' : ''}`;
+
+    console.log(this.props.project);
 
     return (
       <ProjectStyled
@@ -39,6 +41,7 @@ class Project extends React.Component {
           {title}
         </h2>
         <div className="project__content">
+          <Img className="project__image background-img" fluid={image.fluid} />
           <p className="project__text">{abstract.abstract}</p>
           {external ? (
             <ExternalLink className="external" to={externalLink}>Go to site</ExternalLink>

@@ -62,12 +62,12 @@ const LayoutStyled = styled.div`
     `}
 
     ${media.min('desktop')`
-      padding-bottom: ${space(4)};
+      padding-bottom: ${space(3)};
       padding-top: ${space(4.5)};
     `}
 
     ${media.min('maxWidth')`
-      padding-top: ${space(6)};
+      padding-top: ${space(5)};
     `}
   }
 

@@ -4,15 +4,7 @@ import { media } from '../../utils/media-queries';
 import { space, columns } from '../../utils/mixins';
 
 const ProfileWrapper = styled.div`
-  .gatsby-image-wrapper {
-    display: block;
-    filter: grayscale(100%);
-
-    &::before {
-      padding-bottom: 100%;
-      position: relative;
-    }
-  }
+  .background-img { filter: grayscale(100%); }
 
   .social {
     display: flex;
