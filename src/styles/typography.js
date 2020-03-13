@@ -1,3 +1,4 @@
+import { media } from '../utils/media-queries';
 import { pixelate, space } from '../utils/mixins';
 import { colors, typography } from '../utils/settings';
 
@@ -38,15 +39,22 @@ const typographyStyles = `
   a {
     color: ${colors.base500};
     display: inline-block;
+    text-decoration: none;
 
-    &::after {
-      border-bottom: 1px solid ${colors.base500}:
+    &:after {
+      border-bottom: 2px solid currentColor;
       content: '';
+      display: block;
+      margin-top: -2px;
     }
 
     .non-touch &:hover {
       &::after { display: none; }
     }
+
+    ${media.min('tablet')`
+      &:after { margin-top: -8px; }
+    `}
   }
 
   .link {

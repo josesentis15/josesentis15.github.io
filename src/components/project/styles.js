@@ -33,10 +33,6 @@ const ProjectStyled = styled.div`
   .touch &.no-active,
   .non-touch &.no-hover { color: ${colors.base300}; }
 
-  a {
-    text-decoration: underline;
-  }
-
   .label {
     left: 0;
     position: absolute;
@@ -72,19 +68,19 @@ const ProjectStyled = styled.div`
   `}
 
   ${media.min('desktop')`
-      .project__image {
-        height: 60vh;
-        width: 60vh;
-        top: calc(50% - 30vh);
-      }
+    .project__image {
+      height: 60vh;
+      width: 60vh;
+      top: calc(50% - 30vh);
+    }
   `}
 
   ${media.min('maxWidth')`
-      .project__image {
-        height: 66vh;
-        width: 66vh;
-        top: calc(50% - 33vh);
-      }
+    .project__image {
+      height: 66vh;
+      width: 66vh;
+      top: calc(50% - 33vh);
+    }
   `}
 `;
 
