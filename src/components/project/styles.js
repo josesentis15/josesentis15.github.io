@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { colors } from '../../utils/settings';
 import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
@@ -29,6 +30,8 @@ const ProjectStyled = styled.div`
 
   .touch &.active .project__content,
   .non-touch &.hover .project__content { display: block; }
+  .touch &.no-active,
+  .non-touch &.no-hover { color: ${colors.base300}; }
 
   a {
     text-decoration: underline;
@@ -78,9 +81,9 @@ const ProjectStyled = styled.div`
 
   ${media.min('maxWidth')`
       .project__image {
-        height: 70vh;
-        width: 70vh;
-        top: calc(50% - 35vh);
+        height: 66vh;
+        width: 66vh;
+        top: calc(50% - 33vh);
       }
   `}
 `;

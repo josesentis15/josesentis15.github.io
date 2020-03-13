@@ -7,31 +7,39 @@ import ExternalLink from '../../components/externalLink';
 import ProjectStyled from './styles';
 
 class Project extends React.Component {
-  state = {
-    active: false,
-    hover: false
-  };
-
   render() {
-    const { active, hover } = this.state;
-    const { project: { abstract, external, externalLink, slug, order, image } } = this.props;
+    const {
+      project: {
+        abstract,
+        external,
+        externalLink,
+        slug,
+        order,
+        image
+      },
+      onHover,
+      onClick,
+      hoverProject,
+      clickedProject
+    } = this.props;
     const title = this.props.project.title || slug;
-    const className = `project ${active ? 'active' : ''} ${hover ? 'hover' : ''}`;
-
-    console.log(this.props.project);
+    const className = `
+      project
+      ${hoverProject === title ? ' hover' : hoverProject !== '' ? 'no-hover' : ''}
+      ${clickedProject === title ? ' active' : clickedProject !== '' ? 'no-active' : ''}
+    `;
 
     return (
       <ProjectStyled
         className={`${className}`}
         onClick={() => {
-          this.setState({ active: !this.state.active })
+          console.log(className);
+
+          if (clickedProject !== title) onClick(title);
+          else onClick('');
         }}
-        onMouseEnter={() => {
-          this.setState({ hover: true })
-        }}
-        onMouseLeave={() => {
-          this.setState({ hover: false })
-        }}
+        onMouseEnter={() => onHover(title)}
+        onMouseLeave={() => onHover()}
       >
         <h2 className="project__title title2">
           <span className="label">

@@ -7,8 +7,24 @@ import Project from '../components/project';
 import Navigation from '../components/navigation/styles';
 
 class Projects extends React.Component {
+  state = {
+    hoverProject: '',
+    clickedProject: ''
+  }
+
+  onClick = (projectName = '') => {
+    console.log('on Click: ', projectName);
+    this.setState({ clickedProject: projectName })
+  }
+
+  onHover = (projectName = '') => {
+    console.log('on hover: ', projectName);
+    this.setState({ hoverProject: projectName })
+  }
+
   render() {
     const { data } = this.props;
+    const { hoverProject, clickedProject } = this.state;
     const projects = data.allContentfulProject.edges;
     const title = data.site.siteMetadata.sections.projects;
 
@@ -25,6 +41,10 @@ class Projects extends React.Component {
               <Project
                 key={node.id}
                 project={node}
+                hoverProject={hoverProject}
+                clickedProject={clickedProject}
+                onHover={this.onHover}
+                onClick={this.onClick}
               />
             ))}
           </ProjectList>
