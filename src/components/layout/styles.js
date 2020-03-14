@@ -57,10 +57,6 @@ const LayoutStyled = styled.div`
       padding-bottom: ${space(2)};
     `}
 
-    ${media.between('tablet', 'desktop')`
-      main { padding-top: ${space(7)}; }
-    `}
-
     ${media.min('desktop')`
       padding-bottom: ${space(3)};
       padding-top: ${space(4.5)};
@@ -72,6 +68,7 @@ const LayoutStyled = styled.div`
   }
 
   &.layout-bottom main { justify-content: flex-end; }
+  &.headerless main { padding-top: 0 !important; }
 `;
 
 export default LayoutStyled;
