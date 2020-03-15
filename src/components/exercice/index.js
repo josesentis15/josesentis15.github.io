@@ -13,17 +13,19 @@ class Exercice extends React.Component {
         abstract,
         link,
         title,
-        image
+        image,
+        date
       }
     } = this.props;
 
     return (
       <ExerciceStyled>
-        <h2 className="project__title title2">{title}</h2>
-        <div className="project__content">
-          <Img className="project__image background-img" fluid={image.fluid} />
-          <p className="project__text">{abstract.abstract}</p>
-          <ExternalLink className="external" to={link}>Go to site</ExternalLink>
+        <h2 className="exercice__title title2">{title}</h2>
+        <div className="exercice__content">
+          <Img className="exercice__image background-img" fluid={image.fluid} />
+          <p className="exercice__text">{abstract.abstract}</p>
+          <p className="p-small">{date}</p>
+          <ExternalLink className="external" to={link}>Explore</ExternalLink>
         </div>
       </ExerciceStyled>
     );

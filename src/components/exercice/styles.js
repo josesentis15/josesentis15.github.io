@@ -1,24 +1,21 @@
 import styled from 'styled-components';
 
-import { colors } from '../../utils/settings';
 import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
-const ProjectStyled = styled.div`
+const ExerciceStyled = styled.div`
   cursor: pointer;
   padding-bottom: ${space()};
   padding-top: ${space()};
   padding-left: ${space(1.5)};
 
-  .project__title {
+  .exercice__title {
     margin-left: ${space(-1.5)};
     padding-left: ${space(1.5)};
     position: relative;
   }
 
-  .project__content { display: none; }
-
-  .project__image {
+  .exercice__image {
     margin: ${space()} 0;
 
     &::after {
@@ -27,11 +24,6 @@ const ProjectStyled = styled.div`
       background: rgba(0, 0, 0, 0.4) !important;
     }
   }
-
-  .touch &.active .project__content,
-  .non-touch &.hover .project__content { display: block; }
-  .touch &.no-active,
-  .non-touch &.no-hover { color: ${colors.base300}; }
 
   .label {
     left: 0;
@@ -44,20 +36,20 @@ const ProjectStyled = styled.div`
       bottom: 14px;
     }
 
-    .project__text,
-    .project__title {
+    .exercice__text,
+    .exercice__title {
       margin-bottom: ${space(2)};
       position: relative;
       z-index: 1;
     }
 
-    .project__text {
+    .exercice__text {
       margin-bottom: ${space(2)};
       column-count: 2;
       column-gap: ${space(2)};
     }
 
-    .project__image {
+    .exercice__image {
       position: fixed !important;
       right: 0;
       height: 40vh;
@@ -68,7 +60,7 @@ const ProjectStyled = styled.div`
   `}
 
   ${media.min('desktop')`
-    .project__image {
+    .exercice__image {
       height: 60vh;
       width: 60vh;
       top: calc(50% - 30vh);
@@ -76,7 +68,7 @@ const ProjectStyled = styled.div`
   `}
 
   ${media.min('maxWidth')`
-    .project__image {
+    .exercice__image {
       height: 66vh;
       width: 66vh;
       top: calc(50% - 33vh);
@@ -84,4 +76,4 @@ const ProjectStyled = styled.div`
   `}
 `;
 
-export default ProjectStyled;
+export default ExerciceStyled;
