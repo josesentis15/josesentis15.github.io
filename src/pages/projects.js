@@ -87,7 +87,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-//       <PostImage>
-//         <Img fluid={node.image.fluid} />
-//       </PostImage>

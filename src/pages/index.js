@@ -1,5 +1,4 @@
 import React from 'react';
-import 'normalize.css';
 
 import Layout, { Wrapper } from '../components/layout';
 import Navigation from '../components/navigation';

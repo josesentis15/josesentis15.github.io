@@ -34,10 +34,19 @@ const LayoutStyled = styled.div`
     `}
   }
 
+  &.playground main,
   &.dark main {
     background-color: ${colors.base500};
     color: ${colors.white};
     padding-bottom: 0;
+
+    a {
+      color: ${colors.primary};
+    }
+  }
+
+  &.dark main {
+    color: ${colors.white};
 
     a {
       color: ${colors.white};
@@ -69,6 +78,19 @@ const LayoutStyled = styled.div`
 
   &.layout-bottom main { justify-content: flex-end; }
   &.headerless main { padding-top: 0 !important; }
+
+  &.playground {
+    .intro {
+      margin: ${space(2)} 0;
+      max-width: 480px;
+    }
+
+    ${media.min('tablet')`
+      .intro {
+        margin: ${space(3)} 0;
+      }
+    `}
+  }
 `;
 
 export default LayoutStyled;
