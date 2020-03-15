@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import striptags from 'striptags';
 
 import Layout, { Wrapper } from '../components/layout';
 import ProjectList from '../components/projectsList';
@@ -29,7 +30,7 @@ class Projects extends React.Component {
     const title = data.site.siteMetadata.sections.projects;
 
     return (
-      <Layout location={this.props.location} title="Projects" className="dark">
+      <Layout location={this.props.location} title={striptags(title)} className="dark">
         <Wrapper>
           <Navigation>
             <h1 className="title">{title}</h1>

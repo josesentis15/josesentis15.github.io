@@ -1,20 +1,25 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import striptags from 'striptags';
 
 import Exercice from '../components/exercice';
-import ExerciceList from '../components/exercicesList';
-import Layout, { Wrapper } from '../../components/layout';
-import MovingText from '../../components/movingText';
+import ExerciceList from '../components/exerciceList';
+import Layout, { Wrapper } from '../components/layout';
+import MovingText from '../components/movingText';
 
-import routes from '../../utils/routes';
+import routes from '../utils/routes';
 
-const title = `playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground *`
+const rotatingTitle = `playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground * playground *`
 
 class Playground extends React.Component {
   render() {
+    const { data } = this.props;
+    const exercices = data.allContentfulExercice.edges;
+    const title = data.site.siteMetadata.sections.playground;
+
     return (
-      <Layout location={this.props.location} title="playground" className="playground headerless" header={false}>
-        <MovingText>{title}</MovingText>
+      <Layout location={this.props.location} title={striptags(title)} className="playground headerless" header={false}>
+        <MovingText>{rotatingTitle}</MovingText>
         <Wrapper>
           <div className="intro">
             <p>
@@ -26,14 +31,10 @@ class Playground extends React.Component {
             <Link to={routes.home}>Back to Jose Sentis Folio</Link>
           </div>
           <ExerciceList>
-            {projects.map(({ node }) => (
+            {exercices.map(({ node }) => (
               <Exercice
                 key={node.id}
                 exercice={node}
-                // hoverProject={hoverProject}
-                // clickedProject={clickedProject}
-                // onHover={this.onHover}
-                // onClick={this.onClick}
               />
             ))}
           </ExerciceList>
@@ -47,13 +48,27 @@ export default Playground;
 
 export const pageQuery = graphql`
   query {
-    allContentfulExercice(sort: { fields: order }) {
+    site {
+      siteMetadata {
+        sections {
+          playground
+        }
+      }
+    }
+    allContentfulExercice {
       edges {
         node {
-          abstract
-          link
+          abstract {
+            abstract
+          }
+          id
           title
-          image
+          link
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
+          }
         }
       }
     }
