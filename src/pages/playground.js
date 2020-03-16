@@ -23,7 +23,7 @@ class Playground extends React.Component {
 
     const interval = setInterval(() => {
       this.animateText();
-    }, 400);
+    }, 350);
 
     this.interval = interval;
   }
@@ -50,10 +50,11 @@ class Playground extends React.Component {
         <Wrapper>
           <div className="intro">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              This is the space where I create, where I try new technologies to develop myself in skills that are often difficult to learn working in corporate projects.
+              It's the space where I show who I am further than my role in a agencies.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing
+              It's my personal kaizen.
             </p>
             <Link to={routes.home}>Back to Jose Sentis Folio</Link>
           </div>

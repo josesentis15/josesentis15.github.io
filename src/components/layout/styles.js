@@ -82,7 +82,7 @@ const LayoutStyled = styled.div`
 
   &.playground {
     .intro {
-      margin: ${space(2)} 0;
+      margin: ${space(3)} 0 ${space(2)};
       max-width: 480px;
     }
 
