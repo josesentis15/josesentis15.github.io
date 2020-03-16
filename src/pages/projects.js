@@ -7,6 +7,8 @@ import ProjectList from '../components/projectsList';
 import Project from '../components/project';
 import Navigation from '../components/navigation/styles';
 
+import { capitalize } from '../utils/mixins';
+
 class Projects extends React.Component {
   state = {
     hoverProject: '',
@@ -30,7 +32,7 @@ class Projects extends React.Component {
     const title = data.site.siteMetadata.sections.projects;
 
     return (
-      <Layout location={this.props.location} title={striptags(title)} className="dark">
+      <Layout location={this.props.location} title={striptags(capitalize(title))} className="dark">
         <Wrapper>
           <Navigation>
             <h1 className="title">{title}</h1>

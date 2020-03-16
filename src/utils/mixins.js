@@ -21,4 +21,10 @@ const columns = (number, spaces = 1) => `
   &:nth-child(${number}n) { margin-right: 0; }
 `;
 
-export { columns, hover, pixelate, space };
+const capitalize = text => {
+  console.log(text, text.charAt(0).toUpperCase());
+
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+export { capitalize, columns, hover, pixelate, space };

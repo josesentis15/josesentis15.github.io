@@ -1,6 +1,5 @@
 import React from 'react';
 import Img from 'gatsby-background-image';
-import striptags from 'striptags';
 
 import ExternalLink from '../externalLink';
 
