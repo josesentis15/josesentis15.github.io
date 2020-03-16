@@ -21,6 +21,10 @@ module.exports = {
       projects: 'projects',
       about: 'about',
     },
+    playground: {
+      cta: 'Back to Jose Sentis Folio',
+      abstract: `<p>This is the space where I create, where I try new technologies to develop myself in skills that are often difficult to learn working in corporate projects.<br>It's the space where I show who I am further than my role in a agencies.<br>It's my personal kaizen.</p><p>To see other projects, follow the link:</p>`
+    }
   },
   plugins: [
     {

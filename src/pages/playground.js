@@ -43,20 +43,17 @@ class Playground extends React.Component {
     const { title } = this.state;
     const { data } = this.props;
     const exercices = data.allContentfulExercice.edges;
+    const { abstract, cta } = data.site.siteMetadata.playground;
 
     return (
       <Layout location={this.props.location} title={title} className="playground headerless" header={false}>
         <MovingText>{rotatingTitle + rotatingTitle + rotatingTitle + rotatingTitle}</MovingText>
         <Wrapper>
           <div className="intro">
-            <p>
-              This is the space where I create, where I try new technologies to develop myself in skills that are often difficult to learn working in corporate projects.
-              It's the space where I show who I am further than my role in a agencies.
-            </p>
-            <p>
-              It's my personal kaizen.
-            </p>
-            <Link to={routes.home}>Back to Jose Sentis Folio</Link>
+            <div dangerouslySetInnerHTML={{
+              __html: abstract,
+            }}></div>
+            <Link to={routes.home}>{cta}</Link>
           </div>
           <ExerciceList>
             {exercices.map(({ node }) => (
@@ -76,6 +73,14 @@ export default Playground;
 
 export const pageQuery = graphql`
   query {
+    site {
+      siteMetadata {
+        playground {
+          cta
+          abstract
+        }
+      }
+    }
     allContentfulExercice {
       edges {
         node {

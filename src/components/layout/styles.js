@@ -81,13 +81,15 @@ const LayoutStyled = styled.div`
   &.headerless main { padding-top: 0 !important; }
 
   &.playground {
+    a { margin-top: ${space()}; }
+
     .intro {
       margin: ${space(3)} 0 ${space(2)};
       max-width: 480px;
     }
 
     ${media.min('tablet')`
-      a { margin-top: ${space()}; }
+      a { margin-top: ${space(2)}; }
 
       .intro {
         margin: ${space(3)} 0;
