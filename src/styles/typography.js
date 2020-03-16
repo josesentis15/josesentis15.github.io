@@ -77,6 +77,13 @@ const typographyStyles = `
       line-height: ${space(1.75)};
     }
   }
+
+  .label {
+    font-size: ${pixelate(typography.minFontSize)};
+    margin-bottom: 0;
+    font-style: italic;
+    opacity: .5;
+  }
 `;
 
 export default typographyStyles;

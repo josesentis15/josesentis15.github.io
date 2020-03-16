@@ -17,7 +17,7 @@ const ExerciceStyled = styled.div`
     display: flex;
     justify-content: center
 
-    div { max-width: 340px; }
+    > div { max-width: 340px; }
   }
 
   ${media.min('tablet')`

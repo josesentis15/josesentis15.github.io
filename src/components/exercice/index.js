@@ -1,5 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-background-image';
+import moment from 'moment';
 
 import ExternalLink from '../externalLink';
 
@@ -16,6 +17,7 @@ class Exercice extends React.Component {
         date
       }
     } = this.props;
+    const formattedDate = moment(date).format("MM.YYYY");
 
     return (
       <ExerciceStyled>
@@ -23,8 +25,8 @@ class Exercice extends React.Component {
         <div className="content">
           <div>
             <h2 className="p">{title}</h2>
+            <p className="label">Posted: {formattedDate}</p>
             <p>{abstract.abstract}</p>
-            <p className="p-small">{date}</p>
             <ExternalLink className="external" to={link}>Explore</ExternalLink>
           </div>
         </div>

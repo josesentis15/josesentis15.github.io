@@ -1,4 +1,5 @@
 const typography = {
+  minFontSize: 14,
   baseFontSize: 18,
   bigFontSize: 30,
   baseLineHeight: 1.5,

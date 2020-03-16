@@ -16,7 +16,7 @@ const TextWrapper = styled.div`
   line-height: 1;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px ${colors.white};
+  -webkit-text-stroke: 1px rgba(255, 255, 255, .5);
   pointer-events: none;
 
   span {
@@ -25,6 +25,8 @@ const TextWrapper = styled.div`
     display: block;
     position: relative;
   }
+
+  &::selection { background-color: transparent; }
 `;
 
 export default TextWrapper;
