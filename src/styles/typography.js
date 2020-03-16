@@ -66,6 +66,11 @@ const typographyStyles = `
     }
   }
 
+  .p {
+    font-size: ${pixelate(typography.baseFontSize)};
+    line-height: ${space()};
+  }
+
   .p-big {
     @media (min-width: 768px) {
       font-size: ${pixelate(typography.bigFontSize)};

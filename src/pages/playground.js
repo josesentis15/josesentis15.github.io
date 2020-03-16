@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import striptags from 'striptags';
 
 import Exercice from '../components/exercice';
 import ExerciceList from '../components/exerciceList';
@@ -9,7 +8,7 @@ import MovingText from '../components/movingText';
 
 import routes from '../utils/routes';
 
-const rotatingTitle = `playground * playground * playground * playground * `
+const rotatingTitle = `playground * playground * playground * playground * `;
 
 class Playground extends React.Component {
   interval = '';
@@ -24,7 +23,7 @@ class Playground extends React.Component {
 
     const interval = setInterval(() => {
       this.animateText();
-    }, 600);
+    }, 400);
 
     this.interval = interval;
   }
