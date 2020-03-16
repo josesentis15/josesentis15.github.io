@@ -4,12 +4,10 @@ import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
 const ExerciceListStyled = styled.div`
-  ${media.min('tablet')`
-    margin-top: ${space(2)};
-  `}
+  margin: ${space(2)} 0;
 
-  ${media.min('desktopLarge')`
-    margin-top: ${space(4)};
+  ${media.min('desktop')`
+    margin: ${space(4)} 0;
   `}
 `;
 

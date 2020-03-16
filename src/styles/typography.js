@@ -81,7 +81,6 @@ const typographyStyles = `
   .label {
     font-size: ${pixelate(typography.minFontSize)};
     margin-bottom: 0;
-    font-style: italic;
     opacity: .5;
   }
 `;

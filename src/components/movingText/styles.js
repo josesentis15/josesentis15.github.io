@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-import { colors } from '../../utils/settings';
+import { media } from '../../utils/media-queries';
 
 const moveLeft = keyframes`
   0% {
@@ -20,13 +20,19 @@ const TextWrapper = styled.div`
   pointer-events: none;
 
   span {
-    animation: ${moveLeft} 400s infinite linear;
+    animation: ${moveLeft} 150s infinite linear;
     white-space: nowrap;
     display: block;
     position: relative;
   }
 
   &::selection { background-color: transparent; }
+
+  ${media.min('tablet')`
+    span {
+      animation: ${moveLeft} 400s infinite linear;
+    }
+  `}
 `;
 
 export default TextWrapper;

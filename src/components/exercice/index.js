@@ -23,7 +23,7 @@ class Exercice extends React.Component {
       <ExerciceStyled>
         <Img className="background-img" fluid={image.fluid} />
         <div className="content">
-          <div>
+          <div className="content-text">
             <h2 className="p">{title}</h2>
             <p className="label">Posted: {formattedDate}</p>
             <p>{abstract.abstract}</p>

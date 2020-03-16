@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   height: 100%;
   margin: 0 auto;
   max-width: ${pixelate(vars.layout.maxContentWidth)};
+  overflow-y: hidden;
   padding: 0 ${space()};
   width: 100%;
 
@@ -80,14 +81,14 @@ const LayoutStyled = styled.div`
   &.headerless main { padding-top: 0 !important; }
 
   &.playground {
-    a { margin-top: ${space()}; }
-
     .intro {
       margin: ${space(2)} 0;
       max-width: 480px;
     }
 
     ${media.min('tablet')`
+      a { margin-top: ${space()}; }
+
       .intro {
         margin: ${space(3)} 0;
       }
