@@ -11,7 +11,7 @@ const typographyStyles = `
 
   .title {
     font-size: 78px;
-    line-height: 1;
+    line-height: 1.2;
 
     @media (min-width: 768px) {
       font-size: 125px;

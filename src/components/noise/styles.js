@@ -18,33 +18,23 @@ const NoiseWrapper = styled.div`
   height: 100%;
   left: 0;
   overflow: hidden;
-  position: absolute;
+  pointer-events: none;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 0;
 
-  &::after {
-    background: radial-gradient(ellipse at center,rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.60) 100%);
-    bottom: 0;
-    content: '';
-    left: 0;
+  .noise {
     position: absolute;
-    right: 0;
-    top: 0;
+    top: -500px;
+    right: -500px;
+    bottom: -500px;
+    left: -500px;
+    background: transparent url(img/noise.png) 0 0;
+    background-size: 320px 320px;
+    opacity: 0.20;
+    animation: ${noiseAnimation} 1.5s steps(8, end) infinite both;
   }
-
-.noise {
-  position: absolute;
-  top: -500px;
-  right: -500px;
-  bottom: -500px;
-  left: -500px;
-  background: transparent
-  url(img/noise.png) 0 0;
-  background-size: 320px 320px;
-  opacity: 0.35;
-  animation: ${noiseAnimation} 1s steps(8, end) infinite both;
-}
 `;
 
 export default NoiseWrapper;

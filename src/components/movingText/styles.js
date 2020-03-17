@@ -17,6 +17,7 @@ const TextWrapper = styled.div`
   color: transparent;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, .5);
+  overflow: hidden;
   pointer-events: none;
 
   span {

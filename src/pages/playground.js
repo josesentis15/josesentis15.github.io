@@ -5,6 +5,7 @@ import Exercice from '../components/exercice';
 import ExerciceList from '../components/exerciceList';
 import Layout, { Wrapper } from '../components/layout';
 import MovingText from '../components/movingText';
+import Noise from '../components/noise';
 
 import routes from '../utils/routes';
 
@@ -47,6 +48,7 @@ class Playground extends React.Component {
 
     return (
       <Layout location={this.props.location} title={title} className="playground headerless" header={false}>
+        <Noise />
         <MovingText>{rotatingTitle + rotatingTitle + rotatingTitle + rotatingTitle}</MovingText>
         <Wrapper>
           <div className="intro">

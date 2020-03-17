@@ -42,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
   q {
     quotes: none;
   }
+
   ol,
   ul {
     list-style: none;

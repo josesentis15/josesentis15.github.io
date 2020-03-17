@@ -6,7 +6,7 @@ class Noise extends React.Component {
   render () {
     return (
       <NoiseWrapper>
-        <div class="noise"></div>
+        <div className="noise"></div>
       </NoiseWrapper>
     );
   }
