@@ -9,6 +9,7 @@ module.exports = {
     job: `Creative Front-End developer`,
     name: `Jose Sentis`,
     description: `Hi – I’m Jose, a Front-End developer based in Barcelona. I do stuff for the Internet.`,
+    image: `img/og-image.jpg`,
     siteUrl: `https://josesentis.com/`,
     social: {
       github: `https://github.com/josesentis`,
