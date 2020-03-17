@@ -1,7 +1,7 @@
 const routes = {
   home: '/',
   projects: '/projects',
-  playground: '#',
+  playground: '/playground',
   about: '/about'
 }
 

@@ -12,6 +12,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
     "gatsby": "^2.19.30",
+    "gatsby-background-image": "^0.10.2",
     "gatsby-image": "^2.2.42",
     "gatsby-plugin-feed": "^2.3.27",
     "gatsby-plugin-google-analytics": "^2.1.36",
@@ -30,7 +31,7 @@
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-transformer-remark": "^2.6.53",
     "gatsby-transformer-sharp": "^2.3.16",
-    "normalize.css": "^8.0.1",
+    "moment": "^2.24.0",
     "npm-check-updates": "^4.0.4",
     "prismjs": "^1.19.0",
     "react": "^16.13.0",
@@ -38,6 +39,7 @@
     "react-helmet": "^5.2.1",
     "react-lazyload": "^2.6.5",
     "react-router-props": "^1.0.2",
+    "striptags": "^3.1.1",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {

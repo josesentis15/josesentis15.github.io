@@ -11,7 +11,7 @@ module.exports = {
     description: `Hi – I’m Jose, a Front-End developer based in Barcelona. I do stuff for the Internet.`,
     siteUrl: `https://josesentis.com/`,
     social: {
-      github: `https://github.com/josesentis15`,
+      github: `https://github.com/josesentis`,
       linkedin: `https://www.linkedin.com/in/jose-sentis-vazquez-b0915679/`,
       instagram: `https://www.instagram.com/josesentis.playground/`,
       email: 'jose.sentis1987@gmail.com',
@@ -21,6 +21,10 @@ module.exports = {
       projects: 'projects',
       about: 'about',
     },
+    playground: {
+      cta: 'Back to Jose Sentis Folio',
+      abstract: `<p>This is the space where I create, where I try new technologies to develop myself in skills that are often difficult to learn working in corporate projects.<br>It's the space where I show who I am further than my role in a agencies.<br>It's my personal kaizen.</p><p>To see other projects, follow the link:</p>`
+    }
   },
   plugins: [
     {

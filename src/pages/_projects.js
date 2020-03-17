@@ -1,34 +1,38 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import striptags from 'striptags';
 
 import Layout, { Wrapper } from '../components/layout';
 import ProjectList from '../components/projectsList';
 import Project from '../components/project';
-import Navigation from '../styles/navigation';
+import Navigation from '../components/navigation/styles';
+
+import { capitalize } from '../utils/mixins';
 
 class Projects extends React.Component {
   state = {
-    hover: false,
-  };
+    hoverProject: '',
+    clickedProject: ''
+  }
 
-  onMouseOver = e => {
-    this.setState({ hover: false });
-    e.currentTarget.classList.add('hover');
-  };
+  onClick = (projectName = '') => {
+    console.log('on Click: ', projectName);
+    this.setState({ clickedProject: projectName })
+  }
 
-  onMouseOut = e => {
-    this.setState({ hover: false });
-    e.currentTarget.classList.remove('hover');
-  };
+  onHover = (projectName = '') => {
+    console.log('on hover: ', projectName);
+    this.setState({ hoverProject: projectName })
+  }
 
   render() {
     const { data } = this.props;
-    const { hover } = this.state;
+    const { hoverProject, clickedProject } = this.state;
     const projects = data.allContentfulProject.edges;
     const title = data.site.siteMetadata.sections.projects;
 
     return (
-      <Layout location={this.props.location} title="Projects" className="dark">
+      <Layout location={this.props.location} title={striptags(capitalize(title))} className="dark">
         <Wrapper>
           <Navigation>
             <h1 className="title">{title}</h1>
@@ -40,9 +44,10 @@ class Projects extends React.Component {
               <Project
                 key={node.id}
                 project={node}
-                hover={hover}
-                onMouseOver={this.onMouseOver}
-                onMouseOut={this.onMouseOut}
+                hoverProject={hoverProject}
+                clickedProject={clickedProject}
+                onHover={this.onHover}
+                onClick={this.onClick}
               />
             ))}
           </ProjectList>
@@ -85,7 +90,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-//       <PostImage>
-//         <Img fluid={node.image.fluid} />
-//       </PostImage>

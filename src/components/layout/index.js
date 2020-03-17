@@ -25,13 +25,20 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { className = '', children, title = false, description = false, reading = false } = this.props;
+    const {
+      className = '',
+      children,
+      title = false,
+      description = false,
+      reading = false,
+      header = true
+    } = this.props;
 
     return (
       <LayoutStyled className={className.concat(reading ? ' reading' : '')}>
         <SEO title={title} description={description} />
         <GlobalStyle />
-        <Header />
+        {header && (<Header />)}
         <main>{children}</main>
       </LayoutStyled>
     );

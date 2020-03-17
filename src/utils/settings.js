@@ -1,6 +1,8 @@
 const typography = {
+  minFontSize: 14,
   baseFontSize: 18,
-  baseLineHeight: 1.33,
+  bigFontSize: 30,
+  baseLineHeight: 1.5,
   bodyFontFamily: ['Avenir Next', 'Helvetica', 'sans-serif'],
   secondaryFontFamily: ['Adobe Caslon Pro', 'Georgia', 'serif'],
 };

@@ -26,6 +26,8 @@ const HeaderStyled = styled.header`
 
     a {
       color: ${colors.base500};
+      text-decoration: none;
+      &::after { display: none; }
 
       span {
         display: block;
@@ -40,8 +42,8 @@ const HeaderStyled = styled.header`
       }
     `};
 
-    ${media.min('tablet')`
-      padding: ${space(1.5)} 0;
+    ${media.min('maxWidth')`
+      padding: ${space(1.25)} 0;
     `};
   }
 `;
