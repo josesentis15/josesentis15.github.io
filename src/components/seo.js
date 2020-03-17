@@ -12,6 +12,8 @@ const SEO = ({ description, lang = 'en', meta, title }) => {
             job
             name
             description
+            ogImage
+            siteUrl
           }
         }
       }
@@ -22,8 +24,7 @@ const SEO = ({ description, lang = 'en', meta, title }) => {
   const titleTemplate = title ? `%s | ${webTitle}` : `%s`;
   const metaDescription = description || site.siteMetadata.description;
   const metaTitle = title || webTitle;
-  const siteUrl = site.siteMetadata.siteUrl;
-  const ogImage = site.siteMetadata.image;
+  const { siteUrl, ogImage } = site.siteMetadata;
 
   return (
     <Helmet
