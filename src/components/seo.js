@@ -32,16 +32,7 @@ const SEO = ({ description, lang = 'en', meta, title }) => {
       }}
       title={metaTitle}
       titleTemplate={titleTemplate}
-      meta={[
-        {
-          name: `twitter:title`,
-          content: metaTitle
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription
-        },
-      ].concat(meta)}
+      meta={meta}
     >
       <meta property="og:type" content="website" />
       <meta property="og:url" content={siteUrl} />
