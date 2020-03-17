@@ -34,34 +34,6 @@ const SEO = ({ description, lang = 'en', meta, title }) => {
       titleTemplate={titleTemplate}
       meta={[
         {
-          name: `description`,
-          content: metaDescription
-        },
-        {
-          property: `og:title`,
-          content: metaTitle
-        },
-        {
-          property: `og:description`,
-          content: metaDescription
-        },
-        {
-          property: `og:type`,
-          content: `website`
-        },
-        {
-          property: `og:image`,
-          content: ogImage
-        },
-        {
-          property: `og:url`,
-          content: siteUrl
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`
-        },
-        {
           name: `twitter:title`,
           content: metaTitle
         },
@@ -71,6 +43,11 @@ const SEO = ({ description, lang = 'en', meta, title }) => {
         },
       ].concat(meta)}
     >
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={siteUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:title" content={metaTitle} />
+      <meta property="og:description" content={metaDescription} />
       <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png" />
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/apple-touch-icon-72x72.png" />
@@ -84,13 +61,17 @@ const SEO = ({ description, lang = 'en', meta, title }) => {
       <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />
       <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16" />
       <link rel="icon" type="image/png" href="favicon/favicon-128.png" sizes="128x128" />
-      <meta name="application-name" content="&nbsp;"/>
+      <meta name="application-name" content="&nbsp;" />
       <meta name="msapplication-TileColor" content="#FFFFFF" />
       <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png" />
       <meta name="msapplication-square70x70logo" content="favicon/mstile-70x70.png" />
       <meta name="msapplication-square150x150logo" content="favicon/mstile-150x150.png" />
       <meta name="msapplication-wide310x150logo" content="favicon/mstile-310x150.png" />
       <meta name="msapplication-square310x310logo" content="favicon/mstile-310x310.png" />
+      <meta name="description" content={metaDescription} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={metaTitle} data-react-helmet="true" />
+      <meta name="twitter:description" content={metaDescription} />
     </Helmet>
   );
 };
