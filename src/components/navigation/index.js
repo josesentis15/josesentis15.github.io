@@ -19,8 +19,6 @@ class Navigation extends React.Component {
   render() {
     const { loaded } = this.state;
 
-    console.log('Navigation loaded: ', loaded);
-
     return (
       <StaticQuery
         query={componentQuery}

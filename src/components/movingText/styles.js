@@ -11,14 +11,18 @@ const moveLeft = keyframes`
   }
 `;
 
-const TextWrapper = styled.div`
-  font-size: 168px;
-  line-height: 1;
+const textStroke = `
   color: transparent;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, .5);
+`;
+
+const TextWrapper = styled.div`
+  font-size: 168px;
+  line-height: 1;
   overflow: hidden;
   pointer-events: none;
+  ${textStroke}
 
   span {
     animation: ${moveLeft} 150s infinite linear;
@@ -37,3 +41,4 @@ const TextWrapper = styled.div`
 `;
 
 export default TextWrapper;
+export { textStroke };
