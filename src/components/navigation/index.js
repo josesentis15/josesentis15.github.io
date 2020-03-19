@@ -1,13 +1,26 @@
 import React from 'react';
 import { Link, graphql, StaticQuery } from 'gatsby';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import ExternalLink from '../externalLink';
-import NavigationWrapper from './styles';
+import NavigationWrapper, { LinkWrapper } from './styles';
 
 import routes from '../../utils/routes';
 
 class Navigation extends React.Component {
+  state = {
+    loaded: false
+  }
+
+  componentDidMount() {
+    this.setState({ loaded: true });
+  }
+
   render() {
+    const { loaded } = this.state;
+
+    console.log('Navigation loaded: ', loaded);
+
     return (
       <StaticQuery
         query={componentQuery}
@@ -20,9 +33,29 @@ class Navigation extends React.Component {
 
           return (
             <NavigationWrapper>
-              <Link to={routes.projects} className="title link">{projects}</Link>
-              <ExternalLink to={routes.playground} className="title link" icon={true}>{playground}</ExternalLink>
-              <Link to={routes.about} className="title link" activeClassName="active">{about}</Link>
+              <TransitionGroup>
+                {loaded && (
+                  <CSSTransition classNames="loaded" timeout={500}>
+                    <LinkWrapper>
+                      <Link to={routes.projects} className="title link">{projects}</Link>
+                    </LinkWrapper>
+                  </CSSTransition>
+                )}
+                {loaded && (
+                  <CSSTransition classNames="loaded" timeout={700}>
+                    <LinkWrapper className="double">
+                      <ExternalLink to={routes.playground} className="title link" icon={true}>{playground}</ExternalLink>
+                    </LinkWrapper>
+                  </CSSTransition>
+                )}
+                {loaded && (
+                  <CSSTransition classNames="loaded" timeout={900}>
+                    <LinkWrapper>
+                      <Link to={routes.about} className="title link" activeClassName="active">{about}</Link>
+                    </LinkWrapper>
+                  </CSSTransition>
+                )}
+              </TransitionGroup>
             </NavigationWrapper>
           );
         }}

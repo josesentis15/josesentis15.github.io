@@ -1,40 +1,50 @@
 import React from 'react';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, Link, StaticQuery } from 'gatsby';
 
 import { Wrapper } from '../layout';
 
 import HeaderStyled from './styles';
 
-const Header = () => {
-  const rootPath = `${__PATH_PREFIX__}/`;
-  const data = useStaticQuery(graphql`
-    query HeaderQuery {
-      site {
-        siteMetadata {
-          job
-          name
-        }
-      }
-    }
-  `);
+class Header extends React.Component {
+  render() {
+    const rootPath = `${__PATH_PREFIX__}/`;
 
-  const { job, name } = data.site.siteMetadata;
+    return (
+      <StaticQuery
+        query={componentQuery}
+        render={({ site: { siteMetadata } }) => {
+          const { job, name } = siteMetadata;
 
-  return (
-    <HeaderStyled>
-      <Wrapper>
-        <div className="header">
-          <div>
-            <Link to={rootPath}>
-              <span>{name}</span>
-              <span>Folio - {new Date().getFullYear()}</span>
-            </Link>
-          </div>
-          <div>{job}</div>
-        </div>
-      </Wrapper>
-    </HeaderStyled>
-  );
+          return (
+            <HeaderStyled>
+              <Wrapper>
+                <div className="header">
+                  <div>
+                    <Link to={rootPath}>
+                      <span>{name}</span>
+                      <span>Folio - {new Date().getFullYear()}</span>
+                    </Link>
+                  </div>
+                  <div>{job}</div>
+                </div>
+              </Wrapper>
+            </HeaderStyled>
+          );
+        }}
+      />
+    );
+  }
 };
 
 export default Header;
+
+const componentQuery = graphql`
+  query HeaderQuery {
+    site {
+      siteMetadata {
+        job
+        name
+      }
+    }
+  }
+`;

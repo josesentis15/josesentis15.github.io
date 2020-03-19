@@ -33,8 +33,6 @@ class Project extends React.Component {
       <ProjectStyled
         className={`${className}`}
         onClick={() => {
-          console.log(className);
-
           if (clickedProject !== title) onClick(title);
           else onClick('');
         }}

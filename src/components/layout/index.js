@@ -1,4 +1,5 @@
 import React from 'react';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import GlobalStyle from '../../styles';
 import Header from '../header';
@@ -7,8 +8,13 @@ import SEO from '../seo';
 import LayoutStyled, { Wrapper } from './styles';
 
 class Layout extends React.Component {
+  state = {
+    loaded: false
+  }
+
   componentDidMount() {
     this.touchable();
+    this.setState({ loaded: true });
   }
 
   touchable() {
@@ -33,12 +39,19 @@ class Layout extends React.Component {
       reading = false,
       header = true
     } = this.props;
+    const { loaded } = this.state;
 
     return (
       <LayoutStyled className={className.concat(reading ? ' reading' : '')}>
         <SEO title={title} description={description} />
         <GlobalStyle />
-        {header && (<Header />)}
+        <TransitionGroup component={null}>
+          {header && loaded && (
+            <CSSTransition classNames="loaded" timeout={200}>
+              <Header />
+            </CSSTransition>
+          )}
+        </TransitionGroup>
         <main>{children}</main>
       </LayoutStyled>
     );

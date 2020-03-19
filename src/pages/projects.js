@@ -16,12 +16,10 @@ class Projects extends React.Component {
   }
 
   onClick = (projectName = '') => {
-    console.log('on Click: ', projectName);
     this.setState({ clickedProject: projectName })
   }
 
   onHover = (projectName = '') => {
-    console.log('on hover: ', projectName);
     this.setState({ hoverProject: projectName })
   }
 

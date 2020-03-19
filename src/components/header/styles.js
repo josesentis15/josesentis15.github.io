@@ -9,8 +9,13 @@ const HeaderStyled = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  transform: translateY(-100%);
+  transition: transform .5s ease-out;
   width: 100%;
+  will-change: transform;
   z-index: 9;
+
+  &.loaded-enter-done { transform: translateY(0); }
 
   .header {
     align-items: flex-start;

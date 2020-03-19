@@ -10,28 +10,52 @@ const NavigationWrapper = styled.div`
   height: 100%;
   justify-content: center;
 
-  .title {
-    margin: 0 auto ${space(3)};
-    margin-left: -6px;
-
-    &:last-child { margin-bottom: 0; }
-  }
-
   ${media.max('phone')`
     padding: 0 0 ${space()} 0;
   `}
 
-  ${media.max('desktop')`
-    .title {
-      margin-bottom: ${space(2.5)};
+  > div { width: 100%; }
+`;
 
-      span { display: block; }
-    }
+const LinkWrapper = styled.div`
+  height: calc(78px * 1.2);
+  margin: 0 auto ${space(3)};
+  margin-left: -6px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &:last-child { margin-bottom: 0; }
+  &.double { height: calc(78px * 1.2 * 2); }
+
+  ${media.max('desktop')`
+    margin-bottom: ${space(2.5)};
+
+    .title span { display: block; }
   `}
 
   ${media.min('tablet')`
-    .title { margin-left: -10px; }
+    height: calc(125px * 1.2);
+    margin-left: -10px;
+
+    &.double { height: calc(125px * 1.2 * 2); }
   `}
+
+  ${media.min('desktop')`
+    height: calc(165px * 1.2);
+  `}
+
+  .link {
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+    transition: transform .4s ease-out;
+    will-change: transform;
+  }
+
+  &.loaded-enter-done .link { transform: translateY(0); }
 `;
 
 export default NavigationWrapper;
+export { LinkWrapper };
