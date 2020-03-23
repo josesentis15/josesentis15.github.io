@@ -10,7 +10,7 @@ const HeaderStyled = styled.header`
   top: 0;
   left: 0;
   transform: translateY(-100%);
-  transition: transform .5s ease-out;
+  transition: transform .5s linear;
   width: 100%;
   will-change: transform;
   z-index: 9;

@@ -41,7 +41,7 @@ const LoaderWrapper = styled.div`
   ${media.max('desktop')`
     .dot {
       height: 300vw;
-      transition: transform .7s ease-out;
+      transition: transform .1s ease-out;
       width: 300vw;
     }
 

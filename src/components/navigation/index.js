@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql, StaticQuery } from 'gatsby';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import ExternalLink from '../externalLink';
 import NavigationWrapper, { LinkWrapper } from './styles';
@@ -40,14 +40,14 @@ class Navigation extends React.Component {
                   </CSSTransition>
                 )}
                 {loaded && (
-                  <CSSTransition classNames="loaded" timeout={700}>
+                  <CSSTransition classNames="loaded" timeout={600}>
                     <LinkWrapper className="double">
                       <ExternalLink to={routes.playground} className="title link" icon={true}>{playground}</ExternalLink>
                     </LinkWrapper>
                   </CSSTransition>
                 )}
                 {loaded && (
-                  <CSSTransition classNames="loaded" timeout={900}>
+                  <CSSTransition classNames="loaded" timeout={700}>
                     <LinkWrapper>
                       <Link to={routes.about} className="title link" activeClassName="active">{about}</Link>
                     </LinkWrapper>

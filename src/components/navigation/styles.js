@@ -26,7 +26,10 @@ const LinkWrapper = styled.div`
   width: 100%;
 
   &:last-child { margin-bottom: 0; }
-  &.double { height: calc(78px * 1.2 * 2); }
+
+  ${media.max('tablet')`
+    &.double { height: calc(78px * 1.2 * 2); }
+  `}
 
   ${media.max('desktop')`
     margin-bottom: ${space(2.5)};
@@ -37,7 +40,9 @@ const LinkWrapper = styled.div`
   ${media.min('tablet')`
     height: calc(125px * 1.2);
     margin-left: -10px;
+  `}
 
+  ${media.between('tablet', 'desktop')`
     &.double { height: calc(125px * 1.2 * 2); }
   `}
 
@@ -50,7 +55,7 @@ const LinkWrapper = styled.div`
     position: absolute;
     top: 0;
     transform: translateY(100%);
-    transition: transform .4s ease-out;
+    transition: transform .4s linear;
     will-change: transform;
   }
 
