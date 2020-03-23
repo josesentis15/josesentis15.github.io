@@ -1,10 +1,14 @@
 import React from 'react';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { Router, Route } from "react-router-dom";
 
 import Header from '../components/header';
 import Layout, { Wrapper } from '../components/layout';
 import Loader from '../components/loader';
 import Navigation from '../components/navigation';
+import Profile from '../components/profile';
+
+import history from '../utils/history';
 
 class Home extends React.Component {
   state = {
@@ -29,6 +33,9 @@ class Home extends React.Component {
         <Header />
         <Wrapper>
           <Navigation />
+          <Router history={history}>
+            <Route path="/about" component={Profile} />
+          </Router>
         </Wrapper>
       </Layout>
     ) : (
