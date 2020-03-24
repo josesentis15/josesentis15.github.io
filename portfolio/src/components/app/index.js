@@ -1,11 +1,11 @@
 import React from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
 
 import Home from '../../pages/home';
-import Playground from '../../pages/playground';
-import NotFound from '../../pages/notFound';
+// import Playground from '../../pages/playground';
+// import NotFound from '../../pages/notFound';
 
-import GlobalStyles from '../../styles/globals';
+import history from '../../utils/history'
 
 class App extends React.Component {
   componentDidMount() {
@@ -27,14 +27,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
-        <GlobalStyles />
+      <Router history={history}>
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/playground" component={Playground} />
-          <Route component={NotFound} />
+          {/* <Route path="/playground" component={Playground} /> */}
+          {/* <Route component={NotFound} /> */}
         </Switch>
-      </>
+      </Router>
     );
   }
 }

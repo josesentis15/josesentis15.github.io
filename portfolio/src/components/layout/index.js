@@ -3,7 +3,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import GlobalStyle from '../../styles';
 import Header from '../header';
-import SEO from '../seo';
+// import SEO from '../seo';
 
 import LayoutStyled, { Wrapper } from './styles';
 
@@ -43,7 +43,7 @@ class Layout extends React.Component {
 
     return (
       <LayoutStyled className={className.concat(reading ? ' reading' : '')}>
-        <SEO title={title} description={description} />
+        {/* <SEO title={title} description={description} /> */}
         <GlobalStyle />
         <TransitionGroup component={null}>
           {header && loaded && (
