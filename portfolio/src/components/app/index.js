@@ -1,11 +1,14 @@
 import React from 'react';
 import { Router, Switch, Route } from "react-router-dom";
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
 
 import Home from '../../pages/home';
 // import Playground from '../../pages/playground';
 // import NotFound from '../../pages/notFound';
 
 import history from '../../utils/history'
+import client from '../../utils/apollo';
 
 class App extends React.Component {
   componentDidMount() {
@@ -27,13 +30,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router history={history}>
-        <Switch>
-          <Route path="/" component={Home} exact />
-          {/* <Route path="/playground" component={Playground} /> */}
-          {/* <Route component={NotFound} /> */}
-        </Switch>
-      </Router>
+      <ApolloProvider client={client}>
+        <Router history={history}>
+          <Switch>
+            <Route path="/" component={Home} exact />
+            {/* <Route path="/playground" component={Playground} /> */}
+            {/* <Route component={NotFound} /> */}
+          </Switch>
+        </Router>
+      </ApolloProvider>
     );
   }
 }
