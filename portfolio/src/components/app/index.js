@@ -1,7 +1,6 @@
 import React from 'react';
 import { Router, Switch, Route } from "react-router-dom";
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider } from '@apollo/react-hooks';
 
 import Home from '../../pages/home';
 // import Playground from '../../pages/playground';
