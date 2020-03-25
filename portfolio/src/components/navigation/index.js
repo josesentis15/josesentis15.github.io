@@ -1,11 +1,14 @@
 import React from 'react';
-import { Link, graphql, StaticQuery } from 'gatsby';
+import { Query } from "react-apollo";
+import { NavLink, Link } from 'react-router-dom';
+
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import ExternalLink from '../externalLink';
 import NavigationWrapper, { LinkWrapper } from './styles';
 
 import routes from '../../utils/routes';
+import GET_SECTIONS from './queries';
 
 class Navigation extends React.Component {
   state = {
@@ -20,36 +23,35 @@ class Navigation extends React.Component {
     const { loaded } = this.state;
 
     return (
-      <StaticQuery
-        query={componentQuery}
-        render={({ site: { siteMetadata } }) => {
+      <Query query={GET_SECTIONS}>
+        {({ loading, data }) => {
           const {
             playground,
             projects,
             about
-          } = siteMetadata.sections;
+          } = data.sections;
 
           return (
             <NavigationWrapper>
               <TransitionGroup>
-                {loaded && (
+                {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={500}>
                     <LinkWrapper>
                       <Link to={routes.projects} className="title link">{projects}</Link>
                     </LinkWrapper>
                   </CSSTransition>
                 )}
-                {loaded && (
+                {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={700}>
                     <LinkWrapper className="double">
                       <ExternalLink to={routes.playground} className="title link" icon={true}>{playground}</ExternalLink>
                     </LinkWrapper>
                   </CSSTransition>
                 )}
-                {loaded && (
+                {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={900}>
                     <LinkWrapper>
-                      <Link to={routes.about} className="title link" activeClassName="active">{about}</Link>
+                      <NavLink to={routes.about} className="title link" activeClassName="active">{about}</NavLink>
                     </LinkWrapper>
                   </CSSTransition>
                 )}
@@ -57,23 +59,9 @@ class Navigation extends React.Component {
             </NavigationWrapper>
           );
         }}
-      />
+      </Query>
     );
   }
 }
 
 export default Navigation;
-
-const componentQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        sections {
-          playground
-          projects
-          about
-        }
-      }
-    }
-  }
-`;

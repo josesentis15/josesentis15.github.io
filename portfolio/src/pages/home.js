@@ -3,7 +3,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import Layout, { Wrapper } from '../components/layout';
 import Loader from '../components/loader';
-// import Navigation from '../components/navigation';
+import Navigation from '../components/navigation';
 
 class Home extends React.Component {
   state = {
@@ -26,7 +26,7 @@ class Home extends React.Component {
       <Layout location={this.props.location} className="home">
         {loaded ? (
           <Wrapper>
-            {/* <Navigation /> */}
+            <Navigation />
             HOME PAGE
           </Wrapper>
         ) : (
