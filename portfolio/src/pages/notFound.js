@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'react-router-dom';
 
 import Glitch from '../components/glitch';
 import Layout, { Wrapper } from '../components/layout';
