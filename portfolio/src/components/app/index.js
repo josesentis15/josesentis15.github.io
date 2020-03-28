@@ -53,7 +53,7 @@ class App extends React.Component {
             <Router history={history}>
               <Switch>
                 {/* <Route path="/playground" component={Playground} /> */}
-                <Route path="/" component={Home} exact />
+                <Route path='/' component={Home} exact />
                 <Route path="/about" component={About} />
                 <Route component={NotFound} />
               </Switch>

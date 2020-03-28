@@ -1,12 +1,13 @@
 import React from 'react';
 import { Query } from "react-apollo";
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import NavigationWrapper, { AppearingText } from './styles';
 
 import routes from '../../utils/routes';
+import history from '../../utils/history';
 import GET_SECTIONS from './queries';
 
 class Navigation extends React.Component {
@@ -56,9 +57,9 @@ class Navigation extends React.Component {
                 )}
                 {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={700}>
-                    <NavLink to={routes.about} className="title link" activeClassName="active">
+                    <Link to={routes.about} className="title link">
                       <AppearingText><span className="text">{about}</span></AppearingText>
-                    </NavLink>
+                    </Link>
                   </CSSTransition>
                 )}
               </TransitionGroup>
