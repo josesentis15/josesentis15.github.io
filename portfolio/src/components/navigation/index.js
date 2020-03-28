@@ -34,14 +34,14 @@ class Navigation extends React.Component {
             <NavigationWrapper>
               <TransitionGroup>
                 {loaded && !loading && (
-                  <CSSTransition classNames="loaded" timeout={500}>
+                  <CSSTransition classNames="loaded" timeout={400}>
                     <Link to={routes.projects} className="title link">
                       <AppearingText><span className="text">{projects}</span></AppearingText>
                     </Link>
                   </CSSTransition>
                 )}
                 {loaded && !loading && (
-                  <CSSTransition classNames="loaded" timeout={650}>
+                  <CSSTransition classNames="loaded" timeout={600}>
                     <a
                       className="title link double-link"
                       href={routes.playground}

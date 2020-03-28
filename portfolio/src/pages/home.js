@@ -1,6 +1,7 @@
 import React from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
+import Header from '../components/header';
 import Layout, { Wrapper } from '../components/layout';
 import Loader from '../components/loader';
 import Navigation from '../components/navigation';
@@ -25,9 +26,12 @@ class Home extends React.Component {
     return (
       <Layout location={this.props.location} className="home">
         {loaded ? (
-          <Wrapper>
-            <Navigation />
-          </Wrapper>
+          <>
+            <Header />
+            <Wrapper>
+              <Navigation />
+            </Wrapper>
+          </>
         ) : (
             <TransitionGroup component={null}>
               {showLoader && (
