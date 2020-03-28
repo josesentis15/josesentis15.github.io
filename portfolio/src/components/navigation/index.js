@@ -1,6 +1,5 @@
 import React from 'react';
 import { Query } from "react-apollo";
-import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
@@ -21,7 +20,6 @@ class Navigation extends React.Component {
 
   render() {
     const { loaded } = this.state;
-    const { location: { pathname } } = this.props;
 
     return (
       <Query query={GET_SECTIONS}>
@@ -35,14 +33,14 @@ class Navigation extends React.Component {
           return (
             <NavigationWrapper>
               <TransitionGroup>
-                {loaded && !loading && (pathname !== '/about') && (
+                {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={300}>
                     <Link to={routes.projects} className="title link">
                       <AppearingText><span className="text">{projects}</span></AppearingText>
                     </Link>
                   </CSSTransition>
                 )}
-                {loaded && !loading && (pathname === '/') && (
+                {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={500}>
                     <a
                       className="title link double-link"
@@ -56,8 +54,8 @@ class Navigation extends React.Component {
                     </a>
                   </CSSTransition>
                 )}
-                {loaded && !loading && (pathname !== '/projects') && (
-                  <CSSTransition classNames="loaded" timeout={pathname === '/about' ? 300 : 700}>
+                {loaded && !loading && (
+                  <CSSTransition classNames="loaded" timeout={700}>
                     <Link to={routes.about} className="title link">
                       <AppearingText><span className="text">{about}</span></AppearingText>
                     </Link>
@@ -72,4 +70,5 @@ class Navigation extends React.Component {
   }
 }
 
-export default withRouter(Navigation);
+export default Navigation;
+export { NavigationWrapper };
