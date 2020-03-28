@@ -1,6 +1,5 @@
 import React from 'react';
 
-import GlobalStyle from '../../styles';
 // import SEO from '../seo';
 
 import LayoutStyled, { Wrapper } from './styles';
@@ -27,15 +26,12 @@ class Layout extends React.Component {
     const {
       className = '',
       children,
-      title = false,
-      description = false,
       reading = false,
     } = this.props;
 
     return (
       <LayoutStyled className={className.concat(reading ? ' reading' : '')}>
         {/* <SEO title={title} description={description} /> */}
-        <GlobalStyle />
         <main>{children}</main>
       </LayoutStyled>
     );

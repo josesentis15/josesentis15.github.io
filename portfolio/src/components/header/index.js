@@ -28,8 +28,6 @@ class Header extends React.Component {
             name
           } = data;
 
-          console.log(loading, data);
-
           return (
             <HeaderStyled>
               <Wrapper>
