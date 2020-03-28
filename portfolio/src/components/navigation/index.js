@@ -4,8 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import ExternalLink from '../externalLink';
-import NavigationWrapper, { LinkWrapper } from './styles';
+import NavigationWrapper, { AppearingText } from './styles';
 
 import routes from '../../utils/routes';
 import GET_SECTIONS from './queries';
@@ -36,23 +35,30 @@ class Navigation extends React.Component {
               <TransitionGroup>
                 {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={500}>
-                    <LinkWrapper>
-                      <Link to={routes.projects} className="title link">{projects}</Link>
-                    </LinkWrapper>
+                    <Link to={routes.projects} className="title link">
+                      <AppearingText><span className="text">{projects}</span></AppearingText>
+                    </Link>
                   </CSSTransition>
                 )}
                 {loaded && !loading && (
-                  <CSSTransition classNames="loaded" timeout={700}>
-                    <LinkWrapper className="double">
-                      <ExternalLink to={routes.playground} className="title link" icon={true}>{playground}</ExternalLink>
-                    </LinkWrapper>
+                  <CSSTransition classNames="loaded" timeout={650}>
+                    <a
+                      className="title link double-link"
+                      href={routes.playground}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AppearingText>
+                        <span className="text" dangerouslySetInnerHTML={{ __html: playground }} />
+                      </AppearingText>
+                    </a>
                   </CSSTransition>
                 )}
                 {loaded && !loading && (
-                  <CSSTransition classNames="loaded" timeout={900}>
-                    <LinkWrapper>
-                      <NavLink to={routes.about} className="title link" activeClassName="active">{about}</NavLink>
-                    </LinkWrapper>
+                  <CSSTransition classNames="loaded" timeout={800}>
+                    <NavLink to={routes.about} className="title link" activeClassName="active">
+                      <AppearingText><span className="text">{about}</span></AppearingText>
+                    </NavLink>
                   </CSSTransition>
                 )}
               </TransitionGroup>

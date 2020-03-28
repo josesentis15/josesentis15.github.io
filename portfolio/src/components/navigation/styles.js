@@ -14,48 +14,33 @@ const NavigationWrapper = styled.div`
     padding: 0 0 ${space()} 0;
   `}
 
+  ${media.max('desktop')`
+    .double-link span:not(.text) {
+      display: block;
+    }
+  `}
+
   > div { width: 100%; }
+
+  .link { margin-bottom: ${space(1.5)}; }
 `;
 
-const LinkWrapper = styled.div`
-  height: calc(78px * 1.2);
-  margin: 0 auto ${space(3)};
-  margin-left: -6px;
-  overflow: hidden;
+const AppearingText = styled.span`
+  display: block;
   position: relative;
-  width: 100%;
+  overflow: hidden;
 
-  &:last-child { margin-bottom: 0; }
-  &.double { height: calc(78px * 1.2 * 2); }
-
-  ${media.max('desktop')`
-    margin-bottom: ${space(2.5)};
-
-    .title span { display: block; }
-  `}
-
-  ${media.min('tablet')`
-    height: calc(125px * 1.2);
-    margin-left: -10px;
-
-    &.double { height: calc(125px * 1.2 * 2); }
-  `}
-
-  ${media.min('desktop')`
-    height: calc(165px * 1.2);
-  `}
-
-  .link {
-    left: 0;
-    position: absolute;
-    top: 0;
+  .text {
+    display: inline-block;
     transform: translateY(100%);
-    transition: transform .4s ease-out;
-    will-change: transform;
+    transition: transform 0s;
   }
 
-  &.loaded-enter-done .link { transform: translateY(0); }
+  .loaded-enter-done & .text {
+    transition: transform 1s cubic-bezier(.215, .61, .355, 1);
+    transform: translateY(0);
+  }
 `;
 
 export default NavigationWrapper;
-export { LinkWrapper };
+export { AppearingText };

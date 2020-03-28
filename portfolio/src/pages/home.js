@@ -27,7 +27,6 @@ class Home extends React.Component {
         {loaded ? (
           <Wrapper>
             <Navigation />
-            HOME PAGE
           </Wrapper>
         ) : (
             <TransitionGroup component={null}>
