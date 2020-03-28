@@ -1,77 +1,66 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
-import Img from 'gatsby-background-image';
-
-import ExternalLink from '../externalLink';
+import { Query } from "react-apollo";
 
 import ProfileWrapper from './styles';
+import GET_PROFILE from './queries';
 
 class Profile extends React.Component {
   render() {
     return (
-      <StaticQuery
-        query={componentQuery}
-        render={({ site: { siteMetadata }, allContentfulBasicPage: { edges } }) => {
+      <Query query={GET_PROFILE}>
+        {({ loading, data }) => {
           const {
             github,
             linkedin,
             instagram,
             email
-          } = siteMetadata.social;
-          const { node } = edges[0];
+          } = data.social;
+          // const { node } = edges[0];
+
+          if (loading) return;
 
           return (
             <ProfileWrapper>
-              <Img className="background-img" fluid={node.image.fluid} />
+              {/* <Img className="background-img" fluid={node.image.fluid} /> */}
               <div className="p-big">
-                <div
+                {/* <div
                   dangerouslySetInnerHTML={{
                     __html: node.content.childContentfulRichText.html.replace('%link', email),
                   }}
-                />
+                /> */}
                 <div className="social">
-                  <ExternalLink className="link" to={github}>GitHub</ExternalLink>
-                  <ExternalLink className="link" to={linkedin}>Linkedin</ExternalLink>
-                  <ExternalLink className="link" to={instagram}>Instagram</ExternalLink>
+                  <a
+                    className="link"
+                    href={github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    className="link"
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Linkedin
+                  </a>
+                  <a
+                    className="link"
+                    href={instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
+                  </a>
                 </div>
               </div>
             </ProfileWrapper>
           );
         }}
-      />
+      </Query>
     );
   }
 }
 
 export default Profile;
-
-export const componentQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        social {
-          github
-          linkedin
-          instagram
-          email
-        }
-      }
-    }
-    allContentfulBasicPage(filter: { title: { eq: "About" } }) {
-      edges {
-        node {
-          content {
-            childContentfulRichText {
-              html
-            }
-          }
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`;

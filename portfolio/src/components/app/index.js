@@ -4,6 +4,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import Home from '../../pages/home';
+import About from '../../pages/about';
 // import Playground from '../../pages/playground';
 import NotFound from '../../pages/notFound';
 import Loader from '../loader';
@@ -51,8 +52,9 @@ class App extends React.Component {
           <ApolloProvider client={client}>
             <Router history={history}>
               <Switch>
-                <Route path="/" component={Home} exact />
                 {/* <Route path="/playground" component={Playground} /> */}
+                <Route path="/" component={Home} exact />
+                <Route path="/about" component={About} />
                 <Route component={NotFound} />
               </Switch>
             </Router>

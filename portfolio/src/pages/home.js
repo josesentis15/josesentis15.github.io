@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from "react-router";
 
 import Header from '../components/header';
 import Layout, { Wrapper } from '../components/layout';
@@ -11,13 +12,10 @@ class Home extends React.Component {
         <Header />
         <Wrapper>
           <Navigation />
-          {/* <Router>
-
-          </Router> */}
         </Wrapper>
       </Layout>
     );
   }
 }
 
-export default Home;
+export default withRouter(Home);
