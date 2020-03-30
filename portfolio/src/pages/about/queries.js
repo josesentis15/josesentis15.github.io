@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-const GET_SECTION_NAME = gql`
+const GET_ABOUT = gql`
   {
     sections @client {
       about
@@ -8,4 +8,4 @@ const GET_SECTION_NAME = gql`
   }
 `;
 
-export default GET_SECTION_NAME;
+export default GET_ABOUT;

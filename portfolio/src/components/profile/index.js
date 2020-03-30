@@ -8,26 +8,33 @@ class Profile extends React.Component {
   render() {
     return (
       <Query query={GET_PROFILE}>
-        {({ loading, data }) => {
+        {({ loading, error, data }) => {
           const {
-            github,
-            linkedin,
-            instagram,
-            email
-          } = data.social;
-          // const { node } = edges[0];
+            social: {
+              github,
+              linkedin,
+              instagram,
+              email
+            },
+            pages: {
+              about: {
+                content,
+                image
+              }
+            }
+          } = data;
 
-          if (loading) return;
+          if (loading) return(<h1>Loading...</h1>);
 
           return (
             <ProfileWrapper>
-              {/* <Img className="background-img" fluid={node.image.fluid} /> */}
+              <img src={image} alt="Profile" />
               <div className="p-big">
-                {/* <div
+                <div
                   dangerouslySetInnerHTML={{
-                    __html: node.content.childContentfulRichText.html.replace('%link', email),
+                    __html: content.replace('%link', email)
                   }}
-                /> */}
+                />
                 <div className="social">
                   <a
                     className="link"

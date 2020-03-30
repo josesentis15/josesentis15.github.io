@@ -21,7 +21,6 @@ class App extends React.Component {
 
   componentDidMount() {
     this.touchable();
-
     this.setState({ showLoader: true });
 
     setTimeout(() => {

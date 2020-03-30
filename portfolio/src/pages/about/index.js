@@ -6,19 +6,19 @@ import Layout, { Wrapper } from '../../components/layout';
 import { NavigationWrapper } from '../../components/navigation';
 import Profile from '../../components/profile';
 
-import GET_SECTION_NAME from './queries';
+import GET_ABOUT from './queries';
 
 class About extends React.Component {
   render() {
 
     return (
-      <Query query={GET_SECTION_NAME}>
-        {({ loading, data }) => {
+      <Query query={GET_ABOUT}>
+        {({ loading, error, data }) => {
           const {
             about
           } = data.sections;
 
-          if (loading) return;
+          if (loading) return(<h1>Loading...</h1>);
 
           return (
             <Layout location={this.props.location}>

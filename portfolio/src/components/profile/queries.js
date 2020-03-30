@@ -8,37 +8,13 @@ const GET_PROFILE = gql`
       instagram
       email
     }
+    pages @client {
+      about {
+        content
+        image
+      }
+    }
   }
 `;
 
 export default GET_PROFILE;
-
-
-// query {
-//   site {
-//     siteMetadata {
-//       social {
-//         github
-//         linkedin
-//         instagram
-//         email
-//       }
-//     }
-//   }
-//   allContentfulBasicPage(filter: { title: { eq: "About" } }) {
-//     edges {
-//       node {
-//         content {
-//           childContentfulRichText {
-//             html
-//           }
-//         }
-//         image {
-//           fluid {
-//             ...GatsbyContentfulFluid
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
