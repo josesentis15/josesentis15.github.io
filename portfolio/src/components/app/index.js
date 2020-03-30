@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -25,7 +25,7 @@ class App extends React.Component {
 
     setTimeout(() => {
       this.setState({ loaded: true });
-    }, 2100);
+    }, 2200);
   }
 
   touchable() {
@@ -49,12 +49,14 @@ class App extends React.Component {
         <GlobalStyle />
         {loaded ? (
           <ApolloProvider client={client}>
-            <Router history={history}>
+            <BrowserRouter history={history}>
+              <Switch>
                 {/* <Route path="/playground" component={Playground} /> */}
                 <Route path='/' component={Home} exact />
                 <Route path="/about" component={About} />
                 <Route component={NotFound} />
-            </Router>
+              </Switch>
+            </BrowserRouter>
           </ApolloProvider>
         ) : (
             <TransitionGroup>
