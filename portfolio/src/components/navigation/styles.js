@@ -37,7 +37,7 @@ const AppearingText = styled.span`
   }
 
   .loaded-enter-done & .text {
-    transition: transform 1s cubic-bezier(.215, .61, .355, 1);
+    transition: transform .8s cubic-bezier(.215, .61, .355, 1);
     transform: translateY(0);
   }
 `;

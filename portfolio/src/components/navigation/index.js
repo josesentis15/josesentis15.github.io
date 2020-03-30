@@ -71,4 +71,4 @@ class Navigation extends React.Component {
 }
 
 export default Navigation;
-export { NavigationWrapper };
+export { AppearingText, NavigationWrapper };

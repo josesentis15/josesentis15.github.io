@@ -26,7 +26,7 @@ class App extends React.Component {
 
     setTimeout(() => {
       this.setState({ loaded: true });
-    }, 3000);
+    }, 2100);
   }
 
   touchable() {
@@ -58,9 +58,9 @@ class App extends React.Component {
             </Router>
           </ApolloProvider>
         ) : (
-            <TransitionGroup component={null}>
+            <TransitionGroup>
               {showLoader && (
-                <CSSTransition classNames="loaded" timeout={2000}>
+                <CSSTransition classNames="loaded" timeout={1800}>
                   <Loader />
                 </CSSTransition>
               )}
