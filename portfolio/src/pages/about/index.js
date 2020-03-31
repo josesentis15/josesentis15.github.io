@@ -7,6 +7,7 @@ import Layout, { Wrapper } from '../../components/layout';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
 import Profile from '../../components/profile';
 
+import { capitalize } from '../../utils/mixins';
 import GET_ABOUT from './queries';
 
 class About extends React.Component {
@@ -29,7 +30,7 @@ class About extends React.Component {
           } = data.sections;
 
           return (
-            <Layout location={this.props.location} title={striptags(capitalize(about))} >
+            <Layout location={this.props.location} title={capitalize(about)} >
               <Header />
               <Wrapper>
                 <NavigationWrapper>

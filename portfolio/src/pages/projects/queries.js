@@ -7,14 +7,15 @@ const GET_PROJECTS = gql`
     }
     pages @client {
       projects {
-        title
-        external
-        externalLink
-        slug
-        image
-        id
-        order
-        abstract
+        projectList {
+          title
+          external
+          externalLink
+          slug
+          image
+          order
+          abstract
+        }
       }
     }
   }

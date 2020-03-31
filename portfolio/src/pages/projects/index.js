@@ -5,11 +5,12 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import Header from '../../components/header';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
-import Layout, { Wrapper } from '../components/layout';
-import ProjectList from '../components/projectsList';
-import Project from '../components/project';
+import Layout, { Wrapper } from '../../components/layout';
+import ProjectList from '../../components/projectsList';
+import Project from '../../components/project';
 
-import { capitalize } from '../utils/mixins';
+import { capitalize } from '../../utils/mixins';
+import GET_PROJECTS from './queries';
 
 class Projects extends React.Component {
   state = {
@@ -34,19 +35,23 @@ class Projects extends React.Component {
     const { hoverProject, clickedProject, loaded } = this.state;
 
     return (
-      <Query query={GET_ABOUT}>
+      <Query query={GET_PROJECTS}>
         {({ loading, data }) => {
           const {
             sections: {
-              projects: title
+              projects
             },
             pages: {
-              projects
+              projects: {
+                projectList
+              }
             }
           } = data;
 
+          console.log(data);
+
           return (
-            <Layout location={this.props.location} title={striptags(capitalize(title))} className="dark">
+            <Layout location={this.props.location} title={striptags(capitalize(projects))} className="dark">
               <Header />
               <Wrapper>
                 <NavigationWrapper>
@@ -54,7 +59,7 @@ class Projects extends React.Component {
                     {loaded && !loading && (
                       <CSSTransition classNames="loaded" timeout={300}>
                         <h1 className="title">
-                          <AppearingText><span className="text">{title}</span></AppearingText>
+                          <AppearingText><span className="text">{projects}</span></AppearingText>
                         </h1>
                       </CSSTransition>
                     )}
@@ -63,7 +68,7 @@ class Projects extends React.Component {
               </Wrapper>
               <Wrapper className="reading">
                 <ProjectList>
-                  {projects.map(project => (
+                  {projectList.map(project => (
                     <Project
                       key={project.id}
                       project={project}
@@ -75,7 +80,7 @@ class Projects extends React.Component {
                   ))}
                 </ProjectList>
               </Wrapper>
-            </Layout>
+            // </Layout>
           );
         }}
       </Query>

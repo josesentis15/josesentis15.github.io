@@ -5,6 +5,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import Home from '../../pages/home';
 import About from '../../pages/about';
+import Projects from '../../pages/projects';
 // import Playground from '../../pages/playground';
 import NotFound from '../../pages/notFound';
 import Loader from '../loader';
@@ -54,6 +55,7 @@ class App extends React.Component {
                 {/* <Route path="/playground" component={Playground} /> */}
                 <Route path='/' component={Home} exact />
                 <Route path="/about" component={About} />
+                <Route path="/projects" component={Projects} />
                 <Route component={NotFound} />
               </Switch>
             </BrowserRouter>
