@@ -30,7 +30,77 @@ const data = {
       <p>As a developer I try to trigger emotions through digital interfaces using code.</p>
       <p>I’m open for new creative opportunities. Don’t be shy, <a href="mailto:%link" rel="noopener noreferrer">say hi</a></p>`,
       image: '/images/profile.jpg'
-    }
+    },
+    projects: [
+      {
+        title: 'VC Community',
+        external: false,
+        slug: 'vc-community',
+        image: '/images/vc-community.jpg',
+        order: '4',
+        abstract: 'InnoEnergy is a company that connects investors and startups to create effective and prosperous alliances. Its main objective was to create a web app so that communication between these two entities would be more independent and direct.'
+      },
+      {
+        title: 'Esade Exed',
+        external: false,
+        slug: 'esade-exed',
+        image: '/images/esade-exed.jpg',
+        order: '4',
+        abstract: 'Redesign and new development for the Executive Education branch of Esade University. The main goal was increasing the conversion, mesured in the number of brochure downloads and increasing the leads to their exdcutive programmes. The challenge was creating a customer oriented navigation architecture while building a modular website. There were stakeholders with very different backgrounds and needs to cover.'
+      },
+      {
+        title: 'Club Familias',
+        external: true,
+        externalLink: 'https://www.clubfamilias.com/',
+        image: '/images/esade-exed.jpg',
+        order: '5',
+        abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        title: 'Cris García',
+        external: true,
+        externalLink: 'http://cris-garcia.com/',
+        image: '/images/esade-exed.jpg',
+        order: '2',
+        abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        title: 'Runroom',
+        external: true,
+        externalLink: 'https://www.runroom.com/',
+        image: '/images/esade-exed.jpg',
+        order: '1',
+        abstract: 'Repositioning Runroom as a reference point within the field of technology and giving birth to a new digital agency, one that looks like what it offers. New branding via Folch.'
+      },
+      {
+        title: 'Estudio Alberto Dominguez',
+        external: true,
+        externalLink: 'https://www.estudioalbertodominguez.com/',
+        image: '/images/esade-exed.jpg',
+        order: '3',
+        abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        title: 'Finca Mas Solers',
+        external: true,
+        externalLink: 'https://www.fincamassolers.com',
+        image: '/images/finca-mas-solers.jpg',
+        order: '7',
+        abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      }
+    ],
+    exercices: [
+      {
+        title: '',
+        external: '',
+        externalLink: '',
+        slug: '',
+        image: '',
+        id: '',
+        order: '',
+        abstract: ''
+      }
+    ]
   }
 };
 
