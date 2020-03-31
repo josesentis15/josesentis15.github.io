@@ -19,6 +19,7 @@ const Wrapper = styled.div`
 
   &.reading {
     max-width: ${pixelate(vars.layout.maxReadingWidth)};
+    overflow: visible;
 
     ${media.min('reader')`
       padding-left: 0;

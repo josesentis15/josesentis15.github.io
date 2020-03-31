@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -52,16 +52,16 @@ class App extends React.Component {
         <GlobalStyle />
         {loaded ? (
           <ApolloProvider client={client}>
-            <BrowserRouter history={history}>
+            <Router history={history}>
               <Switch>
                 {/* <Route path="/playground" component={Playground} /> */}
                 <Route path='/' component={Home} exact />
                 <Route path="/about" component={About} exact />
                 <Route path="/projects" component={Projects} exact />
-                {Object.keys(content).map(project => <Route path={`/projects/${project}`} component={Project} exact />)}
+                {Object.keys(content).map(project => <Route key={project} path={`/projects/${project}`} component={Project} exact />)}
                 <Route component={NotFound} />
               </Switch>
-            </BrowserRouter>
+            </Router>
           </ApolloProvider>
         ) : (
             <TransitionGroup>

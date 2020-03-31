@@ -48,8 +48,6 @@ class Projects extends React.Component {
             }
           } = data;
 
-          console.log(data);
-
           return (
             <Layout location={this.props.location} title={striptags(capitalize(projects))} className="dark">
               <Header />
@@ -70,7 +68,7 @@ class Projects extends React.Component {
                 <ProjectList>
                   {projectList.map(project => (
                     <Project
-                      key={project.title.replace('\s', Math.random())}
+                      key={project.title.replace(' ', Math.random())}
                       project={project}
                       hoverProject={hoverProject}
                       clickedProject={clickedProject}
