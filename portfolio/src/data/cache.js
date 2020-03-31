@@ -131,14 +131,18 @@ const data = {
     ],
     exercices: [
       {
-        title: '',
-        external: '',
-        externalLink: '',
-        slug: '',
-        image: '',
-        id: '',
-        order: '',
-        abstract: ''
+        title: 'Mouse offset curvature',
+        abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+        link: 'https://josesentis.github.io/playground/06-mouse-offset-curvature/',
+        date: '23/12/2019',
+        image: '/images/exercices/mouse-offset-curvature.jpg'
+      },
+      {
+        title: 'RGB distortion',
+        abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+        link: 'https://josesentis.github.io/playground/05-rgb-distortion/',
+        date: '23/12/2019',
+        image: '/images/exercices/rgb-distortion.jpg'
       }
     ]
   }
