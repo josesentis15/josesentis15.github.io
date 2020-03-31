@@ -6,10 +6,12 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Home from '../../pages/home';
 import About from '../../pages/about';
 import Projects from '../../pages/projects';
+import Project from '../../pages/project';
 // import Playground from '../../pages/playground';
 import NotFound from '../../pages/notFound';
 import Loader from '../loader';
 
+import content from '../../data/content.json';
 import client from '../../utils/apollo';
 import history from '../../utils/history'
 import GlobalStyle from '../../styles';
@@ -54,8 +56,9 @@ class App extends React.Component {
               <Switch>
                 {/* <Route path="/playground" component={Playground} /> */}
                 <Route path='/' component={Home} exact />
-                <Route path="/about" component={About} />
-                <Route path="/projects" component={Projects} />
+                <Route path="/about" component={About} exact />
+                <Route path="/projects" component={Projects} exact />
+                {Object.keys(content).map(project => <Route path={`/projects/${project}`} component={Project} exact />)}
                 <Route component={NotFound} />
               </Switch>
             </BrowserRouter>
