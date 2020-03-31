@@ -5,11 +5,11 @@ import { space } from '../../utils/mixins';
 
 const ProjectListStyled = styled.div`
   ${media.min('tablet')`
-    margin-top: ${space(2)};
+    margin: ${space(2)} 0;
   `}
 
   ${media.min('desktopLarge')`
-    margin-top: ${space(4)};
+    margin: ${space(4)} 0;
   `}
 `;
 

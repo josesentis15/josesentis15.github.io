@@ -33,7 +33,7 @@ const HeaderStyled = styled.header`
     }
 
     a {
-      color: ${colors.base500};
+      color: ${colors.base500} !important;
       text-decoration: none;
       &::after { display: none; }
 

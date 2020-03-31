@@ -44,7 +44,7 @@ class Project extends React.Component {
           {title}
         </h2>
         <div className="project__content">
-          <div className="project__image background-img" style={`background-image: url(${image})`}></div>
+          <div className="project__image background-img" style={{ 'backgroundImage' : `url(${image})`}}></div>
           <p className="project__text">{abstract}</p>
           {external ? (
             <a

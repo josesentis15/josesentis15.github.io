@@ -21,7 +21,7 @@ class Exercice extends React.Component {
 
     return (
       <ExerciceStyled>
-        <Img className="background-img" fluid={image.fluid} />
+        <div className="background-img" style={{ 'backgroundImage' : `url(${image})`}}></div>
         <div className="content">
           <div className="content-text">
             <h2 className="p">{title}</h2>

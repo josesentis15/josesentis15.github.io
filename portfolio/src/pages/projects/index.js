@@ -70,7 +70,7 @@ class Projects extends React.Component {
                 <ProjectList>
                   {projectList.map(project => (
                     <Project
-                      key={project.id}
+                      key={project.title.replace('\s', Math.random())}
                       project={project}
                       hoverProject={hoverProject}
                       clickedProject={clickedProject}
@@ -80,7 +80,7 @@ class Projects extends React.Component {
                   ))}
                 </ProjectList>
               </Wrapper>
-            // </Layout>
+            </Layout>
           );
         }}
       </Query>
