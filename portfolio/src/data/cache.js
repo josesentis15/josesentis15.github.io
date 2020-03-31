@@ -33,6 +33,7 @@ const data = {
     },
     projects: [
       {
+        __typename: 'Project',
         title: 'VC Community',
         external: false,
         slug: 'vc-community',
@@ -41,36 +42,51 @@ const data = {
         abstract: 'InnoEnergy is a company that connects investors and startups to create effective and prosperous alliances. Its main objective was to create a web app so that communication between these two entities would be more independent and direct.',
         content: [
           {
+            __typename: 'Project Component',
             type: 'image',
-            src: '/images/cases/vc-community-1.jpg'
+            src: '/images/cases/vc-community-1.jpg',
+            content: ''
           },
           {
+            __typename: 'Project Component',
             type: 'text',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            src: ''
           },
           {
+            __typename: 'Project Component',
             type: 'video',
-            src: '/images/cases/vc-community-2.mp4'
+            src: '/images/cases/vc-community-2.mp4',
+            content: ''
           },
           {
+            __typename: 'Project Component',
             type: 'image',
-            src: '/images/cases/vc-community-3.jpg'
+            src: '/images/cases/vc-community-3.jpg',
+            content: ''
           },
           {
+            __typename: 'Project Component',
             type: 'image',
-            src: '/images/cases/vc-community-4.jpg'
+            src: '/images/cases/vc-community-4.jpg',
+            content: ''
           },
           {
+            __typename: 'Project Component',
             type: 'text',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            src: ''
           },
           {
+            __typename: 'Project Component',
             type: 'image',
-            src: '/images/cases/vc-community-5.jpg'
+            src: '/images/cases/vc-community-5.jpg',
+            content: ''
           }
         ]
       },
       {
+        __typename: 'Project',
         title: 'Esade Exed',
         external: false,
         slug: 'esade-exed',
@@ -79,58 +95,78 @@ const data = {
         abstract: 'Redesign and new development for the Executive Education branch of Esade University. The main goal was increasing the conversion, mesured in the number of brochure downloads and increasing the leads to their exdcutive programmes. The challenge was creating a customer oriented navigation architecture while building a modular website. There were stakeholders with very different backgrounds and needs to cover.',
         content: [
           {
+            __typename: 'Project Component',
             type: 'image',
-            src: '/images/cases/vc-community-1.jpg'
+            src: '/images/cases/vc-community-1.jpg',
+            content: ''
           },
           {
+            __typename: 'Project Component',
             type: 'text',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            src: ''
           }
         ]
       },
       {
+        __typename: 'Project',
         title: 'Club Familias',
         external: true,
         externalLink: 'https://www.clubfamilias.com/',
         image: '/images/esade-exed.jpg',
         order: '5',
+        slug: '',
+        content: [],
         abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
+        __typename: 'Project',
         title: 'Cris García',
         external: true,
         externalLink: 'http://cris-garcia.com/',
         image: '/images/esade-exed.jpg',
         order: '2',
+        slug: '',
+        content: [],
         abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
+        __typename: 'Project',
         title: 'Runroom',
         external: true,
         externalLink: 'https://www.runroom.com/',
         image: '/images/esade-exed.jpg',
         order: '1',
+        slug: '',
+        content: [],
         abstract: 'Repositioning Runroom as a reference point within the field of technology and giving birth to a new digital agency, one that looks like what it offers. New branding via Folch.'
       },
       {
+        __typename: 'Project',
         title: 'Estudio Alberto Dominguez',
         external: true,
         externalLink: 'https://www.estudioalbertodominguez.com/',
         image: '/images/esade-exed.jpg',
         order: '3',
+        slug: '',
+        content: [],
         abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
+        __typename: 'Project',
         title: 'Finca Mas Solers',
         external: true,
         externalLink: 'https://www.fincamassolers.com',
         image: '/images/finca-mas-solers.jpg',
         order: '7',
+        slug: '',
+        content: [],
         abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       }
     ],
     exercices: [
       {
+        __typename: 'Exercice',
         title: 'Mouse offset curvature',
         abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
         link: 'https://josesentis.github.io/playground/06-mouse-offset-curvature/',
@@ -138,6 +174,7 @@ const data = {
         image: '/images/exercices/mouse-offset-curvature.jpg'
       },
       {
+        __typename: 'Exercice',
         title: 'RGB distortion',
         abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
         link: 'https://josesentis.github.io/playground/05-rgb-distortion/',
