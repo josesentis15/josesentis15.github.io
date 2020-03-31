@@ -29,7 +29,7 @@ class About extends React.Component {
           } = data.sections;
 
           return (
-            <Layout location={this.props.location}>
+            <Layout location={this.props.location} title={striptags(capitalize(about))} >
               <Header />
               <Wrapper>
                 <NavigationWrapper>
