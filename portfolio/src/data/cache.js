@@ -36,92 +36,13 @@ const data = {
       projectList: [
         {
           __typename: 'Project',
-          title: 'VC Community',
-          external: false,
-          externalLink: '',
-          slug: 'vc-community',
-          image: '/images/vc-community.jpg',
-          order: '4',
-          abstract: 'InnoEnergy is a company that connects investors and startups to create effective and prosperous alliances. Its main objective was to create a web app so that communication between these two entities would be more independent and direct.',
-          content: [
-            {
-              __typename: 'Project Component',
-              type: 'image',
-              src: '/images/cases/vc-community-1.jpg',
-              content: ''
-            },
-            {
-              __typename: 'Project Component',
-              type: 'text',
-              content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              src: ''
-            },
-            {
-              __typename: 'Project Component',
-              type: 'video',
-              src: '/images/cases/vc-community-2.mp4',
-              content: ''
-            },
-            {
-              __typename: 'Project Component',
-              type: 'image',
-              src: '/images/cases/vc-community-3.jpg',
-              content: ''
-            },
-            {
-              __typename: 'Project Component',
-              type: 'image',
-              src: '/images/cases/vc-community-4.jpg',
-              content: ''
-            },
-            {
-              __typename: 'Project Component',
-              type: 'text',
-              content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              src: ''
-            },
-            {
-              __typename: 'Project Component',
-              type: 'image',
-              src: '/images/cases/vc-community-5.jpg',
-              content: ''
-            }
-          ]
-        },
-        {
-          __typename: 'Project',
-          title: 'Esade Exed',
-          external: false,
-          externalLink: '',
-          slug: 'esade-exed',
-          image: '/images/esade-exed.jpg',
-          order: '4',
-          abstract: 'Redesign and new development for the Executive Education branch of Esade University. The main goal was increasing the conversion, mesured in the number of brochure downloads and increasing the leads to their exdcutive programmes. The challenge was creating a customer oriented navigation architecture while building a modular website. There were stakeholders with very different backgrounds and needs to cover.',
-          content: [
-            {
-              __typename: 'Project Component',
-              type: 'image',
-              src: '/images/cases/vc-community-1.jpg',
-              content: ''
-            },
-            {
-              __typename: 'Project Component',
-              type: 'text',
-              content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              src: ''
-            }
-          ]
-        },
-        {
-          __typename: 'Project',
-          title: 'Club Familias',
+          title: 'Runroom',
           external: true,
-          externalLink: 'https://www.clubfamilias.com/',
+          externalLink: 'https://www.runroom.com/',
           image: '/images/esade-exed.jpg',
-          order: '5',
+          order: '1',
           slug: '',
-          content: [],
-          abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          abstract: 'Repositioning Runroom as a reference point within the field of technology and giving birth to a new digital agency, one that looks like what it offers. New branding via Folch.'
         },
         {
           __typename: 'Project',
@@ -131,19 +52,7 @@ const data = {
           image: '/images/esade-exed.jpg',
           order: '2',
           slug: '',
-          content: [],
           abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-        },
-        {
-          __typename: 'Project',
-          title: 'Runroom',
-          external: true,
-          externalLink: 'https://www.runroom.com/',
-          image: '/images/esade-exed.jpg',
-          order: '1',
-          slug: '',
-          content: [],
-          abstract: 'Repositioning Runroom as a reference point within the field of technology and giving birth to a new digital agency, one that looks like what it offers. New branding via Folch.'
         },
         {
           __typename: 'Project',
@@ -153,8 +62,37 @@ const data = {
           image: '/images/esade-exed.jpg',
           order: '3',
           slug: '',
-          content: [],
           abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+          __typename: 'Project',
+          title: 'VC Community',
+          external: false,
+          externalLink: '',
+          slug: 'vc-community',
+          image: '/images/vc-community.jpg',
+          order: '4',
+          abstract: 'InnoEnergy is a company that connects investors and startups to create effective and prosperous alliances. Its main objective was to create a web app so that communication between these two entities would be more independent and direct.'
+        },
+        {
+          __typename: 'Project',
+          title: 'Club Familias',
+          external: true,
+          externalLink: 'https://www.clubfamilias.com/',
+          image: '/images/esade-exed.jpg',
+          order: '5',
+          slug: '',
+          abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+          __typename: 'Project',
+          title: 'Esade Exed',
+          external: false,
+          externalLink: '',
+          slug: 'esade-exed',
+          image: '/images/esade-exed.jpg',
+          order: '6',
+          abstract: 'Redesign and new development for the Executive Education branch of Esade University. The main goal was increasing the conversion, mesured in the number of brochure downloads and increasing the leads to their exdcutive programmes. The challenge was creating a customer oriented navigation architecture while building a modular website. There were stakeholders with very different backgrounds and needs to cover.'
         },
         {
           __typename: 'Project',
@@ -164,7 +102,6 @@ const data = {
           image: '/images/finca-mas-solers.jpg',
           order: '7',
           slug: '',
-          content: [],
           abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         }
       ]
