@@ -7,7 +7,7 @@ import Home from '../../pages/home';
 import About from '../../pages/about';
 import Projects from '../../pages/projects';
 import Project from '../../pages/project';
-// import Playground from '../../pages/playground';
+import Playground from '../../pages/playground';
 import NotFound from '../../pages/notFound';
 import Loader from '../loader';
 
@@ -54,9 +54,9 @@ class App extends React.Component {
           <ApolloProvider client={client}>
             <Router history={history}>
               <Switch>
-                {/* <Route path="/playground" component={Playground} /> */}
                 <Route path='/' component={Home} exact />
                 <Route path="/about" component={About} exact />
+                <Route path="/playground" component={Playground} exact />
                 <Route path="/projects" component={Projects} exact />
                 {Object.keys(content).map(project => <Route key={project} path={`/projects/${project}`} component={Project} exact />)}
                 <Route component={NotFound} />
