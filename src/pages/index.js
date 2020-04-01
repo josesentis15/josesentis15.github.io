@@ -26,31 +26,23 @@ class Home extends React.Component {
     const { loaded, showLoader } = this.state;
     const pageName = this.props.location.pathname.replace('/', '');
 
-    return loaded ? (
-      <Layout location={this.props.location} className={pageName === '/' ? 'home' : ''}>
-        <Header />
-        <Wrapper>
-          <Navigation />
-          <Location>
-            {({ location }) => {
-              return location === 'about' && (
-                <Profile />
-              )
-            }}
-          </Location>
-        </Wrapper>
+    return (
+      <Layout location={this.props.location} className="home">
+        {loaded ? (
+          <Wrapper>
+            <Navigation />
+          </Wrapper>
+        ) : (
+            <TransitionGroup component={null}>
+              {showLoader && (
+                <CSSTransition classNames="loaded" timeout={2000}>
+                  <Loader />
+                </CSSTransition>
+              )}
+            </TransitionGroup>
+          )}
       </Layout>
-    ) : (
-        <Layout location={this.props.location}>
-          <TransitionGroup component={null}>
-            {showLoader && (
-              <CSSTransition classNames="loaded" timeout={2000}>
-                <Loader />
-              </CSSTransition>
-            )}
-          </TransitionGroup>
-        </Layout>
-      )
+    );
   }
 }
 
