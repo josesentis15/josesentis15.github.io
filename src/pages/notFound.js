@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from "react-router";
 
 import Glitch from '../components/glitch';
 import Layout, { Wrapper } from '../components/layout';
@@ -29,4 +30,4 @@ class NotFound extends React.Component {
   }
 }
 
-export default NotFound;
+export default withRouter(NotFound);

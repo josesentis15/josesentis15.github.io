@@ -1,6 +1,7 @@
 import React from 'react';
 import { Query } from "react-apollo";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { withRouter } from "react-router";
 
 import Header from '../../components/header';
 import Layout, { Wrapper } from '../../components/layout';
@@ -54,4 +55,4 @@ class About extends React.Component {
   }
 }
 
-export default About;
+export default withRouter(About);

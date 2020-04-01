@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Query } from "react-apollo";
+import { withRouter } from "react-router";
 
 import Exercice from '../../components/exercice';
 import ExerciceList from '../../components/exerciceList';
@@ -81,4 +82,4 @@ class Playground extends React.Component {
   }
 }
 
-export default Playground;
+export default withRouter(Playground);

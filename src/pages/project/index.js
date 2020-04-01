@@ -1,7 +1,7 @@
 import React from 'react';
 import { Query } from "react-apollo";
-import { withRouter } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { withRouter } from "react-router";
 
 import Component from '../../components/component';
 import CrossNavigation from '../../components/crossNavigation';

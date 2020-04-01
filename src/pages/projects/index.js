@@ -2,6 +2,7 @@ import React from 'react';
 import striptags from 'striptags';
 import { Query } from "react-apollo";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { withRouter } from "react-router";
 
 import Header from '../../components/header';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
@@ -86,4 +87,4 @@ class Projects extends React.Component {
   }
 }
 
-export default Projects;
+export default withRouter(Projects);
