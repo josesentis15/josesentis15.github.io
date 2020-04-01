@@ -5,13 +5,14 @@ import { space } from '../../utils/mixins';
 import { colors, typography } from '../../utils/settings';
 
 const HeaderStyled = styled.header`
-  background-color: ${colors.white};
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   will-change: transform;
   z-index: 9;
+
+  .dark & { background-color: ${colors.white}; }
 
   .header {
     align-items: flex-start;

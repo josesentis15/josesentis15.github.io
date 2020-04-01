@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Cursor from '../cursor';
 import SEO from '../seo';
 
 import LayoutStyled, { Wrapper } from './styles';
@@ -28,11 +29,12 @@ class Layout extends React.Component {
       children,
       reading = false,
       title = '',
-      description = ''
+      description = '',
     } = this.props;
 
     return (
       <LayoutStyled className={className.concat(reading ? ' reading' : '')}>
+        <Cursor />
         <SEO title={title} description={description} />
         <main>{children}</main>
       </LayoutStyled>
