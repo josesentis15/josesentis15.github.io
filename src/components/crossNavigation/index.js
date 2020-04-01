@@ -1,77 +1,55 @@
 import React from 'react';
-import { Link, graphql, StaticQuery } from 'gatsby';
+import { Link } from 'react-router-dom';
 
 import CrossNavigationStyled from './styles';
 
 class CrossNavigation extends React.Component {
   render() {
-    const { current } = this.props;
+    const { current, projectList } = this.props;
+
 
     return (
-      <StaticQuery
-        query={componentQuery}
-        render={({ allContentfulProject: { edges } }) => {
-          return (
-            <CrossNavigationStyled>
-              {edges.map(({ node }) => {
-                const { external, externalLink, slug, order, title, id } = node;
+      <CrossNavigationStyled>
+        {projectList.map(project => {
+          const { external, externalLink, slug, order, title } = project;
 
-                const content = (
-                  <h3>
-                    <span className="label">
-                      {order.toString().length === 1 ? '0' : ''}
-                      {order}.
+          const content = (
+            <h3>
+              <span className="label">
+                {order.toString().length === 1 ? '0' : ''}
+                {order}.
                   </span>
-                    {title}
-                  </h3>
-                );
-
-                return (
-                  <li key={id}>
-                    {external ?
-                      (
-                        <a
-                          className="link"
-                          href={externalLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {content}
-                        </a>
-                      )
-                      :
-                      (
-                        <Link to={`/${slug}`} className={`link ${slug === current ? 'active' : ''}`}>
-                          {content}
-                        </Link>
-                      )
-                    }
-                  </li>
-                );
-              })}
-            </CrossNavigationStyled>
+              {title}
+            </h3>
           );
-        }}
-      />
+
+          return (
+            <li key={title.replace(' ', Math.random())}>
+              {external ?
+                (
+                  <a
+                    className="link"
+                    href={externalLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {content}
+                  </a>
+                )
+                :
+                (
+                  <Link to={`/${slug}`} className={`link ${slug === current ? 'active' : ''}`}>
+                    {content}
+                  </Link>
+                )
+              }
+            </li>
+          );
+        })}
+      </CrossNavigationStyled>
     );
+
   }
 };
 
 export default CrossNavigation;
-
-const componentQuery = graphql`
-  query {
-    allContentfulProject(sort: { fields: order }) {
-      edges {
-        node {
-          title
-          slug
-          id
-          order
-          external
-          externalLink
-        }
-      }
-    }
-  }
-`;

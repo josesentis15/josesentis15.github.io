@@ -1,9 +1,11 @@
 import React from 'react';
-import { graphql, Link, StaticQuery } from 'gatsby';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { Query } from "react-apollo";
+import { Link } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import { Wrapper } from '../layout';
 
+import GET_DATA from './queries';
 import HeaderStyled from './styles';
 
 class Header extends React.Component {
@@ -16,51 +18,41 @@ class Header extends React.Component {
   }
 
   render() {
-    const rootPath = `${__PATH_PREFIX__}/`;
     const { loaded } = this.state;
 
     return (
-      <StaticQuery
-        query={componentQuery}
-        render={({ site: { siteMetadata } }) => {
-          const { job, name } = siteMetadata;
+      <Query query={GET_DATA}>
+        {({ loading, data }) => {
+          const {
+            job,
+            name
+          } = data;
 
           return (
-            <TransitionGroup>
-              {loaded && (
-                <CSSTransition classNames="loaded" timeout={200}>
-                  <HeaderStyled>
-                    <Wrapper>
+            <HeaderStyled>
+              <Wrapper>
+                <TransitionGroup component={null}>
+                  {loaded && !loading && (
+                    <CSSTransition classNames="loaded" timeout={200}>
                       <div className="header">
                         <div>
-                          <Link to={rootPath}>
+                          <Link to="/">
                             <span>{name}</span>
                             <span>Folio - {new Date().getFullYear()}</span>
                           </Link>
                         </div>
                         <div>{job}</div>
                       </div>
-                    </Wrapper>
-                  </HeaderStyled>
-                </CSSTransition>
-              )}
-            </TransitionGroup>
+                    </CSSTransition>
+                  )}
+                </TransitionGroup>
+              </Wrapper>
+            </HeaderStyled>
           );
         }}
-      />
+      </Query>
     );
   }
 };
 
 export default Header;
-
-const componentQuery = graphql`
-  query HeaderQuery {
-    site {
-      siteMetadata {
-        job
-        name
-      }
-    }
-  }
-`;

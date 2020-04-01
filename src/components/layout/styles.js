@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   max-width: ${pixelate(vars.layout.maxContentWidth)};
   overflow-y: hidden;
   padding: 0 ${space()};
+  position: relative;
   width: 100%;
 
   ${media.min('tablet')`
@@ -18,6 +19,7 @@ const Wrapper = styled.div`
 
   &.reading {
     max-width: ${pixelate(vars.layout.maxReadingWidth)};
+    overflow: visible;
 
     ${media.min('reader')`
       padding-left: 0;

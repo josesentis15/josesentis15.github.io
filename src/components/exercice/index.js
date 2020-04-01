@@ -1,12 +1,11 @@
 import React from 'react';
-import Img from 'gatsby-background-image';
 import moment from 'moment';
 
-import ExternalLink from '../externalLink';
+import BackgroundImage from '../backgroundImage';
 
 import ExerciceStyled from './styles';
 
-class Exercice extends React.Component {
+class Exercice extends React.PureComponent {
   render() {
     const {
       exercice: {
@@ -21,13 +20,20 @@ class Exercice extends React.Component {
 
     return (
       <ExerciceStyled>
-        <Img className="background-img" fluid={image.fluid} />
+        <BackgroundImage src={image} />
         <div className="content">
           <div className="content-text">
             <h2 className="p">{title}</h2>
             <p className="label">Posted: {formattedDate}</p>
-            <p>{abstract.abstract}</p>
-            <ExternalLink className="external" to={link}>Explore</ExternalLink>
+            <p>{abstract}</p>
+            <a
+              className="external"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore
+            </a>
           </div>
         </div>
       </ExerciceStyled>

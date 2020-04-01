@@ -30,7 +30,7 @@ const NoiseWrapper = styled.div`
     right: -500px;
     bottom: -500px;
     left: -500px;
-    background: transparent url(img/noise.png) 0 0;
+    background: transparent url(${props => props.background}) 0 0;
     background-size: 320px 320px;
     opacity: 0.20;
     animation: ${noiseAnimation} 1.5s steps(8, end) infinite both;

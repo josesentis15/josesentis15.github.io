@@ -1,9 +1,6 @@
 import React from 'react';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import GlobalStyle from '../../styles';
-import Header from '../header';
-import SEO from '../seo';
+// import SEO from '../seo';
 
 import LayoutStyled, { Wrapper } from './styles';
 
@@ -29,15 +26,12 @@ class Layout extends React.Component {
     const {
       className = '',
       children,
-      title = false,
-      description = false,
       reading = false,
     } = this.props;
 
     return (
       <LayoutStyled className={className.concat(reading ? ' reading' : '')}>
-        <SEO title={title} description={description} />
-        <GlobalStyle />
+        {/* <SEO title={title} description={description} /> */}
         <main>{children}</main>
       </LayoutStyled>
     );

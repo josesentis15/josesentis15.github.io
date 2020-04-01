@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link, graphql, StaticQuery } from 'gatsby';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { Query } from "react-apollo";
+import { Link } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import ExternalLink from '../externalLink';
-import NavigationWrapper, { LinkWrapper } from './styles';
+import NavigationWrapper, { AppearingText } from './styles';
 
 import routes from '../../utils/routes';
+import GET_SECTIONS from './queries';
 
 class Navigation extends React.Component {
   state = {
@@ -20,60 +21,56 @@ class Navigation extends React.Component {
     const { loaded } = this.state;
 
     return (
-      <StaticQuery
-        query={componentQuery}
-        render={({ site: { siteMetadata } }) => {
+      <Query query={GET_SECTIONS}>
+        {({ loading, data }) => {
           const {
             playground,
             projects,
             about
-          } = siteMetadata.sections;
+          } = data.sections;
 
           return (
             <NavigationWrapper>
               <TransitionGroup>
-                {loaded && (
+                {loaded && !loading && (
+                  <CSSTransition classNames="loaded" timeout={300}>
+                    <Link to={routes.projects} className="title link">
+                      <AppearingText><span className="text">{projects}</span></AppearingText>
+                    </Link>
+                  </CSSTransition>
+                )}
+                {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={500}>
-                    <LinkWrapper>
-                      <Link to={routes.projects} className="title link">{projects}</Link>
-                    </LinkWrapper>
+                    {/* <a
+                      className="title link double-link"
+                      href={routes.playground}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    > */}
+                    <Link to={routes.playground} className="title link double-link">
+                      <AppearingText>
+                        <span className="text" dangerouslySetInnerHTML={{ __html: playground }} />
+                      </AppearingText>
+                    </Link>
+
+                    {/* </a> */}
                   </CSSTransition>
                 )}
-                {loaded && (
-                  <CSSTransition classNames="loaded" timeout={600}>
-                    <LinkWrapper className="double">
-                      <ExternalLink to={routes.playground} className="title link" icon={true}>{playground}</ExternalLink>
-                    </LinkWrapper>
-                  </CSSTransition>
-                )}
-                {loaded && (
+                {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={700}>
-                    <LinkWrapper>
-                      <Link to={routes.about} className="title link" activeClassName="active">{about}</Link>
-                    </LinkWrapper>
+                    <Link to={routes.about} className="title link">
+                      <AppearingText><span className="text">{about}</span></AppearingText>
+                    </Link>
                   </CSSTransition>
                 )}
               </TransitionGroup>
             </NavigationWrapper>
           );
         }}
-      />
+      </Query>
     );
   }
 }
 
 export default Navigation;
-
-const componentQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        sections {
-          playground
-          projects
-          about
-        }
-      }
-    }
-  }
-`;
+export { AppearingText, NavigationWrapper };

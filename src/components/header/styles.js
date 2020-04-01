@@ -9,13 +9,9 @@ const HeaderStyled = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  transform: translateY(-100%);
-  transition: transform .5s linear;
   width: 100%;
   will-change: transform;
   z-index: 9;
-
-  &.loaded-enter-done { transform: translateY(0); }
 
   .header {
     align-items: flex-start;
@@ -24,13 +20,20 @@ const HeaderStyled = styled.header`
     font-family: ${typography.secondaryFontFamily.join(', ')};
     justify-content: space-between;
     padding: ${space()} 0;
+    transform: translateY(-100%);
+    transition: transform 0s;
+
+    &.loaded-enter-done {
+      transition: transform .7s cubic-bezier(.215, .61, .355, 1);
+      transform: translateY(0);
+    }
 
     > div {
       max-width: 150px;
     }
 
     a {
-      color: ${colors.base500};
+      color: ${colors.base500} !important;
       text-decoration: none;
       &::after { display: none; }
 

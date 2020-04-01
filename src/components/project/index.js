@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import Img from 'gatsby-background-image';
+import { Link } from 'react-router-dom';
 
-import ExternalLink from '../../components/externalLink';
+import BackgroundImage from '../backgroundImage';
 
 import ProjectStyled from './styles';
 
@@ -47,10 +46,17 @@ class Project extends React.Component {
           {title}
         </h2>
         <div className="project__content">
-          <Img className="project__image background-img" fluid={image.fluid} />
-          <p className="project__text">{abstract.abstract}</p>
+          <BackgroundImage src={image} className="project__image" />
+          <p className="project__text">{abstract}</p>
           {external ? (
-            <ExternalLink className="external" to={externalLink}>Go to site</ExternalLink>
+            <a
+              className="external"
+              href={externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Go to site
+            </a>
           ) : (
               <Link to={slug} onClick={e => e.stopPropagation()}>View project</Link>
             )}
