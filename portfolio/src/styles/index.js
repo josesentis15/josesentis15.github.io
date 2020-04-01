@@ -132,18 +132,6 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .background-img {
-    background-position: center;
-    background-size: cover;
-    display: block;
-    overflow: hidden;
-
-    &::before {
-      padding-bottom: 100%;
-      position: relative !important;
-    }
-  }
-
   ${typographyStyles}
   ${utils}
 `;
