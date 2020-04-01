@@ -18,28 +18,28 @@ class Playground extends React.Component {
     title: ''
   }
 
-  // componentDidMount() {
-  //   const title = this.rotatingTitle;
+  componentDidMount() {
+    const title = this.rotatingTitle;
 
-  //   this.setState({ title });
+    this.setState({ title });
 
-  //   const interval = setInterval(() => {
-  //     this.animateText();
-  //   }, 350);
+    const interval = setInterval(() => {
+      this.animateText();
+    }, 350);
 
-  //   this.interval = interval;
-  // }
+    this.interval = interval;
+  }
 
-  // componentWillUnmount() {
-  //   clearInterval(this.interval);
-  // }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
 
-  // animateText = () => {
-  //   const { title } = this.state;
-  //   const rotatedTitle = title.substr(1) + title.slice(0, 1);
+  animateText = () => {
+    const { title } = this.state;
+    const rotatedTitle = title.substr(1) + title.slice(0, 1);
 
-  //   this.setState({ title: rotatedTitle });
-  // };
+    this.setState({ title: rotatedTitle });
+  };
 
   render() {
     const { title } = this.state;
@@ -57,8 +57,8 @@ class Playground extends React.Component {
 
           return (
             <Layout location={this.props.location} title={title} className="playground headerless" header={false}>
-              {/* <Noise /> */}
-              {/* <MovingText>{this.rotatingTitle + this.rotatingTitle + this.rotatingTitle + this.rotatingTitle}</MovingText> */}
+              <Noise />
+              <MovingText>{this.rotatingTitle + this.rotatingTitle + this.rotatingTitle + this.rotatingTitle}</MovingText>
               <Wrapper>
                 <div className="intro">
                   <div dangerouslySetInnerHTML={{ __html: abstract }}></div>

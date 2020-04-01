@@ -19,7 +19,8 @@ const textStroke = `
 
 const TextWrapper = styled.div`
   font-size: 168px;
-  line-height: 1;
+  line-height: 1.2;
+  margin-top: -1.5rem;
   overflow: hidden;
   pointer-events: none;
   ${textStroke}
