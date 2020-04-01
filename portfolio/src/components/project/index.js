@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import BackgroundImage from '../backgroundImage';
+
 import ProjectStyled from './styles';
 
 class Project extends React.Component {
@@ -44,7 +46,7 @@ class Project extends React.Component {
           {title}
         </h2>
         <div className="project__content">
-          <div className="project__image background-img" style={{ 'backgroundImage' : `url(${image})`}}></div>
+          <BackgroundImage src={image} className="project__image" />
           <p className="project__text">{abstract}</p>
           {external ? (
             <a
