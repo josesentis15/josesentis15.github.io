@@ -58,7 +58,7 @@ class Project extends React.Component {
               Go to site
             </a>
           ) : (
-              <Link to={slug} onClick={e => e.stopPropagation()}>View project</Link>
+              <Link to={`projects/${slug}`} onClick={e => e.stopPropagation()}>View project</Link>
             )}
         </div>
       </ProjectStyled>
