@@ -1,24 +1,25 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link } from 'react-router-dom';
+import { Query } from "react-apollo";
 
-import Exercice from '../components/exercice';
-import ExerciceList from '../components/exerciceList';
-import Layout, { Wrapper } from '../components/layout';
-import MovingText from '../components/movingText';
-import Noise from '../components/noise';
+import Exercice from '../../components/exercice';
+import ExerciceList from '../../components/exerciceList';
+import Layout, { Wrapper } from '../../components/layout';
+import MovingText from '../../components/movingText';
+import Noise from '../../components/noise';
 
-import routes from '../utils/routes';
-
-const rotatingTitle = `playground * playground * playground * playground * `;
+import routes from '../../utils/routes';
+import GET_PLAYGROUND from './queries';
 
 class Playground extends React.Component {
+  rotatingTitle = `playground * playground * playground * playground * `;
   interval = '';
   state = {
     title: ''
   }
 
   componentDidMount() {
-    const title = rotatingTitle;
+    const title = this.rotatingTitle;
 
     this.setState({ title });
 
@@ -42,64 +43,42 @@ class Playground extends React.Component {
 
   render() {
     const { title } = this.state;
-    const { data } = this.props;
-    const exercices = data.allContentfulExercice.edges;
-    const { abstract, cta } = data.site.siteMetadata.playground;
 
     return (
-      <Layout location={this.props.location} title={title} className="playground headerless" header={false}>
-        <Noise />
-        <MovingText>{rotatingTitle + rotatingTitle + rotatingTitle + rotatingTitle}</MovingText>
-        <Wrapper>
-          <div className="intro">
-            <div dangerouslySetInnerHTML={{
-              __html: abstract,
-            }}></div>
-            <Link to={routes.home}>{cta}</Link>
-          </div>
-          <ExerciceList>
-            {exercices.map(({ node }) => (
-              <Exercice
-                key={node.id}
-                exercice={node}
-              />
-            ))}
-          </ExerciceList>
-        </Wrapper>
-      </Layout>
+      <Query query={GET_PLAYGROUND}>
+        {({ loading, data }) => {
+          const {
+            playground: {
+              cta,
+              abstract,
+              exercices
+            }
+          } = data.pages;
+
+          return (
+            <Layout location={this.props.location} title={title} className="playground headerless" header={false}>
+              {/* <Noise /> */}
+              {/* <MovingText>{this.rotatingTitle + this.rotatingTitle + this.rotatingTitle + this.rotatingTitle}</MovingText> */}
+              <Wrapper>
+                <div className="intro">
+                  <div dangerouslySetInnerHTML={{ __html: abstract }}></div>
+                  <Link to={routes.home}>{cta}</Link>
+                </div>
+                <ExerciceList>
+                  {exercices.map(exercice => (
+                    <Exercice
+                      key={exercice.title.replace(' ', Math.random())}
+                      exercice={exercice}
+                    />
+                  ))}
+                </ExerciceList>
+              </Wrapper>
+            </Layout>
+          );
+        }}
+      </Query>
     );
   }
 }
 
 export default Playground;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        playground {
-          cta
-          abstract
-        }
-      }
-    }
-    allContentfulExercice {
-      edges {
-        node {
-          abstract {
-            abstract
-          }
-          id
-          title
-          link
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-          date
-        }
-      }
-    }
-  }
-`;

@@ -17,11 +17,6 @@ const data = {
     projects: 'projects',
     about: 'about',
   },
-  playground: {
-    __typename: 'Playground',
-    cta: 'Back to Jose Sentis Folio',
-    abstract: `<p>This is the space where I create, where I try new technologies to develop myself in skills that are often difficult to learn working in corporate projects.<br>It's the space where I show who I am further than my role in a agencies.<br>It's my personal kaizen.</p><p>To see other projects, follow the link:</p>`
-  },
   pages: {
     __typename: 'Pages',
     about: {
@@ -30,6 +25,29 @@ const data = {
       <p>As a developer I try to trigger emotions through digital interfaces using code.</p>
       <p>I’m open for new creative opportunities. Don’t be shy, <a href="mailto:%link" rel="noopener noreferrer">say hi</a></p>`,
       image: '/images/profile.jpg'
+    },
+    playground: {
+      __typename: 'Playground page',
+      cta: 'Back to Jose Sentis Folio',
+      abstract: `<p>This is the space where I create, where I try new technologies to develop myself in skills that are often difficult to learn working in corporate projects.<br>It's the space where I show who I am further than my role in a agencies.<br>It's my personal kaizen.</p><p>To see other projects, follow the link:</p>`,
+      exercices: [
+        {
+          __typename: 'Exercice',
+          title: 'Mouse offset curvature',
+          abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+          link: 'https://josesentis.github.io/playground/06-mouse-offset-curvature/',
+          date: '2019-12-23',
+          image: '/images/exercices/mouse-offset-curvature.jpg'
+        },
+        {
+          __typename: 'Exercice',
+          title: 'RGB distortion',
+          abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+          link: 'https://josesentis.github.io/playground/05-rgb-distortion/',
+          date: '2019-12-23',
+          image: '/images/exercices/rgb-distortion.jpg'
+        }
+      ]
     },
     projects: {
       __typename: 'Project page',
@@ -105,25 +123,7 @@ const data = {
           abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         }
       ]
-    },
-    exercices: [
-      {
-        __typename: 'Exercice',
-        title: 'Mouse offset curvature',
-        abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-        link: 'https://josesentis.github.io/playground/06-mouse-offset-curvature/',
-        date: '23/12/2019',
-        image: '/images/exercices/mouse-offset-curvature.jpg'
-      },
-      {
-        __typename: 'Exercice',
-        title: 'RGB distortion',
-        abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-        link: 'https://josesentis.github.io/playground/05-rgb-distortion/',
-        date: '23/12/2019',
-        image: '/images/exercices/rgb-distortion.jpg'
-      }
-    ]
+    }
   }
 };
 

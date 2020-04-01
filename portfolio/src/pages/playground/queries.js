@@ -1,11 +1,21 @@
 import gql from 'graphql-tag';
 
-const GET_EXERCICES = gql`
+const GET_PLAYGROUND = gql`
   {
-    sections @client {
-      about
+    pages @client {
+      playground {
+        cta
+        abstract
+        exercices {
+          abstract
+          title
+          link
+          image
+          date
+        }
+      }
     }
   }
 `;
 
-export default GET_EXERCICES;
+export default GET_PLAYGROUND;
