@@ -2,7 +2,7 @@ const data = {
   job: `Creative Front-End developer`,
   name: `Jose Sentis`,
   description: `Hi – I’m Jose, a Front-End developer based in Barcelona. I do stuff for the Internet.`,
-  ogImage: `img/og-image.jpg`,
+  ogImage: `images/og-image.jpg`,
   siteUrl: `https://josesentis.com/`,
   social: {
     __typename: 'Social',
