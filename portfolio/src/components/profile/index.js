@@ -1,6 +1,8 @@
 import React from 'react';
 import { Query } from "react-apollo";
 
+import BackgroundImage from '../backgroundImage';
+
 import ProfileWrapper from './styles';
 import GET_PROFILE from './queries';
 
@@ -28,7 +30,7 @@ class Profile extends React.Component {
 
           return (
             <ProfileWrapper>
-              <img src={image} alt="Profile" />
+              <BackgroundImage src={image} />
               <div className="p-big">
                 <div
                   dangerouslySetInnerHTML={{
