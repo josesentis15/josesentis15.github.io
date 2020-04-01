@@ -41,16 +41,19 @@ class Navigation extends React.Component {
                 )}
                 {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={500}>
-                    <a
+                    {/* <a
                       className="title link double-link"
                       href={routes.playground}
                       target="_blank"
                       rel="noopener noreferrer"
-                    >
+                    > */}
+                    <Link to={routes.playground} className="title link double-link">
                       <AppearingText>
                         <span className="text" dangerouslySetInnerHTML={{ __html: playground }} />
                       </AppearingText>
-                    </a>
+                    </Link>
+
+                    {/* </a> */}
                   </CSSTransition>
                 )}
                 {loaded && !loading && (
