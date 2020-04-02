@@ -2,6 +2,8 @@ import React from 'react';
 import { Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import isExplorer from '@runroom/purejs/lib/isExplorer';
+import touchable from '@runroom/purejs/lib/touchable';
 
 import Home from '../../pages/home';
 import About from '../../pages/about';
@@ -23,7 +25,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.touchable();
+    touchable();
+    isExplorer();
+
     this.setState({ showLoader: true });
 
     setTimeout(() => {
@@ -31,18 +35,6 @@ class App extends React.Component {
     }, 2200);
   }
 
-  touchable() {
-    const typedWindow = window || null;
-    const touchsupport =
-      'ontouchstart' in typedWindow ||
-      typedWindow.navigator.maxTouchPoints > 0 ||
-      typedWindow.navigator.msMaxTouchPoints > 0;
-    const touchClass = touchsupport ? 'touch' : 'non-touch';
-
-    if (document.documentElement) {
-      document.documentElement.classList.add(touchClass);
-    }
-  }
 
   render() {
     const { loaded, showLoader } = this.state;
