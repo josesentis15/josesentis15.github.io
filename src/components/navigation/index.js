@@ -3,22 +3,15 @@ import { Query } from "react-apollo";
 import { Link } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import NavigationWrapper, { AppearingText } from './styles';
+import withLoader from '../../hoc/withLoader';
 
 import routes from '../../utils/routes';
 import GET_SECTIONS from './queries';
+import NavigationWrapper, { AppearingText } from './styles';
 
 class Navigation extends React.Component {
-  state = {
-    loaded: false
-  }
-
-  componentDidMount() {
-    this.setState({ loaded: true });
-  }
-
   render() {
-    const { loaded } = this.state;
+    const { loaded } = this.props;
 
     return (
       <Query query={GET_SECTIONS}>
@@ -41,19 +34,11 @@ class Navigation extends React.Component {
                 )}
                 {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={500}>
-                    {/* <a
-                      className="title link double-link"
-                      href={routes.playground}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    > */}
                     <Link to={routes.playground} className="title link double-link">
                       <AppearingText>
                         <span className="text" dangerouslySetInnerHTML={{ __html: playground }} />
                       </AppearingText>
                     </Link>
-
-                    {/* </a> */}
                   </CSSTransition>
                 )}
                 {loaded && !loading && (
@@ -72,5 +57,5 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+export default withLoader(Navigation);
 export { AppearingText, NavigationWrapper };

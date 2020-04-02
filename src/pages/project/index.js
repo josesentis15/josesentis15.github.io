@@ -8,23 +8,15 @@ import CrossNavigation from '../../components/crossNavigation';
 import Header from '../../components/header';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
 import Layout, { Wrapper } from '../../components/layout';
-import ProjectDetail from './styles';
+import withLoader from '../../hoc/withLoader';
 
 import DATA from '../../data/content.json';
 import GET_PROJECTS from '../projects/queries';
+import ProjectDetail from './styles';
 
 class Project extends React.Component {
-  state = {
-    loaded: false
-  }
-
-  componentDidMount() {
-    this.setState({ loaded: true });
-  }
-
   render() {
-    const { loaded } = this.state;
-    const { location: { pathname } } = this.props;
+    const { loaded, location: { pathname } } = this.props;
 
     return (
       <Query query={GET_PROJECTS}>
@@ -88,4 +80,4 @@ class Project extends React.Component {
   }
 }
 
-export default withRouter(Project);
+export default withLoader(withRouter(Project));

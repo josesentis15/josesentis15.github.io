@@ -26,7 +26,7 @@ class App extends React.Component {
 
   componentDidMount() {
     touchable();
-    isExplorer();
+    if (isExplorer()) document.documentElement.classList.add('browser-ie');
 
     this.setState({ showLoader: true });
 

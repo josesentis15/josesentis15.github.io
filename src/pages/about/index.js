@@ -7,21 +7,14 @@ import Header from '../../components/header';
 import Layout, { Wrapper } from '../../components/layout';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
 import Profile from '../../components/profile';
+import withLoader from '../../hoc/withLoader';
 
 import { capitalize } from '../../utils/mixins';
 import GET_ABOUT from './queries';
 
 class About extends React.Component {
-  state = {
-    loaded: false
-  }
-
-  componentDidMount() {
-    this.setState({ loaded: true });
-  }
-
   render() {
-    const { loaded } = this.state;
+    const { loaded } = this.props;
 
     return (
       <Query query={GET_ABOUT}>
@@ -55,4 +48,4 @@ class About extends React.Component {
   }
 }
 
-export default withRouter(About);
+export default withLoader(withRouter(About));

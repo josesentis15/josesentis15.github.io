@@ -3,22 +3,15 @@ import { Query } from "react-apollo";
 import { Link } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
+import withLoader from '../../hoc/withLoader';
 import { Wrapper } from '../layout';
 
 import GET_DATA from './queries';
 import HeaderStyled from './styles';
 
 class Header extends React.Component {
-  state = {
-    loaded: false
-  }
-
-  componentDidMount() {
-    this.setState({ loaded: true });
-  }
-
   render() {
-    const { loaded } = this.state;
+    const { loaded } = this.props;
 
     return (
       <Query query={GET_DATA}>
@@ -55,4 +48,4 @@ class Header extends React.Component {
   }
 };
 
-export default Header;
+export default withLoader(Header);

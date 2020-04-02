@@ -1,16 +1,12 @@
 import React from 'react';
 import { Power2, TweenLite } from 'gsap';
 
+import withLoader from '../../hoc/withLoader';
+
 import Circle from './styles';
 
 class Cursor extends React.PureComponent {
-  state = {
-    loaded: false,
-  }
-
   componentDidMount() {
-    this.setState({ loaded: true });
-
     document.addEventListener('mousemove', this.handleMouseMove);
   }
 
@@ -29,7 +25,7 @@ class Cursor extends React.PureComponent {
   }
 
   render() {
-    const { loaded } = this.state;
+    const { loaded } = this.props;
 
     return loaded && (
       <Circle ref={ref => this._cursor = ref} />
@@ -37,4 +33,4 @@ class Cursor extends React.PureComponent {
   }
 }
 
-export default Cursor;
+export default withLoader(Cursor);
