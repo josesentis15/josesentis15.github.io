@@ -65,6 +65,8 @@ const ProjectStyled = styled.div`
       top: calc(50% - 20vh);
       z-index: 0;
     }
+
+    .non-touch & .project__image { display: none; }
   `}
 
   ${media.min('desktop')`

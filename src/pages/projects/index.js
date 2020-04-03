@@ -12,11 +12,13 @@ import Project from '../../components/project';
 
 import { capitalize } from '../../utils/mixins';
 import GET_PROJECTS from './queries';
+import BackgroundImage from '../../components/backgroundImage';
 
 class Projects extends React.Component {
   state = {
-    hoverProject: '',
-    clickedProject: '',
+    hoverProject: false,
+    isHoverProject: false,
+    clickedProject: false,
     loaded: false
   }
 
@@ -24,16 +26,16 @@ class Projects extends React.Component {
     this.setState({ loaded: true });
   }
 
-  onClick = (projectName = '') => {
-    this.setState({ clickedProject: projectName })
+  onClick = (project = false) => {
+    this.setState({ clickedProject: project })
   }
 
-  onHover = (projectName = '') => {
-    this.setState({ hoverProject: projectName })
+  onHover = (project = false) => {
+    this.setState({ hoverProject: project, isHoverProject: !project ? false : true })
   }
 
   render() {
-    const { hoverProject, clickedProject, loaded } = this.state;
+    const { hoverProject, isHoverProject, clickedProject, loaded } = this.state;
 
     return (
       <Query query={GET_PROJECTS}>
@@ -77,6 +79,18 @@ class Projects extends React.Component {
                       onClick={this.onClick}
                     />
                   ))}
+                  <TransitionGroup>
+                    {isHoverProject && (
+                      <CSSTransition classNames="loaded" timeout={{
+                        enter: 0,
+                        exit: 300
+                    }}>
+                        <div className="image-wrapper">
+                          <BackgroundImage className="project-image" src={hoverProject.image} />
+                        </div>
+                      </CSSTransition>
+                     )}
+                  </TransitionGroup>
                 </ProjectList>
               </Wrapper>
             </Layout>

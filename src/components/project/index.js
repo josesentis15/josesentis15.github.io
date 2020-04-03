@@ -22,20 +22,21 @@ class Project extends React.Component {
       clickedProject
     } = this.props;
     const title = this.props.project.title || slug;
+    const { project } = this.props;
     const className = `
       project
-      ${hoverProject === title ? ' hover' : hoverProject !== '' ? 'no-hover' : ''}
-      ${clickedProject === title ? ' active' : clickedProject !== '' ? 'no-active' : ''}
+      ${hoverProject === project ? ' hover' : hoverProject !== '' ? 'no-hover' : ''}
+      ${clickedProject === project ? ' active' : clickedProject !== '' ? 'no-active' : ''}
     `;
 
     return (
       <ProjectStyled
         className={`${className}`}
         onClick={() => {
-          if (clickedProject !== title) onClick(title);
-          else onClick('');
+          if (clickedProject !== project) onClick(project);
+          else onClick();
         }}
-        onMouseEnter={() => onHover(title)}
+        onMouseEnter={() => onHover(project)}
         onMouseLeave={() => onHover()}
       >
         <h2 className="project__title title2">
