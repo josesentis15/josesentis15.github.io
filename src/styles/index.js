@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { textStroke } from '../components/movingText/styles';
 import { space } from '../utils/mixins';
 import { colors, typography } from '../utils/settings';
 import typographyStyles from './typography';
@@ -140,6 +141,10 @@ const GlobalStyle = createGlobalStyle`
     li {
       list-style: none;
     }
+  }
+
+  .stroke {
+    ${textStroke}
   }
 
   ${typographyStyles}

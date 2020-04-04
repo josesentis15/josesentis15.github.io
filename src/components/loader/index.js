@@ -5,12 +5,26 @@ import Noise from '../noise';
 import LoaderWrapper from './styles';
 import { AppearingText } from '../navigation';
 
+const text = 'Jose Sentis';
+
 class Home extends React.Component {
   render() {
     return (
       <LoaderWrapper className="playground">
         <Noise />
-        <AppearingText><span className="text title">Jose Sentis</span></AppearingText>
+        <div>
+          <span className="title duplicated-text stroke ligth">{text}</span>
+          <span className="title duplicated-text stroke ligth">{text}</span>
+          <span className="title duplicated-text stroke ligth">{text}</span>
+          <span className="title duplicated-text stroke ligth">{text}</span>
+          <span className="title duplicated-text stroke ligth">{text}</span>
+          <AppearingText><span className="text title">{text}</span></AppearingText>
+          <span className="title duplicated-text stroke ligth">{text}</span>
+          <span className="title duplicated-text stroke ligth">{text}</span>
+          <span className="title duplicated-text stroke ligth">{text}</span>
+          <span className="title duplicated-text stroke ligth">{text}</span>
+          <span className="title duplicated-text stroke ligth">{text}</span>
+        </div>
       </LoaderWrapper>
     );
   }

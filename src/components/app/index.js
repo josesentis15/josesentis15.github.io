@@ -26,9 +26,8 @@ class App extends React.Component {
 
     setTimeout(() => {
       this.setState({ loaded: true });
-    }, 2200);
+    }, 2400);
   }
-
 
   render() {
     const { loaded, showLoader } = this.state;
@@ -45,7 +44,7 @@ class App extends React.Component {
         ) : (
             <TransitionGroup>
               {showLoader && (
-                <CSSTransition classNames="loaded" timeout={1800}>
+                <CSSTransition classNames="loaded" timeout={2000}>
                   <Loader />
                 </CSSTransition>
               )}
