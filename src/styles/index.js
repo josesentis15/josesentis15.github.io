@@ -151,13 +151,14 @@ const GlobalStyle = createGlobalStyle`
   ${utils}
 
   .react-p5 {
-    display: none;
     height: 100%;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 0;
+
+    .touch & { display: none; }
   }
 `;
 
