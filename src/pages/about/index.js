@@ -32,7 +32,7 @@ class About extends React.Component {
                     {loaded && !loading && (
                       <CSSTransition classNames="loaded" timeout={300}>
                         <h1 className="title">
-                          <AppearingText><span className="text">{about}</span></AppearingText>
+                          <AppearingText><span className="text stroke dark">{about}</span></AppearingText>
                         </h1>
                       </CSSTransition>
                     )}

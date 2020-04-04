@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { textStroke } from '../../components/movingText/styles';
+
 import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
@@ -23,6 +25,10 @@ const NavigationWrapper = styled.div`
   > div { width: 100%; }
 
   .link { margin-bottom: ${space(1.5)}; }
+
+  .stroke {
+    ${textStroke}
+  }
 `;
 
 const AppearingText = styled.span`
