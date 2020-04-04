@@ -158,7 +158,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     z-index: 0;
 
-    .touch & { display: none; }
+    .touch .not-found & { display: none; }
   }
 `;
 

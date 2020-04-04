@@ -22,13 +22,16 @@ class NotFound extends React.Component {
   }
 
   draw = p5 => {
-    p5.image(this._img, p5.mouseX, p5.mouseY);
+    const x = p5.mouseX ? p5.mouseX - 45 : p5.windowWidth / 2;
+    const y = p5.mouseY ? p5.mouseY - 20 : p5.windowHeight / 2;
+
+    p5.image(this._img, x, y);
   }
 
   render() {
     return (
       <Layout
-        className="layout-bottom"
+        className="layout-bottom not-found"
         location={this.props.location}
         title="404: Not Found"
       >
