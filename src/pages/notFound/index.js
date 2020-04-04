@@ -22,8 +22,8 @@ class NotFound extends React.Component {
   }
 
   draw = p5 => {
-    const x = p5.mouseX ? p5.mouseX - 45 : p5.windowWidth / 2;
-    const y = p5.mouseY ? p5.mouseY - 20 : p5.windowHeight / 2;
+    const x = p5.mouseX ? p5.mouseX - 88 : p5.windowWidth / 2;
+    const y = p5.mouseY ? p5.mouseY - 38 : p5.windowHeight / 2;
 
     p5.image(this._img, x, y);
   }
