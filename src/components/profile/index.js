@@ -30,7 +30,6 @@ class Profile extends React.Component {
 
           return (
             <ProfileWrapper>
-              <BackgroundImage src={image} />
               <div className="p-big">
                 <div
                   dangerouslySetInnerHTML={{
@@ -64,6 +63,7 @@ class Profile extends React.Component {
                   </a>
                 </div>
               </div>
+              <BackgroundImage src={image} />
             </ProfileWrapper>
           );
         }}

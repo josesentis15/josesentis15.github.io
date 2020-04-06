@@ -14,11 +14,22 @@ const hover = (...args) => css`
   }
 `;
 
-const columns = (number, spaces = 1) => `
-  width: calc((100% - ${space(spaces * (number - 1))}) / ${number});
+const columns = (number, spaces = 1, direction = 'default') => `
+  ${direction === 'default' ?
+    `
+      width: calc((100% - ${space(spaces * (number - 1))}) / ${number});
 
-  &:nth-child(n) { margin-right: ${space(spaces)}; }
-  &:nth-child(${number}n) { margin-right: 0; }
+      &:nth-child(n) { margin-right: ${space(spaces)}; }
+      &:nth-child(${number}n) { margin-right: 0; }
+      `
+    :
+    `
+      width: calc((100% - ${space(spaces * (number - 1))}) / ${number});
+
+      &:nth-child(n) { margin-left: ${space(spaces)}; }
+      &:nth-child(${number}n) { margin-left: 0; }
+    `
+  }
 `;
 
 const capitalize = text => text.charAt(0).toUpperCase() + text.slice(1);

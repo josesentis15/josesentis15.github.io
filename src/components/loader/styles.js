@@ -21,6 +21,10 @@ const LoaderWrapper = styled.div`
 
   .title { color: ${colors.white}; }
 
+  ${media.max('phone')`
+    .title { font-size: 50px; }
+  `}
+
   ${media.max('desktop')`
     .title { text-align: center; }
   `}
