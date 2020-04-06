@@ -19,7 +19,6 @@ const Circle = styled.span`
 
   .non-touch &.moved { display: block; }
   .dark & { background-color: ${colors.white}; }
-  .not-found & { display: none !important; }
 `;
 
 export default Circle;
