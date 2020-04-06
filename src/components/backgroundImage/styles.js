@@ -11,6 +11,16 @@ const Image = styled.div`
     display: block;
     padding-bottom: 100%;
   }
+
+  canvas {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  img { display: none; }
 `;
 
 export default Image;

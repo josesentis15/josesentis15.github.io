@@ -24,7 +24,8 @@
     "react-scripts": "^3.4.0",
     "react-transition-group": "^4.3.0",
     "striptags": "^3.1.1",
-    "styled-components": "^5.0.0"
+    "styled-components": "^5.0.0",
+    "three": "^0.115.0"
   },
   "scripts": {
     "start": "react-scripts start",
