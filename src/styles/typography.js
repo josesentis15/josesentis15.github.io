@@ -66,6 +66,11 @@ const typographyStyles = `
     }
   }
 
+  &::selection {
+    background-color: ${colors.primary} !important;
+    color: ${colors.base500} !important;
+  }
+
   .p {
     font-size: ${pixelate(typography.baseFontSize)};
     line-height: ${space()};

@@ -21,8 +21,8 @@ const data = {
     __typename: 'Pages',
     about: {
       __typename: 'About page',
-      content: `<p>I’m Jose Sentis, Senior Front–End Developer from <span id="location-trigger">Barcelona</span> doing stuff for the Internet.</p>
-      <p>As a developer I try to trigger emotions through digital interfaces using code.</p>
+      content: `<p>I’m Jose Sentis, Senior Front–End Developer based in Barcelona.</p>
+      <p>I do stuff for the Internet.</p>
       <p>I’m open for new creative opportunities. Don’t be shy, <a href="mailto:%link" rel="noopener noreferrer">say hi</a></p>`,
       image: '/images/profile.jpg'
     },
