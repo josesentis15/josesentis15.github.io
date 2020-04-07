@@ -1,4 +1,5 @@
 const STRENGTH = -0.25;
+
 const VERTEX_SHADER = `
   uniform vec2 uOffset;
   varying vec2 vUv;
@@ -7,6 +8,7 @@ const VERTEX_SHADER = `
     gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
   }
 `;
+
 const FRAGMENT_SHADER = `
   uniform sampler2D uTexture;
   uniform vec2 uOffset;
