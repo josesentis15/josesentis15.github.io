@@ -14,11 +14,10 @@ const Image = styled.div`
   }
 
   canvas {
-    height: 100vh;
+    border: 1px solid black;
     left: 0;
     position: fixed;
     top: 0;
-    width: 100vw;
   }
 
   img { display: none; }

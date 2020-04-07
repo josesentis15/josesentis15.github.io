@@ -1,7 +1,8 @@
 import React from 'react';
 import { Query } from "react-apollo";
 
-import ThreeImage from '../threeImage';
+// import ThreeImage from '../threeImage';
+import BackgroundImage from '../backgroundImage';
 
 import ProfileWrapper from './styles';
 import GET_PROFILE from './queries';
@@ -63,7 +64,8 @@ class Profile extends React.Component {
                   </a>
                 </div>
               </div>
-              <ThreeImage src={image} />
+              {/* <ThreeImage src={image} /> */}
+              <BackgroundImage src={image} />
             </ProfileWrapper>
           );
         }}

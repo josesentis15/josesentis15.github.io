@@ -71,8 +71,8 @@ class ThreeImage extends React.Component {
 
   onMouseMove = event => {
     // get normalized mouse position on viewport
-    this.mouse.x = (event.clientX / this.viewport.width) * 2 - 1
-    this.mouse.y = -(event.clientY / this.viewport.height) * 2 + 1
+    this.mouse.x = (event.clientX / this.viewport.width) * 2 - 1;
+    this.mouse.y = -(event.clientY / this.viewport.height) * 2 + 1;
 
     let x = this.mouse.x.map(-1, 1, -this.viewSize.width / 2, this.viewSize.width / 2);
     let y = this.mouse.y.map(-1, 1, -this.viewSize.height / 2, this.viewSize.height / 2);
@@ -85,6 +85,8 @@ class ThreeImage extends React.Component {
       ease: Power4.easeOut,
       onUpdate: this.onPositionUpdate
     });
+
+    this.onPositionUpdate();
   }
 
   onPositionUpdate = () => {
