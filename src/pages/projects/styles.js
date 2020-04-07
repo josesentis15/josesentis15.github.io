@@ -3,7 +3,11 @@ import styled from 'styled-components';
 import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
-const ProjectListStyled = styled.div`
+const ProjectList = styled.div`
+  .non-touch & {
+    transform: translateY(${props => props.percentageY}%);
+  }
+
   .image-wrapper { display: block; }
 
   ${media.min('tablet')`
@@ -74,4 +78,4 @@ const ProjectListStyled = styled.div`
   `}
 `;
 
-export default ProjectListStyled;
+export default ProjectList;

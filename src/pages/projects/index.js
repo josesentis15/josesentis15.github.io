@@ -3,28 +3,35 @@ import striptags from 'striptags';
 import { Query } from "react-apollo";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { withRouter } from "react-router";
+import { Power4, TweenLite } from 'gsap';
 
 import Header from '../../components/header';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
 import Layout, { Wrapper } from '../../components/layout';
-import ProjectList from '../../components/projectsList';
 import Project from '../../components/project';
 
 import { capitalize } from '../../utils/mixins';
 import GET_PROJECTS from './queries';
 import BackgroundImage from '../../components/backgroundImage';
+import ProjectList from './styles';
 
 class Projects extends React.Component {
   state = {
     hoverProject: false,
     isHoverProject: false,
     clickedProject: false,
-    loaded: false
+    loaded: false,
+    percentageY: 0
   }
 
   componentDidMount() {
     this.setState({ loaded: true });
+    // this._projectList.addEventListener('mousemove', this.onMouseMove, false);
   }
+
+  // componentWillUnmount() {
+  //   this._projectList.removeEventListener('mousemove', this.onMouseMove, false);
+  // }
 
   onClick = (project = false) => {
     this.setState({ clickedProject: project })
@@ -34,8 +41,23 @@ class Projects extends React.Component {
     this.setState({ hoverProject: project, isHoverProject: !project ? false : true })
   }
 
+  // onMouseMove = event => {
+  //   const percentageY = event.clientY / window.innerHeight * 100;
+  //   const translatePosition = percentageY > 50 ? 50 : percentageY;
+
+  //   TweenLite.to(this._projectList, 0.5, {
+  //     transform: `translateY(-${translatePosition}%)`,
+  //     ease: Power4.easeOut
+  //   });
+  // }
+
   render() {
-    const { hoverProject, isHoverProject, clickedProject, loaded } = this.state;
+    const {
+      hoverProject,
+      isHoverProject,
+      clickedProject,
+      loaded
+    } = this.state;
 
     return (
       <Query query={GET_PROJECTS}>
@@ -68,7 +90,7 @@ class Projects extends React.Component {
                 </NavigationWrapper>
               </Wrapper>
               <Wrapper className="reading">
-                <ProjectList>
+                <ProjectList ref={ref => { this._projectList = ref }}>
                   {projectList.map(project => (
                     <Project
                       key={project.title.replace(' ', Math.random())}

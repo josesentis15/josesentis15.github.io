@@ -2,8 +2,8 @@ import React from 'react';
 
 import ProjectListStyled from './styles';
 
-const ProjectList = ({ children }) => (
-  <ProjectListStyled>
+const ProjectList = ({ percentageY, children }) => (
+  <ProjectListStyled percentageY={percentageY}>
     {children}
   </ProjectListStyled>
 );
