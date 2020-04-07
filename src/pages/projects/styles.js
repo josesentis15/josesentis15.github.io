@@ -4,10 +4,6 @@ import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
 const ProjectList = styled.div`
-  .non-touch & {
-    transform: translateY(${props => props.percentageY}%);
-  }
-
   .image-wrapper { display: block; }
 
   ${media.min('tablet')`
