@@ -11,14 +11,13 @@ class ThreeImage extends React.Component {
   _image = null;
 
   setup() {
-    this.container = document.body;
     this.setViewport();
 
     // renderer
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     this.renderer.setSize(this.viewport.width, this.viewport.height);
     this.renderer.setPixelRatio = window.devicePixelRatio;
-    this.container.appendChild(this.renderer.domElement);
+    this._canvas.appendChild(this.renderer.domElement);
 
     // scene
     this.scene = new THREE.Scene();
@@ -36,7 +35,6 @@ class ThreeImage extends React.Component {
     this.clock = new THREE.Clock();
 
     this.renderer.setAnimationLoop(this.renderScene);
-    this.createEventsListeners();
     this.setViewSize();
   }
 
@@ -60,11 +58,6 @@ class ThreeImage extends React.Component {
     });
     this.plane = new THREE.Mesh(this.geometry, this.material);
     this.scene.add(this.plane);
-  }
-
-  createEventsListeners = () => {
-    this.container.addEventListener('mousemove', this.onMouseMove, false);
-    window.addEventListener('resize', this.onWindowResize, false);
   }
 
   onWindowResize = () => {
@@ -142,8 +135,8 @@ class ThreeImage extends React.Component {
   }
 
   setViewport = () => {
-    let width = this.container.clientWidth;
-    let height = this.container.clientHeight;
+    let width = document.body.clientWidth;
+    let height = document.body.clientHeight;
     let aspectRatio = width / height;
 
     this.viewport = {
@@ -174,6 +167,14 @@ class ThreeImage extends React.Component {
     this.loadTexture().then(() => {
       this.loadImage();
     });
+
+    document.addEventListener('mousemove', this.onMouseMove, false);
+    window.addEventListener('resize', this.onWindowResize, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousemove', this.onMouseMove, false);
+    window.removeEventListener('resize', this.onWindowResize, false);
   }
 
   render() {

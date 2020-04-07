@@ -5,6 +5,7 @@ const Image = styled.div`
   background-size: cover;
   display: block;
   overflow: hidden;
+  position: relative;
 
   &::before {
     content: '';
@@ -13,11 +14,11 @@ const Image = styled.div`
   }
 
   canvas {
-    height: 100%;
+    height: 100vh;
     left: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
   }
 
   img { display: none; }

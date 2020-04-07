@@ -5,7 +5,7 @@ import { space, columns } from '../../utils/mixins';
 
 const ProfileWrapper = styled.div`
   .background-img {
-    filter: grayscale(100%);
+    // filter: grayscale(100%);
     margin-top: ${space()};
   }
 
@@ -19,7 +19,7 @@ const ProfileWrapper = styled.div`
     }
   }
 
-  ${media.min('tablet', 'desktop')`
+  ${media.between('tablet', 'desktop')`
     .background-img {
       float: right;
       margin-top: -20%;
