@@ -47,23 +47,23 @@ const typographyStyles = `
       margin-top: -2px;
     }
 
+    ${media.min('tablet')`&:after { margin-top: -8px; }`}
+    .non-touch &:hover::after { display: none; }
+
     .non-touch &:hover {
       background-color: ${colors.base500};
       color: ${colors.primary};
-
-      &::after { display: none; }
     }
 
     .non-touch .dark &:hover {
       background-color: ${colors.primary};
       color: ${colors.base500};
-
-      &::after { display: none; }
     }
 
-    ${media.min('tablet')`
-      &:after { margin-top: -8px; }
-    `}
+    .non-touch .playground &:hover {
+      background-color: transparent;
+      color: ${colors.primary};
+    }
   }
 
   .link,

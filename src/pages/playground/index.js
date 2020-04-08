@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Query } from "react-apollo";
 import { withRouter } from "react-router";
 
+import { toggleCursor } from '../../components/cursor';
 import Exercice from '../../components/exercice';
 import ExerciceList from '../../components/exerciceList';
 import Layout, { Wrapper } from '../../components/layout';
@@ -13,14 +14,14 @@ import routes from '../../utils/routes';
 import GET_PLAYGROUND from './queries';
 
 class Playground extends React.Component {
-  rotatingTitle = `playground * playground * playground * playground * `;
-  interval = '';
+  _rotatingTitle = `playground * playground * playground * playground * `;
+  _interval = '';
   state = {
     title: ''
   }
 
   componentDidMount() {
-    const title = this.rotatingTitle;
+    const title = this._rotatingTitle;
 
     this.setState({ title });
 
@@ -28,11 +29,11 @@ class Playground extends React.Component {
       this.animateText();
     }, 350);
 
-    this.interval = interval;
+    this._interval = interval;
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval);
+    clearInterval(this._interval);
   }
 
   animateText = () => {
@@ -59,11 +60,15 @@ class Playground extends React.Component {
           return (
             <Layout location={this.props.location} title={title} className="playground headerless" header={false}>
               <Noise />
-              <MovingText>{this.rotatingTitle + this.rotatingTitle + this.rotatingTitle + this.rotatingTitle}</MovingText>
+              <MovingText>{this._rotatingTitle + this._rotatingTitle + this._rotatingTitle + this._rotatingTitle}</MovingText>
               <Wrapper>
                 <div className="intro">
                   <div dangerouslySetInnerHTML={{ __html: abstract }}></div>
-                  <Link to={routes.home}>{cta}</Link>
+                  <Link
+                    to={routes.home}
+                    onMouseEnter={() => toggleCursor()}
+                    onMouseLeave={() => toggleCursor()}
+                  >{cta}</Link>
                 </div>
                 <ExerciceList>
                   {exercices.map(exercice => (

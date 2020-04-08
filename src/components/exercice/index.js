@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 
 import BackgroundImage from '../backgroundImage';
+import { toggleCursor } from '../cursor';
 
 import ExerciceStyled from './styles';
 
@@ -31,6 +32,8 @@ class Exercice extends React.PureComponent {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
+              onMouseEnter={() => toggleCursor()}
+              onMouseLeave={() => toggleCursor()}
             >
               Explore
             </a>
