@@ -49,6 +49,16 @@ const typographyStyles = `
     }
 
     .non-touch &:hover {
+      background-color: ${colors.base500};
+      color: ${colors.primary};
+
+      &::after { display: none; }
+    }
+
+    .non-touch .dark &:hover {
+      background-color: ${colors.primary};
+      color: ${colors.base500};
+
       &::after { display: none; }
     }
 
@@ -57,12 +67,15 @@ const typographyStyles = `
     `}
   }
 
-  .link {
+  .link,
+  .link--bg {
     text-decoration: none;
     &::after { display: none; }
+  }
 
+  .link {
     .non-touch &:hover {
-      color: ${colors.primary} !important;
+      background-color: transparent;
     }
   }
 

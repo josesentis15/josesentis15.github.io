@@ -5,11 +5,12 @@ import { space, columns } from '../../utils/mixins';
 
 const ProfileWrapper = styled.div`
   .background-img {
-    // filter: grayscale(100%);
+    filter: grayscale(100%);
     margin-top: ${space()};
   }
 
   .social {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     margin-top: ${space(2)};

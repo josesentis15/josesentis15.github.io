@@ -34,6 +34,7 @@ const HeaderStyled = styled.header`
     }
 
     a {
+      background-color: transparent !important;
       color: ${colors.base500} !important;
       text-decoration: none;
       &::after { display: none; }
