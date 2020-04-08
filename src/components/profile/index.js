@@ -1,8 +1,9 @@
 import React from 'react';
-import { Query } from "react-apollo";
+// import { Query } from "react-apollo";
 import forEach from '@runroom/purejs/lib/forEach';
 
 // import ThreeImage from '../threeImage';
+import withQuery from '../../hoc/withQuery';
 import BackgroundImage from '../backgroundImage';
 import { toggleCursor } from '../cursor';
 
@@ -10,104 +11,88 @@ import ProfileWrapper from './styles';
 import GET_PROFILE from './queries';
 
 class Profile extends React.Component {
-  // componentDidMount() {
-  //   this.triggerHover();
-  // }
-  // componentWillUnmount() {
-  //   this.removeHover();
-  // }
+  componentDidMount() {
+    this.triggerHover();
+  }
 
-  // triggerHover = () => {
-  //   const links = this._text.querySelectorAll('a');
+  componentWillUnmount() {
+    this.removeHover();
+  }
 
-  //   console.log(links);
+  triggerHover = () => {
+    const links = this._text.querySelectorAll('a');
 
-  //   forEach(links, item => {
-  //     item.addEventListener('mouseover', toggleCursor);
-  //     item.addEventListener('mouseleave', toggleCursor);
-  //   });
-  // }
+    forEach(links, item => {
+      item.addEventListener('mouseover', () => { toggleCursor(); });
+      item.addEventListener('mouseleave', () => { toggleCursor(); });
+    });
+  }
 
-  // removeHover = () => {
-  //   const links = this._text.querySelectorAll('a');
+  removeHover = () => {
+    const links = this._text.querySelectorAll('a');
 
-  //   forEach(links, item => {
-  //     item.removeEventListener('mouseover', toggleCursor, false);
-  //     item.removeEventListener('mouseleave', toggleCursor, false);
-  //   });
-  // }
+    forEach(links, item => {
+      item.removeEventListener('mouseover', () => { toggleCursor(); }, false);
+      item.removeEventListener('mouseleave', () => { toggleCursor(); }, false);
+    });
+  }
 
   render() {
+    const {
+      social: {
+        github,
+        linkedin,
+        instagram,
+        email
+      },
+      pages: {
+        about: {
+          content,
+          image
+        }
+      }
+    } = this.props.data;
+
     return (
-      <Query query={GET_PROFILE}>
-        {({ data }) => {
-          const {
-            social: {
-              github,
-              linkedin,
-              instagram,
-              email
-            },
-            pages: {
-              about: {
-                content,
-                image
-              }
-            }
-          } = data;
-
-          this.triggerHover();
-
-          return (
-            <ProfileWrapper>
-              <div className="p-big">
-                <div
-                  ref={ref => this._text = ref}
-                  dangerouslySetInnerHTML={{
-                    __html: content.replace('%link', email)
-                  }}
-                />
-                <div className="social">
-                  <a
-                    className="link--bg"
-                    href={github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onMouseEnter={() => toggleCursor()}
-                    onMouseLeave={() => toggleCursor()}
-                  >
-                    GitHub
-                  </a>
-                  <a
-                    className="link--bg"
-                    href={linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onMouseEnter={() => toggleCursor()}
-                    onMouseLeave={() => toggleCursor()}
-                  >
-                    Linkedin
-                  </a>
-                  <a
-                    className="link--bg"
-                    href={instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onMouseEnter={() => toggleCursor()}
-                    onMouseLeave={() => toggleCursor()}
-                  >
-                    Instagram
-                  </a>
-                </div>
-              </div>
-              {/* <ThreeImage src={image} /> */}
-              <BackgroundImage src={image} />
-            </ProfileWrapper>
-          );
-        }}
-      </Query>
+      <ProfileWrapper ref={ref => this._text = ref}>
+        <div className="p-big">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: content.replace('%link', email)
+            }}
+          />
+          <div className="social">
+            <a
+              className="link--bg"
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              className="link--bg"
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Linkedin
+            </a>
+            <a
+              className="link--bg"
+              href={instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+          </div>
+        </div>
+        {/* <ThreeImage src={image} /> */}
+        <BackgroundImage src={image} />
+      </ProfileWrapper>
     );
   }
 }
 
-export default Profile;
+export default withQuery(Profile, GET_PROFILE);
