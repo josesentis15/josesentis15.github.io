@@ -18,7 +18,23 @@ const Circle = styled.span`
   z-index: 9999;
 
   .non-touch &.moved { display: block; }
-  .dark & { background-color: ${colors.white}; }
+
+  .dark & {
+    background-color: ${colors.white};
+
+    &.hover { border-bottom-color: ${colors.white}; }
+  }
+
+  &.hover {
+    background: transparent;
+    border-bottom: 30px solid ${colors.base500};
+    border-left: 14px solid transparent;
+    border-radius: 0;
+    border-right: 14px solid transparent;
+    height: 0;
+    transform: rotate(-25deg) translate(-5px, -5px);
+    width: 0;
+  }
 `;
 
 export default Circle;

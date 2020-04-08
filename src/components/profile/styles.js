@@ -7,7 +7,12 @@ const ProfileWrapper = styled.div`
   .background-img {
     filter: grayscale(100%);
     margin-top: ${space()};
+
+    .non-touch &:hover {
+
+    }
   }
+
 
   .social {
     align-items: flex-start;

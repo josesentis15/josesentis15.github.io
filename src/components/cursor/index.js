@@ -7,10 +7,36 @@ import Circle from './styles';
 
 class Cursor extends React.PureComponent {
   componentDidMount() {
-    document.addEventListener('mousemove', this.handleMouseMove);
+    this.addEventListeners();
   }
 
   componentWillUnmount() {
+    this.removeEventListeners();
+  }
+
+  addEventListeners = () => {
+    // const links = document.querySelectorAll('a');
+    // const buttons = document.querySelectorAll('button');
+
+    // console.log([...links, ...buttons]);
+
+    // [...links, ...buttons].map(item => {
+    //   item.addEventListener('mouseover', () => { this._cursor.classList.add(`hover`); }, false);
+    //   item.addEventListener('mouseleave', () => { this._cursor.classList.remove(`hover`); }, false);
+    // });
+
+    document.addEventListener('mousemove', this.handleMouseMove);
+  }
+
+  removeEventListeners = () => {
+    // const links = document.querySelectorAll('a');
+    // const buttons = document.querySelectorAll('button');
+
+    // [...links, ...buttons].map(item => {
+    //   item.removeEventListener('mouseover', () => { this._cursor.classList.add(`hover`); }, false);
+    //   item.removeEventListener('mouseleave', () => { this._cursor.classList.remove(`hover`); }, false);
+    // });
+
     document.removeEventListener('mousemove', this.handleMouseMove);
   }
 
