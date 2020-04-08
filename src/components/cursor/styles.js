@@ -27,7 +27,7 @@ const Circle = styled.span`
 
   &.hover {
     background: transparent;
-    border-bottom: 30px solid ${colors.base500};
+    border-bottom: 30px solid ${colors.primary};
     border-left: 14px solid transparent;
     border-radius: 0;
     border-right: 14px solid transparent;
