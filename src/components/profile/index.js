@@ -1,17 +1,46 @@
 import React from 'react';
 import { Query } from "react-apollo";
+import forEach from '@runroom/purejs/lib/forEach';
 
 // import ThreeImage from '../threeImage';
 import BackgroundImage from '../backgroundImage';
+import { toggleCursor } from '../cursor';
 
 import ProfileWrapper from './styles';
 import GET_PROFILE from './queries';
 
 class Profile extends React.Component {
+  // componentDidMount() {
+  //   this.triggerHover();
+  // }
+  // componentWillUnmount() {
+  //   this.removeHover();
+  // }
+
+  // triggerHover = () => {
+  //   const links = this._text.querySelectorAll('a');
+
+  //   console.log(links);
+
+  //   forEach(links, item => {
+  //     item.addEventListener('mouseover', toggleCursor);
+  //     item.addEventListener('mouseleave', toggleCursor);
+  //   });
+  // }
+
+  // removeHover = () => {
+  //   const links = this._text.querySelectorAll('a');
+
+  //   forEach(links, item => {
+  //     item.removeEventListener('mouseover', toggleCursor, false);
+  //     item.removeEventListener('mouseleave', toggleCursor, false);
+  //   });
+  // }
+
   render() {
     return (
       <Query query={GET_PROFILE}>
-        {({ loading, error, data }) => {
+        {({ data }) => {
           const {
             social: {
               github,
@@ -27,12 +56,13 @@ class Profile extends React.Component {
             }
           } = data;
 
-          if (loading) return(<h1>Loading...</h1>);
+          this.triggerHover();
 
           return (
             <ProfileWrapper>
               <div className="p-big">
                 <div
+                  ref={ref => this._text = ref}
                   dangerouslySetInnerHTML={{
                     __html: content.replace('%link', email)
                   }}
@@ -43,6 +73,8 @@ class Profile extends React.Component {
                     href={github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onMouseEnter={() => toggleCursor()}
+                    onMouseLeave={() => toggleCursor()}
                   >
                     GitHub
                   </a>
@@ -51,6 +83,8 @@ class Profile extends React.Component {
                     href={linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onMouseEnter={() => toggleCursor()}
+                    onMouseLeave={() => toggleCursor()}
                   >
                     Linkedin
                   </a>
@@ -59,6 +93,8 @@ class Profile extends React.Component {
                     href={instagram}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onMouseEnter={() => toggleCursor()}
+                    onMouseLeave={() => toggleCursor()}
                   >
                     Instagram
                   </a>

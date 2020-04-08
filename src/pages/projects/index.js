@@ -4,6 +4,7 @@ import { Query } from "react-apollo";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { withRouter } from "react-router";
 
+import { toggleCursor } from '../../components/cursor';
 import Header from '../../components/header';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
 import Layout, { Wrapper } from '../../components/layout';
@@ -32,7 +33,8 @@ class Projects extends React.Component {
   }
 
   onHover = (project = false) => {
-    this.setState({ hoverProject: project, isHoverProject: !project ? false : true })
+    this.setState({ hoverProject: project, isHoverProject: !project ? false : true });
+    toggleCursor();
   }
 
   render() {

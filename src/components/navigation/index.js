@@ -4,12 +4,17 @@ import { Link } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import withLoader from '../../hoc/withLoader';
+import { toggleCursor } from '../cursor';
 
 import routes from '../../utils/routes';
 import GET_SECTIONS from './queries';
 import NavigationWrapper, { AppearingText } from './styles';
 
 class Navigation extends React.Component {
+  componentWillUnmount() {
+    toggleCursor(true);
+  }
+
   render() {
     const { loaded } = this.props;
 
@@ -27,14 +32,24 @@ class Navigation extends React.Component {
               <TransitionGroup>
                 {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={300}>
-                    <Link to={routes.projects} className="title link">
+                    <Link
+                      to={routes.projects}
+                      className="title link"
+                      onMouseEnter={() => toggleCursor()}
+                      onMouseLeave={() => toggleCursor()}
+                    >
                       <AppearingText><span className="text">{projects}</span></AppearingText>
                     </Link>
                   </CSSTransition>
                 )}
                 {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={500}>
-                    <Link to={routes.playground} className="title link double-link">
+                    <Link
+                      to={routes.playground}
+                      className="title link double-link"
+                      onMouseEnter={() => toggleCursor()}
+                      onMouseLeave={() => toggleCursor()}
+                    >
                       <AppearingText>
                         <span className="text" dangerouslySetInnerHTML={{ __html: playground }} />
                       </AppearingText>
@@ -43,7 +58,12 @@ class Navigation extends React.Component {
                 )}
                 {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={700}>
-                    <Link to={routes.about} className="title link">
+                    <Link
+                      to={routes.about}
+                      className="title link"
+                      onMouseEnter={() => toggleCursor()}
+                      onMouseLeave={() => toggleCursor()}
+                    >
                       <AppearingText><span className="text">{about}</span></AppearingText>
                     </Link>
                   </CSSTransition>

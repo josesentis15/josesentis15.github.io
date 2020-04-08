@@ -5,7 +5,6 @@ import { colors, typography } from '../utils/settings';
 const typographyStyles = `
   .title,
   .title2 {
-    display: block;
     font-weight: 400;
   }
 

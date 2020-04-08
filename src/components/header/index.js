@@ -4,12 +4,17 @@ import { Link } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import withLoader from '../../hoc/withLoader';
+import { toggleCursor } from '../cursor';
 import { Wrapper } from '../layout';
 
 import GET_DATA from './queries';
 import HeaderStyled from './styles';
 
 class Header extends React.Component {
+  componentWillUnmount() {
+    toggleCursor(true);
+  }
+
   render() {
     const { loaded } = this.props;
 
@@ -29,7 +34,11 @@ class Header extends React.Component {
                     <CSSTransition classNames="loaded" timeout={200}>
                       <div className="header">
                         <div>
-                          <Link to="/">
+                          <Link
+                            to="/"
+                            onMouseEnter={() => toggleCursor()}
+                            onMouseLeave={() => toggleCursor()}
+                          >
                             <span>{name}</span>
                             <span>Folio - {new Date().getFullYear()}</span>
                           </Link>
