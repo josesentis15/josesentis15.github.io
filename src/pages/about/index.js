@@ -13,6 +13,34 @@ import { capitalize } from '../../utils/mixins';
 import GET_ABOUT from './queries';
 
 class About extends React.Component {
+  componentDidMount() {
+    this.triggerHover();
+  }
+
+  componentWillUnmount() {
+    this.removeHover();
+  }
+
+  triggerHover = () => {
+    const links = document.querySelectorAll('a');
+    const buttons = document.querySelectorAll('button');
+
+    forEach([...links, ...buttons], item => {
+      item.addEventListener('mouseover', toggleCursor, false);
+      item.addEventListener('mouseleave', toggleCursor, false);
+    });
+  }
+
+  removeHover = () => {
+    const links = document.querySelectorAll('a');
+    const buttons = document.querySelectorAll('button');
+
+    forEach([...links, ...buttons], item => {
+      item.removeEventListener('mouseover', toggleCursor, false);
+      item.removeEventListener('mouseleave', toggleCursor, false);
+    });
+  }
+
   render() {
     const { loaded } = this.props;
 
@@ -24,7 +52,7 @@ class About extends React.Component {
           } = data.sections;
 
           return (
-            <Layout location={this.props.location} title={capitalize(about)} >
+            <Layout location={this.props.location} title={capitalize(about)}>
               <Header />
               <Wrapper>
                 <NavigationWrapper>

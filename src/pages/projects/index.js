@@ -3,7 +3,6 @@ import striptags from 'striptags';
 import { Query } from "react-apollo";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { withRouter } from "react-router";
-import { Power4, TweenLite } from 'gsap';
 
 import Header from '../../components/header';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
@@ -26,12 +25,7 @@ class Projects extends React.Component {
 
   componentDidMount() {
     this.setState({ loaded: true });
-    // this._projectList.addEventListener('mousemove', this.onMouseMove, false);
   }
-
-  // componentWillUnmount() {
-  //   this._projectList.removeEventListener('mousemove', this.onMouseMove, false);
-  // }
 
   onClick = (project = false) => {
     this.setState({ clickedProject: project })
@@ -40,16 +34,6 @@ class Projects extends React.Component {
   onHover = (project = false) => {
     this.setState({ hoverProject: project, isHoverProject: !project ? false : true })
   }
-
-  // onMouseMove = event => {
-  //   const percentageY = event.clientY / window.innerHeight * 100;
-  //   const translatePosition = percentageY > 50 ? 50 : percentageY;
-
-  //   TweenLite.to(this._projectList, 0.5, {
-  //     transform: `translateY(-${translatePosition}%)`,
-  //     ease: Power4.easeOut
-  //   });
-  // }
 
   render() {
     const {

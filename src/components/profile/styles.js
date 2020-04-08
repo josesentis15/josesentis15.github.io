@@ -13,7 +13,6 @@ const ProfileWrapper = styled.div`
     }
   }
 
-
   .social {
     align-items: flex-start;
     display: flex;

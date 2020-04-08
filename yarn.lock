@@ -1117,11 +1117,11 @@
   dependencies:
     infer-owner "^1.0.4"
 
-"@runroom/purejs@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@runroom/purejs/-/purejs-3.0.1.tgz#29cc34d2a8ca49af9801c17c2367501d802ded52"
+"@runroom/purejs@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@runroom/purejs/-/purejs-3.1.0.tgz#fd09736d445446dc811e6d6a796e0e9f842da945"
   dependencies:
-    "@types/node" "13.7.0"
+    "@types/node" "13.11.0"
     puppeteer "2.1.1"
 
 "@sindresorhus/is@^0.14.0":
@@ -1309,9 +1309,9 @@
   version "13.9.3"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.3.tgz#6356df2647de9eac569f9a52eda3480fa9e70b4d"
 
-"@types/node@13.7.0":
-  version "13.7.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.7.0.tgz#b417deda18cf8400f278733499ad5547ed1abec4"
+"@types/node@13.11.0":
+  version "13.11.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.11.0.tgz#390ea202539c61c8fa6ba4428b57e05bc36dc47b"
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"

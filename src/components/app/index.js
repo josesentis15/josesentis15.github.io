@@ -6,6 +6,8 @@ import isExplorer from '@runroom/purejs/lib/isExplorer';
 import touchable from '@runroom/purejs/lib/touchable';
 
 import AppRouter from '../appRouter';
+import Cursor from '../cursor';
+// import Cursor, { toggleCursor } from '../cursor';
 import Loader from '../loader';
 
 import client from '../../utils/apollo';
@@ -19,8 +21,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    touchable();
+    console.log('Component did mount');
+
     if (isExplorer()) document.documentElement.classList.add('browser-ie');
+    document.documentElement.classList.add(touchable() ? 'touch' : 'non-touch');
 
     this.setState({ showLoader: true });
 
@@ -37,6 +41,7 @@ class App extends React.Component {
         <GlobalStyle />
         {loaded ? (
           <ApolloProvider client={client}>
+            <Cursor />
             <Router history={history}>
               <AppRouter />
             </Router>
