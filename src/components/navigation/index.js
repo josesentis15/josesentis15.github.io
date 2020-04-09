@@ -32,40 +32,46 @@ class Navigation extends React.Component {
               <TransitionGroup>
                 {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={300}>
-                    <Link
-                      to={routes.projects}
-                      className="title link"
-                      onMouseEnter={() => toggleCursor()}
-                      onMouseLeave={() => toggleCursor()}
-                    >
-                      <AppearingText><span className="text">{projects}</span></AppearingText>
-                    </Link>
+                    <div>
+                      <Link
+                        to={routes.projects}
+                        className="title link"
+                        onMouseEnter={() => toggleCursor()}
+                        onMouseLeave={() => toggleCursor()}
+                      >
+                        <AppearingText><span className="text">{projects}</span></AppearingText>
+                      </Link>
+                    </div>
                   </CSSTransition>
                 )}
                 {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={500}>
-                    <Link
-                      to={routes.playground}
-                      className="title link double-link"
-                      onMouseEnter={() => toggleCursor()}
-                      onMouseLeave={() => toggleCursor()}
-                    >
-                      <AppearingText>
-                        <span className="text" dangerouslySetInnerHTML={{ __html: playground }} />
-                      </AppearingText>
-                    </Link>
+                    <div>
+                      <Link
+                        to={routes.playground}
+                        className="title link double-link"
+                        onMouseEnter={() => toggleCursor()}
+                        onMouseLeave={() => toggleCursor()}
+                      >
+                        <AppearingText>
+                          <span className="text" dangerouslySetInnerHTML={{ __html: playground }} />
+                        </AppearingText>
+                      </Link>
+                    </div>
                   </CSSTransition>
                 )}
                 {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={700}>
-                    <Link
-                      to={routes.about}
-                      className="title link"
-                      onMouseEnter={() => toggleCursor()}
-                      onMouseLeave={() => toggleCursor()}
-                    >
-                      <AppearingText><span className="text">{about}</span></AppearingText>
-                    </Link>
+                    <div>
+                      <Link
+                        to={routes.about}
+                        className="title link"
+                        onMouseEnter={() => toggleCursor()}
+                        onMouseLeave={() => toggleCursor()}
+                      >
+                        <AppearingText><span className="text">{about}</span></AppearingText>
+                      </Link>
+                    </div>
                   </CSSTransition>
                 )}
               </TransitionGroup>
