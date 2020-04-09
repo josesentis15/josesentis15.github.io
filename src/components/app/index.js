@@ -21,8 +21,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log('Component did mount');
-
     if (isExplorer()) document.documentElement.classList.add('browser-ie');
     document.documentElement.classList.add(touchable() ? 'touch' : 'non-touch');
 
