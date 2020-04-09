@@ -15,6 +15,7 @@ import content from '../data/content.json';
 const AppRouter = () => {
   return (
     <Switch>
+      <Route path='/' component={Home} exact />
       <Route
         render={({ location }) => {
           return (
@@ -25,7 +26,6 @@ const AppRouter = () => {
                 classNames={'fade'}
               >
                 <Switch location={location}>
-                  <Route path='/' component={Home} exact />
                   <Route path="/about" component={About} exact />
                   <Route path="/playground" component={Playground} exact />
                   <Route path="/projects" component={Projects} exact />
