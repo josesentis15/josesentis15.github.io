@@ -7,7 +7,6 @@ import touchable from '@runroom/purejs/lib/touchable';
 
 import AppRouter from '../appRouter';
 import Cursor from '../cursor';
-// import Cursor, { toggleCursor } from '../cursor';
 import Loader from '../loader';
 
 import client from '../../utils/apollo';
