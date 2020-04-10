@@ -14,30 +14,28 @@ import content from '../data/content.json';
 
 const AppRouter = () => {
   return (
-    <Switch>
-      <Route path='/' component={Home} exact />
-      <Route
-        render={({ location }) => {
-          return (
-            <TransitionGroup>
-              <CSSTransition
-                key={location.key}
-                timeout={{ enter: 600, exit: 400 }}
-                classNames={'fade'}
-              >
-                <Switch location={location}>
-                  <Route path="/about" component={About} exact />
-                  <Route path="/playground" component={Playground} exact />
-                  <Route path="/projects" component={Projects} exact />
-                  {Object.keys(content).map(project => <Route key={project} path={`/projects/${project}`} component={Project} exact />)}
-                </Switch>
-              </CSSTransition>
-            </TransitionGroup>
-          );
-        }}>
-      </Route>
-      <Route component={NotFound} />
-    </Switch>
+    <Route
+      render={({ location }) => {
+        return (
+          <TransitionGroup>
+            <CSSTransition
+              key={location.key}
+              timeout={{ enter: 600, exit: 400 }}
+              classNames={'fade'}
+            >
+              <Switch location={location}>
+                <Route path='/' component={Home} exact />
+                <Route path="/about" component={About} exact />
+                <Route path="/playground" component={Playground} exact />
+                <Route path="/projects" component={Projects} exact />
+                {Object.keys(content).map(project => <Route key={project} path={`/projects/${project}`} component={Project} exact />)}
+                <Route component={NotFound} />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+        );
+      }}>
+    </Route>
   );
 };
 

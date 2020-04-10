@@ -57,9 +57,15 @@ const LayoutStyled = styled.div`
   }
 
   &.page-transition {
+    height: 100vh;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
     transition: opacity .3s cubic-bezier(.215, .61, .355, 1);
+    top: 0;
+    width: 100vw;
 
-    // &.home.fade-enter { opacity: 1; }
+    &.home.fade-enter { opacity: 1; }
 
     &.fade-enter {
       transition: opacity .5s cubic-bezier(.215, .61, .355, 1);
