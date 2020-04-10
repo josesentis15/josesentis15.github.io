@@ -61,32 +61,19 @@ const LayoutStyled = styled.div`
     left: 0;
     overflow: hidden;
     position: absolute;
-    transition: opacity .3s cubic-bezier(.215, .61, .355, 1);
+    transition: opacity .3s linear;
     top: 0;
     width: 100vw;
 
     &.home.fade-enter { opacity: 1; }
 
-    &.fade-enter {
-      transition: opacity .5s cubic-bezier(.215, .61, .355, 1);
-    }
-
     &.fade-enter,
-    &.fade-enter-active {
-      opacity: 0;
-      position: absolute;
-    }
-
-    &.fade-enter-active { position: absolute; }
-
-    &.fade-enter-done {
-      position: relative;
-      opacity: 1;
-    }
+    &.fade-enter-active { opacity: 0; }
+    &.fade-enter-done { opacity: 1; }
 
     &.fade-exit {
       opacity: 1;
-      transition: opacity .3s cubic-bezier(.215, .61, .355, 1);
+      transition: opacity .2s linear;
     }
 
     &.fade-exit-active { opacity: 0; }
