@@ -60,7 +60,7 @@ class Projects extends React.Component {
           } = data;
 
           return (
-            <Layout location={this.props.location} title={striptags(capitalize(projects))} className="dark">
+            <Layout location={this.props.location} title={striptags(capitalize(projects))} className="dark page-transition">
               <Header />
               <Wrapper>
                 <NavigationWrapper>

@@ -38,7 +38,7 @@ class Project extends React.Component {
               location={this.props.location}
               title={project.title}
               description={project.abstract}
-              className="dark"
+              className="dark page-transition"
             >
               <Header />
               <Wrapper>

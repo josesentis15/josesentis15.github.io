@@ -58,7 +58,7 @@ class Playground extends React.Component {
           } = data.pages;
 
           return (
-            <Layout location={this.props.location} title={title} className="playground headerless" header={false}>
+            <Layout location={this.props.location} title={title} className="playground headerless page-transition">
               <Noise />
               <MovingText>{this._rotatingTitle + this._rotatingTitle + this._rotatingTitle + this._rotatingTitle}</MovingText>
               <Wrapper>
