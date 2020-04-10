@@ -20,7 +20,7 @@ const AppRouter = () => {
           <TransitionGroup>
             <CSSTransition
               key={location.key}
-              timeout={{ enter: 600, exit: 400 }}
+              timeout={{ enter: 2000, exit: 1000 }}
               classNames={'fade'}
             >
               <Switch location={location}>

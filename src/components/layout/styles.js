@@ -59,6 +59,7 @@ const LayoutStyled = styled.div`
   &.page-transition {
     height: 100vh;
     left: 0;
+    opacity: 1;
     overflow: hidden;
     position: absolute;
     transition: opacity .3s linear;
@@ -71,11 +72,7 @@ const LayoutStyled = styled.div`
     &.fade-enter-active { opacity: 0; }
     &.fade-enter-done { opacity: 1; }
 
-    &.fade-exit {
-      opacity: 1;
-      transition: opacity .2s linear;
-    }
-
+    &.fade-exit,
     &.fade-exit-active { opacity: 0; }
   }
 
