@@ -16,7 +16,10 @@ const ProjectStyled = styled.div`
     position: relative;
   }
 
-  .project__content { display: none; }
+  .project__content {
+    opacity: 0;
+    transition: height .3s cubic-bezier(.215, .61, .355, 1) .3s, opacity .3s cubic-bezier(.215, .61, .355, 1);
+  }
 
   .project__image {
     margin: ${space()} 0;
@@ -28,8 +31,11 @@ const ProjectStyled = styled.div`
     }
   }
 
-  .touch &.active .project__content,
-  .non-touch &.hover .project__content { display: block; }
+  .touch &.active .project__content { display: block; }
+  .non-touch .project__content.hover {
+    opacity: 1;
+    transition: height .3s cubic-bezier(.215, .61, .355, 1), opacity .2s cubic-bezier(.215, .61, .355, 1) .4s;
+  }
   .touch &.no-active,
   .non-touch &.no-hover { color: ${colors.base300}; }
 
