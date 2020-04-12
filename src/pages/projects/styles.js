@@ -19,7 +19,7 @@ const ProjectList = styled.div`
       pointer-events: none;
       right: 0;
       top: calc(50% - 20vh);
-      transition: opacity .1s linear;
+      transition: opacity .2s linear;
       width: 40vh;
       z-index: 0;
     }
@@ -34,7 +34,7 @@ const ProjectList = styled.div`
       width: 100%;
     }
 
-    .image-wrapper.loaded-enter-done {
+    .image-wrapper.is-hover {
       opacity: 1;
 
       .project-image {

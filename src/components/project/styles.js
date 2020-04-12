@@ -16,10 +16,10 @@ const ProjectStyled = styled.div`
     position: relative;
   }
 
-  .project__content {
-    opacity: 0;
-    transition: height .3s cubic-bezier(.215, .61, .355, 1) .3s, opacity .3s cubic-bezier(.215, .61, .355, 1);
-  }
+  // .project__content {
+  //   opacity: 0;
+  //   transition: height .3s cubic-bezier(.215, .61, .355, 1) .3s, opacity .3s cubic-bezier(.215, .61, .355, 1);
+  // }
 
   .project__image {
     margin: ${space()} 0;
@@ -31,13 +31,13 @@ const ProjectStyled = styled.div`
     }
   }
 
-  .touch &.active .project__content { display: block; }
-  .non-touch .project__content.hover {
-    opacity: 1;
-    transition: height .3s cubic-bezier(.215, .61, .355, 1), opacity .2s cubic-bezier(.215, .61, .355, 1) .4s;
-  }
-  .touch &.no-active,
-  .non-touch &.no-hover { color: ${colors.base300}; }
+  // .touch &.active .project__content { display: block; }
+  // .non-touch .project__content.hover {
+  //   opacity: 1;
+  //   transition: height .3s cubic-bezier(.215, .61, .355, 1), opacity .2s cubic-bezier(.215, .61, .355, 1) .4s;
+  // }
+  // .touch &.no-active,
+  // .non-touch &.no-hover { color: ${colors.base300}; }
 
   .label {
     left: 0;
@@ -46,9 +46,7 @@ const ProjectStyled = styled.div`
   }
 
   ${media.min('tablet')`
-    .label {
-      bottom: 14px;
-    }
+    .label { bottom: 14px; }
 
     .project__text,
     .project__title {
@@ -76,6 +74,8 @@ const ProjectStyled = styled.div`
   `}
 
   ${media.min('desktop')`
+    .label { bottom: 16px; }
+
     .project__image {
       height: 60vh;
       width: 60vh;

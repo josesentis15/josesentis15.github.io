@@ -74,6 +74,11 @@ const LayoutStyled = styled.div`
 
     &.fade-exit,
     &.fade-exit-active { opacity: 0; }
+
+    main {
+      height: 100%;
+      overflow-y: auto;
+    }
   }
 
   main {

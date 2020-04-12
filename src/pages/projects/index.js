@@ -4,7 +4,6 @@ import { Query } from "react-apollo";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { withRouter } from "react-router";
 
-import { toggleCursor } from '../../components/cursor';
 import Header from '../../components/header';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
 import Layout, { Wrapper } from '../../components/layout';
@@ -17,31 +16,15 @@ import ProjectList from './styles';
 
 class Projects extends React.Component {
   state = {
-    hoverProject: false,
-    isHoverProject: false,
-    clickedProject: false,
-    loaded: false,
-    percentageY: 0
+    loaded: false
   }
 
   componentDidMount() {
     this.setState({ loaded: true });
   }
 
-  onClick = (project = false) => {
-    this.setState({ clickedProject: project })
-  }
-
-  onHover = (project = false) => {
-    this.setState({ hoverProject: project, isHoverProject: !project ? false : true });
-    toggleCursor();
-  }
-
   render() {
     const {
-      hoverProject,
-      isHoverProject,
-      clickedProject,
       loaded
     } = this.state;
 
@@ -76,29 +59,16 @@ class Projects extends React.Component {
                 </NavigationWrapper>
               </Wrapper>
               <Wrapper className="reading">
-                <ProjectList ref={ref => { this._projectList = ref }}>
+                <ProjectList id="project-list">
                   {projectList.map(project => (
                     <Project
                       key={project.title.replace(' ', Math.random())}
                       project={project}
-                      hoverProject={hoverProject}
-                      clickedProject={clickedProject}
-                      onHover={this.onHover}
-                      onClick={this.onClick}
                     />
                   ))}
-                  <TransitionGroup>
-                    {isHoverProject && (
-                      <CSSTransition classNames="loaded" timeout={{
-                        enter: 0,
-                        exit: 300
-                    }}>
-                        <div className="image-wrapper">
-                          <BackgroundImage className="project-image" src={hoverProject.image} />
-                        </div>
-                      </CSSTransition>
-                     )}
-                  </TransitionGroup>
+                  <div className="image-wrapper">
+                    <BackgroundImage className="project-image" id="project-image" />
+                  </div>
                 </ProjectList>
               </Wrapper>
             </Layout>

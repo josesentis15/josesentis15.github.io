@@ -2,11 +2,20 @@ import React from 'react';
 import AnimateHeight from 'react-animate-height';
 import { Link } from 'react-router-dom';
 
+import { toggleCursor } from '../cursor';
 import BackgroundImage from '../backgroundImage';
 
 import ProjectStyled from './styles';
 
-class Project extends React.Component {
+class Project extends React.PureComponent {
+  state = {
+    hover: false
+  }
+
+  componentDidMount() {
+    this._projectImage = document.getElementById('project-image');
+  }
+
   render() {
     const {
       project: {
@@ -16,31 +25,29 @@ class Project extends React.Component {
         slug,
         order,
         image
-      },
-      onHover,
-      onClick,
-      hoverProject,
-      clickedProject
+      }
     } = this.props;
     const title = this.props.project.title || slug;
-    const { project } = this.props;
-    const className = `
-      project
-      ${hoverProject === project ? ' hover' : hoverProject !== '' ? 'no-hover' : ''}
-      ${clickedProject === project ? ' active' : clickedProject !== '' ? 'no-active' : ''}
-    `;
-
-    console.log(this._projectContent);
+    const { hover } = this.state;
 
     return (
       <ProjectStyled
-        className={`${className}`}
+        className="project"
         onClick={() => {
-          if (clickedProject !== project) onClick(project);
-          else onClick();
+          this.setState({ hover: !this.state.hover });
         }}
-        onMouseEnter={() => onHover(project)}
-        onMouseLeave={() => onHover()}
+        onMouseEnter={() => {
+          this.setState({ hover: true });
+          this._projectImage.style.backgroundImage = `url(${image})`;
+          this._projectImage.parentNode.classList.add('is-hover');
+          toggleCursor();
+        }}
+        onMouseLeave={() => {
+          this.setState({ hover: false });
+          toggleCursor();
+          this._projectImage.style.backgroundImage = '';
+          this._projectImage.parentNode.classList.remove('is-hover');
+        }}
       >
         <h2 className="project__title title2">
           <span className="label">
@@ -51,13 +58,10 @@ class Project extends React.Component {
         </h2>
         <AnimateHeight
           duration={300}
-          height={hoverProject === project ? 'auto' : 0}
+          height={hover ? 'auto' : 0}
+          animateOpacity
         >
-          <div className={`
-            project__content
-            ${hoverProject === project ? ' hover' : hoverProject !== '' ? 'no-hover' : ''}
-            ${clickedProject === project ? ' active' : clickedProject !== '' ? 'no-active' : ''}
-          `}>
+          <div className={`project__content`}>
             <BackgroundImage src={image} className="project__image" />
             <p className="project__text">{abstract}</p>
             {external ? (
