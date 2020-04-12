@@ -30,8 +30,6 @@ class Project extends React.PureComponent {
     const title = this.props.project.title || slug;
     const { hover } = this.state;
 
-    console.log(`Project ${title} hover? `, hover);
-
     return (
       <ProjectStyled
         className="project"
