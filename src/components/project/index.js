@@ -32,7 +32,7 @@ class Project extends React.PureComponent {
 
     return (
       <ProjectStyled
-        className="project"
+        className={`project ${hover ? 'active' : ''}`}
         onMouseEnter={() => {
           this.setState({ hover: true });
           this._projectImage.style.backgroundImage = `url(${image})`;
@@ -58,7 +58,7 @@ class Project extends React.PureComponent {
           height={hover ? 'auto' : 0}
           animateOpacity
         >
-          <div className={`project__content`}>
+          <div className="project__content">
             <BackgroundImage src={image} className="project__image" />
             <p className="project__text">{abstract}</p>
             {external ? (

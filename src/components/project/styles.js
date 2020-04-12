@@ -5,21 +5,20 @@ import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
 const ProjectStyled = styled.div`
+  color: ${colors.base300};
   cursor: pointer;
   padding-bottom: ${space()};
   padding-top: ${space()};
   padding-left: ${space(1.5)};
+  transition: color .2s ease-out;
+
+  &.active { color: ${colors.white}; }
 
   .project__title {
     margin-left: ${space(-1.5)};
     padding-left: ${space(1.5)};
     position: relative;
   }
-
-  // .project__content {
-  //   opacity: 0;
-  //   transition: height .3s cubic-bezier(.215, .61, .355, 1) .3s, opacity .3s cubic-bezier(.215, .61, .355, 1);
-  // }
 
   .project__image {
     margin: ${space()} 0;
@@ -30,14 +29,6 @@ const ProjectStyled = styled.div`
       background: rgba(0, 0, 0, 0.4) !important;
     }
   }
-
-  // .touch &.active .project__content { display: block; }
-  // .non-touch .project__content.hover {
-  //   opacity: 1;
-  //   transition: height .3s cubic-bezier(.215, .61, .355, 1), opacity .2s cubic-bezier(.215, .61, .355, 1) .4s;
-  // }
-  // .touch &.no-active,
-  // .non-touch &.no-hover { color: ${colors.base300}; }
 
   .label {
     left: 0;

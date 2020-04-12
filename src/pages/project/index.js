@@ -54,7 +54,7 @@ class Project extends React.Component {
                   </TransitionGroup>
                 </NavigationWrapper>
               </Wrapper>
-              <ProjectDetail id="project-detail">
+              <ProjectDetail>
                 <Wrapper>
                   <div className="background-wrapper">
                     <Wrapper className="reading">
