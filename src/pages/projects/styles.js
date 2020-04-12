@@ -4,14 +4,13 @@ import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
 const ProjectList = styled.div`
-  .image-wrapper { display: block; }
+  .image-wrapper { display: none; }
 
   ${media.min('tablet')`
     margin: ${space(2)} 0;
 
-    .non-touch & .image-wrapper { display: block; }
-
     .image-wrapper {
+      display: block;
       height: 40vh;
       overflow: hidden;
       opacity: 0;
