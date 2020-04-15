@@ -7,10 +7,6 @@ const ProfileWrapper = styled.div`
   .background-img {
     filter: grayscale(100%);
     margin-top: ${space()};
-
-    .non-touch &:hover {
-
-    }
   }
 
   .social {
@@ -21,6 +17,8 @@ const ProfileWrapper = styled.div`
 
     a {
       margin-bottom: ${space()};
+
+      &:last-child { margin-bottom: 0; }
     }
   }
 
@@ -39,22 +37,12 @@ const ProfileWrapper = styled.div`
     margin-top: ${space(2)};
 
     > * { ${columns(2, 4, 'reverse')} }
-
-    .p-big {
-      margin-top: -${space(4)};
-    }
-
-    .background-img {
-      margin: ${space()} 0 ${space(2)};
-    }
+    .p-big { margin-top: -${space(4)}; }
+    .background-img { max-width: 530px; }
   `};
 
   ${media.min('desktopLarge')`
     > * { ${columns(2, 6, 'reverse')} }
-  `};
-
-  ${media.min('maxWidth')`
-    .background-img { max-width: 35vw; }
   `};
 `;
 
