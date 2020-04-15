@@ -37,24 +37,24 @@ const LayoutStyled = styled.div`
   //   `}
   // }
 
-  // &.playground main,
-  // &.dark main {
-  //   background-color: ${colors.base500};
-  //   color: ${colors.white};
-  //   padding-bottom: 0;
+  &.playground main,
+  &.dark main {
+    background-color: ${colors.base500};
+    color: ${colors.white};
+    padding-bottom: 0;
 
-  //   a {
-  //     color: ${colors.primary};
-  //   }
-  // }
+    a {
+      color: ${colors.primary};
+    }
+  }
 
-  // &.dark main {
-  //   color: ${colors.white};
+  &.dark main {
+    color: ${colors.white};
 
-  //   a {
-  //     color: ${colors.white};
-  //   }
-  // }
+    a {
+      color: ${colors.white};
+    }
+  }
 
   &.page-transition {
     height: 100vh;
