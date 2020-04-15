@@ -28,7 +28,7 @@ class Navigation extends React.Component {
           } = data.sections;
 
           return (
-            <NavigationWrapper>
+            <NavigationWrapper className="navigation">
               <TransitionGroup>
                 {loaded && !loading && (
                   <CSSTransition classNames="loaded" timeout={300}>

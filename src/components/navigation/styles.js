@@ -23,6 +23,7 @@ const NavigationWrapper = styled.div`
   > div { width: 100%; }
 
   .link { margin-bottom: ${space(1.5)}; }
+  .loaded-enter-done:last-child .link { margin-bottom: 0; }
 `;
 
 const AppearingText = styled.span`

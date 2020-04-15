@@ -26,16 +26,16 @@ const Wrapper = styled.div`
 `;
 
 const LayoutStyled = styled.div`
-  // &.home {
-  //   main {
-  //     display: flex;
-  //     flex-direction: column;
-  //   }
+  &.home {
+    main {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-  //   ${media.min('desktop')`
-  //     main { padding-bottom: ${space()}; }
-  //   `}
-  // }
+    .navigation { padding-bottom: 0; }
+  }
 
   &.playground main,
   &.dark main {
@@ -81,13 +81,13 @@ const LayoutStyled = styled.div`
       right: 0;
       bottom: 0;
       top: 0;
-      overflow-y: scroll;
+      overflow-y: auto;
     }
   }
 
   main {
   //   display: flex;
-    padding-bottom: ${space()};
+    // padding-bottom: ${space()};
     padding-top: ${space(5)};
   //   width: 100%;
 
