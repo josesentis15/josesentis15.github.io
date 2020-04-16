@@ -66,7 +66,7 @@ class Projects extends React.Component {
                     />
                   ))}
                   <div className="image-wrapper">
-                    <BackgroundImage className="project-image" id="project-image" />
+                    <BackgroundImage className="project-image" id="project-image" lazyEffect={false} />
                   </div>
                 </ProjectList>
               </Wrapper>

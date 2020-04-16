@@ -7,9 +7,14 @@ const Image = styled.div`
   opacity: 0;
   overflow: hidden;
   position: relative;
-  transition: opacity .5s cubic-bezier(.215, .61, .355, 1) .2s;
+  transition: opacity .5s linear .2s;
+  transform: scale(1.01);
 
-  &.loaded { opacity: 1; }
+  &.loaded {
+    opacity: 1;
+
+    &.image-scale { transform: scale(1.2); }
+  }
 
   &::before {
     content: '';
@@ -17,12 +22,27 @@ const Image = styled.div`
     padding-bottom: 100%;
   }
 
-  .image {
-    bottom: 0;
-    left: 0;
+  .image-wrapper {
+    height: 100%;
+    left: 50%;
     position: absolute;
-    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  .image {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
     top: 0;
+    width: 100%;
+
+    &.image-scale {
+      transform: scale(1);
+      transition: transform 2.5s ease-out;
+    }
   }
 `;
 

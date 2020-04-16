@@ -85,6 +85,8 @@ const LayoutStyled = styled.div`
     }
   }
 
+  main { padding-top: ${space(5)}; }
+
   // &.layout-bottom main { justify-content: flex-end; }
   &.headerless main { padding-top: 0 !important; }
 

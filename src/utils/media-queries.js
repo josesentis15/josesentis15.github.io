@@ -9,6 +9,7 @@ const breakpoints = {
   desktop: 1024,
   desktopLarge: 1280,
   maxWidth: 1440,
+  bigScreens: 1920
 };
 
 function getSizeFromBreakpoint(breakpointValue, max = false) {

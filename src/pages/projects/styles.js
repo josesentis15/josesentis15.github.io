@@ -37,7 +37,7 @@ const ProjectList = styled.div`
       opacity: 1;
 
       .project-image {
-        transition: transform 6s linear;
+        transition: transform 6s ease-out;
         transform: translate(-50%, -50%) scale(1.2);
       }
     }
@@ -46,7 +46,7 @@ const ProjectList = styled.div`
       opacity: 0;
 
       .project-image {
-        transition: transform 6s linear;
+        transition: transform 6s ease-out;
         transform: translate(-50%, -50%) scale(1);
       }
     }

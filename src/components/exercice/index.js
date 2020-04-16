@@ -7,14 +7,6 @@ import { toggleCursor } from '../cursor';
 import ExerciceStyled from './styles';
 
 class Exercice extends React.PureComponent {
-  componentDidMount() {
-    console.log('Mounted...')
-
-    window.addEventListener('scroll', () => {
-      console.log('Scrolling...', this.props.title);
-    });
-  }
-
   render() {
     const {
       exercice: {
@@ -29,7 +21,7 @@ class Exercice extends React.PureComponent {
 
     return (
       <ExerciceStyled>
-        <BackgroundImage src={image} alt={title} />
+        <BackgroundImage src={image} alt={title} scaleEffect={true} />
         <div className="content">
           <div className="content-text">
             <h2 className="p">{title}</h2>

@@ -34,15 +34,18 @@ const ProfileWrapper = styled.div`
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-top: ${space(2)};
 
     > * { ${columns(2, 4, 'reverse')} }
     .p-big { margin-top: -${space(4)}; }
-    .background-img { max-width: 530px; }
-  `};
+    .background-img { max-width: 500px; }
+    `};
 
   ${media.min('desktopLarge')`
     > * { ${columns(2, 6, 'reverse')} }
+  `};
+
+  ${media.min('bigScreens')`
+    margin-top: ${space(2)};
   `};
 `;
 
