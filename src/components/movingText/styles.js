@@ -39,7 +39,7 @@ const TextWrapper = styled.div`
 
   ${media.min('tablet')`
     font-size: 168px;
-    margin-top: -1.5rem;
+    margin-top: -1rem;
 
     span {
       animation: ${moveLeft} 400s infinite linear;
