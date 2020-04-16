@@ -1,5 +1,4 @@
 import React from 'react';
-import striptags from 'striptags';
 import { Query } from "react-apollo";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { withRouter } from "react-router";
@@ -43,7 +42,7 @@ class Projects extends React.Component {
           } = data;
 
           return (
-            <Layout location={this.props.location} title={striptags(capitalize(projects))} className="dark page-transition">
+            <Layout location={this.props.location} title={capitalize(projects)} className="dark page-transition">
               <Header />
               <Wrapper>
                 <NavigationWrapper>

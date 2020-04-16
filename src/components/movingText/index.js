@@ -2,7 +2,7 @@ import React from 'react';
 
 import TextWrapper from './styles';
 
-class movingText extends React.Component {
+class movingText extends React.PureComponent {
   render() {
     const { children } = this.props;
 

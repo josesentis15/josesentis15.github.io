@@ -23,7 +23,7 @@ const textStroke = `
 const TextWrapper = styled.div`
   font-size: 120px;
   line-height: 1.2;
-  margin-top: -1.5rem;
+  margin-top: -0.5rem;
   overflow: hidden;
   pointer-events: none;
   ${textStroke}
@@ -39,6 +39,7 @@ const TextWrapper = styled.div`
 
   ${media.min('tablet')`
     font-size: 168px;
+    margin-top: -1.5rem;
 
     span {
       animation: ${moveLeft} 400s infinite linear;
