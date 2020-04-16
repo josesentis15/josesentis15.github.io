@@ -59,8 +59,8 @@ class Playground extends React.Component {
 
           return (
             <Layout location={this.props.location} title={title} className="playground headerless page-transition">
-              <Noise />
-              <MovingText>{this._rotatingTitle + this._rotatingTitle + this._rotatingTitle + this._rotatingTitle}</MovingText>
+              {/* <Noise /> */}
+              {/* <MovingText>{this._rotatingTitle + this._rotatingTitle + this._rotatingTitle + this._rotatingTitle}</MovingText> */}
               <Wrapper>
                 <div className="intro">
                   <div dangerouslySetInnerHTML={{ __html: abstract }}></div>

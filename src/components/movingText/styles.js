@@ -21,7 +21,7 @@ const textStroke = `
 `;
 
 const TextWrapper = styled.div`
-  font-size: 168px;
+  font-size: 120px;
   line-height: 1.2;
   margin-top: -1.5rem;
   overflow: hidden;
@@ -38,6 +38,8 @@ const TextWrapper = styled.div`
   &::selection { background-color: transparent; }
 
   ${media.min('tablet')`
+    font-size: 168px;
+
     span {
       animation: ${moveLeft} 400s infinite linear;
     }

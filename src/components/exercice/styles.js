@@ -7,6 +7,8 @@ const ExerciceStyled = styled.div`
   margin: ${space(4)} auto;
   max-width: 980px;
 
+  &:last-child { margin-bottom: 0; }
+
   h2 {
     font-weight: 700;
     margin-bottom: ${space()};
