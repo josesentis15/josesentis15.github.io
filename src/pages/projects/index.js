@@ -42,7 +42,7 @@ class Projects extends React.Component {
           } = data;
 
           return (
-            <Layout location={this.props.location} title={capitalize(projects)} className="dark page-transition">
+            <Layout location={this.props.location} title={capitalize(projects)} className="dark">
               <Header />
               <Wrapper>
                 <NavigationWrapper>

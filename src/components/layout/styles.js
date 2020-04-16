@@ -26,6 +26,34 @@ const Wrapper = styled.div`
 `;
 
 const LayoutStyled = styled.div`
+  height: 100vh;
+  left: 0;
+  opacity: 1;
+  overflow: hidden;
+  position: absolute;
+  transition: opacity .3s linear;
+  top: 0;
+  width: 100vw;
+
+  &.home.fade-enter { opacity: 1; }
+
+  &.fade-enter,
+  &.fade-enter-active { opacity: 0; }
+  &.fade-enter-done { opacity: 1; }
+
+  &.fade-exit,
+  &.fade-exit-active { opacity: 0; }
+
+  main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow-y: auto;
+    padding-top: ${space(5)};
+  }
+
   &.home {
     main {
       align-items: center;
@@ -56,39 +84,14 @@ const LayoutStyled = styled.div`
     }
   }
 
-  &.page-transition {
-    height: 100vh;
-    left: 0;
-    opacity: 1;
-    overflow: hidden;
-    position: absolute;
-    transition: opacity .3s linear;
-    top: 0;
-    width: 100vw;
-
-    &.home.fade-enter { opacity: 1; }
-
-    &.fade-enter,
-    &.fade-enter-active { opacity: 0; }
-    &.fade-enter-done { opacity: 1; }
-
-    &.fade-exit,
-    &.fade-exit-active { opacity: 0; }
-
-    main {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      overflow-y: auto;
-    }
-  }
-
-  main { padding-top: ${space(5)}; }
-
-  // &.layout-bottom main { justify-content: flex-end; }
   &.headerless main { padding-top: 0 !important; }
+
+  &.layout-bottom main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: ${space(3)};
+  }
 
   &.playground {
     a { margin-top: ${space()}; }

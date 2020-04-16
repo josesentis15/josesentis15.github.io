@@ -13,7 +13,7 @@ class NotFound extends React.Component {
   render() {
     return (
       <Layout
-        className="layout-bottom not-found page-transition"
+        className="layout-bottom not-found"
         location={this.props.location}
         title="404: Not Found"
       >

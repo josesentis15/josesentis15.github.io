@@ -40,7 +40,7 @@ class Playground extends React.Component {
           } = data;
 
           return (
-            <Layout location={this.props.location} title={striptags(capitalize(`${playground} *`))} className="playground headerless page-transition">
+            <Layout location={this.props.location} title={striptags(capitalize(`${playground} *`))} className="playground headerless">
               <Noise />
               <MovingText>{this._rotatingTitle + this._rotatingTitle + this._rotatingTitle + this._rotatingTitle}</MovingText>
               <Wrapper>
