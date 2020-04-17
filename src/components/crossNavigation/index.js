@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { toggleCursor } from '../cursor';
+
 import CrossNavigationStyled from './styles';
 
 class CrossNavigation extends React.Component {
@@ -32,13 +34,20 @@ class CrossNavigation extends React.Component {
                     href={externalLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onMouseEnter={() => { toggleCursor(); }}
+                    onMouseLeave={() => { toggleCursor(); }}
                   >
                     {content}
                   </a>
                 )
                 :
                 (
-                  <Link to={`/${slug}`} className={`link ${slug === current ? 'active' : ''}`}>
+                  <Link
+                    to={`/${slug}`}
+                    className={`link ${slug === current ? 'active' : ''}`}
+                    onMouseEnter={() => { toggleCursor(); }}
+                    onMouseLeave={() => { toggleCursor(); }}
+                  >
                     {content}
                   </Link>
                 )
