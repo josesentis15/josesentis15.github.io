@@ -19,8 +19,6 @@ class NotFound extends React.Component {
       >
         <Wrapper>
           <h1 className="title">
-            <Glitch className="u-hide--s768" text={this._text} />
-            <Glitch className="u-hide--s768" text={this._text} />
             <Glitch text={this._text} />
           </h1>
           <Link to={routes.home}>Get back</Link>

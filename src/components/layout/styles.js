@@ -84,6 +84,12 @@ const LayoutStyled = styled.div`
     }
   }
 
+  &.not-found .title {
+    ${media.max('tablet')`
+      font-size: 18vw;
+    `}
+  }
+
   &.headerless main { padding-top: 0 !important; }
 
   &.layout-bottom main {
