@@ -6,7 +6,6 @@ import { colors, vars } from '../../utils/settings';
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  max-width: ${pixelate(vars.layout.maxContentWidth)};
   padding: 0 ${space()};
   position: relative;
   width: 100%;
@@ -85,7 +84,7 @@ const LayoutStyled = styled.div`
   }
 
   &.not-found .title {
-    ${media.max('tablet')`
+    ${media.max('desktop')`
       font-size: 18vw;
     `}
   }

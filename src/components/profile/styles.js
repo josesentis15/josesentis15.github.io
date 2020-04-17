@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 import { media } from '../../utils/media-queries';
-import { space, columns } from '../../utils/mixins';
+import { space, columns, pixelate } from '../../utils/mixins';
+import { vars } from '../../utils/settings';
 
 const ProfileWrapper = styled.div`
   .background-img {
     filter: grayscale(100%);
     margin-top: ${space()};
   }
+
+  .content > * { max-width: ${pixelate(vars.layout.maxReadingWidth)}; }
 
   .social {
     align-items: flex-start;
@@ -37,8 +40,8 @@ const ProfileWrapper = styled.div`
 
     > * { ${columns(2, 4, 'reverse')} }
     .p-big { margin-top: -${space(4)}; }
-    .background-img { max-width: 500px; }
-    `};
+    // .background-img { max-width: 500px; }
+  `};
 
   ${media.min('desktopLarge')`
     > * { ${columns(2, 6, 'reverse')} }

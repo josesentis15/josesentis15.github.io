@@ -24,6 +24,11 @@ const NavigationWrapper = styled.div`
 
   .link { margin-bottom: ${space(1.5)}; }
   .loaded-enter-done:last-child .link { margin-bottom: 0; }
+  .title { margin-left: -10px; }
+
+  ${media.min('desktop')`
+    .title { margin-left: -15px; }
+  `}
 `;
 
 const AppearingText = styled.span`

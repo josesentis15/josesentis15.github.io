@@ -55,37 +55,39 @@ class Profile extends React.Component {
 
     return (
       <ProfileWrapper ref={ref => this._text = ref}>
-        <div className="p-big">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: content.replace('%link', email)
-            }}
-          />
-          <div className="social">
-            <a
-              className="link--bg"
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            <a
-              className="link--bg"
-              href={linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Linkedin
-            </a>
-            <a
-              className="link--bg"
-              href={instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
+        <div className="content">
+          <div className="p-big">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: content.replace('%link', email)
+              }}
+            />
+            <div className="social">
+              <a
+                className="link--bg"
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                className="link--bg"
+                href={linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Linkedin
+              </a>
+              <a
+                className="link--bg"
+                href={instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+            </div>
           </div>
         </div>
         {/* <ThreeImage src={image} /> */}
