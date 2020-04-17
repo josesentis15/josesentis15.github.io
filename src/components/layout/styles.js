@@ -51,7 +51,7 @@ const LayoutStyled = styled.div`
     bottom: 0;
     top: 0;
     overflow-y: auto;
-    padding-top: ${space(5)};
+    padding-top: ${space(4.5)};
   }
 
   &.home {
