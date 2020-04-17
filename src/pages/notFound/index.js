@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 
+import { toggleCursor } from '../../components/cursor';
 import Glitch from '../../components/glitch';
 import Layout, { Wrapper } from '../../components/layout';
 
@@ -21,7 +22,13 @@ class NotFound extends React.Component {
           <h1 className="title">
             <Glitch text={this._text} />
           </h1>
-          <Link to={routes.home}>Get back</Link>
+          <Link
+            to={routes.home}
+            onMouseEnter={() => toggleCursor()}
+            onMouseLeave={() => toggleCursor()}
+          >
+            Get back
+          </Link>
         </Wrapper>
       </Layout>
     );

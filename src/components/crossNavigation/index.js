@@ -34,8 +34,8 @@ class CrossNavigation extends React.Component {
                     href={externalLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onMouseEnter={() => { toggleCursor(); }}
-                    onMouseLeave={() => { toggleCursor(); }}
+                    onMouseEnter={() => toggleCursor()}
+                    onMouseLeave={() => toggleCursor()}
                   >
                     {content}
                   </a>
@@ -45,8 +45,8 @@ class CrossNavigation extends React.Component {
                   <Link
                     to={`/${slug}`}
                     className={`link ${slug === current ? 'active' : ''}`}
-                    onMouseEnter={() => { toggleCursor(); }}
-                    onMouseLeave={() => { toggleCursor(); }}
+                    onMouseEnter={() => toggleCursor()}
+                    onMouseLeave={() => toggleCursor()}
                   >
                     {content}
                   </Link>
