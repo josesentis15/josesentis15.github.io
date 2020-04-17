@@ -4,12 +4,14 @@ import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
 const ProjectList = styled.div`
-  .image-wrapper { display: none; }
+  .project-image-animation { display: none; }
 
   ${media.min('tablet')`
     margin: ${space(2)} 0;
 
-    .image-wrapper {
+    .touch & .project-image-animation { display: none; }
+
+    .project-image-animation {
       display: block;
       height: 40vh;
       overflow: hidden;
@@ -33,7 +35,7 @@ const ProjectList = styled.div`
       width: 100%;
     }
 
-    .image-wrapper.is-hover {
+    .project-image-animation.is-hover {
       opacity: 1;
 
       .project-image {
@@ -42,7 +44,7 @@ const ProjectList = styled.div`
       }
     }
 
-    .image-wrapper.loaded-exit-active {
+    .project-image-animation.loaded-exit-active {
       opacity: 0;
 
       .project-image {
@@ -53,7 +55,7 @@ const ProjectList = styled.div`
   `}
 
   ${media.min('desktop')`
-    .image-wrapper {
+    .project-image-animation {
       height: 60vh;
       width: 60vh;
       top: calc(50% - 30vh);
@@ -65,7 +67,7 @@ const ProjectList = styled.div`
   `}
 
   ${media.min('maxWidth')`
-    .image-wrapper {
+    .project-image-animation {
       height: 66vh;
       width: 66vh;
       top: calc(50% - 33vh);
