@@ -59,6 +59,7 @@ const LayoutStyled = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
+      overflow: hidden;
     }
 
     .navigation { padding-bottom: 0; }

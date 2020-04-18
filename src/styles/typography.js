@@ -9,19 +9,23 @@ const typographyStyles = `
   }
 
   .title {
-    font-size: 22vw;
+    font-size: 13vh;
     line-height: 1.2;
 
-    @media (min-width: 768px) and (max-height: 1023px) {
-      font-size: 15vw;
+    // @media (min-width: 768px) and (max-height: 1023px) {
+    //   font-size: 15vw;
+    // }
+
+    @media (min-width: 768px) {
+      font-size: 15vh;
     }
 
     @media (min-width: 1024px) {
-      font-size: 17vw;
+      font-size: 17vh;
     }
 
     @media (min-width: 1280px){
-      font-size: 218px;
+      font-size: 24vh;
     }
   }
 
