@@ -6,7 +6,7 @@ import { colors } from '../../utils/settings';
 const Circle = styled.span`
   background-color: ${colors.base500};
   border-radius: 50%;
-  display: none;
+  display: none !important;
   height: ${space()};
   left: 50vw;
   mix-blend-mode: difference;
