@@ -27,7 +27,7 @@ class About extends React.Component {
             <Layout location={this.props.location} title={capitalize(about)}>
               <Header />
               <Wrapper>
-                <NavigationWrapper className="fixed">
+                <NavigationWrapper>
                   <TransitionGroup>
                     {loaded && !loading && (
                       <CSSTransition classNames="loaded" timeout={300}>
