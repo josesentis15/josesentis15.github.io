@@ -27,6 +27,10 @@ const NavigationWrapper = styled.div`
   .title { margin-left: -10px; }
 
   ${media.min('desktop')`
+    &.fixed {
+
+    }
+
     .title { margin-left: -15px; }
   `}
 `;

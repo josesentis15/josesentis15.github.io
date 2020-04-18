@@ -92,6 +92,15 @@ class Profile extends React.Component {
         </div>
         {/* <ThreeImage src={image} /> */}
         <BackgroundImage src={image} />
+        <p className="thanks">
+          Thanks <a
+            href="http://cris-garcia.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Cris García
+          </a> for your design.
+        </p>
       </ProfileWrapper>
     );
   }

@@ -10,6 +10,25 @@ const ProfileWrapper = styled.div`
     margin-top: ${space()};
   }
 
+  .thanks {
+    font-size: 14px;
+    text-align: right;
+
+    ${media.between('tablet', 'desktop')`
+      text-align: left;
+    `};
+
+    ${media.max('desktop')`
+      margin: ${space(2)} 0 ${space()};
+    `};
+
+    ${media.min('desktop')`
+      bottom: 0;
+      position: absolute;
+      right: 0;
+    `};
+  }
+
   .content > * { max-width: ${pixelate(vars.layout.maxReadingWidth)}; }
 
   .social {
@@ -37,14 +56,16 @@ const ProfileWrapper = styled.div`
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    margin-bottom: ${space(2)};
+    padding-bottom: ${space(2)};
+    position: relative;
 
-    > * { ${columns(2, 4, 'reverse')} }
+    > *:not(.thanks) { ${columns(2, 4, 'reverse')} }
     .p-big { margin-top: -${space(4)}; }
-    // .background-img { max-width: 500px; }
   `};
 
   ${media.min('desktopLarge')`
-    > * { ${columns(2, 6, 'reverse')} }
+    > *:not(.thanks) { ${columns(2, 6, 'reverse')} }
   `};
 
   ${media.min('bigScreens')`
