@@ -22,7 +22,7 @@ const data = {
     about: {
       __typename: 'About page',
       content: `<p>I’m Jose Sentis, Senior Front–End Developer based in Barcelona.</p>
-      <p>I do stuff for the Internet.</p>
+      <p>I do stuff for the Internet and sing karaoke on Saturday nights.</p>
       <p>I’m open for new creative opportunities. Don’t be shy, <a href="mailto:%link" rel="noopener noreferrer">say hi</a></p>`,
       image: '/images/profile.jpg'
     },
