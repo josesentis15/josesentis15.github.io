@@ -91,14 +91,14 @@ class Profile extends React.Component {
               </a>
             </div>
             <p className="thanks">
-              Thanks&nbsp;
+              Designed by&nbsp;
               <a
                 href="http://cris-garcia.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Cris García
-              </a>&nbsp; for your design.
+              </a>.
             </p>
           </div>
         </div>

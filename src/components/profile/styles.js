@@ -5,15 +5,7 @@ import { space, columns } from '../../utils/mixins';
 
 const ProfileWrapper = styled.div`
   .background-img { filter: grayscale(100%); }
-
-  .thanks {
-    font-size: 14px;
-    line-height: 1.2;
-    margin-top: ${space(2)};
-
-    a::after { display: none; }
-  }
-
+  .thanks { margin-top: ${space(4)}; }
   .content > * { max-width: 600px; }
 
   .social {
@@ -49,7 +41,7 @@ const ProfileWrapper = styled.div`
     position: relative;
 
     .profile-image, .content { ${columns(2, 2)}; }
-    .p-big { margin-top: -${space(4)}; }
+    .p-big { margin-top: -${space(5)}; }
   `};
 
   ${media.min('maxWidth')`
