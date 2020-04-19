@@ -12,7 +12,7 @@ const HeaderStyled = styled.header`
   will-change: transform;
   z-index: 9;
 
-  .dark & { background-color: ${colors.white}; }
+  .dark & { background-color: ${colors.base100}; }
 
   .header {
     align-items: flex-start;
@@ -21,17 +21,16 @@ const HeaderStyled = styled.header`
     font-family: ${typography.secondaryFontFamily.join(', ')};
     justify-content: space-between;
     padding: ${space()} 0;
-    transform: translateY(-100%);
     transition: transform 0s;
+
+    .home & { transform: translateY(-100%); }
 
     &.loaded-enter-done {
       transition: transform .7s cubic-bezier(.215, .61, .355, 1);
       transform: translateY(0);
     }
 
-    > div {
-      max-width: 150px;
-    }
+    > div { max-width: 150px; }
 
     a {
       background-color: transparent !important;

@@ -14,7 +14,7 @@ const ProfileWrapper = styled.div`
     a::after { display: none; }
   }
 
-  .content > * { max-width: 700px; }
+  .content > * { max-width: 600px; }
 
   .social {
     align-items: flex-start;
