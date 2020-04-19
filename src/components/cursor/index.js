@@ -18,6 +18,8 @@ const toggleCursor = (force = false) => {
 class Cursor extends React.PureComponent {
   componentDidMount() {
     document.addEventListener('mousemove', this.handleMouseMove);
+
+    TweenLite.to("body", 5, {backgroundColor:"red", scale:0.5});
   }
 
   componentWillUnmount() {
