@@ -18,8 +18,6 @@ const toggleCursor = (force = false) => {
 class Cursor extends React.PureComponent {
   componentDidMount() {
     document.addEventListener('mousemove', this.handleMouseMove);
-
-    TweenMax.to("body", 5, {backgroundColor:"red", scale:0.5});
   }
 
   componentWillUnmount() {
@@ -28,8 +26,6 @@ class Cursor extends React.PureComponent {
 
   handleMouseMove = event => {
     if (!this.cursor.classList.contains('moved')) this.cursor.classList.add('moved');
-
-    console.log(this.cursor, event.clientX, event.clientY);
 
     TweenMax.to(this.cursor, 0.3, {
       left: `${event.clientX}px`,
