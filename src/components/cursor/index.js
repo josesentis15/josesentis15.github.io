@@ -27,6 +27,8 @@ class Cursor extends React.PureComponent {
   handleMouseMove = event => {
     if (!this._cursor.classList.contains('moved')) this._cursor.classList.add('moved');
 
+    console.log(event.clientX, event.clientY);
+
     TweenLite.to(this._cursor, 0.3, {
       left: `${event.clientX}px`,
       top: `${event.clientY}px`,
