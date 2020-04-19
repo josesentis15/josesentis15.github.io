@@ -24,7 +24,11 @@ const typographyStyles = `
       font-size: 24vh;
     }
 
-    @media (min-height: 915px){
+    @media (min-width: 1024px) and (min-height: 915px){
+      font-size: 155px;
+    }
+
+    @media (min-width: 1280px) and (min-height: 915px){
       font-size: 220px;
     }
   }

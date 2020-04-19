@@ -64,8 +64,12 @@ const ProfileWrapper = styled.div`
     .background-img { height: 62vh; }
   }
 
-  @media screen and (min-width: 1024px) and (min-height: 992px) {
+  @media screen and (min-width: 1024px) and (min-height: 915px) {
     .background-img { height: 64vh; }
+  }
+
+  @media screen and (min-width: 1024px) and (min-height: 992px) {
+    .background-img { height: 66vh; }
   }
 
   @media screen and (min-width: 1280px) {
@@ -76,8 +80,12 @@ const ProfileWrapper = styled.div`
     .background-img { height: 54vh; }
   }
 
-  @media screen and (min-width: 1280px) and (min-height: 992px) {
+  @media screen and (min-width: 1280px) and (min-height: 915px) {
     .background-img { height: 56vh; }
+  }
+
+  @media screen and (min-width: 1280px) and (min-height: 992px) {
+    .background-img { height: 60vh; }
   }
 `;
 
