@@ -15,8 +15,12 @@ const NavigationWrapper = styled.div`
   `}
 
   ${media.max('desktop')`
-    .double-link span:not(.text) {
-      display: block;
+    .double-link {
+      line-height: 1;
+
+      span:not(.text) {
+        display: block;
+      }
     }
   `}
 
@@ -27,10 +31,6 @@ const NavigationWrapper = styled.div`
   .title { margin-left: -10px; }
 
   ${media.min('desktop')`
-    &.fixed {
-
-    }
-
     .title { margin-left: -15px; }
   `}
 `;

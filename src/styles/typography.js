@@ -12,10 +12,6 @@ const typographyStyles = `
     font-size: 13vh;
     line-height: 1.2;
 
-    // @media (min-width: 768px) and (max-height: 1023px) {
-    //   font-size: 15vw;
-    // }
-
     @media (min-width: 768px) {
       font-size: 15vh;
     }
@@ -26,6 +22,10 @@ const typographyStyles = `
 
     @media (min-width: 1280px){
       font-size: 24vh;
+    }
+
+    &.active {
+
     }
   }
 
@@ -63,7 +63,8 @@ const typographyStyles = `
       color: ${colors.primary};
     }
 
-    .non-touch .dark &:hover {
+    .non-touch .dark &:hover,
+    .dark &.active {
       background-color: ${colors.primary};
       color: ${colors.base500};
     }
@@ -108,6 +109,8 @@ const typographyStyles = `
     margin-bottom: 0;
     opacity: .5;
   }
+
+  .text.active { color: ${colors.primary}; }
 `;
 
 export default typographyStyles;
