@@ -1,5 +1,5 @@
 import React from 'react';
-import { Power2, TweenLite } from 'gsap';
+import { TweenMax } from 'gsap';
 
 import withLoader from '../../hoc/withLoader';
 
@@ -19,7 +19,7 @@ class Cursor extends React.PureComponent {
   componentDidMount() {
     document.addEventListener('mousemove', this.handleMouseMove);
 
-    TweenLite.to("body", 5, {backgroundColor:"red", scale:0.5});
+    TweenMax.to("body", 5, {backgroundColor:"red", scale:0.5});
   }
 
   componentWillUnmount() {
@@ -31,10 +31,10 @@ class Cursor extends React.PureComponent {
 
     console.log(this.cursor, event.clientX, event.clientY);
 
-    TweenLite.to(this.cursor, 0.3, {
+    TweenMax.to(this.cursor, 0.3, {
       left: `${event.clientX}px`,
       top: `${event.clientY}px`,
-      ease: Power2.easeOut
+      ease: "Power2.easeOut"
     });
   }
 
