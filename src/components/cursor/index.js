@@ -25,11 +25,11 @@ class Cursor extends React.PureComponent {
   }
 
   handleMouseMove = event => {
-    if (!this._cursor.classList.contains('moved')) this._cursor.classList.add('moved');
+    if (!this.cursor.classList.contains('moved')) this.cursor.classList.add('moved');
 
-    console.log(event.clientX, event.clientY);
+    console.log(this.cursor, event.clientX, event.clientY);
 
-    TweenLite.to(this._cursor, 0.3, {
+    TweenLite.to(this.cursor, 0.3, {
       left: `${event.clientX}px`,
       top: `${event.clientY}px`,
       ease: Power2.easeOut
@@ -40,7 +40,7 @@ class Cursor extends React.PureComponent {
     const { loaded } = this.props;
 
     return loaded && (
-      <Circle id="cursor" ref={ref => this._cursor = ref} />
+      <Circle id="cursor" ref={ref => this.cursor = ref} />
     );
   }
 }
