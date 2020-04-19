@@ -17,7 +17,7 @@ const textStroke = `
   -webkit-text-stroke: 1px rgba(255, 255, 255, .5);
 
   &.dark { -webkit-text-stroke: 1px rgba(25, 25, 25, 1); }
-  &.light { -webkit-text-stroke: 1px rgba(60, 234, 67, 1); }
+  &.light { -webkit-text-stroke: 1px rgba(255, 255, 255, 1); }
 `;
 
 const TextWrapper = styled.div`

@@ -69,7 +69,7 @@ const typographyStyles = `
 
     .non-touch .dark &:hover,
     .dark &.active {
-      background-color: ${colors.primary};
+      background-color: ${colors.base100};
       color: ${colors.base500};
     }
 

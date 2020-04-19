@@ -20,9 +20,9 @@ const Circle = styled.span`
   .non-touch &.moved { display: block; }
 
   .dark & {
-    background-color: ${colors.white};
+    background-color: ${colors.base100};
 
-    &.hover { border-bottom-color: ${colors.white}; }
+    &.hover { border-bottom-color: ${colors.base100}; }
   }
 
   &.hover {

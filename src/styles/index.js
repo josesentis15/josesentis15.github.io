@@ -107,6 +107,7 @@ const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar { width: 0px; }
 
   body {
+    background-color: ${colors.base100};
     color: ${colors.base500};
     font-family: ${typography.bodyFontFamily.join(', ')};
     font-size: ${typography.baseFontSize}px;
