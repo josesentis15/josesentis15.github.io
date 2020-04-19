@@ -79,13 +79,11 @@ const typographyStyles = `
     }
   }
 
-  .link,
-  .link--bg {
-    text-decoration: none;
-    &::after { display: none; }
-  }
-
   .link {
+    text-decoration: none;
+
+    &::after { display: none; }
+
     .non-touch &:hover {
       background-color: transparent;
     }

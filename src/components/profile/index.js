@@ -66,7 +66,6 @@ class Profile extends React.Component {
             />
             <div className="social">
               <a
-                className="link--bg"
                 href={github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -74,7 +73,6 @@ class Profile extends React.Component {
                 GitHub
               </a>
               <a
-                className="link--bg"
                 href={linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -82,7 +80,6 @@ class Profile extends React.Component {
                 Linkedin
               </a>
               <a
-                className="link--bg"
                 href={instagram}
                 target="_blank"
                 rel="noopener noreferrer"
