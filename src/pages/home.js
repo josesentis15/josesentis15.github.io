@@ -12,17 +12,6 @@ class Home extends React.Component {
         <Header />
         <Wrapper>
           <Navigation />
-          {/* <NavigationWrapper>
-            <TransitionGroup>
-              {loaded && !loading && (
-                <CSSTransition classNames="loaded" timeout={300}>
-                  <h1 className="title">
-                    <AppearingText><span className="text dark">New site coming soon...</span></AppearingText>
-                  </h1>
-                </CSSTransition>
-              )}
-            </TransitionGroup>
-          </NavigationWrapper> */}
         </Wrapper>
       </Layout>
     );
