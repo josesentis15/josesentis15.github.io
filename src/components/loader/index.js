@@ -13,17 +13,17 @@ class Home extends React.Component {
       <LoaderWrapper className="playground">
         <Noise />
         <div>
-          <span className="title duplicated-text stroke ligth">{text}</span>
-          <span className="title duplicated-text stroke ligth">{text}</span>
-          <span className="title duplicated-text stroke ligth">{text}</span>
-          <span className="title duplicated-text stroke ligth">{text}</span>
-          <span className="title duplicated-text stroke ligth">{text}</span>
+          <span className="title duplicated-text stroke light">{text}</span>
+          <span className="title duplicated-text stroke light">{text}</span>
+          <span className="title duplicated-text stroke light">{text}</span>
+          <span className="title duplicated-text stroke light">{text}</span>
+          <span className="title duplicated-text stroke light">{text}</span>
           <AppearingText><span className="text title">{text}</span></AppearingText>
-          <span className="title duplicated-text stroke ligth">{text}</span>
-          <span className="title duplicated-text stroke ligth">{text}</span>
-          <span className="title duplicated-text stroke ligth">{text}</span>
-          <span className="title duplicated-text stroke ligth">{text}</span>
-          <span className="title duplicated-text stroke ligth">{text}</span>
+          <span className="title duplicated-text stroke light">{text}</span>
+          <span className="title duplicated-text stroke light">{text}</span>
+          <span className="title duplicated-text stroke light">{text}</span>
+          <span className="title duplicated-text stroke light">{text}</span>
+          <span className="title duplicated-text stroke light">{text}</span>
         </div>
       </LoaderWrapper>
     );

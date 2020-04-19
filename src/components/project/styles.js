@@ -6,7 +6,6 @@ import { space } from '../../utils/mixins';
 
 const ProjectStyled = styled.div`
   color: ${colors.base300};
-  cursor: pointer;
   padding-bottom: ${space()};
   padding-top: ${space()};
   padding-left: ${space(1.5)};

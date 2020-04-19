@@ -41,6 +41,12 @@ const ProfileWrapper = styled.div`
     position: relative;
 
     .profile-image, .content { ${columns(2, 2)}; }
+
+    .background-img {
+      position: fixed;
+      width: 43vw;
+    }
+
     .p-big { margin-top: -${space(5)}; }
   `};
 
@@ -90,16 +96,3 @@ const ProfileWrapper = styled.div`
 `;
 
 export default ProfileWrapper;
-
-
-
-
-
-
-  // ${media.min('desktopLarge')`
-  //   > *:not(.thanks) { ${columns(2, 6, 'reverse')} }
-  // `};
-
-  // ${media.min('bigScreens')`
-  //   margin-top: ${space(2)};
-  // `};
