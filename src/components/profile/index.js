@@ -54,7 +54,9 @@ class Profile extends React.Component {
     } = this.props.data;
 
     return (
-      <ProfileWrapper ref={ref => this._text = ref}>
+      <ProfileWrapper id="profile-wrapper" ref={ref => this._text = ref}>
+        {/* <ThreeImage src={image} /> */}
+        <div className="profile-image"><BackgroundImage src={image} /></div>
         <div className="content">
           <div className="p-big">
             <div
@@ -88,19 +90,18 @@ class Profile extends React.Component {
                 Instagram
               </a>
             </div>
+            <p className="thanks">
+              Thanks&nbsp;
+              <a
+                href="http://cris-garcia.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Cris García
+              </a>&nbsp; for your design.
+            </p>
           </div>
         </div>
-        {/* <ThreeImage src={image} /> */}
-        <BackgroundImage src={image} />
-        <p className="thanks">
-          Thanks <a
-            href="http://cris-garcia.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Cris García
-          </a> for your design.
-        </p>
       </ProfileWrapper>
     );
   }
