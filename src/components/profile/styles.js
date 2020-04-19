@@ -52,8 +52,16 @@ const ProfileWrapper = styled.div`
     .p-big { margin-top: -${space(4)}; }
   `};
 
-  ${media.min('desktopLarge')`
+  ${media.min('maxWidth')`
     .profile-image, .content { ${columns(2, 4)}; }
+  `};
+
+  ${media.min('desktopLarge')`
+    .background-img { width: 38vw; }
+  `};
+
+  ${media.min('bigScreens')`
+    .background-img { width: 30vw; }
   `};
 
   @media screen and (min-width: 1024px) {
