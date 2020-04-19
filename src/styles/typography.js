@@ -24,8 +24,8 @@ const typographyStyles = `
       font-size: 24vh;
     }
 
-    &.active {
-
+    @media (min-height: 915px){
+      font-size: 220px;
     }
   }
 
