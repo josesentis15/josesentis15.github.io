@@ -12,9 +12,9 @@ const typographyStyles = `
     font-size: 24vw;
     line-height: 1.2;
 
-    @media (min-width: 768px) {
-      font-size: 15vh;
-    }
+    // @media (min-width: 768px) {
+    //   font-size: 24vw;
+    // }
 
     // @media (min-width: 1024px) {
     //   font-size: 17vh;

@@ -11,8 +11,16 @@ const NavigationWrapper = styled.div`
   justify-content: center;
   min-height: 100%;
 
+  > div { width: 100%; }
+  .title { margin-left: -7px; }
+
   ${media.max('phone')`
     padding: 0 0 ${space()} 0;
+  `}
+
+  ${media.max('desktop')`
+    .link { margin-bottom: ${space(1.75)}; }
+    .loaded-enter-done:last-child .link { margin-bottom: 0; }
   `}
 
   ${media.max('desktop')`
@@ -25,12 +33,12 @@ const NavigationWrapper = styled.div`
     }
   `}
 
-  > div { width: 100%; }
-  .title { margin-left: -7px; }
+  ${media.min('phone')`
+    .title { margin-left: -10px; }
+  `}
 
-  ${media.max('tablet')`
-    .link { margin-bottom: ${space(1.75)}; }
-    .loaded-enter-done:last-child .link { margin-bottom: 0; }
+  ${media.min('tablet')`
+    .title { margin-left: -15px; }
   `}
 
   ${media.min('desktop')`
