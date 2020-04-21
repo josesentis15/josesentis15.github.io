@@ -4,7 +4,6 @@ import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
 const NavigationWrapper = styled.div`
-  background-color: red;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -12,25 +11,26 @@ const NavigationWrapper = styled.div`
   min-height: 100%;
 
   > div { width: 100%; }
-  .title { margin-left: -7px; }
+
+  .title {
+    margin-bottom: ${space(1.75)};
+    margin-left: -7px;
+  }
+
+  .loaded-enter-done:last-child .title { margin-bottom: 0; }
 
   ${media.max('phone')`
     padding: 0 0 ${space()} 0;
   `}
 
   ${media.max('desktop')`
-    .link { margin-bottom: ${space(1.75)}; }
-    .loaded-enter-done:last-child .link { margin-bottom: 0; }
-  `}
+  .double-link {
+    line-height: 1;
 
-  ${media.max('desktop')`
-    .double-link {
-      line-height: 1;
-
-      span:not(.text) {
-        display: block;
-      }
+    span:not(.text) {
+      display: block;
     }
+  }
   `}
 
   ${media.min('phone')`
@@ -42,7 +42,15 @@ const NavigationWrapper = styled.div`
   `}
 
   ${media.min('desktop')`
-    .title { margin-left: -15px; }
+    .title {
+      margin-bottom: ${space()};
+      margin-left: -18px;
+    }
+  `}
+
+  ${media.between('desktop', 'desktopLarge')`
+    justify-content: flex-end;
+    padding-bottom: ${space(2)};
   `}
 `;
 
