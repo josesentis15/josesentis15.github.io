@@ -53,18 +53,7 @@ const LayoutStyled = styled.div`
     padding-top: ${space(4.5)};
   }
 
-  &.home {
-    main {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .navigation { padding-bottom: 0; }
-  }
-
+  &.home main { display: flex; }
   &.playground main,
   &.dark main {
     background-color: ${colors.base500};

@@ -4,11 +4,12 @@ import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
 const NavigationWrapper = styled.div`
+  background-color: red;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
+  min-height: 100%;
 
   ${media.max('phone')`
     padding: 0 0 ${space()} 0;
@@ -25,10 +26,12 @@ const NavigationWrapper = styled.div`
   `}
 
   > div { width: 100%; }
+  .title { margin-left: -7px; }
 
-  .link { margin-bottom: ${space(1.5)}; }
-  .loaded-enter-done:last-child .link { margin-bottom: 0; }
-  .title { margin-left: -10px; }
+  ${media.max('tablet')`
+    .link { margin-bottom: ${space(1.75)}; }
+    .loaded-enter-done:last-child .link { margin-bottom: 0; }
+  `}
 
   ${media.min('desktop')`
     .title { margin-left: -15px; }

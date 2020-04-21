@@ -9,28 +9,28 @@ const typographyStyles = `
   }
 
   .title {
-    font-size: 13vh;
+    font-size: 24vw;
     line-height: 1.2;
 
     @media (min-width: 768px) {
       font-size: 15vh;
     }
 
-    @media (min-width: 1024px) {
-      font-size: 17vh;
-    }
+    // @media (min-width: 1024px) {
+    //   font-size: 17vh;
+    // }
 
-    @media (min-width: 1280px){
-      font-size: 24vh;
-    }
+    // @media (min-width: 1280px){
+    //   font-size: 24vh;
+    // }
 
-    @media (min-width: 1024px) and (min-height: 915px){
-      font-size: 155px;
-    }
+    // @media (min-width: 1024px) and (min-height: 915px){
+    //   font-size: 155px;
+    // }
 
-    @media (min-width: 1280px) and (min-height: 915px){
-      font-size: 220px;
-    }
+    // @media (min-width: 1280px) and (min-height: 915px){
+    //   font-size: 220px;
+    // }
   }
 
   .title2 {
