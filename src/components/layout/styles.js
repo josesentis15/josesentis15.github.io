@@ -44,16 +44,14 @@ const LayoutStyled = styled.div`
   &.fade-exit-active { opacity: 0; }
 
   main {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
+    height: 100%;
     overflow-y: auto;
     padding-top: ${space(4.5)};
+    width: 100%;
   }
 
   &.home main { display: flex; }
+
   &.playground main,
   &.dark main {
     background-color: ${colors.base500};

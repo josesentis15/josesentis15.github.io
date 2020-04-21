@@ -27,30 +27,23 @@ const ProfileWrapper = styled.div`
     .background-img { margin-bottom: ${space(2)}; }
   `}
 
-  // ${media.between('tablet', 'desktop')`
-  //   .background-img {
-  //     float: right;
-  //     margin-top: -20%;
-  //     width: 50%;
-  //   }
-  // `};
-
   ${media.min('desktop')`
     display: flex;
     justify-content: space-between;
     position: relative;
 
-    .profile-image, .content { ${columns(2, 2)}; }
+    .profile-image, .content { ${columns(2, 3)}; }
+    .content { padding-bottom: ${space(2)}; }
 
     .background-img {
       position: fixed;
-      width: 43vw;
+      width: 42vw;
     }
 
     .p-big { margin-top: -${space(5)}; }
   `};
 
-  ${media.min('maxWidth')`
+  ${media.min('desktopLarge')`
     .profile-image, .content { ${columns(2, 4)}; }
   `};
 
@@ -63,35 +56,35 @@ const ProfileWrapper = styled.div`
   `};
 
   @media screen and (min-width: 1024px) {
-    .background-img { height: 58vh; }
+    .background-img { height: 56vh; }
   }
 
-  @media screen and (min-width: 1024px) and (min-height: 768px) {
-    .background-img { height: 62vh; }
+  @media screen and (min-width: 1024px) and (min-height: 850px) {
+    .background-img { height: 61vh; }
   }
 
-  @media screen and (min-width: 1024px) and (min-height: 915px) {
-    .background-img { height: 64vh; }
-  }
-
-  @media screen and (min-width: 1024px) and (min-height: 992px) {
-    .background-img { height: 66vh; }
+  @media screen and (min-width: 1024px) and (min-height: 950px) {
+    .background-img { height: 65vh; }
   }
 
   @media screen and (min-width: 1280px) {
     .background-img { height: 50vh; }
   }
 
-  @media screen and (min-width: 1280px) and (min-height: 768px) {
-    .background-img { height: 54vh; }
-  }
-
-  @media screen and (min-width: 1280px) and (min-height: 915px) {
+  @media screen and (min-width: 1280px) and (min-height: 850px) {
     .background-img { height: 56vh; }
   }
 
-  @media screen and (min-width: 1280px) and (min-height: 992px) {
-    .background-img { height: 60vh; }
+  @media screen and (min-width: 1280px) and (min-height: 950px) {
+    .background-img { height: 58vh; }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .background-img { height: 56vh; }
+  }
+
+  @media screen and (min-width: 1440px) and (min-height: 950px) {
+    .background-img { height: 58vh; }
   }
 `;
 

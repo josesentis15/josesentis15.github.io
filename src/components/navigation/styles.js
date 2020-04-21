@@ -13,7 +13,8 @@ const NavigationWrapper = styled.div`
   > div { width: 100%; }
 
   .title {
-    margin-bottom: ${space(1.75)};
+    .home & { margin-bottom: ${space(1.75)}; }
+
     margin-left: -7px;
   }
 
@@ -24,13 +25,13 @@ const NavigationWrapper = styled.div`
   `}
 
   ${media.max('desktop')`
-  .double-link {
-    line-height: 1;
+    .double-link {
+      line-height: 1;
 
-    span:not(.text) {
-      display: block;
+      span:not(.text) {
+        display: block;
+      }
     }
-  }
   `}
 
   ${media.min('phone')`
@@ -43,14 +44,32 @@ const NavigationWrapper = styled.div`
 
   ${media.min('desktop')`
     .title {
-      margin-bottom: ${space()};
       margin-left: -18px;
+
+      .home & { margin-bottom: ${space()}; }
+    }
+
+    &.fixed {
+      height: 18vw;
+      position: relative;
+
+      > div { position: fixed; }
     }
   `}
 
+  ${media.min('maxWidth')`
+    &.fixed { height: 185px; }
+  `}
+
+  ${media.min('bigScreens')`
+    &.fixed { height: 260px; }
+  `}
+
   ${media.between('desktop', 'desktopLarge')`
-    justify-content: flex-end;
-    padding-bottom: ${space(2)};
+    .home & {
+      justify-content: flex-end;
+      padding-bottom: ${space(2)};
+    }
   `}
 `;
 
