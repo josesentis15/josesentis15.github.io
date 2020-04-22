@@ -60,7 +60,7 @@ const data = {
           image: '/images/covers/runroom.jpg',
           order: '1',
           slug: '',
-          abstract: `Designed in-house with the help of Folch, on an art direction role, the website was presented as the launching of the new Runroom brand. This new branding repositions Runroom as a reference point in the creative market giving visibility to the real capacities of the company. <br> The main concept is a blurry mixture of colours which was translated into the main animation of the site's home page. This animation was created in a workshop with Edu Prats where using WebGL and shaders the desired look and feel was achieved and integrated into the branding.`
+          abstract: `Designed in-house with the help of Folch, on an art direction role, the website was presented as the launching of the new Runroom brand. This new branding repositions Runroom as a reference point in the creative market giving visibility to the real capacities of the company. <br> The main concept is a blurry mixture of colours which was translated into the main animation of the site's home page. This animation was created in a workshop with Edu Prats where using WebGL and shaders the desired look and feel was achieved and integrated into the branding. <br>Design: Cris García`
         },
         {
           __typename: 'Project',
