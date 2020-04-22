@@ -60,7 +60,7 @@ const data = {
           image: '/images/covers/runroom.jpg',
           order: '1',
           slug: '',
-          abstract: `Designed in-house with the help of Folch, on an art direction role, the website was presented as the launching of the new Runroom brand. This new branding repositions Runroom as a reference point in the creative market giving visibility to the real capacities of the company. <br> The main concept is a blurry mixture of colours which was translated into the main animation of the site's home page. This animation was created in a workshop with Edu Prats where using WebGL and shaders the desired look and feel was achieved and integrated into the branding. <br>Design: Cris García`
+          abstract: `Designed in-house with the help of Folch, on an art direction role, the website was presented as the launching of the new Runroom brand. This new branding repositions Runroom as a reference point in the creative market giving visibility to the real capacities of the company. <br> The main concept is a blurry mixture of colours which was translated into the main animation of the site's home page. This animation was created in a workshop with Edu Prats where using WebGL and shaders the desired look and feel was achieved and integrated into the branding. <br>2019 - Design: Cris García`
         },
         {
           __typename: 'Project',
@@ -77,10 +77,10 @@ const data = {
           title: 'Estudio Alberto Dominguez',
           external: true,
           externalLink: 'https://www.estudioalbertodominguez.com/',
-          image: '/images/esade-exed.jpg',
+          image: '/images/covers/estudio-alberto-dominguez.jpg',
           order: '3',
           slug: '',
-          abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          abstract: `This project the transformation from a solo a freelance designer to becoming a design studio.<br>He is an experienced designer who defines himself as branding, social media and illustration specialist.<br>The goal was showcasing as much work as possible in a fully screen grid with high quality images.<br>2018 - Design: Alberto Dominguez.`
         },
         {
           __typename: 'Project',
