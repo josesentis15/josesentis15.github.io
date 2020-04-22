@@ -29,63 +29,99 @@ const ProfileWrapper = styled.div`
 
   ${media.min('desktop')`
     display: flex;
-    justify-content: space-between;
-    position: relative;
+    justify-content: flex-end;
 
-    .profile-image, .content { ${columns(2, 3)}; }
-    .content { padding-bottom: ${space(2)}; }
-
-    .background-img {
-      position: fixed;
-      width: 42vw;
+    .content {
+      margin-top: -${space(6)};
+      padding: ${space(2)};
+      width: 50%;
     }
 
-    .p-big { margin-top: -${space(5)}; }
+    .profile-image {
+      height: 100vh;
+      left: 0;
+      padding: ${space(2)};
+      padding-top: 38vh;
+      position: fixed;
+      top: 0;
+      width: 50vw;
+    }
+
+    // .content {
+    //   margin-top: -${space(5)};
+    //   padding-bottom: ${space(2)};
+    // }
+
+    // .background-img {
+    //   position: fixed;
+    //   width: 42vw;
+    // }
   `};
-
-  ${media.min('desktopLarge')`
-    .profile-image, .content { ${columns(2, 4)}; }
-  `};
-
-  ${media.min('desktopLarge')`
-    .background-img { width: 38vw; }
-  `};
-
-  ${media.min('bigScreens')`
-    .background-img { width: 30vw; }
-  `};
-
-  @media screen and (min-width: 1024px) {
-    .background-img { height: 56vh; }
-  }
-
-  @media screen and (min-width: 1024px) and (min-height: 850px) {
-    .background-img { height: 61vh; }
-  }
-
-  @media screen and (min-width: 1024px) and (min-height: 950px) {
-    .background-img { height: 65vh; }
-  }
-
-  @media screen and (min-width: 1280px) {
-    .background-img { height: 50vh; }
-  }
-
-  @media screen and (min-width: 1280px) and (min-height: 850px) {
-    .background-img { height: 56vh; }
-  }
-
-  @media screen and (min-width: 1280px) and (min-height: 950px) {
-    .background-img { height: 58vh; }
-  }
-
-  @media screen and (min-width: 1440px) {
-    .background-img { height: 56vh; }
-  }
-
-  @media screen and (min-width: 1440px) and (min-height: 950px) {
-    .background-img { height: 58vh; }
-  }
 `;
 
 export default ProfileWrapper;
+
+
+
+// ${media.min('desktop')`
+// display: flex;
+// justify-content: space-between;
+// position: relative;
+
+// .profile-image, .content { ${columns(2, 3)}; }
+
+// .content {
+//   margin-top: -${space(5)};
+//   padding-bottom: ${space(2)};
+// }
+
+// .background-img {
+//   position: fixed;
+//   width: 42vw;
+// }
+// `};
+
+// ${media.min('desktopLarge')`
+// .profile-image, .content { ${columns(2, 4)}; }
+// `};
+
+// ${media.min('desktopLarge')`
+// .background-img { width: 38vw; }
+// `};
+
+// ${media.min('bigScreens')`
+// .background-img { width: 30vw; }
+// .content { margin-top: -${space(5.5)}; }
+// `};
+
+// @media screen and (min-width: 1024px) {
+// .background-img { height: 56vh; }
+// }
+
+// @media screen and (min-width: 1024px) and (min-height: 850px) {
+// .background-img { height: 61vh; }
+// }
+
+// @media screen and (min-width: 1024px) and (min-height: 950px) {
+// .background-img { height: 65vh; }
+// }
+
+// @media screen and (min-width: 1280px) {
+// .background-img { height: 50vh; }
+// }
+
+// @media screen and (min-width: 1280px) and (min-height: 850px) {
+// .background-img { height: 56vh; }
+// }
+
+// @media screen and (min-width: 1280px) and (min-height: 950px) {
+// .background-img { height: 58vh; }
+// }
+
+// @media screen and (min-width: 1440px) {
+// .background-img { height: 56vh; }
+// }
+
+// @media screen and (min-width: 1440px) and (min-height: 950px) {
+// .background-img { height: 58vh; }
+// }
