@@ -117,7 +117,7 @@ const data = {
           title: 'Finca Mas Solers',
           external: true,
           externalLink: 'https://www.fincamassolers.com',
-          image: '/images/finca-mas-solers.jpg',
+          image: '/images/covers/inca-mas-solers.jpg',
           order: '7',
           slug: '',
           abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
