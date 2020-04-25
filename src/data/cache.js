@@ -88,7 +88,7 @@ const data = {
           external: false,
           externalLink: '',
           slug: 'vc-community',
-          image: '/images/vc-community.jpg',
+          image: '/images/covers/vc-community.jpg',
           order: '4',
           abstract: 'InnoEnergy is a company that connects investors and startups to create effective and prosperous alliances. Its main objective was to create a web app so that communication between these two entities would be more independent and direct.'
         },
