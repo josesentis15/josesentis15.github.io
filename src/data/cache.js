@@ -117,10 +117,10 @@ const data = {
           title: 'Finca Mas Solers',
           external: true,
           externalLink: 'https://www.fincamassolers.com',
-          image: '/images/covers/inca-mas-solers.jpg',
+          image: '/images/covers/finca-mas-solers.jpg',
           order: '7',
           slug: '',
-          abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          abstract: `This project aimed to create a space that represented the spectacularity of this venue. Finca Mas Solers is a space that hosts from high class weddings to congresses and whichs is defined by the elegance of it's decoration and the finness of it's old and curated spaces.`
         }
       ]
     }
