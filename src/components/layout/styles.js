@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 `;
 
 const LayoutStyled = styled.div`
-  height: 100vh;
+  height: 100%;
   left: 0;
   opacity: 1;
   overflow: hidden;
@@ -50,7 +50,10 @@ const LayoutStyled = styled.div`
     width: 100%;
   }
 
-  &.home main { display: flex; }
+  &.home main {
+    display: flex;
+    overflow: hidden;
+  }
 
   &.playground main,
   &.dark main {

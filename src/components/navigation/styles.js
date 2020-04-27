@@ -13,16 +13,12 @@ const NavigationWrapper = styled.div`
   > div { width: 100%; }
 
   .title {
-    .home & { margin-bottom: ${space(1.75)}; }
+    .home & { margin-bottom: ${space(1)}; }
 
     margin-left: -7px;
   }
 
   .loaded-enter-done:last-child .title { margin-bottom: 0; }
-
-  ${media.max('phone')`
-    padding: 0 0 ${space()} 0;
-  `}
 
   ${media.max('desktop')`
     .double-link {
