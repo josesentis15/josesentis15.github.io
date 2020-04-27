@@ -90,11 +90,11 @@ const LayoutStyled = styled.div`
   }
 
   &.playground {
-    a { margin-top: ${space()}; }
-
     .intro {
       margin: ${space(2)} 0;
       max-width: 480px;
+
+      a { margin-top: ${space()}; }
     }
 
     ${media.min('phone')`
