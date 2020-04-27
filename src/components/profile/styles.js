@@ -31,13 +31,9 @@ const ProfileWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
 
-    .content {
-      margin-top: -${space(6)};
-      padding: ${space(2)};
-      width: 50%;
-    }
-
     .profile-image {
+      align-items: flex-end;
+      display: flex;
       height: 100vh;
       left: 0;
       padding: ${space(2)};
@@ -45,17 +41,33 @@ const ProfileWrapper = styled.div`
       position: fixed;
       top: 0;
       width: 50vw;
+
+      .background-img {
+        max-width: 420px;
+        width: 100%;
+      }
     }
 
-    // .content {
-    //   margin-top: -${space(5)};
-    //   padding-bottom: ${space(2)};
-    // }
+    .content-wrapper {
+      align-items: flex-end;
+      display: flex;
+      height: 100vh;
+      left: 50vw;
+      position: fixed;
+      top: 0;
+      width: 50vw;
 
-    // .background-img {
-    //   position: fixed;
-    //   width: 42vw;
-    // }
+      .content {
+        height: 100%;
+        overflow-y: auto;
+        padding: ${space(2)};
+        padding-top: ${space(8)};
+      }
+    }
+  `};
+
+  ${media.min('desktopLarger')`
+    .profile-image .background-img { max-width: 540px; }
   `};
 `;
 

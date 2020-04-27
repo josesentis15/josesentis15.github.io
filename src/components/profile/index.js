@@ -57,46 +57,48 @@ class Profile extends React.Component {
       <ProfileWrapper ref={ref => this._text = ref}>
         {/* <ThreeImage src={image} /> */}
         <div className="profile-image"><BackgroundImage src={image} /></div>
-        <div className="content">
-          <div className="p-big">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: content.replace('%link', email)
-              }}
-            />
-            <div className="social">
-              <a
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-              <a
-                href={linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Linkedin
-              </a>
-              <a
-                href={instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
+        <div className="content-wrapper">
+          <div className="content">
+            <div className="p-big">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: content.replace('%link', email)
+                }}
+              />
+              <div className="social">
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Linkedin
+                </a>
+                <a
+                  href={instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </div>
+              <p className="thanks">
+                Designed by&nbsp;
+                <a
+                  href="http://cris-garcia.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Cris García
+                </a>.
+              </p>
             </div>
-            <p className="thanks">
-              Designed by&nbsp;
-              <a
-                href="http://cris-garcia.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Cris García
-              </a>.
-            </p>
           </div>
         </div>
       </ProfileWrapper>
