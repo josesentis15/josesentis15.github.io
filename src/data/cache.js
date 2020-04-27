@@ -29,7 +29,7 @@ const data = {
     playground: {
       __typename: 'Playground page',
       cta: 'Back to Jose Sentis Folio',
-      abstract: `<p>This is the space where I create, where I try new technologies to develop myself in skills that are often difficult to learn working in corporate projects.<br>It's the space where I show who I am further than my role in a agencies.<br>It's my personal kaizen.</p><p>To see other projects, follow the link:</p>`,
+      abstract: `<p>This is the space where I create, where I try new technologies to develop myself in skills that are often difficult to learn working in corporate projects.<br><br>It's the space where I show who I am further than my role in a agencies.<br><br>It's my personal kaizen.</p><p>To see other projects, follow the link:</p>`,
       exercices: [
         {
           __typename: 'Exercice',
@@ -60,7 +60,7 @@ const data = {
           image: '/images/covers/runroom.jpg',
           order: '1',
           slug: '',
-          abstract: `Designed in-house with the help of Folch, on an art direction role, the website was presented as the launching of the new Runroom brand. This new branding repositions Runroom as a reference point in the creative market giving visibility to the real capacities of the company. <br> The main concept is a blurry mixture of colours which was translated into the main animation of the site's home page. This animation was created in a workshop with Edu Prats where using WebGL and shaders the desired look and feel was achieved and integrated into the branding. <br>2019 - Design: Cris García`
+          abstract: `Designed in-house with the help of Folch, on an art direction role, the website was presented as the launching of the new Runroom brand. <br><br>This new branding repositions Runroom as a reference point in the creative market giving visibility to the real capacities of the company.<br> The main concept is a blurry mixture of colours which was translated into the main animation of the site's home page. This animation was created in a workshop with Edu Prats where using WebGL and shaders the desired look and feel was achieved and integrated into the branding. <br><br>2019 - Design: Cris García`
         },
         {
           __typename: 'Project',
@@ -80,7 +80,7 @@ const data = {
           image: '/images/covers/estudio-alberto-dominguez.jpg',
           order: '3',
           slug: '',
-          abstract: `This project the transformation from a solo a freelance designer to becoming a design studio.<br>He is an experienced designer who defines himself as branding, social media and illustration specialist.<br>The goal was showcasing as much work as possible in a fully screen grid with high quality images.<br>2018 - Design: Alberto Dominguez.`
+          abstract: `This project the transformation from a solo a freelance designer to becoming a design studio.<br><br>He is an experienced designer who defines himself as branding, social media and illustration specialist.<br><br>The goal was showcasing as much work as possible in a fully screen grid with high quality images.<br><br>2018 - Design: Alberto Dominguez.`
         },
         {
           __typename: 'Project',

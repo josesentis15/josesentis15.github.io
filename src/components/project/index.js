@@ -60,7 +60,7 @@ class Project extends React.PureComponent {
         >
           <div className="project__content">
             <BackgroundImage src={image} className="project__image" />
-            <p className="project__text">{abstract}</p>
+            <p className="project__text" dangerouslySetInnerHTML={{ __html: abstract }} />
             {external ? (
               <a
                 className="external"
