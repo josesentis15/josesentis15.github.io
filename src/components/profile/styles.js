@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { media } from '../../utils/media-queries';
-import { space, columns } from '../../utils/mixins';
+import { space } from '../../utils/mixins';
 
 const ProfileWrapper = styled.div`
   .background-img { filter: grayscale(100%); }
@@ -60,68 +60,3 @@ const ProfileWrapper = styled.div`
 `;
 
 export default ProfileWrapper;
-
-
-
-// ${media.min('desktop')`
-// display: flex;
-// justify-content: space-between;
-// position: relative;
-
-// .profile-image, .content { ${columns(2, 3)}; }
-
-// .content {
-//   margin-top: -${space(5)};
-//   padding-bottom: ${space(2)};
-// }
-
-// .background-img {
-//   position: fixed;
-//   width: 42vw;
-// }
-// `};
-
-// ${media.min('desktopLarge')`
-// .profile-image, .content { ${columns(2, 4)}; }
-// `};
-
-// ${media.min('desktopLarge')`
-// .background-img { width: 38vw; }
-// `};
-
-// ${media.min('bigScreens')`
-// .background-img { width: 30vw; }
-// .content { margin-top: -${space(5.5)}; }
-// `};
-
-// @media screen and (min-width: 1024px) {
-// .background-img { height: 56vh; }
-// }
-
-// @media screen and (min-width: 1024px) and (min-height: 850px) {
-// .background-img { height: 61vh; }
-// }
-
-// @media screen and (min-width: 1024px) and (min-height: 950px) {
-// .background-img { height: 65vh; }
-// }
-
-// @media screen and (min-width: 1280px) {
-// .background-img { height: 50vh; }
-// }
-
-// @media screen and (min-width: 1280px) and (min-height: 850px) {
-// .background-img { height: 56vh; }
-// }
-
-// @media screen and (min-width: 1280px) and (min-height: 950px) {
-// .background-img { height: 58vh; }
-// }
-
-// @media screen and (min-width: 1440px) {
-// .background-img { height: 56vh; }
-// }
-
-// @media screen and (min-width: 1440px) and (min-height: 950px) {
-// .background-img { height: 58vh; }
-// }
