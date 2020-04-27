@@ -93,9 +93,13 @@ const LayoutStyled = styled.div`
     a { margin-top: ${space()}; }
 
     .intro {
-      margin: ${space(3)} 0 ${space(2)};
+      margin: ${space(2)} 0;
       max-width: 480px;
     }
+
+    ${media.min('phone')`
+      .intro { margin: ${space(3)} 0 ${space(2)}; }
+    `}
 
     ${media.min('tablet')`
       a { margin-top: ${space(2)}; }
