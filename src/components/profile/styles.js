@@ -41,9 +41,10 @@ const ProfileWrapper = styled.div`
       position: fixed;
       top: 0;
       width: 50vw;
+      z-index: 0;
 
       .background-img {
-        max-width: 420px;
+        max-width: 380px;
         width: 100%;
       }
     }
@@ -66,9 +67,9 @@ const ProfileWrapper = styled.div`
     }
   `};
 
-  ${media.min('desktopLarger')`
-    .profile-image .background-img { max-width: 540px; }
-  `};
+  @media screen and (min-width: 1440px) and (min-height: 715px) {
+    .profile-image .background-img { max-width: 500px; }
+  }
 `;
 
 export default ProfileWrapper;

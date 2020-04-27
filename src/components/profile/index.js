@@ -56,6 +56,7 @@ class Profile extends React.Component {
     return (
       <ProfileWrapper ref={ref => this._text = ref}>
         {/* <ThreeImage src={image} /> */}
+
         <div className="profile-image"><BackgroundImage src={image} /></div>
         <div className="content-wrapper">
           <div className="content">
