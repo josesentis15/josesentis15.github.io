@@ -28,8 +28,6 @@ class Playground extends React.Component {
   componentDidMount() {
     axios.get(`contents.json`)
       .then(({ data }) => {
-        console.log(data);
-
         this.setState({ loaded: true, exercices: data });
       }).catch(() => {
         this.props.history.push('/404');
@@ -49,8 +47,7 @@ class Playground extends React.Component {
             pages: {
               playground: {
                 cta,
-                abstract,
-                // exercices
+                abstract
               }
             }
           } = data;

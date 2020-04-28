@@ -9,13 +9,6 @@ const GET_PLAYGROUND = gql`
       playground {
         cta
         abstract
-        exercices {
-          abstract
-          title
-          link
-          image
-          date
-        }
       }
     }
   }
