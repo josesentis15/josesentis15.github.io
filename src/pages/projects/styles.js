@@ -4,11 +4,11 @@ import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
 const ProjectList = styled.div`
+  margin: ${space(2)} 0;
+
   .project-image-animation { display: none; }
 
   ${media.min('tablet')`
-    margin: ${space(2)} 0;
-
     .touch & .project-image-animation { display: none; }
 
     .project-image-animation {

@@ -5,13 +5,10 @@ import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
 const ProjectStyled = styled.div`
-  color: ${colors.base300};
   padding-bottom: ${space()};
   padding-top: ${space()};
   padding-left: ${space(1.5)};
   transition: color .2s ease-out;
-
-  &.active { color: ${colors.white}; }
 
   .project__title {
     margin-left: ${space(-1.5)};
@@ -32,8 +29,21 @@ const ProjectStyled = styled.div`
   .label {
     left: 0;
     position: absolute;
-    bottom: 10px;
+    bottom: 12px;
   }
+
+  .touch & {
+    .project__non-touch-title,
+    .project__content { display: none; }
+  }
+
+  .non-touch & {
+    color: ${colors.base300};
+    &.active { color: ${colors.white}; }
+    .project__touch-title { display: none; }
+  }
+
+  .project__touch-title::after { display: none; }
 
   ${media.min('tablet')`
     .label { bottom: 14px; }

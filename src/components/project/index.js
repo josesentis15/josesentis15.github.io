@@ -47,16 +47,41 @@ class Project extends React.PureComponent {
         }}
       >
         <h2 className="project__title title2">
-          <span className="label">
-            {order.toString().length === 1 ? '0' : ''}
-            {order}.
+        {external ? (
+          <a
+            className="external project__touch-title"
+            href={externalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="label">
+              {order.toString().length === 1 ? '0' : ''}
+              {order}.
+          </span>
+            <span>{title}</span>
+          </a>
+        ) : (
+            <Link className="project__touch-title" to={`projects/${slug}`} onClick={e => e.stopPropagation()}>
+              <span className="label">
+                {order.toString().length === 1 ? '0' : ''}
+                {order}.
+          </span>
+              <span>{title}</span>
+            </Link>
+          )}
+          <div className="project__non-touch-title">
+            <span className="label">
+              {order.toString().length === 1 ? '0' : ''}
+              {order}.
             </span>
-          {title}
+            <span>{title}</span>
+          </div>
         </h2>
         <AnimateHeight
           duration={300}
           height={hover ? 'auto' : 0}
           animateOpacity
+          className="project__content-wrapper"
         >
           <div className="project__content">
             <BackgroundImage src={image} className="project__image" />
