@@ -39,6 +39,9 @@ const NavigationWrapper = styled.div`
   `}
 
   ${media.min('desktop')`
+    position: relative;
+    z-index: 1;
+
     .title {
       margin-left: -18px;
 
@@ -47,8 +50,6 @@ const NavigationWrapper = styled.div`
 
     &.fixed {
       height: 18vw;
-      position: relative;
-      z-index: 1;
 
       > div { position: fixed; }
     }

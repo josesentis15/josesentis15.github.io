@@ -67,17 +67,17 @@ const ProjectStyled = styled.div`
     .label { bottom: 16px; }
 
     .project__image {
-      height: 60vh;
-      width: 60vh;
-      top: calc(50% - 30vh);
+      height: 50vh;
+      width: 50vh;
+      top: calc(50% - 25vh);
     }
   `}
 
   ${media.min('maxWidth')`
     .project__image {
-      height: 66vh;
-      width: 66vh;
-      top: calc(50% - 33vh);
+      height: 60vh;
+      width: 60vh;
+      top: calc(50% - 25vh);
     }
   `}
 `;

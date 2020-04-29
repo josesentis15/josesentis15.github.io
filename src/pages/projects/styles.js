@@ -56,9 +56,9 @@ const ProjectList = styled.div`
 
   ${media.min('desktop')`
     .project-image-animation {
-      height: 60vh;
-      width: 60vh;
-      top: calc(50% - 30vh);
+      height: 50vh;
+      width: 50vh;
+      top: calc(50% - 25vh);
     }
   `}
 
@@ -68,9 +68,9 @@ const ProjectList = styled.div`
 
   ${media.min('maxWidth')`
     .project-image-animation {
-      height: 66vh;
-      width: 66vh;
-      top: calc(50% - 33vh);
+      height: 60vh;
+      width: 60vh;
+      top: calc(50% - 25vh);
     }
   `}
 `;
