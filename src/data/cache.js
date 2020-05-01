@@ -42,7 +42,7 @@ const data = {
           image: '/images/covers/runroom.jpg',
           order: '1',
           slug: '',
-          abstract: `Designed in-house with the help of Folch, on an art direction role, the website was presented as the launching of the new Runroom brand. <br><br>This new branding repositions Runroom as a reference point in the creative market giving visibility to the real capacities of the company.<br> The main concept is a blurry mixture of colours which was translated into the main animation of the site's home page. This animation was created in a workshop with Edu Prats where using WebGL and shaders the desired look and feel was achieved and integrated into the branding. <br><br>2019 - Design: Cris García`
+          abstract: `Designed in-house with the help of Folch, on an art direction role, the website was presented as the launching of the new Runroom brand. <br><br>This new branding repositions Runroom as a reference point in the creative market giving visibility to the real capacities of the company.<br> The main concept is a blurry mixture of colours which was translated into the main animation of the site's home page. This animation was created in a workshop with Edu Prats where using WebGL and shaders the desired look and feel was achieved and integrated into the branding.<br><br>2019 - Design: Cris García`
         },
         {
           __typename: 'Project',
@@ -82,7 +82,7 @@ const data = {
           image: '/images/esade-exed.jpg',
           order: '5',
           slug: '',
-          abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          abstract: ''
         },
         {
           __typename: 'Project',
@@ -102,7 +102,7 @@ const data = {
           image: '/images/covers/finca-mas-solers.jpg',
           order: '7',
           slug: '',
-          abstract: `This project aimed to create a space that represented the spectacularity of this venue. Finca Mas Solers is a space that hosts from high class weddings to congresses and whichs is defined by the elegance of it's decoration and the finness of it's old and curated spaces.`
+          abstract: `This project aimed to create a space that represented the spectacularity of this venue. Finca Mas Solers is a space that hosts from high class weddings to congresses and whichs is defined by the elegance of it's decoration and the finness of it's old and curated spaces.<br><br>2017 - Design: Cris García & Barbara Skrodzka`
         }
       ]
     }
