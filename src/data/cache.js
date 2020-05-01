@@ -72,7 +72,7 @@ const data = {
           slug: 'vc-community',
           image: '/images/covers/vc-community.jpg',
           order: '4',
-          abstract: 'InnoEnergy is a company that connects investors and startups to create effective and prosperous alliances. Its main objective was to create a web app so that communication between these two entities would be more independent and direct.'
+          abstract: 'InnoEnergy is a company that connects investors and startups from the energy sector to create effective and prosperous alliances. Through this Webapp, built in ReactJs, Typescript and GraphQL, they intend to establish a communicaction channel between these two entities so startups can grow and investors can follow their progression.'
         },
         {
           __typename: 'Project',
@@ -92,7 +92,7 @@ const data = {
           slug: 'esade-exed',
           image: '/images/esade-exed.jpg',
           order: '6',
-          abstract: `Creation of the new concept for one of ESADE's branches. This site is designed to host a very complex and flexible navigation architecture as it is ment to act as the base structure for the variety of programmes that the university is offering. The main goal was increasing the conversion, mesured in the number of brochure downloads and increasing the leads to their executive programmes and offering a modular flexibility.`
+          abstract: `Creation of the new concept for one of ESADE's branches. This site is designed to host a very complex and flexible navigation architecture as it is ment to act as the base structure for the variety of programmes that the university is offering. The main goal was increasing the conversion, mesured in the number of brochure downloads and increasing the leads to their executive programmes, and offering a modular flexibility.`
         },
         {
           __typename: 'Project',

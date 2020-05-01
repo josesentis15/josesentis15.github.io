@@ -5,6 +5,7 @@ import { space } from '../../utils/mixins';
 
 const Wysiwyg = styled.div`
   margin: ${space(3)} auto;
+  overflow: hidden;
 
   p {
     max-width: 580px;
@@ -33,7 +34,7 @@ const Wysiwyg = styled.div`
   `};
 
   ${media.min('desktop')`
-    margin: ${space(6)} auto;
+    margin: ${space(5)} auto;
   `}
 `;
 
