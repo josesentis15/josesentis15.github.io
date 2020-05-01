@@ -14,7 +14,7 @@ const ProjectDetail = styled.article`
     background-color: ${colors.base100};
     color: ${colors.base500};
     margin: 0 calc(100% / 12);
-    padding: ${space(3)} ${space()};
+    padding: ${space(3)} ${space()} ${space(2)};
 
     .reading { padding: 0; }
 

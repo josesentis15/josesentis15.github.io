@@ -27,21 +27,18 @@ class CrossNavigation extends React.Component {
 
           return (
             <li key={title.replace(' ', Math.random())}>
-              {external ?
-                (
-                  <a
-                    className="link"
-                    href={externalLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onMouseEnter={() => toggleCursor()}
-                    onMouseLeave={() => toggleCursor()}
-                  >
-                    {content}
-                  </a>
-                )
-                :
-                (
+              {external ? (
+                <a
+                  className="link"
+                  href={externalLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => toggleCursor()}
+                  onMouseLeave={() => toggleCursor()}
+                >
+                  {content}
+                </a>
+              ) : (
                   <Link
                     to={`/${slug}`}
                     className={`link ${slug === current ? 'active' : ''}`}
@@ -50,8 +47,7 @@ class CrossNavigation extends React.Component {
                   >
                     {content}
                   </Link>
-                )
-              }
+                )}
             </li>
           );
         })}
