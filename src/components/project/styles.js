@@ -11,8 +11,8 @@ const ProjectStyled = styled.div`
   transition: color .2s ease-out;
 
   .project__title {
-    margin-left: ${space(-1.5)};
-    padding-left: ${space(1.5)};
+    margin-left: ${space(-1)};
+    padding-left: ${space(1)};
     position: relative;
   }
 
@@ -46,6 +46,11 @@ const ProjectStyled = styled.div`
   .project__touch-title::after { display: none; }
 
   ${media.min('tablet')`
+    .project__title {
+      margin-left: ${space(-1.5)};
+      padding-left: ${space(1.5)};
+    }
+
     .label { bottom: 14px; }
 
     .project__text,

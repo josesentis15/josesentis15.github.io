@@ -10,6 +10,17 @@ const ProjectDetail = styled.article`
 
   > div { padding: 0; }
 
+  .title2 {
+    padding-left: ${space()};
+    position: relative;
+
+    .label {
+      left: 0;
+      position: absolute;
+      bottom: 12px;
+    }
+  }
+
   .dark & .background-wrapper {
     background-color: ${colors.base100};
     color: ${colors.base500};
@@ -17,24 +28,23 @@ const ProjectDetail = styled.article`
     padding: ${space(3)} ${space()} ${space(2)};
 
     .reading { padding: 0; }
-
     a { color: ${colors.base500}; }
   }
 
-  ${media.min('desktop')`
-    .background-wrapper {
-      padding-top: ${space(5)};
-    }
-
+  ${media.min('tablet')`
     .title2 {
-      margin-left: -${space(1.5)};
+      margin-left: ${space(-1.5)};
+      padding-left: ${space(1.5)};
     }
   `}
 
+  ${media.min('desktop')`
+    .title2 .label { bottom: 16px; }
+    .background-wrapper { padding-top: ${space(5)}; }
+  `}
+
   ${media.min('desktopLarge')`
-    .title2 {
-      margin-left: -${space(5)};
-    }
+    .title2 { margin-left: -${space(5)}; }
   `}
 `;
 

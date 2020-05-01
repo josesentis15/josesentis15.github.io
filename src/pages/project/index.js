@@ -47,7 +47,7 @@ class Project extends React.Component {
                     {loaded && !loading && (
                       <CSSTransition classNames="loaded" timeout={300}>
                         <h1 className="title">
-                          <AppearingText><span className="text stroke light">{projects}</span></AppearingText>
+                          <AppearingText><span className="text active">{projects}</span></AppearingText>
                         </h1>
                       </CSSTransition>
                     )}
@@ -63,7 +63,7 @@ class Project extends React.Component {
                           {project.order.toString().length === 1 ? '0' : ''}
                           {project.order}.
                         </span>
-                        {project.title}
+                        <span>{project.title}</span>
                       </h1>
                       {DATA['vc-community'].map((data, index) => (
                         <Component data={data} key={`component_${index}`} />
