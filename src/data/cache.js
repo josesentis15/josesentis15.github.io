@@ -62,7 +62,7 @@ const data = {
           image: '/images/covers/estudio-alberto-dominguez.jpg',
           order: '3',
           slug: '',
-          abstract: `This project the transformation from a solo a freelance designer to becoming a design studio.<br><br>He is an experienced designer who defines himself as branding, social media and illustration specialist.<br><br>The goal was showcasing as much work as possible in a fully screen grid with high quality images.<br><br>2018 - Design: Alberto Dominguez.`
+          abstract: `This project the transformation from a solo a freelance designer to becoming a design studio.<br>He is an experienced designer who defines himself as branding, social media and illustration specialist.<br>The goal was showcasing as much work as possible in a fully screen grid with high quality images.<br><br>2018 - Design: Alberto Dominguez.`
         },
         {
           __typename: 'Project',
