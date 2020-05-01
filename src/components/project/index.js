@@ -30,6 +30,18 @@ class Project extends React.PureComponent {
     const title = this.props.project.title || slug;
     const { hover } = this.state;
 
+    const content = (
+      <>
+        <span className="label">
+          {order.toString().length === 1 ? '0' : ''}
+          {order}.
+        </span>
+        <span>
+          {title}
+        </span>
+      </>
+    );
+
     return (
       <ProjectStyled
         className={`project ${hover ? 'active' : ''}`}
@@ -47,38 +59,26 @@ class Project extends React.PureComponent {
         }}
       >
         <h2 className="project__title title2">
-        {external ? (
-          <a
-            className="external project__touch-title"
-            href={externalLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="label">
-              {order.toString().length === 1 ? '0' : ''}
-              {order}.
-          </span>
-            <span>{title}</span>
-          </a>
-        ) : (
-            <Link className="project__touch-title" to={`projects/${slug}`} onClick={e => e.stopPropagation()}>
-              <span className="label">
-                {order.toString().length === 1 ? '0' : ''}
-                {order}.
-          </span>
-              <span>{title}</span>
-            </Link>
-          )}
+          {external ? (
+            <a
+              className="external project__touch-title"
+              href={externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {content}
+            </a>
+          ) : (
+              <Link className="project__touch-title" to={`projects/${slug}`} onClick={e => e.stopPropagation()}>
+                {content}
+              </Link>
+            )}
           <div className="project__non-touch-title">
-            <span className="label">
-              {order.toString().length === 1 ? '0' : ''}
-              {order}.
-            </span>
-            <span>{title}</span>
+            {content}
           </div>
         </h2>
         <AnimateHeight
-          duration={300}
+          duration={400}
           height={hover ? 'auto' : 0}
           animateOpacity
           className="project__content-wrapper"
