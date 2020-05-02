@@ -13,7 +13,7 @@ const ProjectList = styled.div`
 
     .project-image-animation {
       display: block;
-      height: 40vh;
+      height: 45vh;
       overflow: hidden;
       opacity: 0;
       position: fixed !important;
@@ -56,7 +56,7 @@ const ProjectList = styled.div`
 
   ${media.min('desktop')`
     .project-image-animation {
-      height: 50vh;
+      height: 55vh;
       width: 50vh;
       top: calc(50% - 25vh);
     }
@@ -68,7 +68,7 @@ const ProjectList = styled.div`
 
   ${media.min('maxWidth')`
     .project-image-animation {
-      height: 60vh;
+      height: 65vh;
       width: 60vh;
       top: calc(50% - 25vh);
     }

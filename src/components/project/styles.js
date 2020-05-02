@@ -47,6 +47,7 @@ const ProjectStyled = styled.div`
 
   ${media.min('tablet')`
     .project__title {
+      margin-bottom: ${space()};
       margin-left: ${space(-1.5)};
       padding-left: ${space(1.5)};
     }
@@ -55,7 +56,6 @@ const ProjectStyled = styled.div`
 
     .project__text,
     .project__title {
-      margin-bottom: ${space(2)};
       position: relative;
       z-index: 1;
     }

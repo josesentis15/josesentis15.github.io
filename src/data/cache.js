@@ -49,7 +49,7 @@ const data = {
           title: 'Cris García',
           external: true,
           externalLink: 'http://cris-garcia.com/',
-          image: '/images/esade-exed.jpg',
+          image: '/images/covers/cris-garcia.jpg',
           order: '2',
           slug: '',
           abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -79,7 +79,7 @@ const data = {
           title: 'Club Familias',
           external: true,
           externalLink: 'https://www.clubfamilias.com/',
-          image: '/images/esade-exed.jpg',
+          image: '/images/covers/club-familias.jpg',
           order: '5',
           slug: '',
           abstract: ''
@@ -90,7 +90,7 @@ const data = {
           external: false,
           externalLink: '',
           slug: 'esade-exed',
-          image: '/images/esade-exed.jpg',
+          image: '/images/covers/esade-exed.jpg',
           order: '6',
           abstract: `Creation of the new concept for one of ESADE's branches. This site is designed to host a very complex and flexible navigation architecture as it is ment to act as the base structure for the variety of programmes that the university is offering. The main goal was increasing the conversion, mesured in the number of brochure downloads and increasing the leads to their executive programmes, and offering a modular flexibility.`
         },
