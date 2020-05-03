@@ -38,6 +38,7 @@ const ProfileWrapper = styled.div`
       left: 0;
       padding: ${space(2)};
       padding-top: 38vh;
+      pointer-events: none;
       position: fixed;
       top: 0;
       width: 50vw;
@@ -53,15 +54,16 @@ const ProfileWrapper = styled.div`
       align-items: flex-end;
       display: flex;
       height: 100vh;
-      left: 50vw;
+      left: 0;
       position: fixed;
       top: 0;
-      width: 50vw;
+      width: 100vw;
 
       .content {
         height: 100%;
         overflow-y: auto;
         padding: ${space(2)};
+        padding-left: calc(50vw + ${space(2)});
         padding-top: ${space(8)};
       }
     }
