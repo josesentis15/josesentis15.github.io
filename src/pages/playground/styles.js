@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
-const ExerciceListStyled = styled.div`
+const ExerciceList = styled.div`
   margin: ${space(2)} 0;
 
-  ${media.min('desktop')`
+  ${media.min('tablet')`
     margin: ${space(4)} 0;
   `}
 `;
 
-export default ExerciceListStyled;
+export { ExerciceList };
