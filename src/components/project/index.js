@@ -8,6 +8,7 @@ import BackgroundImage from '../backgroundImage';
 import ProjectStyled from './styles';
 
 class Project extends React.PureComponent {
+  _transparentImage = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
   state = {
     hover: false
   }
@@ -54,7 +55,7 @@ class Project extends React.PureComponent {
         onMouseLeave={() => {
           this.setState({ hover: false });
           toggleCursor();
-          this._projectImage.style.backgroundImage = '';
+          this._projectImage.style.backgroundImage = this._transparentImage;
           this._projectImage.parentNode.classList.remove('is-hover');
         }}
       >
