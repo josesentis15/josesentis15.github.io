@@ -1,7 +1,7 @@
 const data = {
   job: `Creative Frontend developer`,
   name: `Jose Sentis`,
-  description: `Hi – I’m Jose, a Frontend developer based in Barcelona. I do stuff for the Internet.`,
+  description: `Hi – I’m Jose, a Senior Frontend developer based in Barcelona. I’m open for new creative opportunities. Don’t be shy, say hi!`,
   ogImage: `images/og-image.jpg`,
   siteUrl: `https://josesentis.com/`,
   social: {
