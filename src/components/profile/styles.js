@@ -58,14 +58,14 @@ const ProfileWrapper = styled.div`
       position: fixed;
       top: 0;
       width: 100vw;
+    }
 
-      .content {
-        height: 100%;
-        overflow-y: auto;
-        padding: ${space(2)};
-        padding-left: calc(50vw + ${space(2)});
-        padding-top: ${space(8)};
-      }
+    .content {
+      height: 100%;
+      overflow-y: auto;
+      padding: ${space(2)};
+      padding-left: calc(50vw + ${space(2)});
+      padding-top: ${space(8)};
     }
   `};
 
