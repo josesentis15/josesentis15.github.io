@@ -52,7 +52,7 @@ const data = {
           image: '/images/covers/cris-garcia.jpg',
           order: '2',
           slug: '',
-          abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          abstract: 'Cris García is a Barcelona based graphic and web designer. She designs with text as she\'s very keen on typography. This can be observed on her designs where she plays with text, content and image and makes them her design assets. We\'ve worked hand to hand for a number of times and she designed this portolio. <br><br>2018 - Design: Cris García.'
         },
         {
           __typename: 'Project',
@@ -62,7 +62,7 @@ const data = {
           image: '/images/covers/estudio-alberto-dominguez.jpg',
           order: '3',
           slug: '',
-          abstract: `This project the transformation from a solo a freelance designer to becoming a design studio.<br>He is an experienced designer who defines himself as branding, social media and illustration specialist.<br>The goal was showcasing as much work as possible in a fully screen grid with high quality images.<br><br>2018 - Design: Alberto Dominguez.`
+          abstract: `This project is the transformation from a solo a freelance designer to becoming a design studio.<br>He is an experienced designer who defines himself as branding, social media and illustration specialist.<br>The goal was showcasing as much work as possible in a fully screen grid with high quality images.<br><br>2018 - Design: Alberto Dominguez.`
         },
         {
           __typename: 'Project',
