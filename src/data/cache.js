@@ -52,17 +52,17 @@ const data = {
           image: '/images/covers/cris-garcia.jpg',
           order: '2',
           slug: '',
-          abstract: 'Cris García is a Barcelona based graphic and web designer. She designs with text as she\'s very keen on typography. This can be observed on her designs where she plays with text, content and image and makes them her design assets. We\'ve worked hand to hand for a number of times and she designed this portolio. <br><br>2019 - Design: Cris García.'
+          abstract: 'Cris García is a Barcelona based graphic and web designer. She designs with text as she\'s very keen on typography. This can be observed on her designs where she plays with text, content and image and makes them her design assets. We\'ve worked hand to hand for a number of times and she designed this portolio.<br><br>2019 - Design: Cris García.'
         },
         {
           __typename: 'Project',
-          title: 'Estudio Alberto Dominguez',
+          title: 'Club Familias',
           external: true,
-          externalLink: 'https://www.estudioalbertodominguez.com/',
-          image: '/images/covers/estudio-alberto-dominguez.jpg',
+          externalLink: 'https://www.clubfamilias.com/',
+          image: '/images/covers/club-familias.jpg',
           order: '3',
           slug: '',
-          abstract: `This project is the transformation from a solo a freelance designer to becoming a design studio.<br>He is an experienced designer who defines himself as branding, social media and illustration specialist.<br>The goal was showcasing as much work as possible in a fully screen grid with high quality images.<br><br>2018 - Design: Alberto Dominguez.`
+          abstract: 'A blog intended for young couples and families with children is transformed to a modern media site. <br><br>Club Familias is a 360º project in which all the teams worked as one to define from the inbound marketing strategy to the content architecture and technological solution.<br><br>2019 - Design: Alberto Dominguez.<br><br>2019 - Design: Cris García & Cris Boix.'
         },
         {
           __typename: 'Project',
@@ -72,17 +72,17 @@ const data = {
           slug: 'vc-community',
           image: '/images/covers/vc-community.jpg',
           order: '4',
-          abstract: 'InnoEnergy is a company that connects investors and startups from the energy sector to create effective and prosperous alliances. Through this Webapp, built in ReactJs, Typescript and GraphQL, they intend to establish a communicaction channel between these two entities so startups can grow and investors can follow their progression.'
+          abstract: 'InnoEnergy is a company that connects investors and startups from the energy sector to create effective and prosperous alliances. Through this Webapp, built in ReactJs, Typescript and GraphQL, they intend to establish a communicaction channel between these two entities so startups can grow and investors can follow their progression.<br><br>2019 - Design: Cris García & Cris Boix.'
         },
         {
           __typename: 'Project',
-          title: 'Club Familias',
+          title: 'Estudio Alberto Dominguez',
           external: true,
-          externalLink: 'https://www.clubfamilias.com/',
-          image: '/images/covers/club-familias.jpg',
+          externalLink: 'https://www.estudioalbertodominguez.com/',
+          image: '/images/covers/estudio-alberto-dominguez.jpg',
           order: '5',
           slug: '',
-          abstract: ''
+          abstract: `This project is the transformation from a solo a freelance designer to becoming a design studio.<br>He is an experienced designer who defines himself as branding, social media and illustration specialist.<br>The goal was showcasing as much work as possible in a fully screen grid with high quality images.<br><br>2018 - Design: Alberto Dominguez.`
         },
         {
           __typename: 'Project',
@@ -92,7 +92,7 @@ const data = {
           slug: 'esade-exed',
           image: '/images/covers/esade-exed.jpg',
           order: '6',
-          abstract: `Creation of the new concept for one of ESADE's branches. This site is designed to host a very complex and flexible navigation architecture as it is ment to act as the base structure for the variety of programmes that the university is offering. The main goal was increasing the conversion, mesured in the number of brochure downloads and increasing the leads to their executive programmes, and offering a modular flexibility.`
+          abstract: `Creation of the new concept for one of ESADE's branches. This site is designed to host a very complex and flexible navigation architecture as it is ment to act as the base structure for the variety of programmes that the university is offering. The main goal was increasing the conversion, mesured in the number of brochure downloads and increasing the leads to their executive programmes, and offering a modular flexibility.<br><br>2018 - Design: Cris García.`
         },
         {
           __typename: 'Project',
