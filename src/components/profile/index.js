@@ -1,8 +1,6 @@
 import React from 'react';
-// import { Query } from "react-apollo";
 import forEach from '@runroom/purejs/lib/forEach';
 
-// import ThreeImage from '../threeImage';
 import withQuery from '../../hoc/withQuery';
 import BackgroundImage from '../backgroundImage';
 import { toggleCursor } from '../cursor';
@@ -55,8 +53,6 @@ class Profile extends React.Component {
 
     return (
       <ProfileWrapper ref={ref => this._text = ref}>
-        {/* <ThreeImage src={image} /> */}
-
         <div className="profile-image"><BackgroundImage src={image} /></div>
         <div className="content-wrapper">
           <div className="content">

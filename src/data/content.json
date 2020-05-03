@@ -3,27 +3,27 @@
     "esade-exed": [
       {
         "type": "image",
-        "src": "/cases/esade-img-1.jpg"
+        "src": "/images/projects/esade-img-1.jpg"
       }, {
         "type": "video",
-        "src": "/cases/esade-video-1.mp4",
-        "poster": "/cases/esade-video-poster-1.jpg"
+        "src": "/images/projects/esade-video-1.mp4",
+        "poster": "/images/projects/esade-video-poster-1.jpg"
       }, {
         "type": "image",
-        "src": "/cases/esade-img-2.jpg"
+        "src": "/images/projects/esade-img-2.jpg"
       }, {
         "type": "video",
-        "src": "/cases/esade-video-2.mp4",
-        "poster": "/cases/esade-video-poster-2.jpg"
+        "src": "/images/projects/esade-video-2.mp4",
+        "poster": "/images/projects/esade-video-poster-2.jpg"
       }, {
         "type": "image",
-        "src": "/cases/esade-img-3.jpg"
+        "src": "/images/projects/esade-img-3.jpg"
       }, {
         "type": "image",
-        "src": "/cases/esade-img-4.jpg"
+        "src": "/images/projects/esade-img-4.jpg"
       }, {
         "type": "image",
-        "src": "/cases/esade-img-5.jpg"
+        "src": "/images/projects/esade-img-5.jpg"
       }
     ],
     "vc-community": [
@@ -33,27 +33,27 @@
       },
       {
         "type": "image",
-        "src": "/cases/innoenergy-img-1.jpg"
+        "src": "/images/projects/innoenergy-img-1.jpg"
       },
       {
         "type": "image",
-        "src": "/cases/innoenergy-img-2.jpg"
+        "src": "/images/projects/innoenergy-img-2.jpg"
       },
       {
         "type": "image",
-        "src": "/cases/innoenergy-img-3.jpg"
+        "src": "/images/projects/innoenergy-img-3.jpg"
       },
       {
         "type": "image",
-        "src": "/cases/innoenergy-img-4.jpg"
+        "src": "/images/projects/innoenergy-img-4.jpg"
       },
       {
         "type": "image",
-        "src": "/cases/innoenergy-img-5.jpg"
+        "src": "/images/projects/innoenergy-img-5.jpg"
       },
       {
         "type": "image",
-        "src": "/cases/innoenergy-img-6.jpg"
+        "src": "/images/projects/innoenergy-img-6.jpg"
       }
     ]
 }

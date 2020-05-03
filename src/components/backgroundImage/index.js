@@ -11,15 +11,13 @@ const BackgroundImage = ({ alt, src, className = '', id = '', lazyEffect = true,
       className={`background-img ${className} ${loaded ? 'loaded' : ''}`}
       id={id}
     >
-      <div className="image-wrapper">
-        <LazyLoadImage
-          className={`image ${scaleEffect ? 'image-scale' : ''}`}
-          alt={alt}
-          src={src}
-          delayTime="600"
-          afterLoad={() => { setLoaded(true) }}
-        />
-      </div>
+      <LazyLoadImage
+        className={`image ${scaleEffect ? 'image-scale' : ''}`}
+        alt={alt}
+        src={src}
+        delayTime="600"
+        afterLoad={() => { setLoaded(true) }}
+      />
     </Image>
   )
 };

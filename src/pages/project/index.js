@@ -65,7 +65,7 @@ class Project extends React.Component {
                         </span>
                         <span>{project.title}</span>
                       </h1>
-                      {DATA['vc-community'].map((data, index) => (
+                      {DATA[project.slug].map((data, index) => (
                         <Component data={data} key={`component_${index}`} />
                       ))}
                       <CrossNavigation current={project.slug} projectList={projectList} />

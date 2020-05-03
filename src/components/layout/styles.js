@@ -52,7 +52,7 @@ const LayoutStyled = styled.div`
 
   &.home main {
     display: flex;
-    overflow: hidden;
+    overflow: auto;
   }
 
   &.playground main,
