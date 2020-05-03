@@ -52,7 +52,7 @@ const data = {
           image: '/images/covers/cris-garcia.jpg',
           order: '2',
           slug: '',
-          abstract: 'Cris García is a Barcelona based graphic and web designer. She designs with text as she\'s very keen on typography. This can be observed on her designs where she plays with text, content and image and makes them her design assets. We\'ve worked hand to hand for a number of times and she designed this portolio. <br><br>2018 - Design: Cris García.'
+          abstract: 'Cris García is a Barcelona based graphic and web designer. She designs with text as she\'s very keen on typography. This can be observed on her designs where she plays with text, content and image and makes them her design assets. We\'ve worked hand to hand for a number of times and she designed this portolio. <br><br>2019 - Design: Cris García.'
         },
         {
           __typename: 'Project',

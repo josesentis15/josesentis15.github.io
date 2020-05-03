@@ -13,7 +13,7 @@ const Image = styled.div`
   &.loaded {
     opacity: 1;
 
-    &.image-scale { transform: scale(1.2); }
+    &.image-scale { transform: scale(1.2) translate(-50%, -50%); }
   }
 
   &::before {
@@ -22,25 +22,17 @@ const Image = styled.div`
     padding-bottom: 100%;
   }
 
-  .image-wrapper {
+  .image {
+    object-fit: cover;
     height: 100%;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-  }
-
-  .image {
-    height: 100%;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    width: 100%;
 
     &.image-scale {
-      transform: scale(1);
+      transform: translate(-50%, -50%) scale(1);
       transition: transform 2.5s ease-out;
     }
   }
