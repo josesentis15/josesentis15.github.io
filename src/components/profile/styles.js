@@ -70,6 +70,11 @@ const ProfileWrapper = styled.div`
   `};
 
   @media screen and (min-width: 1440px) and (min-height: 715px) {
+    .profile-image .background-img { max-width: 440px; }
+    .content { padding-top: ${space(10)}; }
+  }
+
+  @media screen and (min-width: 1440px) and (min-height: 850px) {
     .profile-image .background-img { max-width: 500px; }
     .content { padding-top: ${space(12)}; }
   }
