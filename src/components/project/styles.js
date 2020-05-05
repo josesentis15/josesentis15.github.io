@@ -8,7 +8,9 @@ const ProjectStyled = styled.div`
   padding-bottom: ${space()};
   padding-top: ${space()};
   padding-left: ${space(1.5)};
+  position: relative;
   transition: color .2s ease-out;
+  z-index: 1;
 
   .project__title {
     margin-left: ${space(-1)};

@@ -5,6 +5,7 @@ import { space } from '../../utils/mixins';
 
 const ExerciceStyled = styled.div`
   margin: ${space(4)} auto;
+
   &:last-child { margin-bottom: 0; }
 
   h2 {
