@@ -73,7 +73,7 @@ const data = {
           slug: 'vc-community',
           image: '/images/covers/vc-community.jpg',
           order: '4',
-          abstract: 'InnoEnergy is a company that connects investors and startups from the energy sector to create effective and prosperous alliances. Through this Webapp, built in ReactJs, Typescript and GraphQL, they intend to establish a communicaction channel between these two entities so startups can grow and investors can follow their progression.<br><br>2019 - Design: Cris García & Cris Boix.'
+          abstract: 'InnoEnergy is a company that connects investors and startups from the energy sector to create effective and prosperous alliances.<br><br>The platform is intended to establish a communicaction channel between these two entities so startups can grow and investors can follow their progression.<br>The solution, a web-app built in ReactJs, Typescript and GraphQL implements a chat service, a following / follower sysyem, a challange and feedback system and privacy settings management to allow different users to see different content.<br><br>2019 - Design: Cris García & Cris Boix.'
         },
         {
           __typename: 'Project',
