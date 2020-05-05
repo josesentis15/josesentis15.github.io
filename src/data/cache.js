@@ -23,7 +23,7 @@ const data = {
       __typename: 'About page',
       content: `<p>I’m Jose Sentis, Senior Frontend Developer based in Barcelona.</p>
       <p>I consider coding a form of creation and I love to work with crazy designers that push me to think outside the box, so we can bring to life tons of amazing projects.</p>
-      <p>Besides my passion for coding (as you can see) you could easily find me a Saturday night singing in a karaoken (not the best performer but the one who puts the best show on stage for sure).</p>
+      <p>Besides my passion for coding (as you can see) you could easily find me a Saturday night singing in a karaoke (not the best performer but the one who puts the best show on stage for sure).</p>
       <p>I’m open for creative opportunities or for a fun kareoke night. Don’t be shy, <a href="mailto:%link" rel="noopener noreferrer">say hi!</a></p>`,
       image: '/images/profile.jpg'
     },
