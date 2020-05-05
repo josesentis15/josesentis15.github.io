@@ -103,7 +103,7 @@ const data = {
           image: '/images/covers/finca-mas-solers.jpg',
           order: '7',
           slug: '',
-          abstract: `This project aimed to create a space that represented the spectacularity of this venue. Finca Mas Solers is a space that hosts from high class weddings to congresses and whichs is defined by the elegance of it's decoration and the finness of it's old and curated spaces.<br><br>2017 - Design: Cris García & Barbara Skrodzka`
+          abstract: `This project aimed to create a space that represented the spectacularity of this venue. Finca Mas Solers is a space that hosts from high class weddings to congresses and whichs is defined by the elegance of it's decoration and the finness of it's old and curated spaces.<br><br>A new team was created for this project because the client had a very close release date that had to be released by any means.<br><br>2017 - Design: Cris García & Barbara Skrodzka`
         }
       ]
     }
