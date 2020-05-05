@@ -63,7 +63,7 @@ const data = {
           image: '/images/covers/club-familias.jpg',
           order: '3',
           slug: '',
-          abstract: 'A blog intended for young couples and families with children is transformed to a modern media site. <br><br>Club Familias is a 360º project in which all the teams worked as one to define from the inbound marketing strategy to the content architecture and technological solution.<br><br>2019 - Design: Alberto Dominguez.<br><br>2019 - Design: Cris García & Cris Boix.'
+          abstract: 'A blog intended for young couples and families with children is transformed to a modern media site.<br>Club Familias is a 360º project where all the teams in the company collaborated as one.<br><br>The solution was built and scoped according to the technological requirements from the client and the inbound marketing strategy and content architecture that was defined by the team.<br><br>2019 - Design: Cris García & Cris Boix.'
         },
         {
           __typename: 'Project',
