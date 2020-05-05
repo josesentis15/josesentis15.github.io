@@ -53,7 +53,7 @@ const data = {
           image: '/images/covers/cris-garcia.jpg',
           order: '2',
           slug: '',
-          abstract: 'Cris García is a Barcelona based graphic and web designer. She designs with text as she\'s very keen on typography. This can be observed on her designs where she plays with text, content and image and makes them her design assets. We\'ve worked hand to hand for a number of times and she designed this portolio.<br><br>2019 - Design: Cris García.'
+          abstract: 'Cris García is a Barcelona based graphic and web designer.<br>She designs with text as she\'s very keen on typography. This can be observed on her designs where she plays with text, content and image and makes them her design assets. We\'ve worked hand to hand for a number of times and she designed this portolio.<br>The project was created using Twigjs as she needed a fast launch. This evolved into a Twigjs boilerplate which I have hosted on GitHub and which I usually use for the creation of landing pages.<br><br>2019 - Design: Cris García.'
         },
         {
           __typename: 'Project',
