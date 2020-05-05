@@ -77,23 +77,23 @@ const data = {
         },
         {
           __typename: 'Project',
-          title: 'Estudio Alberto Dominguez',
-          external: true,
-          externalLink: 'https://www.estudioalbertodominguez.com/',
-          image: '/images/covers/estudio-alberto-dominguez.jpg',
-          order: '5',
-          slug: '',
-          abstract: `This project is the transformation from a solo a freelance designer to becoming a design studio.<br>He is an experienced designer who defines himself as branding, social media and illustration specialist.<br>The goal was showcasing as much work as possible in a fully screen grid with high quality images.<br><br>2018 - Design: Alberto Dominguez.`
-        },
-        {
-          __typename: 'Project',
           title: 'Esade Exed',
           external: false,
           externalLink: '',
           slug: 'esade-exed',
           image: '/images/covers/esade-exed.jpg',
+          order: '5',
+          abstract: `This site is designed to host a very complex and flexible navigation architecture as it is ment to act as the base structure for the variety of programmes that the university is offering.<br><br>The main goal was increasing the leads and number of brochure downloads while offering a modular flexibility.<br><br>This was achieved by a system of sticky CTAs that changed in relation to the user's interaction with the page and the implementation of a programme recommendation system to funnel the visitors to the different programmes and suggest alternative options with a powerful cross navigation.<br><br>2018 - Design: Cris García.`
+        },
+        {
+          __typename: 'Project',
+          title: 'Estudio Alberto Dominguez',
+          external: true,
+          externalLink: 'https://www.estudioalbertodominguez.com/',
+          image: '/images/covers/estudio-alberto-dominguez.jpg',
           order: '6',
-          abstract: `Creation of the new concept for one of ESADE's branches. This site is designed to host a very complex and flexible navigation architecture as it is ment to act as the base structure for the variety of programmes that the university is offering. The main goal was increasing the conversion, mesured in the number of brochure downloads and increasing the leads to their executive programmes, and offering a modular flexibility.<br><br>2018 - Design: Cris García.`
+          slug: '',
+          abstract: `This project is the transformation from a solo a freelance designer to becoming a design studio.<br>He is an experienced designer who defines himself as branding, social media and illustration specialist.<br>The goal was showcasing as much work as possible in a fully screen grid with high quality images.<br><br>2018 - Design: Alberto Dominguez.`
         },
         {
           __typename: 'Project',
