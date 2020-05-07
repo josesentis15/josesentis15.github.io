@@ -63,7 +63,7 @@ const data = {
           image: '/images/covers/club-familias.jpg',
           order: '3',
           slug: '',
-          abstract: 'A blog intended for young couples and families with children is transformed to a modern media site.<br>Club Familias is a 360º project where all the teams in the company collaborated as one.<br><br>The solution was built and scoped according to the technological requirements from the client and the inbound marketing strategy and content architecture that was defined by the team.<br><br>2019 - Design: Cris García & Cris Boix.'
+          abstract: 'A portal intended for young couples and families with children is transformed to a modern media site.<br>Club Familias is a 360º project where all the teams in the company collaborated as one to redefine the brand, the UX and the CX.<br><br>The solution was built and scoped according to the technological requirements and the inbound marketing strategy and content architecture that was defined by the team to power the automation.<br><br>2019 - Design: Cris García & Cris Boix.'
         },
         {
           __typename: 'Project',
