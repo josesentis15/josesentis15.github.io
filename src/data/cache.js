@@ -23,14 +23,14 @@ const data = {
       __typename: 'About page',
       content: `<p>I’m Jose Sentis, Senior Frontend Developer based in Barcelona.</p>
       <p>I consider coding a form of creation and I love to work with crazy designers that push me to think outside the box, so we can bring to life tons of amazing projects.</p>
-      <p>Besides my passion for coding (as you can see) you could easily find me a Saturday night singing in a karaoke (not the best performer but the one who puts the best show on stage for sure).</p>
-      <p>I’m open for creative opportunities or for a fun kareoke night. Don’t be shy, <a href="mailto:%link" rel="noopener noreferrer">say hi!</a></p>`,
+      <p>Besides my passion for coding (as you can see) you could easily find me on a Saturday night singing in a karaoke (not the best performer but the one who puts the best show on stage for sure).</p>
+      <p>I’m open for creative opportunities or for a fun karaoke night. Don’t be shy, <a href="mailto:%link" rel="noopener noreferrer">say hi!</a></p>`,
       image: '/images/profile.jpg'
     },
     playground: {
       __typename: 'Playground page',
       cta: 'Back to Jose Sentis Folio',
-      abstract: `<p>This is the space where I create, where I try new technologies to develop myself in skills that are often difficult to learn working in corporate projects.<br><br>It's the space where I show who I am further than my role in a agencies.<br><br>It's my personal kaizen.</p><p>To see other projects, follow the link:</p>`
+      abstract: `<p>This is the space where I create, where I try new technologies to develop myself in skills that are often difficult to learn working in corporate projects.<br><br>It's the space where I show who I am further than normal agency projects.<br><br>It's my personal kaizen.</p><p>To see other projects, follow the link:</p>`
     },
     projects: {
       __typename: 'Project page',
