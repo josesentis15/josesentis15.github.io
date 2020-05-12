@@ -8,13 +8,14 @@ import BackgroundImage from '../backgroundImage';
 import ProjectStyled from './styles';
 
 class Project extends React.PureComponent {
-  _transparentImage = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+  // _transparentImage = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
   state = {
     hover: false
   }
 
   componentDidMount() {
-    this._projectImage = document.getElementById('project-image');
+    const { title } = this.props.project;
+    this._projectImage = document.getElementById(title.replace(' ', '-'));
   }
 
   render() {
@@ -48,15 +49,15 @@ class Project extends React.PureComponent {
         className={`project ${hover ? 'active' : ''}`}
         onMouseEnter={() => {
           this.setState({ hover: true });
-          this._projectImage.style.backgroundImage = `url(${image})`;
           this._projectImage.parentNode.classList.add('is-hover');
+          this._projectImage.classList.add('is-active');
           toggleCursor();
         }}
         onMouseLeave={() => {
           this.setState({ hover: false });
           toggleCursor();
-          this._projectImage.style.backgroundImage = this._transparentImage;
           this._projectImage.parentNode.classList.remove('is-hover');
+          this._projectImage.classList.remove('is-active');
         }}
       >
         <h2 className="project__title title2">

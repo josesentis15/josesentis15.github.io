@@ -65,8 +65,16 @@ class Projects extends React.Component {
                       project={project}
                     />
                   ))}
-                  <div className="project-image-animation">
-                    <BackgroundImage className="project-image" id="project-image" lazyEffect={false} />
+                  <div className="project-image-animation" id="project-image">
+                    {projectList.map(project => (
+                      <BackgroundImage
+                        key={project.title.replace(' ', Math.random())}
+                        className="project-image"
+                        lazyEffect={false}
+                        id={project.title.replace(' ', '-')}
+                        src={project.image}
+                      />
+                    ))}
                   </div>
                 </ProjectList>
               </Wrapper>

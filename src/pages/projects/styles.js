@@ -15,41 +15,32 @@ const ProjectList = styled.div`
       display: block;
       height: 45vh;
       overflow: hidden;
-      opacity: 0;
       position: fixed !important;
       pointer-events: none;
       right: 0;
       top: calc(50% - 20vh);
-      transition: opacity .2s linear;
       width: 40vh;
       z-index: 0;
     }
 
     .project-image {
       left: 50%;
+      opacity: 0;
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%) scale(1);
-      transition: transform 0s;
+      transition: transform 0s, opacity .2s linear;
       height: 100%;
       width: 100%;
+
+      &.is-active { opacity: 1; }
     }
 
-    .project-image-animation.is-hover {
-      opacity: 1;
-
-      .project-image {
-        transition: transform 6s ease-out;
-        transform: translate(-50%, -50%) scale(1.2);
-      }
-    }
-
+    .project-image-animation.is-hover,
     .project-image-animation.loaded-exit-active {
-      opacity: 0;
-
       .project-image {
-        transition: transform 6s ease-out;
-        transform: translate(-50%, -50%) scale(1);
+        transition: transform 6s ease-out, opacity .2s linear;
+        transform: translate(-50%, -50%) scale(1.2);
       }
     }
   `}
