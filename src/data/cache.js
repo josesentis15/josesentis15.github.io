@@ -1,14 +1,15 @@
 const data = {
-  job: `Creative Frontend developer`,
-  name: `Jose Sentis`,
+  job: `creative frontend developer`,
+  name: `jose sentis`,
   description: `Hi – I’m Jose, a Senior Frontend developer based in Barcelona. I’m open for new creative opportunities. Don’t be shy, say hi!`,
   ogImage: `images/og-image.jpg`,
   siteUrl: `https://josesentis.com/`,
   social: {
     __typename: 'Social',
     github: `https://github.com/josesentis`,
-    linkedin: `https://www.linkedin.com/in/jose-sentis-vazquez-b0915679/`,
-    instagram: `https://www.instagram.com/josesentis.playground/`,
+    linkedin: `https://www.linkedin.com/in/jose-sentis-vazquez-b0915679`,
+    instagram: `https://www.instagram.com/codeplayground_`,
+    twitter: `https://twitter.com/josesentis_`,
     email: 'jose.sentis1987@gmail.com',
   },
   sections: {
@@ -29,7 +30,7 @@ const data = {
     },
     playground: {
       __typename: 'Playground page',
-      cta: 'Back to Jose Sentis Folio',
+      cta: 'Back to jose sentis folio',
       abstract: `<p>This is the space where I create, where I try new technologies to develop myself in skills that are often difficult to learn working in corporate projects.<br><br>It's the space where I show who I am further than normal agency projects.<br><br>It's my personal kaizen.</p><p>To see other projects, follow the link:</p>`
     },
     projects: {

@@ -41,6 +41,7 @@ class Profile extends React.Component {
         github,
         linkedin,
         instagram,
+        twitter,
         email
       },
       pages: {
@@ -83,6 +84,13 @@ class Profile extends React.Component {
                   rel="noopener noreferrer"
                 >
                   Instagram
+                </a>
+                <a
+                  href={twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Twitter
                 </a>
               </div>
               <p className="thanks">

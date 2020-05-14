@@ -6,6 +6,7 @@ const GET_PROFILE = gql`
       github
       linkedin
       instagram
+      twitter
       email
     }
     pages @client {
