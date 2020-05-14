@@ -9,5 +9,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 serviceWorker.unregister();
 
 if (!!window.MSInputMethodContext && !!document.documentMode) {
-  document.getElementById('explorer-banner').remove();
+  alert('Windows!');
+
+  document.getElementById('explorer-banner').style.display = 'block';
 }
