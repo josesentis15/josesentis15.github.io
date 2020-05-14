@@ -7,3 +7,7 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(<App />, document.getElementById('root'));
 
 serviceWorker.unregister();
+
+if (!!window.MSInputMethodContext && !!document.documentMode) {
+  document.getElementById('explorer-banner').remove();
+}
