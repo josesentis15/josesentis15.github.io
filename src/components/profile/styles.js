@@ -45,7 +45,7 @@ const ProfileWrapper = styled.div`
       z-index: 0;
 
       .background-img {
-        max-width: 380px;
+        max-width: 320px;
         width: 100%;
       }
     }
@@ -68,6 +68,10 @@ const ProfileWrapper = styled.div`
       padding-top: ${space(8)};
     }
   `};
+
+  @media screen and (min-width: 1024px) and (min-height: 768px) {
+    .profile-image .background-img { max-width: 380px; }
+  }
 
   @media screen and (min-width: 1440px) and (min-height: 715px) {
     .profile-image .background-img { max-width: 440px; }
