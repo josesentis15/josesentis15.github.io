@@ -23,7 +23,7 @@
   </head>
   <body>
     <script>
-      if (!!window.MSInputMethodContext && !!document.documentMode) {
+      if (!(!!window.MSInputMethodContext && !!document.documentMode)) {
         document.getElementById('explorer-banner').style.display = 'none';
       }
     </script>
