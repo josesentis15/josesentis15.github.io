@@ -13,6 +13,11 @@ const typographyStyles = `
     line-height: 1;
 
     @media (min-width: 1024px) {
+      font-size: 14.5vw;
+    }
+
+    // Assuming it's a tablet
+    @media (min-width: 1024px) and (orientation: landscape) {
       font-size: 17.5vw;
     }
 
