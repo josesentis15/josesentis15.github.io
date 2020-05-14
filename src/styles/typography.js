@@ -13,7 +13,7 @@ const typographyStyles = `
     line-height: 1;
 
     @media (min-width: 1024px) {
-      font-size: 14.5vw;
+      font-size: 13.5vw;
     }
 
     @media (min-width: 1024px) and (min-height: 768px) {
