@@ -9,7 +9,9 @@ const link = new HttpLink();
 const client = new ApolloClient({
   cache,
   link,
+  resolvers: {}
 });
+
 cache.writeData({ data });
 
 export default client;
