@@ -16,7 +16,7 @@ const typographyStyles = `
       font-size: 14.5vw;
     }
 
-    @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    @media (min-width: 1024px) and (min-height: 768px) {
       font-size: 17.5vw;
     }
 
