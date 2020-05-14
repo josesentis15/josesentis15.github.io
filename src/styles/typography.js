@@ -16,8 +16,7 @@ const typographyStyles = `
       font-size: 14.5vw;
     }
 
-    // Assuming it's a tablet
-    @media (min-width: 1024px) and (orientation: landscape) {
+    @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
       font-size: 17.5vw;
     }
 
