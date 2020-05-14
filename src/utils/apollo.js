@@ -13,5 +13,6 @@ const client = new ApolloClient({
 });
 
 cache.writeData({ data });
+client.onResetStore(() => cache.writeData({ data }));
 
 export default client;
