@@ -18,6 +18,8 @@ const ProjectStyled = styled.div`
     position: relative;
   }
 
+  .p { opacity: .5; }
+
   .project__image {
     margin: ${space()} 0;
 
@@ -33,6 +35,8 @@ const ProjectStyled = styled.div`
     position: absolute;
     bottom: 12px;
   }
+
+  .project__touch-title .label { opacity: 1; }
 
   .touch & {
     .project__non-touch-title,
