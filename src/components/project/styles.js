@@ -12,7 +12,7 @@ const ProjectStyled = styled.div`
   transition: color .2s ease-out;
   z-index: 1;
 
-  .project__title {
+  .title-wrapper {
     margin-left: ${space(-1)};
     padding-left: ${space(1)};
     position: relative;
@@ -49,9 +49,12 @@ const ProjectStyled = styled.div`
 
   ${media.min('tablet')`
     .project__title {
-      margin-bottom: ${space()};
-      margin-left: ${space(-1.5)};
-      padding-left: ${space(1.5)};
+      margin-bottom: ${space(1.5)};
+
+      .title-wrapper {
+        margin-left: ${space(-1.5)};
+        padding-left: ${space(1.5)};
+      }
     }
 
     .label { bottom: 14px; }

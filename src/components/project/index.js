@@ -8,7 +8,6 @@ import BackgroundImage from '../backgroundImage';
 import ProjectStyled from './styles';
 
 class Project extends React.PureComponent {
-  // _transparentImage = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
   state = {
     hover: false
   }
@@ -26,7 +25,8 @@ class Project extends React.PureComponent {
         externalLink,
         slug,
         order,
-        image
+        image,
+        stack
       }
     } = this.props;
     const title = this.props.project.title || slug;
@@ -34,13 +34,16 @@ class Project extends React.PureComponent {
 
     const content = (
       <>
-        <span className="label">
-          {order.toString().length === 1 ? '0' : ''}
-          {order}.
-        </span>
-        <span>
-          {title}
-        </span>
+        <div className="title-wrapper">
+          <span className="label">
+            {order.toString().length === 1 ? '0' : ''}
+            {order}.
+          </span>
+          <span>
+            {title}
+          </span>
+        </div>
+        <p className="p">{stack}</p>
       </>
     );
 
