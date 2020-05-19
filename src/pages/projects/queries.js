@@ -8,7 +8,8 @@ const GET_PROJECTS = gql`
     pages @client {
       projects {
         projectList {
-          title
+          title,
+          stack
           external
           externalLink
           slug
