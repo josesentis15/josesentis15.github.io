@@ -45,7 +45,7 @@ const data = {
           image: '/images/covers/slovinsky.jpg',
           order: '1',
           slug: '',
-          abstract: `Defined as a brand between classic and modern style, Slovinsky launches its website as a new growth step. Anna, Slovinsky\'s owner and designer, has a long jewelry tradition in her family which allow her to create pieces with soul and personality, as she describes.<br><br> Making the most of Gatsby\'s fast and stable features and it\'s easy integration with platforms like Contentful and Netlify we created an MVP website which intends to evolve parallel to Slovinsky's needs adding new features and iterations in the near future.<br><br>2020 - Design: Alex Muñoz`,
+          abstract: `Defined as a brand between classic and modern style, Slovinsky launches its website as a new growth step. Anna, Slovinsky's owner and designer, has a long jewelry tradition in her family which allow her to create pieces with soul and personality, as she describes.<br><br> Making the most of Gatsby's fast and stable features and it's easy integration with platforms like Contentful and Netlify we created an MVP website which intends to evolve parallel to Slovinsky's needs adding new features and iterations in the near future.<br><br>2020 - Design: Alex Muñoz`,
         },
         {
           __typename: 'Project',
@@ -67,7 +67,7 @@ const data = {
           image: '/images/covers/cris-garcia.jpg',
           order: '3',
           slug: '',
-          abstract: 'Cris García is a Barcelona based graphic and web designer.<br>She designs with text as she\'s very keen on typography. This can be observed on her designs where she plays with text, content and image and makes them her design assets. We\'ve worked hand to hand for a number of times and she designed this portolio.<br>The project was created using Twigjs as she needed a fast launch. This evolved into a Twigjs boilerplate which I have hosted on GitHub and which I usually use for the creation of landing pages.<br><br>2019 - Design: Cris García.'
+          abstract: `Cris García is a Barcelona based graphic and web designer.<br>She designs with text as she's very keen on typography. This can be observed on her designs where she plays with text, content and image and makes them her design assets. We've worked hand to hand for a number of times and she designed this portolio.<br>The project was created using Twigjs as she needed a fast launch. This evolved into a Twigjs boilerplate which I have hosted on GitHub and which I usually use for the creation of landing pages.<br><br>2019 - Design: Cris García.`
         },
         {
           __typename: 'Project',
