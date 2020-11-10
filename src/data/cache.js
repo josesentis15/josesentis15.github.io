@@ -45,7 +45,7 @@ const data = {
           image: '/images/covers/slovinsky.jpg',
           order: '1',
           slug: '',
-          abstract: `Defined as a brand between classic and modern style, Slovinsky launches its website as a new growth step. Anna, Slovinsky's owner and designer, has a long jewelry tradition in her family which allow her to create pieces with soul and personality, as she describes.<br><br> Making the most of Gatsby's fast and stable features and it's easy integration with platforms like Contentful and Netlify we created an MVP website which intends to evolve parallel to Slovinsky's needs adding new features and iterations in the near future.<br><br>2020 - Design: Alex Muñoz`,
+          abstract: `Defined as a brand between classic and modern style, Slovinsky launches its website as a new growth step. Anna, Slovinsky's owner and designer, has a long jewelry tradition in her family which allow her to create pieces with soul and personality, as she describes.<br>Making the most of Gatsby's fast and stable features and it's easy integration with platforms like Contentful and Netlify we created an MVP website which intends to evolve parallel to Slovinsky's needs adding new features and iterations in the near future.<br><br>2020 - Design: Alex Muñoz`,
         },
         {
           __typename: 'Project',
