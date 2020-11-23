@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
+import { space } from '../../utils/mixins';
+
 const rotate = keyframes`
   0% {
     transform: rotate(0deg);
@@ -14,8 +16,9 @@ const TextWrapper = styled.div`
     color: white;
     height: 100px;
     position: fixed;
-    right: 100px;
+    right: ${space()};
     width: 100px;
+    z-index: 10;
 
     p {
       height: 100px;
@@ -24,7 +27,6 @@ const TextWrapper = styled.div`
     }
 
     span {
-      background: blue;
       height: 50px;
       position: absolute;
       text-align: center;

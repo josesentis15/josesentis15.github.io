@@ -19,6 +19,7 @@ import { ExerciceList } from './styles';
 
 class Playground extends React.Component {
   _rotatingTitle = `playground * `;
+  _circleTitle = `playground*`;
   _interval = '';
   state = {
     title: '',
@@ -57,7 +58,7 @@ class Playground extends React.Component {
             <Layout location={this.props.location} title={striptags(capitalize(`${playground} *`))} className="playground headerless">
               <Noise />
               <MovingText>{[8].map(() => this._rotatingTitle)}</MovingText>
-              <CircleText text={this._rotatingTitle} />
+              <CircleText text={this._circleTitle} />
               <Wrapper>
                 <div className="intro">
                   <div dangerouslySetInnerHTML={{ __html: abstract }}></div>
