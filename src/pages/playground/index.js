@@ -55,7 +55,7 @@ class Playground extends React.Component {
           return loaded && (
             <Layout location={this.props.location} title={striptags(capitalize(`${playground} *`))} className="playground headerless">
               <Noise />
-              <MovingText>{this._rotatingTitle + this._rotatingTitle + this._rotatingTitle + this._rotatingTitle}</MovingText>
+              <MovingText>{[4].map(() => this._rotatingTitle)}</MovingText>
               <Wrapper>
                 <div className="intro">
                   <div dangerouslySetInnerHTML={{ __html: abstract }}></div>
