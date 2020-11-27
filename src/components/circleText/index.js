@@ -1,5 +1,7 @@
 import React from 'react';
 import { TweenMax } from 'gsap';
+import scrollDirection from '@runroom/purejs/lib/scrollDirection';
+
 import TextWrapper, { Character } from './styles';
 
 class circleText extends React.Component {
@@ -10,12 +12,13 @@ class circleText extends React.Component {
   componentDidMount() {
     this.rotateElement();
 
-    // window.addEventListener('scroll', this.animateScroll());
+    window.addEventListener('scroll', this.animateScroll());
   };
 
-  // animateScroll = () => {
+  animateScroll = () => {
     // this.circleRef.classList.add('scrolling');
-  // };
+    console.log(scrollDirection());
+  };
 
   rotateElement = () => {
     TweenMax.to(this.circleRef, {
