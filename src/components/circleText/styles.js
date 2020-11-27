@@ -22,7 +22,7 @@ const TextWrapper = styled.div`
 
     p {
       height: 100px;
-      transform: translateX(50px);
+      transform: translateX(44px);
       width: 50px;
     }
 

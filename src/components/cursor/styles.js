@@ -14,7 +14,9 @@ const Circle = styled.span`
   pointer-events: none;
   top: 50vh;
   transform: translate(-50%, -50%);
+  transition: .1s ease-out;
   width: ${space()};
+  will-change: width, height;
   z-index: 9999;
 
   .non-touch &.moved { display: block; }
@@ -34,6 +36,11 @@ const Circle = styled.span`
     height: 0;
     transform: rotate(-25deg) translate(-5px, -5px);
     width: 0;
+  }
+
+  &.rotating-text {
+    height: 100px;
+    width: 100px;
   }
 `;
 
