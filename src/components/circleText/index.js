@@ -4,21 +4,27 @@ import TextWrapper, { Character } from './styles';
 
 class circleText extends React.Component {
   state = {
-    scrollSpeed: 0
+    scrollSpeed: 8
   }
 
   componentDidMount() {
-    this.animateScroll();
+    this.rotateElement();
+
+    // window.addEventListener('scroll', this.animateScroll());
   };
 
-  animateScroll = () => {
+  // animateScroll = () => {
+    // this.circleRef.classList.add('scrolling');
+  // };
+
+  rotateElement = () => {
     TweenMax.to(this.circleRef, {
-      duration: 8,
+      duration: this.state.speed,
       rotate: 360,
       repeat: -1,
       ease: "none"
     });
-  };
+  }
 
   render() {
     const { text, ...props } = this.props;
