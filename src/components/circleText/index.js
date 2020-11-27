@@ -7,8 +7,6 @@ const circleText = ({ text, ...props }) => {
   const degrees = 360 / characters.length;
   let tempDegrees = 0;
 
-  console.log(props);
-
   return (
     <TextWrapper {...props}>
       <p>
