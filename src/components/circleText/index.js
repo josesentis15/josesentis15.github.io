@@ -12,9 +12,11 @@ class circleText extends React.Component {
   };
 
   animateScroll = () => {
-    TweenMax.to(this.circleRef, 10, {
-      rotation: '+=360_cw',
-      repeat: 1
+    TweenMax.to(this.circleRef, {
+      duration: 8,
+      rotate: 360,
+      // repeat: 1,
+      ease: "none"
     });
   };
 
