@@ -15,7 +15,7 @@ class circleText extends React.Component {
     TweenMax.to(this.circleRef, {
       duration: 8,
       rotate: 360,
-      // repeat: 1,
+      repeat: -1,
       ease: "none"
     });
   };
