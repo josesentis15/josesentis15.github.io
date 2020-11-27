@@ -16,7 +16,7 @@ const TextWrapper = styled.div`
     color: white;
     height: 100px;
     position: fixed;
-    right: ${space()};
+    right: ${space(2)};
     width: 100px;
     z-index: 10;
 
