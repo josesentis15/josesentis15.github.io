@@ -59,7 +59,11 @@ class Playground extends React.Component {
               <Noise />
               <MovingText>{[8].map(() => this._rotatingTitle)}</MovingText>
               <Wrapper>
-                <CircleText text={this._circleTitle} />
+                <CircleText
+                  text={this._circleTitle}
+                  onMouseEnter={() => toggleCursor('rotating-text')}
+                  onMouseLeave={() => toggleCursor('rotating-text')}
+                />
                 <div className="intro">
                   <div dangerouslySetInnerHTML={{ __html: abstract }}></div>
                   <Link

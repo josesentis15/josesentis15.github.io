@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { toggleCursor } from '../cursor';
-
 import CrossNavigationStyled from './styles';
 
 class CrossNavigation extends React.Component {
