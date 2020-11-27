@@ -12,11 +12,12 @@ class circleText extends React.Component {
   componentDidMount() {
     this.rotateElement();
 
-    window.addEventListener('scroll', this.animateScroll());
+    document.getElementsByTagName('main')[0].addEventListener('scroll', this.animateScroll);
   };
 
   animateScroll = () => {
     // this.circleRef.classList.add('scrolling');
+    console.log('scrolling...2');
     console.log(scrollDirection());
   };
 
