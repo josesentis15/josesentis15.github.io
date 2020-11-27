@@ -5,9 +5,11 @@ import withLoader from '../../hoc/withLoader';
 
 import Circle from './styles';
 
-const toggleCursor = (force = false, cursorClass = '') => {
+const toggleCursor = (cursorClass = '', force = false) => {
   const cursor = document.getElementById('cursor');
   const toggleClass = cursorClass ? cursorClass : 'hover';
+
+  console.log('TOGGLE CURSORRRRR', toggleClass);
 
   if (force || cursor.classList.contains(toggleClass)) {
     cursor.classList.remove(toggleClass);

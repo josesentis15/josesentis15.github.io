@@ -12,7 +12,7 @@ import HeaderStyled from './styles';
 
 class Header extends React.Component {
   componentWillUnmount() {
-    toggleCursor(true);
+    toggleCursor('', true);
   }
 
   render() {
