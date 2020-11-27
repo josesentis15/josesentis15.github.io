@@ -58,8 +58,8 @@ class Playground extends React.Component {
             <Layout location={this.props.location} title={striptags(capitalize(`${playground} *`))} className="playground headerless">
               <Noise />
               <MovingText>{[8].map(() => this._rotatingTitle)}</MovingText>
-              <CircleText text={this._circleTitle} />
               <Wrapper>
+                <CircleText text={this._circleTitle} />
                 <div className="intro">
                   <div dangerouslySetInnerHTML={{ __html: abstract }}></div>
                   <Link

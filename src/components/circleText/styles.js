@@ -12,7 +12,7 @@ const rotate = keyframes`
 `;
 
 const TextWrapper = styled.div`
-    animation: ${rotate} 10s infinite linear;
+    // animation: ${rotate} 10s infinite linear;
     color: white;
     height: 100px;
     position: fixed;
