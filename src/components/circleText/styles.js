@@ -5,10 +5,14 @@ import { space } from '../../utils/mixins';
 const TextWrapper = styled.div`
     color: white;
     height: 100px;
+    opacity: 0;
     position: fixed;
     right: ${space(2)};
+    transition: opacity .2s ease-out;
     width: 100px;
     z-index: 10;
+
+    &.visible { opacity: 1; }
 
     p {
       height: 100px;

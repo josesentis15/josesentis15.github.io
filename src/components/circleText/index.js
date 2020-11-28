@@ -13,16 +13,8 @@ class circleText extends React.Component {
   componentDidMount() {
     this.rotateElement();
 
-    // this._mainElement = document.getElementsByTagName('main')[0];
-
-    // this._mainElement.addEventListener('scroll', this.animateScroll);
+    this._headerElement = document.getElementById('moving-text');
   };
-
-  // animateScroll = () => {
-  //   // this.circleRef.classList.add('scrolling');
-  //   console.log('scrolling...2');
-  //   // console.log(this._mainElement.scrollTop);
-  // };
 
   rotateElement = () => {
     TweenMax.to(this._circleRef, {
@@ -38,11 +30,22 @@ class circleText extends React.Component {
     const characters = text.split("");
     const degrees = 360 / characters.length;
     let tempDegrees = 0;
+    let textClass = '';
 
     console.log('----------Scroll TOP: ', scrollTop);
+    console.log(this._headerElement);
+
+    if (this._headerElement) {
+      console.log('----------Inner height: ', this._headerElement.innerHeight);
+    }
+
+    if (this._headerElement && scrollTop > this._headerElement.offsetHeight) {
+      textClass = 'visible';
+      console.log('----------Inner height: ', this._headerElement.innerHeight);
+    }
 
     return (
-      <TextWrapper {...props} ref={ref => this._circleRef = ref}>
+      <TextWrapper className={textClass} ref={ref => this._circleRef = ref} {...props}>
         <p>
           {characters.map(char => {
             tempDegrees += degrees;
