@@ -1,10 +1,11 @@
 import React from 'react';
 import { TweenMax } from 'gsap';
-import scrollDirection from '@runroom/purejs/lib/scrollDirection';
 
+import withScroll from '../../hoc/withScroll';
 import TextWrapper, { Character } from './styles';
 
 class circleText extends React.Component {
+  // _mainElement;
   state = {
     scrollSpeed: 8
   }
@@ -12,18 +13,20 @@ class circleText extends React.Component {
   componentDidMount() {
     this.rotateElement();
 
-    document.getElementsByTagName('main')[0].addEventListener('scroll', this.animateScroll);
+    // this._mainElement = document.getElementsByTagName('main')[0];
+
+    // this._mainElement.addEventListener('scroll', this.animateScroll);
   };
 
-  animateScroll = () => {
-    // this.circleRef.classList.add('scrolling');
-    console.log('scrolling...2');
-    console.log(scrollDirection());
-  };
+  // animateScroll = () => {
+  //   // this.circleRef.classList.add('scrolling');
+  //   console.log('scrolling...2');
+  //   // console.log(this._mainElement.scrollTop);
+  // };
 
   rotateElement = () => {
-    TweenMax.to(this.circleRef, {
-      duration: this.state.speed,
+    TweenMax.to(this._circleRef, {
+      duration: this.state.scrollSpeed,
       rotate: 360,
       repeat: -1,
       ease: "none"
@@ -31,13 +34,15 @@ class circleText extends React.Component {
   }
 
   render() {
-    const { text, ...props } = this.props;
+    const { text, scrollTop, ...props } = this.props;
     const characters = text.split("");
     const degrees = 360 / characters.length;
     let tempDegrees = 0;
 
+    console.log('----------Scroll TOP: ', scrollTop);
+
     return (
-      <TextWrapper {...props} ref={ref => this.circleRef = ref}>
+      <TextWrapper {...props} ref={ref => this._circleRef = ref}>
         <p>
           {characters.map(char => {
             tempDegrees += degrees;
@@ -50,4 +55,4 @@ class circleText extends React.Component {
   }
 }
 
-export default circleText;
+export default withScroll(circleText);
