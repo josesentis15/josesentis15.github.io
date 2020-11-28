@@ -6,6 +6,7 @@ import TextWrapper, { Character } from './styles';
 
 class circleText extends React.Component {
   _headerElement;
+  _introElement;
   state = {
     scrollSpeed: 8
   }
@@ -14,6 +15,7 @@ class circleText extends React.Component {
     this.rotateElement();
 
     this._headerElement = document.getElementById('moving-text');
+    this._introElement = document.getElementById('intro-text');
   };
 
   rotateElement = () => {
@@ -23,6 +25,14 @@ class circleText extends React.Component {
       repeat: -1,
       ease: "none"
     });
+  }
+
+  shouldShow = () => {
+    if (this._headerElement && this._introElement) {
+      if (this.props.scrollTop > (this._headerElement.offsetHeight + this._introElement.offsetHeight)) return true;
+    }
+
+    return false;
   }
 
   render() {
@@ -35,14 +45,7 @@ class circleText extends React.Component {
     console.log('----------Scroll TOP: ', scrollTop);
     console.log(this._headerElement);
 
-    if (this._headerElement) {
-      console.log('----------Inner height: ', this._headerElement.innerHeight);
-    }
-
-    if (this._headerElement && scrollTop > this._headerElement.offsetHeight) {
-      textClass = 'visible';
-      console.log('----------Inner height: ', this._headerElement.innerHeight);
-    }
+    if (this.shouldShow()) textClass = 'visible';
 
     return (
       <TextWrapper className={textClass} ref={ref => this._circleRef = ref} {...props}>

@@ -9,6 +9,7 @@ const TextWrapper = styled.div`
     position: fixed;
     right: ${space(2)};
     transition: opacity .2s ease-out;
+    top: ${space(2)};
     width: 100px;
     z-index: 10;
 

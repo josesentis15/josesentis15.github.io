@@ -64,7 +64,7 @@ class Playground extends React.Component {
                   onMouseEnter={() => toggleCursor('rotating-text')}
                   onMouseLeave={() => toggleCursor('rotating-text')}
                 />
-                <div className="intro">
+                <div id="intro-text" className="intro">
                   <div dangerouslySetInnerHTML={{ __html: abstract }}></div>
                   <Link
                     to={routes.home}
