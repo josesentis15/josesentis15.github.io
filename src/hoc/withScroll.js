@@ -24,7 +24,7 @@ import React from 'react';
 
 const withScrollTop = WrappedComponent => {
   return class extends React.Component {
-    _mainElement ;
+    _mainElement;
 
     state = {
       scrollTop: 0
@@ -33,10 +33,13 @@ const withScrollTop = WrappedComponent => {
     componentDidMount() {
       this._mainElement = document.getElementsByTagName('main')[0];
       this._mainElement.addEventListener('scroll', this.calculateScrollTop);
-      this.setState({ scrollTop: this.calculateScrollTop });
+
+      this.calculateScrollTop()
     };
 
-    calculateScrollTop = () => this._mainElement.scrollTop;
+    calculateScrollTop = () => {
+      this.setState({ scrollTop: this._mainElement.scrollTop });
+    }
 
     render() {
       return <WrappedComponent {...this.props} scrollTop={this.state.scrollTop} />;
