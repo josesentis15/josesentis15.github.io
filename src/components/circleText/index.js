@@ -5,7 +5,7 @@ import withScroll from '../../hoc/withScroll';
 import TextWrapper, { Character } from './styles';
 
 class circleText extends React.Component {
-  // _mainElement;
+  _headerElement;
   state = {
     scrollSpeed: 8
   }
