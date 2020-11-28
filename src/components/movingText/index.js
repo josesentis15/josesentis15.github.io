@@ -4,10 +4,10 @@ import TextWrapper from './styles';
 
 class movingText extends React.PureComponent {
   render() {
-    const { children } = this.props;
+    const { children, ...props } = this.props;
 
     return (
-      <TextWrapper>
+      <TextWrapper {...props}>
         <span>{children}</span>
       </TextWrapper>
     );

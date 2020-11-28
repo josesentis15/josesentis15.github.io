@@ -57,7 +57,7 @@ class Playground extends React.Component {
           return loaded && (
             <Layout location={this.props.location} title={striptags(capitalize(`${playground} *`))} className="playground headerless">
               <Noise />
-              <MovingText>{[...Array(8)].map(() => this._rotatingTitle)}</MovingText>
+              <MovingText id="moving-text">{[...Array(8)].map(() => this._rotatingTitle)}</MovingText>
               <Wrapper>
                 <CircleText
                   text={this._circleTitle}
