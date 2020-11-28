@@ -42,9 +42,6 @@ class circleText extends React.Component {
     let tempDegrees = 0;
     let textClass = '';
 
-    console.log('----------Scroll TOP: ', scrollTop);
-    console.log(this._headerElement);
-
     if (this.shouldShow()) textClass = 'visible';
 
     return (

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { space } from '../../utils/mixins';
+import { media } from '../../utils/media-queries';
 
 const TextWrapper = styled.div`
     color: white;
@@ -12,6 +13,8 @@ const TextWrapper = styled.div`
     top: ${space(2)};
     width: 100px;
     z-index: 10;
+
+    ${media.max('tablet')` display: none; `}
 
     &.visible { opacity: 1; }
 
