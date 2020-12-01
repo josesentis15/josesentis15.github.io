@@ -8,6 +8,7 @@ import axios from 'axios';
 import { toggleCursor } from '../../components/cursor';
 import Exercice from '../../components/exercice';
 import Layout, { Wrapper } from '../../components/layout';
+import CircleText from '../../components/circleText';
 import MovingText from '../../components/movingText';
 import Noise from '../../components/noise';
 
@@ -17,7 +18,8 @@ import GET_PLAYGROUND from './queries';
 import { ExerciceList } from './styles';
 
 class Playground extends React.Component {
-  _rotatingTitle = `playground * playground * playground * playground * `;
+  _rotatingTitle = `playground * `;
+  _circleTitle = `playground*`;
   _interval = '';
   state = {
     title: '',
@@ -55,9 +57,14 @@ class Playground extends React.Component {
           return loaded && (
             <Layout location={this.props.location} title={striptags(capitalize(`${playground} *`))} className="playground headerless">
               <Noise />
-              <MovingText>{this._rotatingTitle + this._rotatingTitle + this._rotatingTitle + this._rotatingTitle}</MovingText>
+              <MovingText id="moving-text">{[...Array(8)].map(() => this._rotatingTitle)}</MovingText>
               <Wrapper>
-                <div className="intro">
+                <CircleText
+                  text={this._circleTitle}
+                  onMouseEnter={() => toggleCursor('rotating-text')}
+                  onMouseLeave={() => toggleCursor('rotating-text')}
+                />
+                <div id="intro-text" className="intro">
                   <div dangerouslySetInnerHTML={{ __html: abstract }}></div>
                   <Link
                     to={routes.home}

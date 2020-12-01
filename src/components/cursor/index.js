@@ -5,13 +5,14 @@ import withLoader from '../../hoc/withLoader';
 
 import Circle from './styles';
 
-const toggleCursor = (force = false) => {
+const toggleCursor = (cursorClass = '', force = false) => {
   const cursor = document.getElementById('cursor');
+  const toggleClass = cursorClass ? cursorClass : 'hover';
 
-  if (force || cursor.classList.contains('hover')) {
-    cursor.classList.remove('hover');
+  if (force || cursor.classList.contains(toggleClass)) {
+    cursor.classList.remove(toggleClass);
   } else {
-    cursor.classList.add('hover');
+    cursor.classList.add(toggleClass);
   }
 }
 

@@ -12,7 +12,7 @@ import NavigationWrapper, { AppearingText } from './styles';
 
 class Navigation extends React.Component {
   componentWillUnmount() {
-    toggleCursor(true);
+    toggleCursor('', true);
   }
 
   render() {
