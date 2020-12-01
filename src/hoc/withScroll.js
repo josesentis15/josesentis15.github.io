@@ -5,46 +5,37 @@ const withScrollTop = WrappedComponent => {
     _mainElement;
     _lastScrollTop = 0;
     _status = 0;
+    _scrollingInterval = null;
     state = {
-      scrollTop: 0
+      scrollTop: 0,
+      isScrolling: false
     }
 
     componentDidMount() {
       this._mainElement = document.getElementsByTagName('main')[0];
-      this._mainElement.addEventListener('scroll', this.calculateScrollTop);
+      this._mainElement.addEventListener('scroll', this.calculteUserScroll);
 
-      this.calculateScrollTop();
+      this.calculteUserScroll();
     };
 
-    calculateScrollTop = () => {
+    calculteUserScroll = () => {
       this.setState({ scrollTop: this.scrollTop() });
-
-      console.log(this.scrollDirection());
+      this.isUserScrolling();
     }
 
     scrollTop = () => this._mainElement.scrollTop;
 
-    scrollDirection = (deltaUp = 0, deltaDown = 0) => {
-      const { scrollTop } = this.state;
+    isUserScrolling = () => {
+      window.clearTimeout(this._scrollingInterval);
+      this.setState({ isScrolling: true });
 
-      if (scrollTop <= 0) {
-        this._lastScrollTop = scrollTop;
-        this._status = 0;
-      } else if (scrollTop > this._lastScrollTop) {
-        if (Math.abs(this._lastScrollTop - scrollTop) >= deltaDown) {
-          this._lastScrollTop = scrollTop;
-          this._status = 1;
-        }
-      } else if (Math.abs(this._lastScrollTop - scrollTop) >= deltaUp) {
-        this._lastScrollTop = scrollTop;
-        this._status = -1;
-      }
-
-      return this._status;
+      this._scrollingInterval = setTimeout(() => {
+        this.setState({ isScrolling: false });
+      }, 66);
     }
 
     render() {
-      return <WrappedComponent {...this.props} scrollTop={this.state.scrollTop} />;
+      return <WrappedComponent {...this.props} scrollTop={this.state.scrollTop} isScrolling={this.state.isScrolling} />;
     }
   }
 };

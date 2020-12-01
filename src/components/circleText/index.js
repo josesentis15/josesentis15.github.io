@@ -7,9 +7,9 @@ import TextWrapper, { Character } from './styles';
 class circleText extends React.Component {
   _headerElement;
   _introElement;
-  state = {
-    scrollSpeed: 8
-  }
+  _minScrollSpeed = 8;
+  _maxScrollSpeed = 4;
+  _tween;
 
   componentDidMount() {
     this.rotateElement();
@@ -19,8 +19,12 @@ class circleText extends React.Component {
   };
 
   rotateElement = () => {
-    TweenMax.to(this._circleRef, {
-      duration: this.state.scrollSpeed,
+    const scrollSpeed = this.props.isScrolling ? this._maxScrollSpeed : this._minScrollSpeed;
+
+    console.log('IS ROTATING: ', scrollSpeed);
+
+    this._tween = TweenMax.to(this._circleRef, {
+      duration: this._maxScrollSpeed,
       rotate: 360,
       repeat: -1,
       ease: "none"
@@ -43,6 +47,9 @@ class circleText extends React.Component {
     let textClass = '';
 
     if (this.shouldShow()) textClass = 'visible';
+    this.rotateElement();
+
+     console.log('Render!');
 
     return (
       <TextWrapper className={textClass} ref={ref => this._circleRef = ref} {...props}>
