@@ -12,18 +12,19 @@ class circleText extends React.Component {
   }
 
   componentDidMount() {
-    // this.rotateElement();
+    this.rotateElement();
 
     this._headerElement = document.getElementById('moving-text');
   };
 
   rotateElement = () => {
     this._tween = TweenMax.to(this._circleRef, {
-      duration: 8,
+      duration: 6,
       rotate: 360,
       repeat: -1,
       ease: "none"
     });
+    this._tween.pause();
   }
 
   shouldShow = () => {
@@ -35,13 +36,13 @@ class circleText extends React.Component {
   }
 
   handleMouseEnter = () => {
-    console.log('Mouse enter');
     this.setState({ hover: true });
+    this._tween.play();
   }
 
   handleMouseLeave = () => {
-    console.log('Mouse enter');
     this.setState({ hover: false });
+    this._tween.pause();
   }
 
   render() {
@@ -52,7 +53,7 @@ class circleText extends React.Component {
     let textClass = '';
 
     if (this.shouldShow()) textClass = 'visible';
-    if (this.state.hover) textClass += 'hover';
+    if (this.state.hover) textClass += ' hover';
     return (
       <TextWrapper
         className={textClass}

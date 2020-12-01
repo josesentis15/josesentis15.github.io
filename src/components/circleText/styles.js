@@ -5,13 +5,12 @@ import { space } from '../../utils/mixins';
 import { media } from '../../utils/media-queries';
 
 const TextWrapper = styled.div`
-  // border: 1px solid white;
   color: white;
   height: 120px;
   position: absolute;
   right: calc(${space(2)} - 20px);
   transition: color .1s ease-out;
-  top: 0;
+  top: -20px;
   width: 120px;
   z-index: 10;
 
@@ -21,11 +20,13 @@ const TextWrapper = styled.div`
 
   &.visible {
     position: fixed;
-    right: ${space(2)};
-    top: ${space(2)};
+    right: calc(${space(2)} - 20px);
+    top: calc(${space(2)} - 20px);
   }
 
-  &.hover { color: ${colors.primary}; }
+  &.hover {
+    color: ${colors.primary};
+  }
 
   p {
     height: 100px;
