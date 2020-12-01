@@ -8,7 +8,6 @@ const withScrollTop = WrappedComponent => {
     _scrollingInterval = null;
     state = {
       scrollTop: 0,
-      isScrolling: false
     }
 
     componentDidMount() {
@@ -20,22 +19,12 @@ const withScrollTop = WrappedComponent => {
 
     calculteUserScroll = () => {
       this.setState({ scrollTop: this.scrollTop() });
-      this.isUserScrolling();
     }
 
     scrollTop = () => this._mainElement.scrollTop;
 
-    isUserScrolling = () => {
-      window.clearTimeout(this._scrollingInterval);
-      this.setState({ isScrolling: true });
-
-      this._scrollingInterval = setTimeout(() => {
-        this.setState({ isScrolling: false });
-      }, 66);
-    }
-
     render() {
-      return <WrappedComponent {...this.props} scrollTop={this.state.scrollTop} isScrolling={this.state.isScrolling} />;
+      return <WrappedComponent {...this.props} scrollTop={this.state.scrollTop} />;
     }
   }
 };
