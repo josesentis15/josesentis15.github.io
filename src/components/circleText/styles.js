@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { colors } from '../../utils/settings';
 import { space } from '../../utils/mixins';
 import { media } from '../../utils/media-queries';
 
@@ -8,18 +9,22 @@ const TextWrapper = styled.div`
     height: 100px;
     position: absolute;
     right: ${space(2)};
-    transition: opacity .2s ease-out;
+    transition: color .1s ease-out;
     top: 0;
     width: 100px;
     z-index: 10;
 
-    ${media.max('tablet')` display: none; `}
+    ${media.max('tablet')`
+      display: none;
+    `}
 
     &.visible {
       position: fixed;
       right: ${space(2)};
       top: ${space(2)};
     }
+
+    &.hover { color: ${colors.primary}; }
 
     p {
       height: 100px;
