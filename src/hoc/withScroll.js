@@ -24,19 +24,19 @@ const withScrollTop = WrappedComponent => {
 
     scrollTop = () => this._mainElement.scrollTop;
 
-    scrollDirection = (deltaUp = 10, deltaDown = 10) => {
-      const currentScrollTop = this.scrollTop() || 0;
+    scrollDirection = (deltaUp = 0, deltaDown = 0) => {
+      const { scrollTop } = this.state;
 
-      if (currentScrollTop <= 0) {
-        this._lastScrollTop = currentScrollTop;
+      if (scrollTop <= 0) {
+        this._lastScrollTop = scrollTop;
         this._status = 0;
-      } else if (currentScrollTop > this._lastScrollTop) {
-        if (Math.abs(this._lastScrollTop - currentScrollTop) >= deltaDown) {
-          this._lastScrollTop = currentScrollTop;
+      } else if (scrollTop > this._lastScrollTop) {
+        if (Math.abs(this._lastScrollTop - scrollTop) >= deltaDown) {
+          this._lastScrollTop = scrollTop;
           this._status = 1;
         }
-      } else if (Math.abs(this._lastScrollTop - currentScrollTop) >= deltaUp) {
-        this._lastScrollTop = currentScrollTop;
+      } else if (Math.abs(this._lastScrollTop - scrollTop) >= deltaUp) {
+        this._lastScrollTop = scrollTop;
         this._status = -1;
       }
 
