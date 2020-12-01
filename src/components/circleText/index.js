@@ -34,6 +34,16 @@ class circleText extends React.Component {
     return false;
   }
 
+  handleMouseEnter = () => {
+    console.log('Mouse enter');
+    this.setState({ hover: true });
+  }
+
+  handleMouseLeave = () => {
+    console.log('Mouse enter');
+    this.setState({ hover: false });
+  }
+
   render() {
     const { text, onMouseEnter, onMouseLeave, ...props } = this.props;
     const characters = text.split("");
@@ -47,19 +57,19 @@ class circleText extends React.Component {
       <TextWrapper
         className={textClass}
         onMouseEnter={() => {
-          console.log('Mouse enter');
-          this.setState({ hover: true });
+          this.handleMouseEnter();
           onMouseEnter();
         }}
         onMouseLeave={() => {
-          console.log('Mouse leave');
-          this.setState({ hover: false });
+          this.handleMouseLeave();
           onMouseLeave();
         }}
         ref={ref => this._circleRef = ref}
         {...props}
       >
-        <p>
+        <p
+          ref={ref => this._wrapperRef = ref}
+        >
           {characters.map(char => {
             tempDegrees += degrees;
 

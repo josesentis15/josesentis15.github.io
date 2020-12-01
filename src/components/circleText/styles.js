@@ -5,6 +5,7 @@ import { space } from '../../utils/mixins';
 import { media } from '../../utils/media-queries';
 
 const TextWrapper = styled.div`
+  // border: 1px solid white;
   color: white;
   height: 120px;
   position: absolute;
@@ -28,11 +29,11 @@ const TextWrapper = styled.div`
 
   p {
     height: 100px;
+    transform: translate3d(-5px,-48px,0);
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate3d(-5%, -48%, 0);
-    width: 100px;
+    width: 50px;
   }
 
   span {
