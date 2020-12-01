@@ -12,7 +12,7 @@ class circleText extends React.Component {
   }
 
   componentDidMount() {
-    this.rotateElement();
+    // this.rotateElement();
 
     this._headerElement = document.getElementById('moving-text');
   };
@@ -27,7 +27,7 @@ class circleText extends React.Component {
   }
 
   shouldShow = () => {
-    if (this._headerElement && this._introElement) {
+    if (this._headerElement) {
       if (this.props.scrollTop > this._headerElement.offsetHeight) return true;
     }
 
