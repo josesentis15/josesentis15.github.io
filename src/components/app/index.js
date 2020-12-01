@@ -28,27 +28,27 @@ class App extends React.Component {
     if (isExplorer()) document.documentElement.classList.add('browser-ie');
     document.documentElement.classList.add(touchable() ? 'touch' : 'non-touch');
 
-    // this.setState({ showLoader: true });
+    this.setState({ showLoader: true });
 
-    // setTimeout(() => {
-    //   this.setState({ loaded: true });
-    // }, 2400);
+    setTimeout(() => {
+      this.setState({ loaded: true });
+    }, 2400);
   }
 
   render() {
-    // const { loaded, showLoader } = this.state;
+    const { loaded, showLoader } = this.state;
 
     return (
       <>
         <GlobalStyle />
-        {/* {loaded ? ( */}
+        {loaded ? (
           <ApolloProvider client={client}>
             <Cursor />
             <Router history={history}>
               <AppRouter />
             </Router>
           </ApolloProvider>
-        {/* ) : (
+        ) : (
             <TransitionGroup>
               {showLoader && (
                 <CSSTransition classNames="loaded" timeout={2000}>
@@ -57,7 +57,7 @@ class App extends React.Component {
               )}
             </TransitionGroup>
           )
-        } */}
+        }
       </>
     );
   }
