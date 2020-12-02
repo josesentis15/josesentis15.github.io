@@ -39,8 +39,8 @@ const Circle = styled.span`
   }
 
   &.rotating-text {
-    height: 120px;
-    width: 120px;
+    height: 110px;
+    width: 110px;
   }
 `;
 
