@@ -9,28 +9,18 @@ import ExerciceStyled from './styles';
 import { playground } from '../../../package.json';
 
 class Exercice extends React.PureComponent {
-  _main;
   state = {
-    visible: false
+    visible: true
   }
 
-  componentDidMount() {
-    this._main = document.getElementsByTagName('main')[0];
-    this._main.addEventListener('scroll', this.animateProjects);
-  }
+  // animateProjects = () => {
+  //   console.log('scrolling...', this.props.scrollTop);
 
-  componentWillUnmount() {
-    this._main.addEventListener('scroll', this.animateProjects);
-  }
-
-  animateProjects = () => {
-    console.log('scrolling...', this.props.scrollTop);
-
-    if (!this.state.visible && this.props.scrollTop > 500) {
-      this.props.cancelScroll();
-      this.setState({ visible: true });
-    }
-  }
+  //   if (!this.state.visible && this.props.scrollTop > 500) {
+  //     this.props.cancelScroll();
+  //     this.setState({ visible: true });
+  //   }
+  // }
 
   render() {
     const {
@@ -42,12 +32,12 @@ class Exercice extends React.PureComponent {
         date
       }
     } = this.props;
-    // const { visible } = this.state;
+    const { visible } = this.state;
     const formattedDate = moment(date).format("MM.YYYY");
 
     return (
       <ExerciceStyled>
-        <BackgroundImage src={`${playground}${image}`} alt={title} scaleEffect={true} />
+        {visible && <BackgroundImage src={`${playground}${image}`} alt={title} scaleEffect={true} />}
         <div className="content">
           <div className="content-text">
             <h2 className="p">{title}</h2>
@@ -70,5 +60,5 @@ class Exercice extends React.PureComponent {
   };
 }
 
-
-export default withScroll(Exercice);
+export default Exercice;
+// export default withScroll(Exercice);
