@@ -102,7 +102,7 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
   }
 
-  * { cursor:none !important; }
+  // * { cursor:none !important; }
   ::-webkit-scrollbar-track-piece { background-color: transparent; }
   ::-webkit-scrollbar { width: 0px; }
 

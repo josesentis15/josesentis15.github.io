@@ -28,10 +28,10 @@ class Cursor extends React.PureComponent {
   handleMouseMove = event => {
     if (!this.cursor.classList.contains('moved')) this.cursor.classList.add('moved');
 
-    TweenMax.to(this.cursor, 0.3, {
+    TweenMax.to(this.cursor, 0.4, {
       left: `${event.clientX}px`,
       top: `${event.clientY}px`,
-      ease: "Power2.easeOut"
+      ease: "Power3.easeOut"
     });
   }
 
