@@ -11,7 +11,7 @@ import { playground } from '../../../package.json';
 class Exercice extends React.PureComponent {
   _main;
   state = {
-    visible: true
+    visible: false
   }
 
   componentDidMount() {
@@ -25,22 +25,29 @@ class Exercice extends React.PureComponent {
 
   animateProjects = () => {
     console.log('scrolling...', this.props.scrollTop);
+
+    if (!this.state.visible && this.props.scrollTop > 500) {
+      this.props.cancelScroll();
+      this.setState({ visible: true });
+    }
   }
 
   render() {
     const {
-      abstract,
-      link,
-      title,
-      image,
-      date
+      exercice: {
+        abstract,
+        link,
+        title,
+        image,
+        date
+      }
     } = this.props;
-    const { visible } = this.state;
+    // const { visible } = this.state;
     const formattedDate = moment(date).format("MM.YYYY");
 
     return (
       <ExerciceStyled>
-        {visible && <BackgroundImage src={`${playground}${image}`} alt={title} scaleEffect={true} />}
+        <BackgroundImage src={`${playground}${image}`} alt={title} scaleEffect={true} />
         <div className="content">
           <div className="content-text">
             <h2 className="p">{title}</h2>

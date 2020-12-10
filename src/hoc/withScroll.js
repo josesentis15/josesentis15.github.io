@@ -14,14 +14,22 @@ const withScrollTop = WrappedComponent => {
       this.calculteUserScroll();
     };
 
+    componentWillUnmount() {
+      this.cancleScroll();
+    };
+
     calculteUserScroll = () => {
       this.setState({ scrollTop: this.scrollTop() });
+    }
+
+    cancelScroll = () => {
+      this._mainElement.removeEventListener('scroll', this.calculteUserScroll);
     }
 
     scrollTop = () => this._mainElement.scrollTop;
 
     render() {
-      return <WrappedComponent {...this.props} scrollTop={this.state.scrollTop} />;
+      return <WrappedComponent {...this.props} scrollTop={this.state.scrollTop} cancelScroll={this.cancelScroll} />;
     }
   }
 };
