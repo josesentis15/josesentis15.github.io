@@ -35,10 +35,6 @@ class Playground extends React.Component {
       });
   }
 
-  // animateProjects = () => {
-  //   console.log('scrolling...');
-  // }
-
   render() {
     const { loaded, exercices } = this.state;
 
