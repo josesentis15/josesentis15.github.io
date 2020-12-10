@@ -21,7 +21,6 @@ class Playground extends React.Component {
   _rotatingTitle = `playground * `;
   _circleTitle = `playground*`;
   _interval = '';
-  _viewport;
   state = {
     title: '',
     loaded: false,
@@ -35,6 +34,10 @@ class Playground extends React.Component {
       }).catch(() => {
         this.props.history.push('/404');
       });
+  }
+
+  animateProjects = () => {
+    console.log('scrolling...');
   }
 
   render() {
@@ -59,7 +62,7 @@ class Playground extends React.Component {
             <Layout location={this.props.location} title={striptags(capitalize(`${playground} *`))} className="playground headerless">
               <Noise />
               <MovingText id="moving-text">{[...Array(8)].map(() => this._rotatingTitle)}</MovingText>
-              <Wrapper ref={ref => this._viewport = ref} data-name="this">
+              <Wrapper>
                 <CircleText
                   text={this._circleTitle}
                   onMouseEnter={() => toggleCursor('rotating-text')}
