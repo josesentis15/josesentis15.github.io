@@ -15,8 +15,6 @@ class circleText extends React.Component {
     this.rotateElement();
 
     this._headerElement = document.getElementById('moving-text');
-
-    console.log(this._tween);
   };
 
   rotateElement = () => {
@@ -24,7 +22,7 @@ class circleText extends React.Component {
       duration: 4,
       rotate: 360,
       repeat: -1,
-      ease: "none"
+      ease: 'none'
     });
   }
 

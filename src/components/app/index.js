@@ -41,23 +41,23 @@ class App extends React.Component {
     return (
       <>
         <GlobalStyle />
-        {/* {loaded ? ( */}
+        {loaded ? (
           <ApolloProvider client={client}>
             <Cursor />
             <Router history={history}>
               <AppRouter />
             </Router>
           </ApolloProvider>
-        {/*  ) : (
-             <TransitionGroup>
-               {showLoader && (
-                 <CSSTransition classNames="loaded" timeout={2000}>
-                   <Loader />
-                 </CSSTransition>
-               )}
-             </TransitionGroup>
-           )
-        }*/}
+        ) : (
+            <TransitionGroup>
+              {showLoader && (
+                <CSSTransition classNames="loaded" timeout={2000}>
+                  <Loader />
+                </CSSTransition>
+              )}
+            </TransitionGroup>
+          )
+        }
       </>
     );
   }

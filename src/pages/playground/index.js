@@ -4,6 +4,8 @@ import { Query } from "react-apollo";
 import { withRouter } from "react-router";
 import striptags from 'striptags';
 import axios from 'axios';
+import { TweenMax } from 'gsap';
+import "gsap/ScrollToPlugin";
 
 import { toggleCursor } from '../../components/cursor';
 import Exercice from '../../components/exercice';
@@ -21,6 +23,7 @@ class Playground extends React.Component {
   _rotatingTitle = `playground * `;
   _circleTitle = `playground*`;
   _interval = '';
+  _viewport;
   state = {
     title: '',
     loaded: false,
@@ -58,7 +61,7 @@ class Playground extends React.Component {
             <Layout location={this.props.location} title={striptags(capitalize(`${playground} *`))} className="playground headerless">
               <Noise />
               <MovingText id="moving-text">{[...Array(8)].map(() => this._rotatingTitle)}</MovingText>
-              <Wrapper>
+              <Wrapper ref={ref => this._viewport = ref} data-name="this">
                 <CircleText
                   text={this._circleTitle}
                   onMouseEnter={() => toggleCursor('rotating-text')}
