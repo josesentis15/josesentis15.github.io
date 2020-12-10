@@ -9,7 +9,8 @@ const TextWrapper = styled.div`
   height: 120px;
   position: absolute;
   right: calc(${space(2)} - 20px);
-  transition: color .1s ease-out;
+  opacity: 0;
+  transition: opacity .2s ease-out, color .1s ease-out;
   top: -20px;
   width: 120px;
   z-index: 10;
@@ -19,6 +20,7 @@ const TextWrapper = styled.div`
   `}
 
   &.visible {
+    opacity: 1;
     position: fixed;
     right: calc(${space(2)} - 20px);
     top: calc(${space(2)} - 20px);
