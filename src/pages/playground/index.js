@@ -6,7 +6,7 @@ import striptags from 'striptags';
 import axios from 'axios';
 
 import { toggleCursor } from '../../components/cursor';
-import Exercice from '../../components/exercice';
+import ExerciceList from '../../components/exerciceList';
 import Layout, { Wrapper } from '../../components/layout';
 import CircleText from '../../components/circleText';
 import MovingText from '../../components/movingText';
@@ -15,7 +15,6 @@ import Noise from '../../components/noise';
 import { capitalize } from '../../utils/mixins';
 import routes from '../../utils/routes';
 import GET_PLAYGROUND from './queries';
-import { ExerciceList } from './styles';
 
 class Playground extends React.Component {
   _rotatingTitle = `playground * `;
@@ -36,9 +35,9 @@ class Playground extends React.Component {
       });
   }
 
-  animateProjects = () => {
-    console.log('scrolling...');
-  }
+  // animateProjects = () => {
+  //   console.log('scrolling...');
+  // }
 
   render() {
     const { loaded, exercices } = this.state;
@@ -76,14 +75,7 @@ class Playground extends React.Component {
                     onMouseLeave={() => toggleCursor()}
                   >{cta}</Link>
                 </div>
-                <ExerciceList>
-                  {exercices.map(exercice => (
-                    <Exercice
-                      key={exercice.title.replace(' ', Math.random())}
-                      exercice={exercice}
-                    />
-                  ))}
-                </ExerciceList>
+                <ExerciceList exercices={exercices} />
               </Wrapper>
             </Layout>
           );

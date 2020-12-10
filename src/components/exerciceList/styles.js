@@ -3,6 +3,14 @@ import styled from 'styled-components';
 import { media } from '../../utils/media-queries';
 import { space } from '../../utils/mixins';
 
+const ExerciceListStyled = styled.div`
+  margin: ${space(2)} 0;
+
+  ${media.min('tablet')`
+    margin: ${space(4)} 0;
+  `}
+`;
+
 const ExerciceStyled = styled.div`
   margin: ${space(4)} auto;
 
@@ -105,4 +113,5 @@ const ExerciceStyled = styled.div`
   `}
 `;
 
-export default ExerciceStyled;
+export { ExerciceStyled };
+export default ExerciceListStyled;
