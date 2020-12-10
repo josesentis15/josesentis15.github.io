@@ -4,8 +4,6 @@ import { Query } from "react-apollo";
 import { withRouter } from "react-router";
 import striptags from 'striptags';
 import axios from 'axios';
-import { TweenMax } from 'gsap';
-import "gsap/ScrollToPlugin";
 
 import { toggleCursor } from '../../components/cursor';
 import Exercice from '../../components/exercice';
