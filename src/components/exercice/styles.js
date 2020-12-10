@@ -113,5 +113,4 @@ const ExerciceStyled = styled.div`
   `}
 `;
 
-export { ExerciceStyled };
-export default ExerciceListStyled;
+export default ExerciceStyled;

@@ -5,7 +5,7 @@ import withScroll from '../../hoc/withScroll';
 import BackgroundImage from '../backgroundImage';
 import { toggleCursor } from '../cursor';
 
-import { ExerciceStyled } from './styles';
+import ExerciceStyled from './styles';
 import { playground } from '../../../package.json';
 
 class Exercice extends React.PureComponent {
