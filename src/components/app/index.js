@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Router } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
@@ -15,52 +15,52 @@ import client from '../../utils/apollo';
 import history from '../../utils/history'
 import GlobalStyle from '../../styles';
 
-axios.defaults.baseURL = playground;
-axios.defaults.headers.post['Content-Type'] = 'application/json';
+const App = () => {
+  // state = {
+  //   loaded: false,
+  //   showLoader: false
+  // }
 
-class App extends React.Component {
-  state = {
-    loaded: false,
-    showLoader: false
-  }
+  axios.defaults.baseURL = playground;
+  axios.defaults.headers.post['Content-Type'] = 'application/json';
 
-  componentDidMount() {
+  useEffect(() => {
     if (isExplorer()) document.documentElement.classList.add('browser-ie');
     document.documentElement.classList.add(touchable() ? 'touch' : 'non-touch');
 
-    this.setState({ showLoader: true });
+    // this.setState({ showLoader: true });
 
-    setTimeout(() => {
-      this.setState({ loaded: true });
-    }, 2400);
-  }
+    // setTimeout(() => {
+    //   this.setState({ loaded: true });
+    // }, 2400);
+  }, []);
 
-  render() {
-    const { loaded, showLoader } = this.state;
+  // render() {
+  //   const { loaded, showLoader } = this.state;
 
-    return (
-      <>
-        <GlobalStyle />
-        {loaded ? (
-          <ApolloProvider client={client}>
-            <Cursor />
-            <Router history={history}>
-              <AppRouter />
-            </Router>
-          </ApolloProvider>
-        ) : (
-            <TransitionGroup>
-              {showLoader && (
-                <CSSTransition classNames="loaded" timeout={2000}>
-                  <Loader />
-                </CSSTransition>
-              )}
-            </TransitionGroup>
-          )
-        }
-      </>
-    );
-  }
+  return (
+    <>
+      <GlobalStyle />
+      {/* {loaded ? ( */}
+        <ApolloProvider client={client}>
+          <Cursor />
+          <Router history={history}>
+            <AppRouter />
+          </Router>
+        </ApolloProvider>
+       {/* ) : (
+           <TransitionGroup>
+             {showLoader && (
+               <CSSTransition classNames="loaded" timeout={2000}>
+                 <Loader />
+               </CSSTransition>
+             )}
+           </TransitionGroup>
+         )
+       } */}
+    </>
+  );
+  // }
 }
 
 export default App;
