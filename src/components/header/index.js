@@ -3,9 +3,9 @@ import { Query } from "react-apollo";
 import { Link } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
+import { Wrapper } from '../../layouts/Default';
 import withLoader from '../../hocs/withLoader';
 import { toggleCursor } from '../cursor';
-import { Wrapper } from '../layout';
 
 import GET_DATA from './queries';
 import HeaderStyled from './styles';

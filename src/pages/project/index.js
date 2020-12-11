@@ -7,7 +7,7 @@ import Component from '../../components/component';
 import CrossNavigation from '../../components/crossNavigation';
 import Header from '../../components/header';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
-import Layout, { Wrapper } from '../../components/layout';
+import Layout, { Wrapper } from '../../layouts/Default';
 import withLoader from '../../hocs/withLoader';
 
 import DATA from '../../data/content.json';

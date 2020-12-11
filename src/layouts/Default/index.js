@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SEO from '../seo';
+import SEO from '../../components/seo';
 
 import LayoutStyled, { Wrapper } from './styles';
 

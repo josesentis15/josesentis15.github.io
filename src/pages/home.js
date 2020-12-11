@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from "react-router";
 
 import Header from '../components/header';
-import Layout, { Wrapper } from '../components/layout';
+import Layout, { Wrapper } from '../layouts/Default';
 import Navigation from '../components/navigation';
 
 class Home extends React.Component {

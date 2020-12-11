@@ -5,7 +5,7 @@ import { withRouter } from "react-router";
 
 import Header from '../../components/header';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
-import Layout, { Wrapper } from '../../components/layout';
+import Layout, { Wrapper } from '../../layouts/Default';
 import Project from '../../components/project';
 
 import { capitalize } from '../../utils/mixins';

@@ -7,7 +7,7 @@ import axios from 'axios';
 
 import { toggleCursor } from '../../components/cursor';
 import Exercice from '../../components/exercice';
-import Layout, { Wrapper } from '../../components/layout';
+import Layout, { Wrapper } from '../../layouts/Default';
 import CircleText from '../../components/circleText';
 import MovingText from '../../components/movingText';
 import Noise from '../../components/noise';

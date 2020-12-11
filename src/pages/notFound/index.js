@@ -4,7 +4,7 @@ import { withRouter } from "react-router";
 
 import { toggleCursor } from '../../components/cursor';
 import Glitch from '../../components/glitch';
-import Layout, { Wrapper } from '../../components/layout';
+import Layout, { Wrapper } from '../../layouts/Default';
 import Noise from '../../components/noise';
 
 import routes from '../../utils/routes';

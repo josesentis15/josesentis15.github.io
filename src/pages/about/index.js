@@ -4,7 +4,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { withRouter } from "react-router";
 
 import Header from '../../components/header';
-import Layout, { Wrapper } from '../../components/layout';
+import Layout, { Wrapper } from '../../layouts/Default';
 import { AppearingText, NavigationWrapper } from '../../components/navigation';
 import Profile from '../../components/profile';
 import withLoader from '../../hocs/withLoader';
