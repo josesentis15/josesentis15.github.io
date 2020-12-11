@@ -1,7 +1,7 @@
 import React from 'react';
 import { TweenMax } from 'gsap';
 
-import withLoader from '../../hoc/withLoader';
+import withLoader from '../../hocs/withLoader';
 
 import Circle from './styles';
 

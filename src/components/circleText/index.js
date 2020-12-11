@@ -1,7 +1,7 @@
 import React from 'react';
 import { TweenMax } from 'gsap';
 
-import withScroll from '../../hoc/withScroll';
+import withScroll from '../../hocs/withScroll';
 import TextWrapper, { Character } from './styles';
 
 class circleText extends React.Component {

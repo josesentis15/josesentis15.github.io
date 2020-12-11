@@ -1,7 +1,7 @@
 import React from 'react';
 import forEach from '@runroom/purejs/lib/forEach';
 
-import withQuery from '../../hoc/withQuery';
+import withQuery from '../../hocs/withQuery';
 import BackgroundImage from '../backgroundImage';
 import { toggleCursor } from '../cursor';
 

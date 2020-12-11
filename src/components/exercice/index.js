@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import withScroll from '../../hoc/withScroll';
+import withScroll from '../../hocs/withScroll';
 import BackgroundImage from '../backgroundImage';
 import { toggleCursor } from '../cursor';
 
