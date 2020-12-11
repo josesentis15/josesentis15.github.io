@@ -14,7 +14,7 @@ const Circle = styled.span`
   pointer-events: none;
   top: 50vh;
   transform: translate(-50%, -50%);
-  transition: .1s ease-out;
+  transition: color .1s ease-out;
   width: ${space()};
   will-change: width, height;
   z-index: 9999;
