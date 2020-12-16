@@ -28,7 +28,7 @@ class SEO extends React.Component {
             >
               <meta property="og:type" content="website" />
               <meta property="og:url" content={siteUrl} />
-              <meta property="og:image" content={ogImage} />
+              <meta property="og:image" content={`${siteUrl}/${ogImage}`} />
               <meta property="og:title" content={metaTitle} />
               <meta property="og:description" content={metaDescription} />
               <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
