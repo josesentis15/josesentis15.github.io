@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 
-import withScroll from '../../hocs/withScroll';
 import BackgroundImage from '../backgroundImage';
 import { toggleCursor } from '../cursor';
 
@@ -12,15 +11,6 @@ class Exercice extends React.PureComponent {
   state = {
     visible: true
   }
-
-  // animateProjects = () => {
-  //   console.log('scrolling...', this.props.scrollTop);
-
-  //   if (!this.state.visible && this.props.scrollTop > 500) {
-  //     this.props.cancelScroll();
-  //     this.setState({ visible: true });
-  //   }
-  // }
 
   render() {
     const {
